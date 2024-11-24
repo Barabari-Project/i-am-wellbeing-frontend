@@ -5,25 +5,25 @@ const ContactUs = () => {
   return (
     <div className="px-2 pt-4 border-2 ">
       {/* Main Flex Container */}
-      <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 pt-6 ">
+      <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 pt-10 ">
         {/* Left Section - Image */}
         <div className="hidden xs:flex xs:flex-1 lg:flex-[2] justify-center">
           <img
             src={team}
             alt="teams"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-lg object-cover"
           />
         </div>
 
         {/* Right Section - Form */}
         <div className="flex-1 w-full">
-          <h1 className="text-2xl font-bold leading-9 text-gray-800">
+          <h1 className="text-3xl font-bold leading-9 text-gray-800">
             Be a part of our network of compassion
           </h1>
-          <p className="text-sm text-gray-600 mt-2">* The following info is required</p>
+          <p className="text-sm text-gray-600 mt-2 mb-6">* The following info is required</p>
           <form
             action="/submit"
-            className="flex flex-col gap-6 mt-4 text-gray-800 font-bold"
+            className="flex flex-col gap-8 mt-4 text-gray-800 font-bold"
           >
             {/* Input Fields */}
             <input
@@ -60,8 +60,8 @@ const ContactUs = () => {
       </div>
 
       {/* Collaboration Section */}
-      <div className="text-center mt-8 px-4 md:px-8 ">
-        <h1 className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold ">
+      <div className="text-center mt-8 px-4 md:px-8 mb-12">
+        <h1 className="text-base xs:text-lg sm:text-xl md:text-3xl font-semibold ">
           For collaboration, write to us at{' '}
           <span className="font-bold ">info@iamwellbeing.in</span>
         </h1>
