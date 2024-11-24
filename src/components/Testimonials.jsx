@@ -14,17 +14,12 @@ const Testimonials = () => {
 
   return (
     <div
-      className='testimonials-slider w-full flex justify-center mt-10 h-[600px] lg:h-[400px]'
+      className='testimonials-slider w-full flex justify-center mt-10 h-auto min-h-[600px] lg:h-[400px]'
       style={{
-        // display: "flex",
-        // justifyContent: "flex-end",
         backgroundImage: `url(${testimonialsImg})`,
         backgroundPositionX: "center center",
         backgroundSize: "cover",
         backgroundRepeat: "repeat",
-        // height: "100%",
-        // height:"100%",
-        // padding: "200px 0 0 0",
       }}
     >
       <Slider

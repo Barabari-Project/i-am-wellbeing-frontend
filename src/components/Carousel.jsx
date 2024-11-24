@@ -16,15 +16,15 @@ const Carousel = () => {
        slidesToShow: 1,
        slidesToScroll: 1,
        autoplay: true,
-       autoplaySpeed:1000
-     };
+       autoplaySpeed: 3000,
+     };  
   return (
     <>
       <Slider
         {...settings}
-        className='border-b lg:border-none desktop z-[-1]'
+        className='border-b lg:border-none desktop '
       >
-        <div className='bg-red-300 w-full  items-center relative flex'>
+        <div className=' w-full  items-center relative flex'>
           <img src={a2} alt='' />
 
           <div className='absolute top-5 lg:top-20 lg:left-10 left-5 text-4xl lg:text-6xl font-bold'>
@@ -36,7 +36,7 @@ const Carousel = () => {
           </div>
         </div>
 
-        <div className='bg-red-300 w-full items-center relative flex'>
+        <div className='w-full items-center relative flex'>
           <img src={a1} alt='' className='' />
           <div className='absolute top-5 lg:top-20 lg:left-10 left-5 text-4xl lg:text-6xl font-bold'>
             <p>Creating</p>
@@ -45,7 +45,7 @@ const Carousel = () => {
           </div>
         </div>
 
-        <div className='bg-red-300 w-full items-center relative flex'>
+        <div className='w-full items-center relative flex'>
           <img src={a3} alt='' />
           <div className='absolute top-5 lg:top-20 lg:left-10 left-5 text-4xl lg:text-6xl font-bold'>
             <p>Making</p>
