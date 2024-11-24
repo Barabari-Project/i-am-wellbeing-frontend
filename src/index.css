@@ -39,7 +39,9 @@ body{
      font-family: 'Alegreya', sans-serif;
      /* height: auto; */
      overflow-x: hidden;
-     /* box-sizing: border-box; */
+     box-sizing: border-box;
+     margin : 0;
+     padding : 0;
 }
 
 
@@ -74,6 +76,12 @@ body{
     box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
 }
 
+.w-full{
+    height: auto;
+}
+
+
+
 @media screen and (min-width: 700px) {
     .mobile{
         display: none !important;
@@ -85,5 +93,29 @@ body{
 @media screen and (max-width: 700px) {
     .desktop{
         display: none !important;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    
+    body{
+        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-header{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+
+    .w-full{
+        width: 99%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        ;
     }
 }
