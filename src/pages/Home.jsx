@@ -118,19 +118,19 @@ const Home = () => {
               <img
                 src={peoplenew}
                 alt='People'
-                className='w-full lg:-[200px] h-[100px] object-cover'
+                className='w-full lg:-[200px] h-full object-cover'
               />
             </div>
             <div className='bottom-background__img'>
               <img
                 src={yellowbgnew1}
                 alt='Yellow Background'
-                className='w-full h-[50px] lg:h-[150px] object-cover'
+                className='w-full h-[50px] lg:h-[130px] object-cover'
               />
             </div>
           </div>
 
-          <div className='-mt-20 flex gap-8 flex-wrap lg:flex-nowrap'>
+          <div className=' -mt-10 lg:-mt-20 flex gap-8 flex-wrap lg:flex-nowrap'>
             {/* Event Item 1 */}
             <div className='w-full md:w-1/2 lg:w-1/3 text-xl border bg-white p-2'>
               <div className='event-item text-center'>
@@ -209,23 +209,23 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='section about-us py-16'>
+      <section className='section about-us py-16 '>
         <div className='container mx-auto'>
-          <div className='flex flex-wrap items-center justify-between'>
+          <div className='flex flex-wrap md:flex-nowrap  items-start md:justify-between justify-center gap-5 md:gap-0'>
             <div className='hidden lg:block lg:w-1/12'></div>
-            <div className='max-w-sm'>
+            <div className='max-w-sm  flex items-start justify-between'>
               <video
                 preload='none'
                 controls
-                className='w-full h-[400px]'
+                className='max-w-sm h-[400px]'
                 poster={intro}
               >
                 <source type='video/mp4' src={video} />
               </video>
             </div>
 
-            <div className='lg:w-4/12 xl:w-5/12 mt-10 flex flex-col'>
-              <div className='mb-2 flex justify-end'>
+            <div className='lg:w-4/12 xl:w-6/12  flex items-center flex-col h-full '>
+              <div className=' flex'>
                 <img src={design} alt='Design' className='w-[300px] m-auto' />
               </div>
 
@@ -240,7 +240,7 @@ const Home = () => {
                       {num1}
                     </span>
                   </div>
-                  <div className='counter-item__top'>
+                  <div className='counter-item__top ml-10'>
                     <h6 className='counter-item__title text-lg text-center'>
                       Professionals Trained
                     </h6>
@@ -248,9 +248,9 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className='text-center flex flex-col'>
+              <div className='text-center flex flex-col mt-6'>
                 <div className='counter-item counter-item--style-1'>
-                  <div className='counter-item__lower'>
+                  <div className='counter-item__lower ml-10'>
                     <span
                       ref={counterTwo}
                       className='js-counter text-6xl font-bold'
@@ -280,8 +280,8 @@ const Home = () => {
           backgroundRepeat: "repeat-x",
         }}
       >
-        <div className='row'>
-          <div className='ml-4 relative'>
+        <div className='row absolute top-2'>
+          <div className='ml-4 mt-10 md:mt-0'>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Why we do what we do?</span>
             </h2>
@@ -301,7 +301,7 @@ const Home = () => {
         }}
       >
         <div className='row mb-4 absolute top-2'>
-          <div className='ml-4'>
+          <div className='ml-4 mt-10 md:mt-0'>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Clients & Partners?</span>
             </h2>
