@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaYoutube,
-} from "react-icons/fa";
 
 import logo from "../imgs/logonew.png";
 

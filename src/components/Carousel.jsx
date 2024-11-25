@@ -22,7 +22,7 @@ const Carousel = () => {
     <>
       <Slider
         {...settings}
-        className='border-b lg:border-none desktop '
+        className='border-b lg:border-none desktop mt-10'
       >
         <div className=' w-full  items-center relative flex'>
           <img src={a2} alt='' />

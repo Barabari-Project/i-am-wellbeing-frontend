@@ -77,9 +77,10 @@ body{
 }
 
 .w-full{
+    max-width: 100%;
+    overflow-x: hidden;
     height: auto;
 }
-
 
 
 @media screen and (min-width: 700px) {
