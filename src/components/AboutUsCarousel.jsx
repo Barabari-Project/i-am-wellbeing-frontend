@@ -15,15 +15,15 @@ const AboutUsCarousel = () => {
   };
   return (
     <Slider {...settings} className=' max-w-5xl m-auto'>
-      <div className='bg-red-300 w-full flex items-center relative'>
+      <div className='w-full flex items-center relative'>
         <img src={out1} alt='' />
       </div>
 
-      <div className='bg-red-300 w-full flex items-center relative'>
+      <div className='w-full flex items-center relative'>
         <img src={out3} alt='' className='' />
       </div>
 
-      <div className='bg-red-300 w-full flex items-center relative'>
+      <div className=' w-full flex items-center relative'>
         <img src={out5} alt='' />
       </div>
     </Slider>

@@ -8,6 +8,7 @@ import linkedin from '../imgs/icons/l.webp';
 import logo from '../imgs/logonew.png';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiDownArrowAlt , BiUpArrowAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -16,7 +17,7 @@ const Header = () => {
 
   return (
     <>
-      <header className='w-full z-10'>
+      <header className='w-full shadow-md  border-b '>
         <div className='top-bar bg-[#029390] text-sm md:flex hidden justify-end p-2 pr-8 gap-10'>
           <img className='w-[30px]' src={facebook} alt='' />
           <img className='w-[30px]' src={instagram} alt='' />
@@ -25,22 +26,16 @@ const Header = () => {
           <img className='w-[30px]' src={linkedin} alt='' />
         </div>
 
-        <div className='shadow-lg border  items-center justify-between p-4 md:flex hidden'>
-          <div className='logo  top-8 z-10 relative  w-[120px]'>
-            <img
-              src={logo}
-              alt=''
-              className='absolute left-5 bottom-[-25px] scale-400'
-            />
-          </div>
-
-          <ul className='flex sm:gap-5 lg:gap-10 gap-10'>
+        <div className='w-[100%] m-auto shadow-lg   items-center justify-end p-4  md:flex hidden relative'>
+          <ul className='flex sm:gap-5 lg:gap-10 gap-10 pr-2'>
             <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
               Home
             </li>
+            <Link to="/about-us">
             <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
               About us
             </li>
+            </Link>
             <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
               TIC
             </li>
@@ -57,6 +52,10 @@ const Header = () => {
               Contact Us
             </li>
           </ul>
+        </div>
+
+        <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
+          <img src={logo} alt='' className='' />
         </div>
 
         {/* hamburgur menu */}
