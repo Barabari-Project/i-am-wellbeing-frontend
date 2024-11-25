@@ -82,6 +82,11 @@ body{
     height: auto;
 }
 
+.border-image {
+   
+}
+
+/* home page media query */
 
 @media screen and (min-width: 700px) {
     .mobile{
@@ -119,4 +124,16 @@ body{
         overflow-x: hidden;
         ;
     }
+}
+/* end home page media query */
+
+
+/* about us page media */
+
+@media  screen and (max-width: 700px) {
+    
+    /* .team-container{
+        grid-template-columns: 1fr 1fr;
+    } */
+    
 }
