@@ -8,6 +8,7 @@ import linkedin from '../imgs/icons/l.webp';
 import logo from '../imgs/logonew.png';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiDownArrowAlt , BiUpArrowAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -25,14 +26,16 @@ const Header = () => {
           <img className='w-[30px]' src={linkedin} alt='' />
         </div>
 
-        <div className='w-[100%] m-auto shadow-lg z-[-1]  items-center justify-end p-4  md:flex hidden relative'>
+        <div className='w-[100%] m-auto shadow-lg   items-center justify-end p-4  md:flex hidden relative'>
           <ul className='flex sm:gap-5 lg:gap-10 gap-10 pr-2'>
             <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
               Home
             </li>
+            <Link to="/about-us">
             <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
               About us
             </li>
+            </Link>
             <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
               TIC
             </li>
