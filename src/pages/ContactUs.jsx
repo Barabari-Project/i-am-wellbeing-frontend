@@ -4,7 +4,7 @@ import team from '../imgs/team2.png';
 const ContactUs = () => {
   return (
     <div className="px-2 pt-4 border-2 ">
-      {/* Main Flex Container */}
+       {/* Main Flex Container  */}
       <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 pt-10 ">
         {/* Left Section - Image */}
         <div className="hidden xs:flex xs:flex-1 lg:flex-[2] justify-center">
