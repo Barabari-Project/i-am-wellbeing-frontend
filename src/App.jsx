@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
       <div className='w-full'>
         <Header/>
-        {/* <Routes>
+        <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/about-us' element={<About/>}/>
           <Route path='/tic' element={<Tic/>}/>
@@ -29,9 +29,7 @@ function App() {
           <Route path='/media' element={<Media/>}/>
           <Route path='/contact-us' element={<ContactUs/>}/>
           <Route path='/program' element={<Programe/>}/>
-        </Routes> */}
-
-        <Media/>
+        </Routes> 
         <Footer/>
       </div>
     </BrowserRouter>
