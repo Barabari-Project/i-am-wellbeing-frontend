@@ -28,6 +28,7 @@ import annualReport1 from '../imgs/aboutus-images/annualreport1.png'
 import annualReport2 from '../imgs/aboutus-images/annualreport2.png'
 import annualReport3 from '../imgs/aboutus-images/annualreport3.png'
 import annualReport4 from '../imgs/aboutus-images/annualreport4.jpeg'
+import { Modal } from 'bootstrap'
 
 
 
@@ -80,167 +81,237 @@ const About = () => {
      },
    ]);  
 
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedTeamMember, setSelectedTeamMember] = useState(null);
+
+  
   return (
-    <section className='section about py-16 border'>
-      <div className='flex max-w-6xl m-auto'>
-        <div className='md:max-w-3xl border w-[90%] m-auto'>
+    <>
+      <section className='section about py-16 '>
+        {/* model */}
+        <div
+          className={`fixed  bg-[rgba(0,0,0,0.8)] top-0 z-20 transition-all duration-300 ease-in-out inset-0 ${
+            isOpen ? "h-full" : "h-0"
+          } overflow-hidden`}
+        >
           <div
-            className={`p-5`}
+            className='logo-close w-full text-right p-5 font-bold text-white'
+            onClick={() => setIsOpen(false)}
+          >
+            <i className='fas fa-times font-bold text-2xl cursor-pointer'></i>
+          </div>
+
+          <div className='model-content w-[90%]  md:max-w-3xl m-auto  '>
+            <div className='bg-white text-black p-8 max-h-[550px] md:max-h-auto overflow-y-scroll md:overflow-hidden'>
+              <h2 className='text-2xl font-semibold mb-2'>
+                {selectedTeamMember?.name}
+              </h2>
+              <h3 className='text-xl font-semibold mb-2'>
+                {selectedTeamMember?.designation}
+              </h3>
+              <p className='md:text-lg text-md'>
+                {selectedTeamMember?.description}
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* code model */}
+
+        <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto '>
+          <div className=' m-auto'>
+            <div
+              className={`p-5 max-w-7xl`}
+              style={{
+                borderWidth: "3px" /* Set the border width */,
+                borderStyle: "solid" /* Set the border style */,
+                borderImageSource: `url(${borderImg})` /* Path to your image */,
+                borderImageSlice: 100 /* Adjust this value as needed */,
+                borderImageWidth: 10 /* Adjust this value as needed */,
+                borderImageOutset: 0 /* Optional: Adjust spacing */,
+              }}
+            >
+              <p className='text-xl leading-10'>
+                My very first day at work brought me face to face with 55 young
+                girls living at a childcare home who had survived sexual abuse,
+                physical abuse, and neglect at a very young age. Interacting
+                with them I realised that all my education hadn’t equipped me to
+                deal with any of it &amp; this required a whole other skill set.
+                This realisation hit me hard. Being a survivor myself I was
+                highly aware of the impact of risk factors and protective
+                factors that existed within the system. This pushed me to
+                further enhance my training by enrolling in courses, taking
+                intensive supervision, and adding to my trauma therapy skill
+                set. I went on to work with many different organizations and
+                understood that while so many people could identify the
+                prevalence and impact of trauma, there was no concrete
+                intervention that could help mitigate this impact. There were so
+                many gaps in the level of understanding and care. There were
+                adults struggling with trauma themselves, trying to raise
+                children who were struggling too. They say that it takes a
+                village, and from my standpoint, that village was completely
+                disconnected. This yearning for creating a network of
+                compassion, connection, care, equipped with knowledge and
+                expertise sowed the seed for the birth of I Am Wellbeing.
+              </p>
+            </div>
+          </div>
+
+          <div className=''>
+            <img src={AkanshaChandrel} alt='img' className='max-w-sm h-auto ' />
+            <h6
+              className='text-center bg-cover bg-repeat-round font-bold'
+              style={{ backgroundImage: `url(${s7})` }}
+            >
+              Akanksha Chandele, Director
+            </h6>
+          </div>
+        </div>
+        <div className='our-team mt-10'>
+          <div
+            className='text-xl md:text-5xl text-white font-bold relative'
             style={{
-              borderWidth: "3px" /* Set the border width */,
-              borderStyle: "solid" /* Set the border style */,
-              borderImageSource: `url(${borderImg})` /* Path to your image */,
-              borderImageSlice: 100 /* Adjust this value as needed */,
-              borderImageWidth: 10 /* Adjust this value as needed */,
-              borderImageOutset: 0 /* Optional: Adjust spacing */,
+              backgroundImage: `url(${greenBg})`,
+              backgroundSize: "100% auto",
+              backgroundRepeat: "repeat-x",
+              backgroundPosition: "bottom left",
+              height: "140px",
             }}
           >
-            <p className='text-xl leading-10'>
-              My very first day at work brought me face to face with 55 young
-              girls living at a childcare home who had survived sexual abuse,
-              physical abuse, and neglect at a very young age. Interacting with
-              them I realised that all my education hadn’t equipped me to deal
-              with any of it &amp; this required a whole other skill set. This
-              realisation hit me hard. Being a survivor myself I was highly
-              aware of the impact of risk factors and protective factors that
-              existed within the system. This pushed me to further enhance my
-              training by enrolling in courses, taking intensive supervision,
-              and adding to my trauma therapy skill set. I went on to work with
-              many different organizations and understood that while so many
-              people could identify the prevalence and impact of trauma, there
-              was no concrete intervention that could help mitigate this impact.
-              There were so many gaps in the level of understanding and care.
-              There were adults struggling with trauma themselves, trying to
-              raise children who were struggling too. They say that it takes a
-              village, and from my standpoint, that village was completely
-              disconnected. This yearning for creating a network of compassion,
-              connection, care, equipped with knowledge and expertise sowed the
-              seed for the birth of I Am Wellbeing.
-            </p>
+            <h1 className='absolute top-[100px] sm:top-12 md:top-5 left-2'>
+              Our Team
+            </h1>
+          </div>
+
+          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3  md:grid-cols-3 max-w-4xl m-auto gap-10 mt-10'>
+            {teams.map((team) => {
+              return (
+                <div
+                  className='team-card w-[90%] m-auto cursor-pointer'
+                  key={team.name}
+                  onClick={() => {
+                    setSelectedTeamMember(team);
+                    setIsOpen(true);
+                  }}
+                >
+                  <img src={team.imgSrc} alt='team' className='w-full' />
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        <div className='w-full max-w-xl'>
-          <img src={AkanshaChandrel} alt='img' className='max-w-xl h-auto ' />
-          <h6
-            className='text-center bg-cover bg-repeat-round font-bold'
-            style={{ backgroundImage: `url(${s7})` }}
+        <div className='our-consultant mt-10'>
+          <div
+            className='text-2xl md:text-6xl text-white font-bold relative'
+            style={{
+              backgroundImage: `url(${greenBg})`,
+              backgroundSize: "100% auto",
+              backgroundRepeat: "repeat-x",
+              backgroundPosition: "bottom left",
+              height: "140px",
+            }}
           >
-            Akanksha Chandele, Director
-          </h6>
-        </div>
-      </div>
-      <div className='our-team mt-10'>
-        <div
-          className='text-6xl text-white font-bold relative'
-          style={{
-            backgroundImage: `url(${greenBg})`,
-            backgroundSize: "100% auto",
-            backgroundRepeat: "repeat-x",
-            backgroundPosition: "bottom left",
-            height: "140px",
-          }}
-        >
-          <h1 className='absolute top-4 left-2'>Our Team</h1>
+            <h1 className='absolute top-[100px]  md:top-5 left-2'>
+              Our consultants
+            </h1>
+          </div>
+
+          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-10 mt-10'>
+            <img
+              src={consultant1}
+              alt='consultant1'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant2}
+              alt='consultant2'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant3}
+              alt='consultant3'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant4}
+              alt='consultant4'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant5}
+              alt='consultant5'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant6}
+              alt='consultant6'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant7}
+              alt='consultant7'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant8}
+              alt='consultant8'
+              className='w-[350px] h-auto'
+            />
+            <img
+              src={consultant9}
+              alt='consultant9'
+              className='w-[350px] h-auto'
+            />
+          </div>
         </div>
 
-        <div className='team-container grid  md:grid-cols-3 max-w-4xl m-auto gap-10 mt-10'>
-          {teams.map((team) => {
-            return (
-              <div className='team-card' key={team.name}>
-                <img src={team.imgSrc} alt='team' className='' />
-              </div>
-            );
-          })}
-        </div>
-      </div>
+        <div className='annual-reports'>
+          <div
+            className=' text-2xl md:text-6xl text-white font-bold relative'
+            style={{
+              backgroundImage: `url(${greenBg})`,
+              backgroundSize: "100% auto",
+              backgroundRepeat: "repeat-x",
+              backgroundPosition: "bottom left",
+              height: "140px",
+            }}
+          >
+            <h1 className='absolute top-[100px] sm:top-20 md:top-4 left-2'>
+              Annual Reports
+            </h1>
+          </div>
 
-      <div className='our-consultant mt-10'>
-        <div
-          className='text-6xl text-white font-bold relative'
-          style={{
-            backgroundImage: `url(${greenBg})`,
-            backgroundSize: "100% auto",
-            backgroundRepeat: "repeat-x",
-            backgroundPosition: "bottom left",
-            height: "140px",
-          }}
-        >
-          <h1 className='absolute top-4 left-2'>Our consultant</h1>
+          <div className='annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-10 mt-10'>
+         <a href="../imgs/aboutus-images/annual-reports-images/I Am Wellbeing_Annual Report_2020-2021.pdf" target='_blank' download className='cursor-pointer'>
+            <img
+              src={annualReport1}
+              alt='annualreport1'
+              className='sm:w-[300px]'
+            />
+            </a>
+            <img
+              src={annualReport2}
+              alt='annualreport2'
+              className='sm:w-[300px]'
+            />
+            <img
+              src={annualReport3}
+              alt='annualreport3'
+              className='sm:w-[300px]'
+            />
+            <img
+              src={annualReport4}
+              alt='annualreport4'
+              className='sm:w-[300px]'
+            />
+          </div>
         </div>
-
-        <div className='team-container grid grid-cols-4 max-w-5xl m-auto gap-10 mt-10'>
-          <img
-            src={consultant1}
-            alt='consultant1'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant2}
-            alt='consultant2'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant3}
-            alt='consultant3'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant4}
-            alt='consultant4'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant5}
-            alt='consultant5'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant6}
-            alt='consultant6'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant7}
-            alt='consultant7'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant8}
-            alt='consultant8'
-            className='w-[350px] h-auto'
-          />
-          <img
-            src={consultant9}
-            alt='consultant9'
-            className='w-[350px] h-auto'
-          />
-        </div>
-      </div>
-
-      <div className='annual-reports'>
-        <div
-          className='text-6xl text-white font-bold relative'
-          style={{
-            backgroundImage: `url(${greenBg})`,
-            backgroundSize: "100% auto",
-            backgroundRepeat: "repeat-x",
-            backgroundPosition: "bottom left",
-            height: "140px",
-          }}
-        >
-          <h1 className='absolute top-4 left-2'>Annual Reports</h1>
-        </div>
-
-        <div className='annual-container grid grid-cols-4 max-w-5xl m-auto gap-10 mt-2'>
-           <img src={annualReport1} alt="annualreport1" />
-           <img src={annualReport2} alt="annualreport2" />
-           <img src={annualReport3} alt="annualreport3" />
-           <img src={annualReport4} alt="annualreport4" />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
 export default About
+
+
+
