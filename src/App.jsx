@@ -28,7 +28,7 @@ function App() {
           <Route path='/short-training' element={<ShortTraining/>}/>
           <Route path='/media' element={<Media/>}/>
           <Route path='/contact-us' element={<ContactUs/>}/>
-          <Route path='/program' element={<Programe/>}/>
+          <Route path='/programs' element={<Programe/>}/>
         </Routes>
         <Footer/>
       </div>
