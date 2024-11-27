@@ -117,8 +117,8 @@ const About = () => {
         </div>
         {/* code model */}
 
-        <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto '>
-          <div className=' m-auto'>
+        <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto mt-10 md:mt-0'>
+          <div className='m-auto'>
             <div
               className={`p-5 max-w-7xl`}
               style={{
@@ -168,25 +168,26 @@ const About = () => {
         </div>
         <div className='our-team mt-10'>
           <div
-            className='text-xl md:text-5xl text-white font-bold relative'
+            className='text-4xl md:text-6xl text-white font-bold relative p-1'
             style={{
+              backgroundColor: "#029390",
               backgroundImage: `url(${greenBg})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-x",
               backgroundPosition: "bottom left",
-              height: "140px",
+              height: "120px",
             }}
           >
-            <h1 className='absolute top-[100px] sm:top-12 md:top-5 left-2'>
+            <h1 className='absolute top-[60px] sm:top-12 md:top-3 left-2'>
               Our Team
             </h1>
           </div>
 
-          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3  md:grid-cols-3 max-w-4xl m-auto gap-10 mt-10'>
+          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6  md:grid-cols-3 max-w-3xl m-auto  mt-10'>
             {teams.map((team) => {
               return (
                 <div
-                  className='team-card w-[90%] m-auto cursor-pointer'
+                  className='team-card w-[100%]  m-auto cursor-pointer'
                   key={team.name}
                   onClick={() => {
                     setSelectedTeamMember(team);
@@ -202,8 +203,9 @@ const About = () => {
 
         <div className='our-consultant mt-10'>
           <div
-            className='text-2xl md:text-6xl text-white font-bold relative'
+            className='text-4xl md:text-6xl text-white font-bold relative'
             style={{
+              backgroundColor: "#029390",
               backgroundImage: `url(${greenBg})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-x",
@@ -211,7 +213,7 @@ const About = () => {
               height: "140px",
             }}
           >
-            <h1 className='absolute top-[100px]  md:top-5 left-2'>
+            <h1 className='absolute top-[70px]  md:top-5 left-2'>
               Our consultants
             </h1>
           </div>
@@ -267,8 +269,9 @@ const About = () => {
 
         <div className='annual-reports'>
           <div
-            className=' text-2xl md:text-6xl text-white font-bold relative'
+            className='text-4xl md:text-6xl text-white font-bold relative'
             style={{
+              backgroundColor: "#029390",
               backgroundImage: `url(${greenBg})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-x",
@@ -276,34 +279,58 @@ const About = () => {
               height: "140px",
             }}
           >
-            <h1 className='absolute top-[100px] sm:top-20 md:top-4 left-2'>
+            <h1 className='absolute top-[70px] sm:top-20 md:top-4 left-2'>
               Annual Reports
             </h1>
           </div>
 
           <div className='annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-10 mt-10'>
-         <a href="../imgs/aboutus-images/annual-reports-images/I Am Wellbeing_Annual Report_2020-2021.pdf" target='_blank' download className='cursor-pointer'>
-            <img
-              src={annualReport1}
-              alt='annualreport1'
-              className='sm:w-[300px]'
-            />
+            <a
+              href='https://drive.google.com/file/d/1O2lsC6jPYwwu_HR-qmm7_vgxRpKYNBDu/view?usp=sharing&embedded=true'
+              target='_blank'
+              className='cursor-pointer'
+            >
+              <img
+                src={annualReport1}
+                alt='annualreport1'
+                className='sm:w-[300px]'
+              />
             </a>
-            <img
-              src={annualReport2}
-              alt='annualreport2'
-              className='sm:w-[300px]'
-            />
-            <img
-              src={annualReport3}
-              alt='annualreport3'
-              className='sm:w-[300px]'
-            />
-            <img
-              src={annualReport4}
-              alt='annualreport4'
-              className='sm:w-[300px]'
-            />
+            <a
+              href='https://drive.google.com/file/d/14ayDznPPVbfQtQ2G802D8d-PEy6xQWzy/view?usp=sharing&embedded=true'
+              target='_blank'
+              className='cursor-pointer'
+            >
+              <img
+                src={annualReport2}
+                alt='annualreport2'
+                className='sm:w-[300px]'
+              />
+            </a>
+
+            <a
+              href='https://drive.google.com/file/d/11q4HwENy1-IsLeVGLVxrQn1hzyK_pnW3/view?usp=sharing&embedded=true'
+              target='_blank'
+              className='cursor-pointer'
+            >
+              <img
+                src={annualReport3}
+                alt='annualreport3'
+                className='sm:w-[300px]'
+              />
+            </a>
+
+            <a
+              href='https://drive.google.com/file/d/1sHhcyxUHjhX5kjdfWZ4ufhymyDqSBjap/view?usp=sharing&embedded=true'
+              target='_blank'
+              className='cursor-pointer'
+            >
+              <img
+                src={annualReport4}
+                alt='annualreport4'
+                className='sm:w-[300px]'
+              />
+            </a>
           </div>
         </div>
       </section>
