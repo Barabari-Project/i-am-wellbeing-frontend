@@ -81,6 +81,9 @@ body{
     overflow-x: hidden;
     height: auto;
 }
+.event-item__title:hover{
+color:#6c757d
+}
 
 
 /* home page media query */
