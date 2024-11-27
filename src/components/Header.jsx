@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [toggle , setToggle] = useState(false);
   const [show , setShow] = useState(false); // state for side bar array to show and hide
+  const [isVisible, setIsVisible] = useState(false);  
 
   return (
     <>
