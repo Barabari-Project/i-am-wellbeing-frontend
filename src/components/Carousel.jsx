@@ -56,7 +56,7 @@ const Carousel = () => {
         </div>
       </Slider>
 
-      <Slider {...settings} className='border-b mobile'>
+      <Slider {...settings} className='border-b mobile mt-20'>
         <div className=' w-full'>
           <img
             src={mobileBanner1}
