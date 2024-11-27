@@ -29,8 +29,8 @@ const Header = () => {
 
         <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  md:flex hidden'>
           <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
-            <Link to="/">
-            <img src={logo} alt='' className='' />
+            <Link to='/'>
+              <img src={logo} alt='' className='' />
             </Link>
           </div>
 
@@ -55,7 +55,7 @@ const Header = () => {
 
               <li className='border border-black py-1 px-4 group rounded-full text-center cursor-pointer relative'>
                 Training
-                <ul className='absolute sub-menu w-[255px] h-[150px] text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390] group-hover:z-10 group-hover:opacity-100 group-hover:translate-y-0'>
+                <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390] group-hover:z-10 group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
                   <Link to='/ticp'>
                     <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
                       TICP
@@ -75,9 +75,9 @@ const Header = () => {
                 </li>
               </Link>
               <Link to='/media'>
-              <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
-                Media
-              </li>
+                <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
+                  Media
+                </li>
               </Link>
               <Link to='/contact-us'>
                 <li className='border border-black py-1 px-4 rounded-full text-center'>
@@ -96,7 +96,7 @@ const Header = () => {
 
       {/* sub menu list  */}
 
-      <div className='flex md:hidden  items-center justify-between px-4 mobile-header'>
+      <div className='flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full'> 
         <img src={logo} alt='' className='w-[80px]' />
         <HiMenuAlt3
           className='text-3xl font-[300] cursor-pointer'
@@ -104,7 +104,6 @@ const Header = () => {
         />
       </div>
       {/* end hamburgur menu */}
-
 
       {/* side bar  */}
       <div
@@ -132,20 +131,23 @@ const Header = () => {
         </div>
 
         <div className='w-full h-full text[14px] flex flex-col items-start pl-14 bg-[#F9F7F6] pt-20 text-sm  gap-2'>
-          <Link to="/"
+          <Link
+            to='/'
             className='font-[300]  text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
-           >
+          >
             HOME
           </Link>
 
-          <Link to="/about-us"
+          <Link
+            to='/about-us'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
             href='#'
           >
             ABOUT US
           </Link>
 
-          <Link to="/tic"
+          <Link
+            to='/tic'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
             href='#'
           >
@@ -167,31 +169,34 @@ const Header = () => {
               }`}
             >
               <ul className='ml-6 mt-5 flex flex-col gap-4'>
-                <Link to="/ticp">
-                <li className='text-gray-500'>TICP</li>
+                <Link to='/ticp'>
+                  <li className='text-gray-500'>TICP</li>
                 </Link>
-                <Link to="/short-training">
-                 <li className='text-gray-500'>Short Training</li>
+                <Link to='/short-training'>
+                  <li className='text-gray-500'>Short Training</li>
                 </Link>
               </ul>
             </div>
           </a>
 
-          <Link to="programs"
+          <Link
+            to='programs'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300  rounded-md '
             href='#'
           >
             PROGRAMS
           </Link>
 
-          <Link to="/media"
+          <Link
+            to='/media'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
             href='#'
           >
             MEDIA
           </Link>
 
-          <Link to="/contact-us"
+          <Link
+            to='/contact-us'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
             href='#'
           >

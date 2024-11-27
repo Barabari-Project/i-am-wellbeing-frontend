@@ -1,12 +1,13 @@
 import React from "react";
 
 import logo from "../imgs/logonew.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className='footer bg-black text-white lg:pt-10 pb-5  '>
       <div className='max-w-5xl m-auto flex lg:flex-row flex-col lg:gap-10 items-start  p-10 lg:p-0'>
-        <div className='left hidden lg:flex flex-col lg:pr-20'>
+        <div className='left hidden lg:flex flex-col lg:pr-20 sm:pl-20 md:pl-0'>
           <div className='footer-contacts '>
             <div className='footer-logo'>
               <a className='footer-logo__link' href='index.html'>
@@ -78,60 +79,54 @@ const Footer = () => {
               <nav className='mt-4'>
                 <ul className='unordered-list flex flex-col gap-1'>
                   <li>
-                    <a
-                      href='index.php'
+                    <Link to="/"
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href='about.php'
+                    <Link to="/about-us"
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       About Us
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href='tic.php'
+                    <Link to="/tic"
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       TIC
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href='ticp.php'
+                    <Link to="/ticp"
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       TICP
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link to="/program"
                       href='program.php'
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       Programs
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href='media.php'
+                    <Link to="/media"
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       Media
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href='contact-us.php'
+                    <Link to="/contact-us"
                       className=' no-underline text-[#A9A9AB] text-sm'
                     >
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
