@@ -81,6 +81,30 @@ body{
     overflow-x: hidden;
     height: auto;
 }
+.event-item__title:hover{
+color:#6c757d
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.model-content::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  height: 30%; /* Height of the scrollbar */
+}
+
+.model-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for track */
+}
+
+.model-content::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for thumb */
+}
+
+.model-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb on hover */
+}
+
 
 /* For WebKit browsers (Chrome, Safari) */
 .model-content::-webkit-scrollbar {
