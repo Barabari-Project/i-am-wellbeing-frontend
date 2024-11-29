@@ -29,7 +29,7 @@ function App() {
           <Route path='/media' element={<Media/>}/>
           <Route path='/contact-us' element={<ContactUs/>}/>
           <Route path='/programs' element={<Programe/>}/>
-        </Routes>
+        </Routes> 
         <Footer/>
       </div>
     </BrowserRouter>
