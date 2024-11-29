@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Programe = () => {
+const Testimonials = () => {
   return (
-     <h1>Programme</h1>
-  )
-}
+    <>
+     <h1>Tic page</h1>
+    </>
+  );
+};
 
-export default Programe
+export default Testimonials;

@@ -14,7 +14,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className='testimonials-slider w-full flex justify-center mt-10 h-auto min-h-[600px] lg:h-[400px]'
+      className='testimonials-slider w-full flex justify-center mt-10  h-auto min-h-[400px] lg:h-[400px]'
       style={{
         backgroundImage: `url(${testimonialsImg})`,
         backgroundPositionX: "center center",
