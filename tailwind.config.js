@@ -6,7 +6,14 @@ export default {
       screens: {
         xs: "475px",
         md: "900px",
-      }
+      },
+      colors: {
+        customPeach: '#F9B185', 
+        
+      },
+      borderRadius: {
+        '50px': '50px', 
+      },
     },
   },
   plugins: [],

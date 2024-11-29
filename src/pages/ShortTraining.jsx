@@ -1,9 +1,122 @@
-import React from 'react'
+import React from "react";
+
+import stp0 from "../imgs/stp data/stp0.png";
+import stp1 from "../imgs/stp data/stp1.png";
+import stp3 from "../imgs/stp data/stp3.png";
+import stp4 from "../imgs/stp data/stp4.png";
+import stp5 from "../imgs/stp data/stp5.png";
+import stp6 from "../imgs/stp data/stp6.png";
+import videoposter from "../imgs/stp data/stpvideo1.png";
 
 const ShortTraining = () => {
   return (
-    <div>ShortTraining</div>
-  )
-}
+    <>
+      {/* ---------------opening page------------------------------------ */}
+      <section className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10" style={{ backgroundImage: `url(${stp0})` }}>
+  <div className="bg-customPeach opacity-80 w-full text-center">
+    <h1 className="text-[38px] font-black tracking-wider my-3">Short Trainings Program</h1>
+    <p className="text-[#109ca2] mb-[3%]">Bridging the gap from theory to practice</p>
+  </div>
 
-export default ShortTraining
+  {/* Buttons Section */}
+  <div className=" w-[78%] m-auto md:flex md:flex-wrap md:justify-center md:items-center mt-[100px]">
+  <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mr-6 mb-2">
+    <a href="#objectives">Objectives</a>
+  </button>
+  <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mr-6 mb-2">
+    <a href="#Key-Features">Key Features</a>
+  </button>
+  <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mr-6 mb-2">
+    <a href="#training">Training Schedule</a>
+  </button>
+  <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-2">
+    <a href="#eligibilty">Eligibility</a>
+  </button>
+</div>
+
+
+  {/* Apply Now Button */}
+  <div className="flex justify-center my-7">
+  <button className="bg-customPeach text-white px-[62px] py-[12px] rounded-md font-extrabold text-[14px] md:text-[18px]">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform" target="_blank">APPLY NOW</a>
+  </button>
+</div>
+
+
+ 
+  <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px]">
+    <p>Questions before registering? Please read through this page. If you still have questions, please send us an email at info@iamwellbeing.in</p>
+  </div>
+</section>
+
+      {/* ---------------------------------intention----------------------------- */}
+      <section className="mx-[10%] lg:mx-[3.5%] py-16  ">
+        <h1 className="text-[40px] mb-2 font-black">Intention</h1>
+        <p className="text-justify leading-9 text-[22px]">With the intention of building the capacity of young mental health professionals and students towards trauma-informed practices and holistic healing, I Am Wellbeing has designed a series of short trainings which will be conducted by experts from the field.<br/>
+          The primary intent is to bridge the gap between academic knowledge and practical experience through the medium of experiential training that is backed by years of experience and research while being financially accessible.</p>
+          <video preload="none" controls poster={videoposter} className=" w-[68%] m-auto mt-4">
+    <source
+      type="video/mp4"
+      src="https://res.cloudinary.com/dulsc0xrw/video/upload/v1732819022/stpzv_pjfoqa.mp4"
+    />
+  </video>
+      </section>
+      {/* -------------------------------------objectives-------------------------- */}
+      <section id="objectives" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach ">
+        <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
+        <img src={stp1} alt="img"/>
+      </section>
+      {/* ----------------------------------------key features------------------------------ */}
+      <section id="Key-Features" className="px-[10%] lg:px-[3.5%] py-16 ">
+        <h1 className="text-[40px] mb-2 font-black">key features</h1>
+        <img src={stp4} alt="img" className="md:w-[98%]"/>
+      </section>
+      {/* ----------------------------------training--------------------------------- */}
+      <section id="training"  className="px-[10%] lg:px-[3.5%] py-7 ">
+        <h1 className="text-[40px] mb-6 font-black">Training schedule</h1>
+        <img src={stp3} alt="img" className="md:w-[64%]"/>
+      </section>
+      {/* ----------------------------Eligibility------------------------------- */}
+      <section id="eligibilty" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach">
+        <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
+        <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
+  <li>Students from psychology and allied fields (postgraduate students only).</li>
+  <li>Working mental health practitioners.</li>
+</ul>
+      </section>
+      {/* -------------------------------contribution--------------------------- */}
+      <section  className="px-[10%] lg:px-[3.5%] py-7 ">
+        <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
+        <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
+  <li>Kindly note that the minimum contribution per training is INR 500 (Five Hundred Rupees Only). However, you can choose to contribute more.</li>
+          <li>If you choose to attend more than one training, the amount to be paid should be INR 500 multiplied by the number of trainings you have selected.</li>
+          <li>Following details will be required to complete the payment process: Pan card, address, and a screenshot of the payment.</li>
+          <li>The amount can be paid via online transaction (NEFT/IMPS):</li>
+        </ul>
+        <p className="text-justify leading-9 text-[22px] pt-6">All contributions will be utilised for Nairatmya Foundation's work with under- resourced communities...</p>
+      </section>
+      {/* ----------------------------know your trainers--------------------------- */}
+      <section  className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach">
+        <h1 className="text-[40px] mb-2 font-black">Know Your Trainers</h1>
+        <img src={stp5} alt="img"/>
+      </section>
+
+      {/* --------------------------------know your trainers2--------------------------- */}
+      <section className="px-[10%] lg:px-[3.5%] py-7 ">
+        <img src={stp6} alt="img" />
+        <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8">
+  <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-sm">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform" target="_blank">REGISTER HERE</a>
+  </button>
+  <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px mt-4 md:mt-0 transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1  text-sm">
+   <a href="https://www.iamwellbeing.org/imgs/Short%20Trainings%20Brochure%20Final%20.pdf" target="_blank" >DOWNLOAD THE BROCHURE</a> 
+  </button>
+</div>
+
+
+      </section>
+    </>
+  );
+};
+
+export default ShortTraining;
