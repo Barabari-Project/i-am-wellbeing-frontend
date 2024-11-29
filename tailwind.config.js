@@ -11,6 +11,9 @@ export default {
         customPeach: '#F9B185', 
         
       },
+      borderRadius: {
+        '50px': '50px', 
+      },
     },
   },
   plugins: [],
