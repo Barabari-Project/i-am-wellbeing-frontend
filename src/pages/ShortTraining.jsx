@@ -38,7 +38,7 @@ const ShortTraining = () => {
   {/* Apply Now Button */}
   <div className="flex justify-center my-7">
   <button className="bg-customPeach text-white px-[62px] py-[12px] rounded-md font-extrabold text-[14px] md:text-[18px]">
-    <a href="">APPLY NOW</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform" target="_blank">APPLY NOW</a>
   </button>
 </div>
 
@@ -106,10 +106,10 @@ const ShortTraining = () => {
         <img src={stp6} alt="img" />
         <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8">
   <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-sm">
-    REGISTER HERE
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform" target="_blank">REGISTER HERE</a>
   </button>
   <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px mt-4 md:mt-0 transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1  text-sm">
-    DOWNLOAD THE BROCHURE
+   <a href="https://www.iamwellbeing.org/imgs/Short%20Trainings%20Brochure%20Final%20.pdf" target="_blank" >DOWNLOAD THE BROCHURE</a> 
   </button>
 </div>
 
