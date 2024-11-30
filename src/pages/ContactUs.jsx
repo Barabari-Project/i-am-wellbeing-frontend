@@ -3,7 +3,7 @@ import team from '../imgs/team2.png';
 
 const ContactUs = () => {
   return (
-    <div className="px-2 pt-4 border-2 ">
+    <div className="px-[3%] pt-[22%] sm:pt-8 border-2 ">
        {/* Main Flex Container  */}
       <div className="flex flex-col xs:flex-row gap-4 xs:gap-8 pt-10 ">
         {/* Left Section - Image */}
@@ -16,14 +16,14 @@ const ContactUs = () => {
         </div>
 
         {/* Right Section - Form */}
-        <div className="flex-1 w-full">
-          <h1 className="text-3xl font-bold leading-9 text-gray-800">
+        <div className="flex-1 w-full ">
+          <h1 className="text-3xl font-bold leading-9 ">
             Be a part of our network of compassion
           </h1>
-          <p className="text-sm text-gray-600 mt-2 mb-6">* The following info is required</p>
+          <p className="text-sm text-black mt-2 mb-6">* The following info is required</p>
           <form
             action="/submit"
-            className="flex flex-col gap-8 mt-4 text-gray-800 font-bold"
+            className="flex flex-col gap-8 mt-4 text-gray-800 font-extrabold"
           >
             {/* Input Fields */}
             <input
@@ -51,7 +51,7 @@ const ContactUs = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="text-sm font-bold py-3 px-10 text-center rounded-full border-2 border-yellow-400 w-1/2 lg:w-1/2 bg-transparent hover:bg-yellow-400 transition-all duration-300 mx-auto lg:mx-0"
+              className="text-sm font-bold py-3 md:px-10 text-center rounded-full border-2 border-yellow-400 w-1/2 lg:w-1/2 bg-transparent hover:bg-yellow-400 transition-all duration-300 mx-auto lg:mx-0"
             >
               SEND MESSAGE
             </button>

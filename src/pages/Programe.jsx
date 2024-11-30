@@ -29,21 +29,21 @@ const Programe = () => {
   return (
     <>
       {/* programe first page */}
-      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9">
+      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-8 px-[3%]  2xl:px-[18%]">
         <div className="container mx-auto  md:w-[93%]">
           <div className="flex flex-col items-center">
             <div className="bottom-background__img w-full">
               <img
                 src={peoplenew}
                 alt="People"
-                className="w-full lg:-[100px] h-full object-cover"
+                className="w-full lg:-[100px] h-full object-cover "
               />
             </div>
-            <div className="bottom-background__img">
+            <div className="bottom-background__img w-full">
               <img
                 src={yellowbgnew1}
                 alt="Yellow Background"
-                className="w-full h-[50px] lg:h-[130px] object-cover"
+                className="w-full h-[50px] lg:h-[130px] object-cover "
               />
             </div>
           </div>
@@ -128,17 +128,17 @@ const Programe = () => {
       </section>
 
       {/* Anubhoooo page */}
-      <section id="anubho" className="mb-9">
+      <section id="anubho" className="mb-9 ">
         {/* header of anubho */}
         <div
-          className="bg-cover  px-5 pt-5 pb-16"
+          className="bg-cover  px-5 pt-5 pb-16 "
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
-          <h1 className="text-4xl font-bold lg:text-6xl">Anubhoo</h1>
+          <h1 className="text-4xl font-bold lg:text-6xl align-text-bottom">Anubhoo</h1>
         </div>
-        <div className=" p-4 lg:p-0 ">
+        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[18%]  ">
           {/* top img of anubho */}
-        <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-4">
+        <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-4 ">
           <div className="">
             <img src={anubho1} alt="anubho image"></img>
           </div>
@@ -236,7 +236,7 @@ const Programe = () => {
           <h1 className="text-4xl font-bold lg:text-6xl text-white">Udaan</h1>
         </div>
         
-        <div className=" p-4 lg:p-0">
+        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[18%] ">
            {/* top img of udan */}
         <div className="md:flex m-auto  p-2 lg:px-4 lg:gap-4 ">
           <div className="w-full sm:p-6  ">
@@ -329,7 +329,7 @@ const Programe = () => {
         >
           <h1 className="text-4xl font-bold lg:text-6xl">Project Arya</h1>
         </div>
-        <div  className="  p-4 lg:p-0">
+        <div  className="  p-4 lg:p-0 px-[1%] 2xl:px-[18%] border-2 border-dashed border-blue-500">
            {/* top img of udan */}
         <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-3">
           <div className="w-[100%] md:w-[70%] ">
