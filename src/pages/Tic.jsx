@@ -8,17 +8,11 @@ import ticImage from '../imgs/ticimage1.jpg'
 import miniMagic from '../imgs/mini_magick20190427-2009-ff1osr.png'
 import tic2 from '../imgs/tic2.png'
 import test1 from '../imgs/testimonialImg.png'
-import Slider from 'react-slick'
 const Tic = () => {
-   var settings = {
-     speed: 500,
-     slidesToShow: 1,
-     slidesToScroll: 1,
-   };
 
   return (
     <div className='container m-auto pt-5 mt-10 md:mt-0'>
-      <div className='content max-w-6xl mt-5 p-3'>
+      <div className='content max-w-6xl m-auto mt-5 p-3'>
         <div className='understanding trauma lg:grid  lg:grid-cols-12 items-center justify-between  '>
           <div className='left text-3xl font-semibold text-center  hidden lg:block lg:col-span-5 '>
             <img
@@ -72,7 +66,7 @@ const Tic = () => {
         </div>
 
         {/* impact od trauma */}
-        <div className='understanding trauma  lg:grid lg:grid-cols-12   lg:w-full p-2 lg:p-2 m-auto   items-center '>
+        <div className='understanding trauma  lg:grid lg:grid-cols-12   lg:w-full p-2 lg:p-2 m-auto    '>
           <div className='left text-3xl text-center  hidden lg:flex justify-center font-semibold max col-span-5'>
             <img src={ticImage} alt='quote-left' className='w-[350px]' />
           </div>
@@ -116,7 +110,7 @@ const Tic = () => {
               alt='quote-right'
               className='lg:w-[30px] w-[50px] '
             />
-            <p className='text-2xl lg:text-lg relative '>
+            <p className='text-2xl lg:text-2xl relative '>
               Trauma-Informed Care understands and considers the pervasive
               nature of trauma and promotes environments of healing and recovery
               rather than practices and services that may inadvertently
@@ -130,7 +124,7 @@ const Tic = () => {
           </div>
         </div>
 
-        <div className='mt-10 max-w-7xl m-auto '>
+        <div className='lg:mt-10 mt-14  max-w-7xl m-auto '>
           <h2 className='lg:text-5xl text-3xl ml-2 font-bold lg:ml-12'>
             Principles of TIC
           </h2>
