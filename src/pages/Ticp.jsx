@@ -2,7 +2,12 @@ import React from 'react'
 
 const Ticp = () => {
   return (
-    <div>Ticp</div>
+    <div className="container border">
+      <div className="banner">
+        Ticp
+       p
+      </div>
+    </div>
   )
 }
 
