@@ -8,11 +8,14 @@ import stp5 from "../imgs/stp data/stp5.png";
 import stp6 from "../imgs/stp data/stp6.png";
 import videoposter from "../imgs/stp data/stpvideo1.png";
 
+import stpnew from "../imgs/stp data2/stp1.png"
+
+
 const ShortTraining = () => {
   return (
     <>
       {/* ---------------opening page------------------------------------ */}
-      <section className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10" style={{ backgroundImage: `url(${stp0})` }}>
+      <section className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10 w-full relative" style={{ backgroundImage: `url(${stp0})` }}>
   <div className="bg-customPeach opacity-80 w-full text-center">
     <h1 className="text-[38px] font-black tracking-wider my-3">Short Trainings Program</h1>
     <p className="text-[#109ca2] mb-[3%]">Bridging the gap from theory to practice</p>
@@ -44,15 +47,15 @@ const ShortTraining = () => {
 
 
  
-  <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px]">
+  <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[28%]">
     <p>Questions before registering? Please read through this page. If you still have questions, please send us an email at info@iamwellbeing.in</p>
   </div>
 </section>
 
       {/* ---------------------------------intention----------------------------- */}
-      <section className="mx-[10%] lg:mx-[3.5%] py-16  2xl:px-[24%] ">
+      <section className="mx-[10%] lg:mx-[3.5%] py-16  2xl:px-[22%] ">
         <h1 className="text-[40px] mb-2 font-black">Intention</h1>
-        <p className="text-justify leading-9 text-[22px]">With the intention of building the capacity of young mental health professionals and students towards trauma-informed practices and holistic healing, I Am Wellbeing has designed a series of short trainings which will be conducted by experts from the field.<br/>
+        <p className="text-justify leading-9 text-[22px] 2xl:text-[23px]">With the intention of building the capacity of young mental health professionals and students towards trauma-informed practices and holistic healing, I Am Wellbeing has designed a series of short trainings which will be conducted by experts from the field.<br/>
           The primary intent is to bridge the gap between academic knowledge and practical experience through the medium of experiential training that is backed by years of experience and research while being financially accessible.</p>
           <video preload="none" controls poster={videoposter} className=" w-[68%] m-auto mt-4">
     <source
@@ -61,23 +64,44 @@ const ShortTraining = () => {
     />
   </video>
       </section>
+
+
+
+
+
+
+
+
+
+
       {/* -------------------------------------objectives-------------------------- */}
-      <section id="objectives" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[24%] ">
+      <section id="objectives" className="sm:px-[2%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] ">
         <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
-        <img src={stp1} alt="img"/>
+        <img src={stpnew} className=" pr-0 sm:pr-[22%] border-2 border-red-600" alt="img"/>
+        
+       
       </section>
+
+
+
+
+
+
+
+
+
       {/* ----------------------------------------key features------------------------------ */}
-      <section id="Key-Features" className="px-[10%] lg:px-[3.5%] py-16  2xl:px-[24%] ">
+      <section id="Key-Features" className="px-[10%] lg:px-[3.5%] py-16  2xl:px-[26%] ">
         <h1 className="text-[40px] mb-2 font-black">key features</h1>
         <img src={stp4} alt="img" className="md:w-[98%]"/>
       </section>
       {/* ----------------------------------training--------------------------------- */}
-      <section id="training"  className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[24%] ">
+      <section id="training"  className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%] ">
         <h1 className="text-[40px] mb-6 font-black">Training schedule</h1>
-        <img src={stp3} alt="img" className="md:w-[64%]"/>
+        <img src={stp3} alt="img" className="md:w-[64%] 2xl:w-[100%]"/>
       </section>
       {/* ----------------------------Eligibility------------------------------- */}
-      <section id="eligibilty" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[24%] ">
+      <section id="eligibilty" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] ">
         <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
         <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
   <li>Students from psychology and allied fields (postgraduate students only).</li>
@@ -85,7 +109,7 @@ const ShortTraining = () => {
 </ul>
       </section>
       {/* -------------------------------contribution--------------------------- */}
-      <section  className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[24%] ">
+      <section  className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%] ">
         <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
         <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
   <li>Kindly note that the minimum contribution per training is INR 500 (Five Hundred Rupees Only). However, you can choose to contribute more.</li>
@@ -96,13 +120,13 @@ const ShortTraining = () => {
         <p className="text-justify leading-9 text-[22px] pt-6">All contributions will be utilised for Nairatmya Foundation's work with under- resourced communities...</p>
       </section>
       {/* ----------------------------know your trainers--------------------------- */}
-      <section  className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[24%] ">
+      <section  className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] ">
         <h1 className="text-[40px] mb-2 font-black">Know Your Trainers</h1>
         <img src={stp5} alt="img"/>
       </section>
 
       {/* --------------------------------know your trainers2--------------------------- */}
-      <section className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[24%]  ">
+      <section className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%]  ">
         <img src={stp6} alt="img" className=""/>
         <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8">
   <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-sm">

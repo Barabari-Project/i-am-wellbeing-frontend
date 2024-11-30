@@ -29,7 +29,7 @@ const Programe = () => {
   return (
     <>
       {/* programe first page */}
-      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-8 px-[3%]  2xl:px-[18%]">
+      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-8 px-[3%]  2xl:px-[28%] 2xl:pt-[6%]">
         <div className="container mx-auto  md:w-[93%]">
           <div className="flex flex-col items-center">
             <div className="bottom-background__img w-full">
@@ -136,7 +136,7 @@ const Programe = () => {
         >
           <h1 className="text-4xl font-bold lg:text-6xl align-text-bottom">Anubhoo</h1>
         </div>
-        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[18%]  ">
+        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[28%]  ">
           {/* top img of anubho */}
         <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-4 ">
           <div className="">
@@ -236,7 +236,7 @@ const Programe = () => {
           <h1 className="text-4xl font-bold lg:text-6xl text-white">Udaan</h1>
         </div>
         
-        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[18%] ">
+        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[28%] ">
            {/* top img of udan */}
         <div className="md:flex m-auto  p-2 lg:px-4 lg:gap-4 ">
           <div className="w-full sm:p-6  ">
@@ -329,7 +329,7 @@ const Programe = () => {
         >
           <h1 className="text-4xl font-bold lg:text-6xl">Project Arya</h1>
         </div>
-        <div  className="  p-4 lg:p-0 px-[1%] 2xl:px-[18%] border-2 border-dashed border-blue-500">
+        <div  className="  p-4 lg:p-0 px-[1%] 2xl:px-[28%] border-2 border-dashed border-blue-500">
            {/* top img of udan */}
         <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-3">
           <div className="w-[100%] md:w-[70%] ">
