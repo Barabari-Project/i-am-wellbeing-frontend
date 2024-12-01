@@ -29,6 +29,7 @@ import annualReport2 from '../imgs/aboutus-images/annualreport2.png'
 import annualReport3 from '../imgs/aboutus-images/annualreport3.png'
 import annualReport4 from '../imgs/aboutus-images/annualreport4.jpeg'
 import { Modal } from 'bootstrap'
+import Model from '../components/Model'
 
 
 
@@ -89,7 +90,7 @@ const About = () => {
     <>
       <section className='section about py-16 '>
         {/* model */}
-        <div
+        {/* <div
           className={`fixed  bg-[rgba(0,0,0,0.8)] top-0 z-20 transition-all duration-300 ease-in-out inset-0 ${
             isOpen ? "h-full" : "h-0"
           } overflow-hidden`}
@@ -114,7 +115,8 @@ const About = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Model isOpen={isOpen} setIsOpen={setIsOpen}  selectedTeamMember={selectedTeamMember} />
         {/* code model */}
 
         <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto mt-10 md:mt-0'>

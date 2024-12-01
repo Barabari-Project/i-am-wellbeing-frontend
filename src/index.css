@@ -128,6 +128,8 @@ color:#6c757d
 
 
 
+
+
 /* home page media query */
 
 @media screen and (min-width: 700px) {
@@ -178,4 +180,26 @@ color:#6c757d
         grid-template-columns: 1fr 1fr;
     } */
     
+}
+
+/* end about us page media */
+
+/* ticp page css */
+
+.ticp-banner{
+    background-image: url('./imgs/ticp-images/ticp5.png');
+    height: 270px;
+}
+
+@media screen and (max-width: 500px) {
+    
+    
+    .ticp-banner{
+        font-size: 25px;
+        height: 270px;
+        margin-top: 80px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }

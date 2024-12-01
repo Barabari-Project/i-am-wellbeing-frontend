@@ -50,7 +50,7 @@ const ShortTraining = () => {
 </section>
 
       {/* ---------------------------------intention----------------------------- */}
-      <section className="mx-[10%] lg:mx-[3.5%] py-16  ">
+      <section className="mx-[10%] lg:mx-[3.5%] py-16  2xl:px-[24%] ">
         <h1 className="text-[40px] mb-2 font-black">Intention</h1>
         <p className="text-justify leading-9 text-[22px]">With the intention of building the capacity of young mental health professionals and students towards trauma-informed practices and holistic healing, I Am Wellbeing has designed a series of short trainings which will be conducted by experts from the field.<br/>
           The primary intent is to bridge the gap between academic knowledge and practical experience through the medium of experiential training that is backed by years of experience and research while being financially accessible.</p>
@@ -62,22 +62,22 @@ const ShortTraining = () => {
   </video>
       </section>
       {/* -------------------------------------objectives-------------------------- */}
-      <section id="objectives" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach ">
+      <section id="objectives" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[24%] ">
         <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
         <img src={stp1} alt="img"/>
       </section>
       {/* ----------------------------------------key features------------------------------ */}
-      <section id="Key-Features" className="px-[10%] lg:px-[3.5%] py-16 ">
+      <section id="Key-Features" className="px-[10%] lg:px-[3.5%] py-16  2xl:px-[24%] ">
         <h1 className="text-[40px] mb-2 font-black">key features</h1>
         <img src={stp4} alt="img" className="md:w-[98%]"/>
       </section>
       {/* ----------------------------------training--------------------------------- */}
-      <section id="training"  className="px-[10%] lg:px-[3.5%] py-7 ">
+      <section id="training"  className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[24%] ">
         <h1 className="text-[40px] mb-6 font-black">Training schedule</h1>
         <img src={stp3} alt="img" className="md:w-[64%]"/>
       </section>
       {/* ----------------------------Eligibility------------------------------- */}
-      <section id="eligibilty" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach">
+      <section id="eligibilty" className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[24%] ">
         <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
         <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
   <li>Students from psychology and allied fields (postgraduate students only).</li>
@@ -85,7 +85,7 @@ const ShortTraining = () => {
 </ul>
       </section>
       {/* -------------------------------contribution--------------------------- */}
-      <section  className="px-[10%] lg:px-[3.5%] py-7 ">
+      <section  className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[24%] ">
         <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
         <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
   <li>Kindly note that the minimum contribution per training is INR 500 (Five Hundred Rupees Only). However, you can choose to contribute more.</li>
@@ -96,14 +96,14 @@ const ShortTraining = () => {
         <p className="text-justify leading-9 text-[22px] pt-6">All contributions will be utilised for Nairatmya Foundation's work with under- resourced communities...</p>
       </section>
       {/* ----------------------------know your trainers--------------------------- */}
-      <section  className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach">
+      <section  className="px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[24%] ">
         <h1 className="text-[40px] mb-2 font-black">Know Your Trainers</h1>
         <img src={stp5} alt="img"/>
       </section>
 
       {/* --------------------------------know your trainers2--------------------------- */}
-      <section className="px-[10%] lg:px-[3.5%] py-7 ">
-        <img src={stp6} alt="img" />
+      <section className="px-[10%] lg:px-[3.5%] py-7 2xl:px-[24%]  ">
+        <img src={stp6} alt="img" className=""/>
         <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8">
   <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-sm">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform" target="_blank">REGISTER HERE</a>

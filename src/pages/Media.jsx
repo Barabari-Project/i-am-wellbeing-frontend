@@ -43,7 +43,7 @@ const Media = () => {
     },
   ]
   return (
-    <div className="lg:flex py-[3%] px-[3%]  pt-[4.5%] lg:gap-3 m-auto w-[99%]">
+    <div className="lg:flex py-[3%] px-[3%]  pt-[4.5%] lg:gap-3 m-auto w-[99%] 2xl:px-[10%]">
   {/* Left side */}
   <div className="lg:flex-1 lg:px-1">
   <video preload="none" controls poster={angerImg} className="lg:h-[82%] lg:w-full lg:px-[2%] ">
