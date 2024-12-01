@@ -29,23 +29,23 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="First Name*"
-              className="h-12 outline-none border-2 border-gray-100 rounded-full px-8 w-full bg-gray-100 transition duration-300 focus:bg-white md:w-1/2 lg:w-1/2"
+              className="h-12 outline-none border-2 border-gray-100 rounded-full px-10 py-2 w-full bg-gray-100 transition duration-300 focus:bg-slate-300 md:w-1/2 lg:w-1/2"
             />
             <input
               type="email"
               placeholder="Email*"
-              className="h-12 outline-none border-2 border-gray-100 rounded-full px-8 w-full bg-gray-100 transition duration-300 focus:bg-white md:w-1/2 lg:w-1/2"
+              className="h-12 py-2 outline-none border-2 border-gray-100 rounded-full px-10 w-full bg-gray-100 transition duration-300 focus:bg-slate-300 md:w-1/2 lg:w-1/2"
             />
             <input
               type="number"
               placeholder="Phone"
-              className="h-12 outline-none border-2 border-gray-100 rounded-full px-8 w-full bg-gray-100 transition duration-300 focus:bg-white md:w-1/2 lg:w-1/2"
+              className="h-12 py-2 outline-none border-2 border-gray-100 rounded-full px-10 w-full bg-gray-100 transition duration-300 focus:bg-slate-300 md:w-1/2 lg:w-1/2"
             />
             <textarea
               cols={3}
               rows={5}
               placeholder="Message"
-              className="outline-none border-2 border-gray-100 rounded-lg px-6 py-4 w-full bg-gray-100 transition duration-300 focus:bg-white md:w-1/2 lg:w-1/2"
+              className="outline-none  border-2 border-gray-100 rounded-lg px-10 py-4 w-full bg-gray-100 transition duration-300 focus:bg-slate-300 md:w-1/2 lg:w-1/2"
             ></textarea>
 
             {/* Submit Button */}
