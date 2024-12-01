@@ -44,6 +44,16 @@ body{
      padding : 0;
 }
 
+.btn:hover {
+    color: #333;
+    background-color: #f9b185;
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+}
+
 
 
 .slick-dots {

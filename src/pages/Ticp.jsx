@@ -418,7 +418,7 @@ const Ticp = () => {
           </div>
 
           <div className='btns max-w-3xl flex flex-wrap items-center gap-5 lg:gap-20 justify-center m-auto mt-10'>
-            <button className=' p-3 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
+            <button className='btn p-3 transition-all duration-300 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
               <a
                 href='https://drive.google.com/file/d/1KC4EkwWfn7gOndZWCSWj4uknVJKG8S9I/view?usp=sharing'
                 target='_blank'
@@ -426,7 +426,7 @@ const Ticp = () => {
                 DOWNLOAD THE BROCHURE
               </a>
             </button>
-            <button className='p-3 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
+            <button className='p-3 transition-all duration-300 btn bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
               <a
                 href='https://docs.google.com/forms/d/1XndjGihgSJNstgCGXm1J1shpAJeRuGz1C9foyq-Lljc/closedform?pli=1'
                 target='_blank'
