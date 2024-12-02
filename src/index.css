@@ -44,6 +44,16 @@ body{
      padding : 0;
 }
 
+.btn:hover {
+    color: #333;
+    background-color: #f9b185;
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+}
+
 
 
 .slick-dots {
@@ -81,6 +91,7 @@ body{
     overflow-x: hidden;
     height: auto;
 }
+
 .event-item__title:hover{
 color:#6c757d
 }
@@ -128,6 +139,13 @@ color:#6c757d
 
 
 
+.slick-prev:before, .slick-next:before{
+    opacity: 0;
+}
+.slick-prev{
+    opacity: 0;
+}
+
 /* home page media query */
 
 @media screen and (min-width: 700px) {
@@ -161,10 +179,10 @@ color:#6c757d
     
 
     .w-full{
-        width: 99%;
+        width: 100%;
         margin: 0 auto;
         overflow-x: hidden;
-        ;
+        
     }
 }
 /* end home page media query */
@@ -178,4 +196,24 @@ color:#6c757d
         grid-template-columns: 1fr 1fr;
     } */
     
+}
+
+/* end about us page media */
+
+/* ticp page css */
+
+.ticp-banner{
+    background-image: url('./imgs/ticp-images/ticp5.png');
+    height: 270px;
+}
+
+@media screen and (max-width: 500px) {
+    .ticp-banner{
+        font-size: 25px;
+        height: 270px;
+        margin-top: 80px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
