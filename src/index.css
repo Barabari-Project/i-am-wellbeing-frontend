@@ -142,6 +142,9 @@ color:#6c757d
 .slick-prev:before, .slick-next:before{
     opacity: 0;
 }
+.slick-prev{
+    opacity: 0;
+}
 
 /* home page media query */
 
@@ -179,7 +182,7 @@ color:#6c757d
         width: 100%;
         margin: 0 auto;
         overflow-x: hidden;
-        ;
+        
     }
 }
 /* end home page media query */
