@@ -293,7 +293,7 @@ const Ticp = () => {
             <p className='mb-2'>Above 85%- 5( Excellent) </p>
             <p className='mb-2'>70-85% - 4 (Good) </p>
             <p className='mb-2'>51-65% - 3( Above Average)</p>
-            <p className='mb-2'>31-50- 2 (Average) >30%- 1 (Below Average)</p>
+            <p className='mb-2'>31-50- 2 (Average)  30%- 1 (Below Average)</p>
           </div>
 
           <h1 className='title text-3xl font-bold mb-3'>

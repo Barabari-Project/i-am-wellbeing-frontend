@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 
 import facebook from '../imgs/icons/f.webp';
 import instagram from '../imgs/icons/i.webp';
@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 
 
 const Header = () => {
-  const [toggle , setToggle] = useState(false);
-  const [show , setShow] = useState(false); // state for side bar array to show and hide
-  const [isVisible, setIsVisible] = useState(false);  
+  const [show , setShow] = useState(false); // state for show sub menu 
+  const [toggle , setToggle] = useState(false); // state for side bar array to show and hide
+   
 
   return (
     <>
@@ -96,11 +96,11 @@ const Header = () => {
 
       {/* sub menu list  */}
 
-      <div className='flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full'> 
+      <div className='flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full'>
         <img src={logo} alt='' className='w-[80px]' />
         <HiMenuAlt3
           className='text-3xl font-[300] cursor-pointer'
-          onClick={() => setToggle(!toggle)}
+          onClick={() => setToggle(true)}
         />
       </div>
       {/* end hamburgur menu */}
@@ -111,7 +111,7 @@ const Header = () => {
           e.stopPropagation();
           setToggle(false);
         }}
-        className={`fixed z-10 top-0 md:hidden w-full h-screen bg-[rgba(0,0,0,0.6)] ${
+        className={`fixed top-0 left-0  z-10 w-full h-screen bg-[rgba(0,0,0,0.6)] ${
           toggle ? "translate-x-0" : "translate-x-[-1000px]"
         }`}
       ></div>
@@ -125,7 +125,7 @@ const Header = () => {
           id='nav-bar'
           className='flex items-center justify-end w-[80%] m-auto bg-[#F9F7F6]'
         >
-          <button className='md:hidden pt-2' onClick={() => setToggle(!toggle)}>
+          <button className='md:hidden pt-2' onClick={() => setToggle(false)}>
             <i className='fa-solid fa-close text-xl'></i>
           </button>
         </div>
@@ -134,6 +134,7 @@ const Header = () => {
           <Link
             to='/'
             className='font-[300]  text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
+            onClick={() => setToggle(false)}
           >
             HOME
           </Link>
@@ -141,7 +142,7 @@ const Header = () => {
           <Link
             to='/about-us'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
-            href='#'
+            onClick={() => setToggle(false)}
           >
             ABOUT US
           </Link>
@@ -149,19 +150,17 @@ const Header = () => {
           <Link
             to='/tic'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
-            href='#'
+            onClick={() => setToggle(false)}
           >
             TIC
           </Link>
 
-          <a className='font-[300] text-[#282A43] p-2  rounded-md ' href='#'>
+          <a
+            className='font-[300] text-[#282A43] p-2  rounded-md '
+            onClick={() => setShow(!show)}
+          >
             <span className='flex items-center gap-2'>
-              TRAINING{" "}
-              {show ? (
-                <BiUpArrowAlt onClick={() => setShow(false)} />
-              ) : (
-                <BiDownArrowAlt onClick={() => setShow(true)} />
-              )}
+              TRAINING {show ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
             </span>
             <div
               className={`overflow-hidden transition-all duration-500 ${
@@ -169,10 +168,10 @@ const Header = () => {
               }`}
             >
               <ul className='ml-6 mt-5 flex flex-col gap-4'>
-                <Link to='/ticp'>
+                <Link to='/ticp' onClick={() => setToggle(false)}>
                   <li className='text-gray-500'>TICP</li>
                 </Link>
-                <Link to='/short-training'>
+                <Link to='/short-training' onClick={() => setToggle(false)}>
                   <li className='text-gray-500'>Short Training</li>
                 </Link>
               </ul>
@@ -182,7 +181,7 @@ const Header = () => {
           <Link
             to='programs'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300  rounded-md '
-            href='#'
+            onClick={() => setToggle(false)}
           >
             PROGRAMS
           </Link>
@@ -190,7 +189,7 @@ const Header = () => {
           <Link
             to='/media'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
-            href='#'
+            onClick={() => setToggle(false)}
           >
             MEDIA
           </Link>
@@ -198,7 +197,7 @@ const Header = () => {
           <Link
             to='/contact-us'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
-            href='#'
+            onClick={() => setToggle(false)}
           >
             CONTACT
           </Link>

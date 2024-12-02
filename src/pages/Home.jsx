@@ -10,6 +10,7 @@ import Testimonials from "../components/Testimonials";
 import Carousel from "../components/Carousel";
 import AboutUsCarousel from "../components/AboutUsCarousel";
 import ClientCarousel from "../components/ClientCarousel";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [num1, setNum1] = useState(0); // State for the first counter
@@ -76,7 +77,7 @@ const Home = () => {
   return (
     <div className='main w-full'>
       <Carousel />
-      
+
       <section className='section about-us py-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='flex flex-col lg:flex-row items-center'>
@@ -136,22 +137,22 @@ const Home = () => {
               <div className='event-item text-center'>
                 <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
                   <h3 className='event-item__title'>
-                    <a href='program.php' className='text-4xl font-[300]'>
+                    <Link to='/programs' className='text-4xl font-[300]'>
                       Anubhoo
-                    </a>
+                    </Link>
                   </h3>
                   <h6 className='event-item__title text-md font-[400]'>
-                    <a href='#' className='text-gray-700'>
+                    <a className='text-gray-700 cursor-default'>
                       Trauma-Informed care <br />
                       training
                     </a>
                   </h6>
-                  <a
+                  <Link
+                    to='/programs'
                     className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
-                    href='program.php'
                   >
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -161,22 +162,22 @@ const Home = () => {
               <div className='event-item text-center'>
                 <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
                   <h3 className='event-item__title'>
-                    <a href='program.php' className='text-4xl font-[300]'>
+                    <Link to='/programs' className='text-4xl font-[300]'>
                       Udaan
-                    </a>
+                    </Link>
                   </h3>
                   <h6 className='event-item__title text-md font-[400]'>
-                    <a href='#' className='text-gray-700'>
+                    <a className='text-gray-700 cursor-default'>
                       Individual counselling and
                       <br /> therapy
                     </a>
                   </h6>
-                  <a
+                  <Link
+                    to='/programs'
                     className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
-                    href='program.php'
                   >
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -186,22 +187,22 @@ const Home = () => {
               <div className='event-item text-center'>
                 <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
                   <h3 className='event-item__title'>
-                    <a href='program.php' className='text-4xl font-[300]'>
+                    <Link to='/programs' className='text-4xl font-[300]'>
                       Project Arya
-                    </a>
+                    </Link>
                   </h3>
                   <h6 className='event-item__title text-md font-[400]'>
-                    <a href='#' className='text-gray-700'>
+                    <a className='text-gray-700 cursor-default'>
                       Trauma-informed social- <br />
                       emotional learning
                     </a>
                   </h6>
-                  <a
+                  <Link
+                    to='/programs'
                     className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
-                    href='program.php'
                   >
                     Read More
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -310,7 +311,6 @@ const Home = () => {
       </section>
 
       <ClientCarousel />
-
       <Testimonials />
     </div>
   );
