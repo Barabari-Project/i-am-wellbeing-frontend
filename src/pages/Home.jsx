@@ -310,7 +310,6 @@ const Home = () => {
       </section>
 
       <ClientCarousel />
-
       <Testimonials />
     </div>
   );
