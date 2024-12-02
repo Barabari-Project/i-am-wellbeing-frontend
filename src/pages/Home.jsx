@@ -77,7 +77,7 @@ const Home = () => {
   return (
     <div className='main w-full'>
       <Carousel />
-      
+
       <section className='section about-us py-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='flex flex-col lg:flex-row items-center'>
@@ -137,7 +137,7 @@ const Home = () => {
               <div className='event-item text-center'>
                 <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
                   <h3 className='event-item__title'>
-                    <Link to='/program' className='text-4xl font-[300]'>
+                    <Link to='/programs' className='text-4xl font-[300]'>
                       Anubhoo
                     </Link>
                   </h3>
@@ -147,7 +147,8 @@ const Home = () => {
                       training
                     </a>
                   </h6>
-                  <Link to="/program"
+                  <Link
+                    to='/programs'
                     className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
                   >
                     Read More
@@ -161,7 +162,7 @@ const Home = () => {
               <div className='event-item text-center'>
                 <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
                   <h3 className='event-item__title'>
-                    <Link to="/program"  className='text-4xl font-[300]'>
+                    <Link to='/programs' className='text-4xl font-[300]'>
                       Udaan
                     </Link>
                   </h3>
@@ -171,7 +172,8 @@ const Home = () => {
                       <br /> therapy
                     </a>
                   </h6>
-                  <Link to="/program"
+                  <Link
+                    to='/programs'
                     className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
                   >
                     Read More
@@ -185,7 +187,7 @@ const Home = () => {
               <div className='event-item text-center'>
                 <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
                   <h3 className='event-item__title'>
-                    <Link to="/program" className='text-4xl font-[300]'>
+                    <Link to='/programs' className='text-4xl font-[300]'>
                       Project Arya
                     </Link>
                   </h3>
@@ -195,7 +197,8 @@ const Home = () => {
                       emotional learning
                     </a>
                   </h6>
-                  <Link to="/program"
+                  <Link
+                    to='/programs'
                     className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
                   >
                     Read More
