@@ -234,7 +234,7 @@ const ShortTraining = () => {
               <h2 className="text-lg md:text-2xl font-bold mb-2">
                 Shambhavi Singh (She/Her)
               </h2>
-              <p className="   leading-relaxed">
+              <p className=" text-justify  leading-relaxed">
                 Shambhavi has studied Child and Adolescent Psychology at Queen's
                 University, Belfast. She is a Trauma-Informed Arts-Based
                 Therapist and Solution-Focused Brief Therapist with expertise in
@@ -259,7 +259,7 @@ const ShortTraining = () => {
               <h2 className="text-lg md:text-2xl font-bold mb-2">
                 Akanksha Chandele (They/Them)
               </h2>
-              <p className="   leading-relaxed">
+              <p className=" text-justify  leading-relaxed">
                 Akanksha is a Holistic Trauma Therapist actively engaged in
                 working with survivors of abuse and trauma. Their practice is
                 rooted in building interconnectedness and compassion for all.
@@ -288,7 +288,7 @@ const ShortTraining = () => {
               <h2 className="text-lg md:text-2xl font-bold mb-2">
                 Rakshita Goel (She/Her)
               </h2>
-              <p className="   leading-relaxed">
+              <p className="text-justify   leading-relaxed">
                 Rakshita Goel is a Creative Arts therapist specialising in
                 Dramatherapy, as well as a certified Emotional Freedom Technique
                 (EFT) practitioner, with over 8 years of experience in mental
@@ -312,7 +312,7 @@ const ShortTraining = () => {
               <h2 className="text-lg md:text-2xl font-bold mb-2">
                 Maitreyi Nigwekar (She/her)
               </h2>
-              <p className="   leading-relaxed">
+              <p className=" text-justify  leading-relaxed">
                 Maitreyi is a Trauma-Informed Healer working with survivors of
                 C-PTSD, abuse, & individuals moving through grief. Her approach
                 involves working with different archetypes, belief systems,

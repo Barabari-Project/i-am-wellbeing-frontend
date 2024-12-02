@@ -329,8 +329,8 @@ const Programe = () => {
         >
           <h1 className="text-4xl font-bold lg:text-6xl">Project Arya</h1>
         </div>
-        <div  className="  p-4 lg:p-0 px-[1%] 2xl:px-[28%] border-2 border-dashed border-blue-500">
-           {/* top img of udan */}
+        <div  className="  p-4 lg:p-0 px-[1%] 2xl:px-[28%] border-blue-500">
+           {/* top img of arya */}
         <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-3">
           <div className="w-[100%] md:w-[70%] ">
             <img src={arya1} alt="anubho image"></img>
@@ -351,7 +351,7 @@ const Programe = () => {
             </p>
           </div>
         </div>
-         {/* 3slides of anubho */}
+         {/* 3slides of arya */}
         <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
           <img src={arya2} alt="img" className=" sm:w-1/5" />
           <img src={arya3} alt="img" className="  sm:w-1/5" />
