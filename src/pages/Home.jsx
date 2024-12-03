@@ -77,8 +77,8 @@ const Home = () => {
   return (
     <div className='main w-full'>
       <Carousel />
-      <section className='section about-us py-8 border'>
-        <div className='max-w-7xl  mx-auto'>
+      <section className='section about-us py-8'>
+        <div className='max-w-6xl 2xl:max-w-7xl  mx-auto'>
           <div className='flex flex-col lg:flex-row '>
             <div className='w-full lg:w-1/2 xl:w-1/3'>
               <img
