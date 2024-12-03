@@ -29,7 +29,7 @@ const Programe = () => {
   return (
     <>
       {/* programe first page */}
-      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-8 px-[3%]  2xl:px-[28%] 2xl:pt-[6%]">
+      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-6 px-[8%]  xxxl:px-[13%] xxxl:pt-[6%]">
         <div className="container mx-auto  md:w-[93%]">
           <div className="flex flex-col items-center">
             <div className="bottom-background__img w-full">
@@ -134,19 +134,19 @@ const Programe = () => {
           className="bg-cover  px-5 pt-5 pb-16 "
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
-          <h1 className="text-4xl font-bold lg:text-6xl align-text-bottom">Anubhoo</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl align-text-bottom">Anubhoo</h1>
         </div>
-        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[28%]  ">
+        <div className=" p-4 lg:p-4 px-[8%] xxxl:px-[14%]  ">
           {/* top img of anubho */}
-        <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-4 ">
-          <div className="">
+        <div className="lg:flex m-auto  px-4 lg:px-11 lg:gap-4 ">
+          <div className="m-auto">
             <img src={anubho1} alt="anubho image"></img>
           </div>
           <div className="w-full sm:p-3  ">
             <h1 className="text-right w-[99%] font-bold text-4xl pb-4">
               Creating ecosystems of care
             </h1>
-            <p className="text-[22px] leading-9 text-justify">
+            <p className="text-[22px] leading-9 text-justify ">
               With the dream of Making India Trauma-Informed, Anubhoo is a
               training and skill building initiative which focuses on equipping
               and training all the stakeholders, like psychologists, social
@@ -233,12 +233,12 @@ const Programe = () => {
           className="bg-cover bg-center px-5 pt-5 pb-16"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
-          <h1 className="text-4xl font-bold lg:text-6xl text-white">Udaan</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl text-white">Udaan</h1>
         </div>
         
-        <div className=" p-4 lg:p-0 px-[1%] 2xl:px-[28%] ">
+        <div className=" p-4 lg:p-4 px-[8%] xxxl:px-[14%] ">
            {/* top img of udan */}
-        <div className="md:flex m-auto  p-2 lg:px-4 lg:gap-4 ">
+        <div className="lg:flex m-auto  p-2 lg:px-4 lg:gap-4 ">
           <div className="w-full sm:p-6  ">
             <h1 className=" w-[99%] font-bold text-4xl pb-4">
               Quality therapeutic intervention
@@ -251,7 +251,7 @@ const Programe = () => {
               marginalisation from a young age.
             </p>
           </div>
-          <div className="w-[100%] md:w-[70%] sm:pr-10 ">
+          <div className="w-[100%] lg:w-[70%] sm:pr-10  m-auto ">
             <img src={udan1} alt="anubho image"></img>
           </div>
         </div>
@@ -327,12 +327,12 @@ const Programe = () => {
           className="bg-cover  px-5 pt-5 pb-16"
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
-          <h1 className="text-4xl font-bold lg:text-6xl">Project Arya</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl">Project Arya</h1>
         </div>
-        <div  className="  p-4 lg:p-0 px-[1%] 2xl:px-[28%] border-blue-500">
+        <div  className="  p-4 lg:p-4 px-[8%] xxxl:px-[14%] border-blue-500">
            {/* top img of arya */}
-        <div className="md:flex m-auto  px-4 lg:px-11 lg:gap-3">
-          <div className="w-[100%] md:w-[70%] ">
+        <div className="lg:flex m-auto  px-4 lg:px-11 lg:gap-3">
+          <div className="w-[100%] lg:w-[70%] ">
             <img src={arya1} alt="anubho image"></img>
           </div>
           <div className="w-full sm:p-3  ">

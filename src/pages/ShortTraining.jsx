@@ -23,7 +23,7 @@ const ShortTraining = () => {
         style={{ backgroundImage: `url(${stp0})` }}
       >
         <div className="bg-customPeach opacity-80 w-full text-center">
-          <h1 className="text-[38px] font-black tracking-wider my-3">
+          <h1 className="text-[38px] font-black tracking-wider my-2">
             Short Trainings Program
           </h1>
           <p className="text-[#109ca2] mb-[3%]">
@@ -32,21 +32,22 @@ const ShortTraining = () => {
         </div>
 
         {/* Buttons Section */}
-        <div className=" w-[78%] m-auto md:flex md:flex-wrap md:justify-center md:items-center mt-[100px]">
-          <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mr-6 mb-2">
-            <a href="#objectives">Objectives</a>
-          </button>
-          <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mr-6 mb-2">
-            <a href="#Key-Features">Key Features</a>
-          </button>
-          <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mr-6 mb-2">
-            <a href="#training">Training Schedule</a>
-          </button>
-          <button className="bg-white px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-2">
-            <a href="#eligibilty">Eligibility</a>
-          </button>
-        </div>
-
+        <div className="w-full  flex items-center justify-center ">
+  <div className="w-[100%] sm:w-[78%] flex flex-col  md:flex-row flex-wrap justify-center items-center mt-[100px]">
+    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2  max-w-[200px] xs:max-w-none">
+      <a href="#objectives">Objectives</a>
+    </button>
+    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
+      <a href="#Key-Features">Key Features</a>
+    </button>
+    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
+      <a href="#training">Training Schedule</a>
+    </button>
+    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
+      <a href="#eligibilty">Eligibility</a>
+    </button>
+  </div>
+</div>
         {/* Apply Now Button */}
         <div className="flex justify-center my-7">
           <button className="bg-customPeach text-white px-[62px] py-[12px] rounded-md font-extrabold text-[14px] md:text-[18px]">
@@ -59,7 +60,7 @@ const ShortTraining = () => {
           </button>
         </div>
 
-        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[28%]">
+        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[28%] leading-7">
           <p>
             Questions before registering? Please read through this page. If you
             still have questions, please send us an email at
@@ -117,7 +118,7 @@ const ShortTraining = () => {
         {/* <img src={stp4} alt="img" className="md:w-[98%]"/> */}
 
         <div>
-          <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[16px] sm:text-[18px] m-auto md:text-[22px] xl:w-[80%] w-[97%] lg:text-2xl  2xl:w-[97%] 2xl:text-3xl rounded-md">
+          <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px]  2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Who is it for?</h1>
             <div className="bg-customPeach w-[72%] my-3 px-4 flex flex-col justify-center rounded-md">
               <h1>
@@ -127,7 +128,7 @@ const ShortTraining = () => {
             </div>
           </div>
 
-          <div className=" bg-customPeach  mt-5 flex text-[10px] xs:text-[16px] sm:text-[18px] m-auto md:text-[22px] xl:w-[80%] w-[97%] lg:text-2xl 2xl:w-[97%] 2xl:text-3xl rounded-md">
+          <div className=" bg-customPeach  mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px] 2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Expert Facilitators</h1>
             <div className=" bg-[#f6f0df] w-[72%] my-3 px-4 flex flex-col justify-center rounded-md">
               <h1>
@@ -137,7 +138,7 @@ const ShortTraining = () => {
             </div>
           </div>
 
-          <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[16px] sm:text-[18px] m-auto  md:text-[22px] xl:w-[80%] w-[97%] lg:text-2xl 2xl:w-[97%] 2xl:text-3xl rounded-md">
+          <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto  md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px] 2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Low-Cost Initiative</h1>
             <div className="bg-customPeach w-[72%] my-3 px-4 flex flex-col justify-center rounded-md">
               <h1>
@@ -147,7 +148,7 @@ const ShortTraining = () => {
             </div>
           </div>
 
-          <div className=" bg-customPeach mt-5 flex text-[10px] xs:text-[16px] sm:text-[18px]  m-auto md:text-[22px]  xl:w-[80%] w-[97%] lg:text-2xl 2xl:w-[97%] 2xl:text-3xl rounded-md">
+          <div className=" bg-customPeach mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px]  m-auto md:text-[18px]  xl:w-[80%] w-[97%] lg:text-[20px] 2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Certificate</h1>
             <div className=" bg-[#f6f0df] w-[72%] my-3 px-4 flex flex-col justify-center rounded-md">
               <h1>
@@ -157,7 +158,7 @@ const ShortTraining = () => {
             </div>
           </div>
 
-          <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[16px] sm:text-[18px] m-auto  md:text-[22px] xl:w-[80%] w-[97%] lg:text-2xl 2xl:w-[97%] 2xl:text-3xl rounded-md">
+          <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto  md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px] 2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Free Resources</h1>
             <div className="bg-customPeach w-[72%] my-3 px-4 flex flex-col justify-center rounded-md">
               <h1>
@@ -172,7 +173,7 @@ const ShortTraining = () => {
       {/* ----------------------------------training--------------------------------- */}
       <section
         id="training"
-        className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%] "
+        className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-5 2xl:px-[26%] "
       >
         <h1 className="text-[40px] mb-6 font-black">Training schedule</h1>
         <img src={stp3} alt="img" className="md:w-[64%] 2xl:w-[100%]" />
@@ -183,7 +184,7 @@ const ShortTraining = () => {
         className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
-        <ul class="list-disc pl-[10%]  leading-9 text-[22px]">
+        <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
           <li>
             Students from psychology and allied fields (postgraduate students
             only).
@@ -194,7 +195,7 @@ const ShortTraining = () => {
       {/* -------------------------------contribution--------------------------- */}
       <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%] ">
         <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
-        <ul class="list-disc pl-[10%]  leading-9 text-[22px]">
+        <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
           <li>
             Kindly note that the minimum contribution per training is INR 500
             (Five Hundred Rupees Only). However, you can choose to contribute
@@ -323,8 +324,8 @@ const ShortTraining = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8">
-          <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-sm">
+        <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8 ">
+          <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-[12px]">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform"
               target="_blank"
@@ -332,7 +333,7 @@ const ShortTraining = () => {
               REGISTER HERE
             </a>
           </button>
-          <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px mt-4 md:mt-0 transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1  text-sm">
+          <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px mt-4 md:mt-0 transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1  text-[12px]">
             <a
               href="https://www.iamwellbeing.org/imgs/Short%20Trainings%20Brochure%20Final%20.pdf"
               target="_blank"

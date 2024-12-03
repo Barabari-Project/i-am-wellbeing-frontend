@@ -6,6 +6,7 @@ export default {
       screens: {
         xs: "475px",
         md: "900px",
+        xxxl:"1600px"
       },
       colors: {
         customPeach: '#F9B185', 
