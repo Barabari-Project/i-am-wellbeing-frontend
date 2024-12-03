@@ -60,7 +60,7 @@ const ShortTraining = () => {
           </button>
         </div>
 
-        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[28%] leading-7">
+        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[20%] leading-7">
           <p>
             Questions before registering? Please read through this page. If you
             still have questions, please send us an email at
@@ -70,7 +70,7 @@ const ShortTraining = () => {
       </section>
 
       {/* ---------------------------------intention----------------------------- */}
-      <section className="mx-[10%] lg:mx-[3.5%] py-16  2xl:px-[22%] ">
+      <section className="mx-[10%] lg:mx-[3.5%] py-16  2xl:px-[17%] ">
         <h1 className="text-[40px] mb-2 font-black">Intention</h1>
         <p className="text-justify leading-9 text-[22px] 2xl:text-[23px]">
           With the intention of building the capacity of young mental health
@@ -99,7 +99,7 @@ const ShortTraining = () => {
       {/* -------------------------------------objectives-------------------------- */}
       <section
         id="objectives"
-        className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] "
+        className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
         <img
@@ -112,7 +112,7 @@ const ShortTraining = () => {
       {/* ----------------------------------------key features------------------------------ */}
       <section
         id="Key-Features"
-        className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-16  2xl:px-[26%] "
+        className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-16  2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">key features</h1>
         {/* <img src={stp4} alt="img" className="md:w-[98%]"/> */}
@@ -173,7 +173,7 @@ const ShortTraining = () => {
       {/* ----------------------------------training--------------------------------- */}
       <section
         id="training"
-        className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-5 2xl:px-[26%] "
+        className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-5 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-6 font-black">Training schedule</h1>
         <img src={stp3} alt="img" className="md:w-[64%] 2xl:w-[100%]" />
@@ -181,7 +181,7 @@ const ShortTraining = () => {
       {/* ----------------------------Eligibility------------------------------- */}
       <section
         id="eligibilty"
-        className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] "
+        className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
         <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
@@ -193,7 +193,7 @@ const ShortTraining = () => {
         </ul>
       </section>
       {/* -------------------------------contribution--------------------------- */}
-      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%] ">
+      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%] ">
         <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
         <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
           <li>
@@ -218,7 +218,7 @@ const ShortTraining = () => {
         </p>
       </section>
       {/* ----------------------------know your trainers--------------------------- */}
-      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[26%] ">
+      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] ">
         <h1 className="text-3xl sm:text-[40px] mb-2 font-black">
           Know Your Trainers
         </h1>
@@ -276,7 +276,7 @@ const ShortTraining = () => {
       </section>
 
       {/* --------------------------------know your trainers2--------------------------- */}
-      <section className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[26%]  ">
+      <section className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%]  ">
         <div className="lg:px-[2%]">
           <div className="lg:flex mt-[4%] gap-5 leading-10">
             <img
