@@ -31,11 +31,11 @@ const Carousel = () => {
   return (
     <>
       <div className='hidden lg:block'>
-        <Slider {...settings} className='border-b lg:border-none  mt-10'>
-          <div className=' w-full  items-center relative flex'>
-            <img src={a2} alt='' />
+        <Slider {...settings} className=''>
+          <div className=' w-full  items-center relative flex text-center'>
+            <img src={a2} alt='' className='w-full' />
 
-            <div className='absolute top-5 lg:top-20 lg:left-10 left-5 text-4xl lg:text-6xl font-bold'>
+            <div className='absolute top-5 md:top-10 2xl:top-40  lg:left-10 left-5 text-5xl 2xl:text-8xl  font-bold'>
               <p>Mitigating</p>
               <p>the impact of</p>
               <p>Adverse</p>
@@ -45,17 +45,17 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex'>
-            <img src={a1} alt='' className='' />
-            <div className='absolute top-5 lg:top-20 lg:left-10 left-5 text-4xl lg:text-6xl font-bold'>
+            <img src={a1} alt='' className='w-full' />
+            <div className='absolute top-5 md:top-10 2xl:top-40  lg:left-10 left-5 text-5xl 2xl:text-8xl  font-bold'>
               <p>Creating</p>
               <p>Ecosystem</p>
               <p>of Care</p>
             </div>
           </div>
 
-          <div className='w-full items-center relative flex'>
-            <img src={a3} alt='' />
-            <div className='absolute top-5 lg:top-20 lg:left-10 left-5 text-4xl lg:text-6xl font-bold'>
+          <div className='w-full items-center relative flex '>
+            <img src={a3} alt='' className="w-full" />
+            <div className='absolute top-5 md:top-10 2xl:top-40  lg:left-10 left-5 text-5xl 2xl:text-8xl  font-bold'>
               <p>Making</p>
               <p>India</p>
               <p>Trauma-</p>
