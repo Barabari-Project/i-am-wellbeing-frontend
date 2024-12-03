@@ -84,7 +84,7 @@ const Ticp = () => {
         </div>
       </div>
 
-      <div className='container w-[98%] sm:max-w-7xl  lg:max-w-6xl m-auto lg:bg-white pt-2'>
+      <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2'>
         <div className='about-us text-xl'>
           <h2 className='title text-4xl font-bold pl-4 mt-10 lg:mt-0'>
             About us
@@ -190,7 +190,7 @@ const Ticp = () => {
           <img src={ticp2Img} alt='curriculum' />
           <img src={ticp3Img} alt='table-img' />
         </div>
-        <div className='beyond'>
+        <div className='beyond pl-2'>
           <h1 className='title text-5xl font-bold '>BEYOND LEVEL-1</h1>
           <p className='text-[22px] mt-3 font-semibold text-gray-600 text-justify w-[95%] lg:w-full'>
             Successful completion of level 1 will qualify you to apply for Level
@@ -395,12 +395,13 @@ const Ticp = () => {
           </ul>
         </div>
 
-        <div className='know-your-trainner'>
+        <div className='know-your-trainner pl-2'>
           <h1 className='text-4xl font-bold'>Know Your Trainers:</h1>
           <div className='trainners grid items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10'>
             {team.map((trainer) => {
               return (
                 <div
+                  key={trainer.name}
                   className='trainner-card cursor-pointer '
                   onClick={() => {
                     setIsOpen(true);

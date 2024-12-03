@@ -17,17 +17,17 @@ const Faq = () => {
      };
 
     return (
-     <div className='bg-yellow-300 p-2 mt-10 pb-10 mb-1'>
-       <h1 className='text-4xl font-bold m-4'>FAQ:</h1>
-       <div className="grid lg:grid-cols-2 items-start justify-center gap-5 lg:gap-10">
+     <div className='bg-yellow-300  mt-10 pb-6 mb-1  pt-2 pr-2 lg:pl-2'>
+       <h1 className='text-4xl font-bold m-4 mb-0'>FAQ:</h1>
+       <div className="grid lg:grid-cols-2 items-start justify-center gap-5 lg:gap-10 p-4 ">
        {questions.map((question , index) => {
          return (
            <div
-             className={`border-2 bg-white rounded-[30px] relative  transition-all overflow-hidden  duration-300 p-8  lg:px-8`}
+             className={`border-2 bg-white rounded-[30px]  relative  transition-all overflow-hidden duration-300 p-8  lg:px-8`}
              key={question.ques}
            >
              <div className='flex overflow-hidden   items-center  justify-between'>
-               <h1 className='sm:text-md text-sm  max-w-fit lg:text-lg font-bold m-0 lg:tracking-tight'>
+               <h1 className='sm:text-xl text-sm  max-w-fit lg:text-lg font-bold m-0 lg:tracking-tight'>
                  {question.ques}
                </h1>
                <div
@@ -43,7 +43,7 @@ const Faq = () => {
                  openIndex === index ? "max-h-[500px] mt-2" : "max-h-0"
                }`}
              >
-               <p className='text-md'>{question.answer}</p>
+               <p className='text-md text-[#444]'>{question.answer}</p>
              </div>
            </div>
          );
