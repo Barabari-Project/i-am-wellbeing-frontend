@@ -1,5 +1,5 @@
 import React from 'react';
-import team from '../imgs/team2.png';
+// import team from '../imgs/team2.png';
 
 const ContactUs = () => {
   return (
@@ -9,7 +9,7 @@ const ContactUs = () => {
         {/* Left Section - Image */}
         <div className="hidden xs:flex xs:flex-1 lg:flex-[2] justify-center">
           <img
-            src={team}
+            // src={team}
             alt="teams"
             className="w-full h-auto rounded-lg object-cover"
           />
