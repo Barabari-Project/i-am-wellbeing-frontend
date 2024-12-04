@@ -1,12 +1,13 @@
 
-import a1 from "../imgs/a1.png";
-import a2 from "../imgs/a2.png";
-import a3 from "../imgs/a3.png";
 import Slider from "react-slick";
 
-import mobileBanner1 from "../imgs/mobile-banner.png";
-import mobileBanner2 from "../imgs/mobile-banner-2.png";
-import mobileBanner3 from "../imgs/mobile-banner-3.png";
+const a1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a1.png`;
+const a2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a2.png`;
+const a3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a3.png`;  
+const mobileBanner1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner.png`;
+const mobileBanner2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-2.png`;
+const mobileBanner3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-3.png`;
+
 
 const Carousel = () => {
      var settings = {

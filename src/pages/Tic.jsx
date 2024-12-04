@@ -1,13 +1,14 @@
 import React from 'react'
 
-import quoteLeft from '../imgs/quote-left.png'
-import quoteRight from '../imgs/quote-left1.png'
-import blueQuoteLeft from '../imgs/blue-quote.png'
-import blueQuoteRight from '../imgs/blue-quote1.png'
-import ticImage from '../imgs/ticimage1.jpg'
-import miniMagic from '../imgs/mini_magick20190427-2009-ff1osr.png'
-import tic2 from '../imgs/tic2.png'
-import test1 from '../imgs/testimonialImg.png'
+const quoteLeft = `${import.meta.env.VITE_PUBLIC_URL}/Home/quote-left.png`;
+const quoteRight = `${import.meta.env.VITE_PUBLIC_URL}/Home/quote-left1.png`;
+const blueQuoteLeft = `${import.meta.env.VITE_PUBLIC_URL}/Home/blue-quote.png`;
+const blueQuoteRight = `${import.meta.env.VITE_PUBLIC_URL}/Home/blue-quote1.png`;
+const ticImage = `${import.meta.env.VITE_PUBLIC_URL}/Home/ticimage1.jpg`;
+const miniMagic = `${import.meta.env.VITE_PUBLIC_URL}/Home/mini_magick20190427-2009-ff1osr.png`;
+const tic2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/tic2.png`;
+const test1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
+
 const Tic = () => {
 
   return (

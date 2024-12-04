@@ -1,6 +1,7 @@
 import React from "react";
-import peoplenew from "../imgs/peoplenew.png";
-import yellowbgnew1 from "../imgs/yellowbgnew1.png";
+
+const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
+const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellow-bg.png`;
 
 import anubho1 from "../imgs/programPageData/anubho1.png";
 import anubho2 from "../imgs/programPageData/anubho2.png";
