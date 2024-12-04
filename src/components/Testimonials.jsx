@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import testimonialsImg from '../imgs/testimonialImg.png'
+const testimonialsImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
 
 const Testimonials = () => {
   var settings = {

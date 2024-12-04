@@ -1,14 +1,15 @@
 import React, {useState } from "react";
 
-import facebook from '../imgs/icons/f.webp';
-import instagram from '../imgs/icons/i.webp';
-import twitter from '../imgs/icons/t.webp';
-import youtube from '../imgs/icons/y.webp';
-import linkedin from '../imgs/icons/l.webp';
-import logo from '../imgs/logonew.png';
 import { HiMenuAlt3 } from "react-icons/hi";
 import { BiDownArrowAlt , BiUpArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
+
+const facebook = `${import.meta.env.VITE_PUBLIC_URL}/icons/f.webp`;
+const instagram = `${import.meta.env.VITE_PUBLIC_URL}/icons/i.webp`;
+const twitter = `${import.meta.env.VITE_PUBLIC_URL}/icons/t.webp`;
+const youtube = `${import.meta.env.VITE_PUBLIC_URL}/icons/y.webp`;
+const linkedin = `${import.meta.env.VITE_PUBLIC_URL}/icons/l.webp`;
+const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
 
 
 const Header = () => {

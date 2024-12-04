@@ -1,6 +1,7 @@
 import React from "react";
 
-import logo from "../imgs/logonew.png";
+const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {

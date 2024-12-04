@@ -1,34 +1,35 @@
 import React, { useState } from 'react'
-import borderImg from '../imgs/aboutus-images/about-us-bg.png'
-import AkanshaChandrel from '../imgs/aboutus-images/worker1.png'
-import s7 from '../imgs/aboutus-images/s7.jpg'
-import greenBg from '../imgs/aboutus-images/greenbg.png'
+
+const borderImg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/about-us-bg.png`;  
+const AkanshaChandrel = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/worker1.png`;
+const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
+const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
 
 // team images
-import team1 from '../imgs/aboutus-images/ttt1.png'
-import team2 from '../imgs/aboutus-images/ttt2.png'
-import team3 from '../imgs/aboutus-images/ttt3.png'
-import team4 from '../imgs/aboutus-images/ttt4.png'
-import team5 from '../imgs/aboutus-images/tttt5.png'
-import team6 from '../imgs/aboutus-images/ttt6.png'
+const team1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt1.png`;
+const team2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt2.png`;
+const team3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt3.png`;
+const team4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt4.png`;
+const team5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/tttt5.png`;
+const team6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt6.png`;
 
 // consultant images
-import consultant1 from '../imgs/aboutus-images/aaaa1.png'
-import consultant2 from '../imgs/aboutus-images/aaaa2.png'
-import consultant3 from '../imgs/aboutus-images/aaaa3.png'
-import consultant4 from '../imgs/aboutus-images/aaaa4.png'
-import consultant5 from '../imgs/aboutus-images/aaaa5.png'
-import consultant6 from '../imgs/aboutus-images/aaaa6.png'
-import consultant7 from '../imgs/aboutus-images/aaaa7.png'
-import consultant8 from '../imgs/aboutus-images/aaaa8.png'
-import consultant9 from '../imgs/aboutus-images/aaaa9.png'
+const consultant1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa1.png`;
+const consultant2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa2.png`;
+const consultant3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa3.png`;
+const consultant4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa4.png`;
+const consultant5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa5.png`;
+const consultant6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa6.png`;
+const consultant7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa7.png`;
+const consultant8 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa8.png`;
+const consultant9 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa9.png`;
 
 // annual reports images
-import annualReport1 from '../imgs/aboutus-images/annualreport1.png'
-import annualReport2 from '../imgs/aboutus-images/annualreport2.png'
-import annualReport3 from '../imgs/aboutus-images/annualreport3.png'
-import annualReport4 from '../imgs/aboutus-images/annualreport4.jpeg'
-import { Modal } from 'bootstrap'
+const annualReport1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport1.png`;
+const annualReport2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport2.png`;
+const annualReport3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport3.png`;
+const annualReport4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport4.jpeg`;
+
 import Model from '../components/Model'
 
 
