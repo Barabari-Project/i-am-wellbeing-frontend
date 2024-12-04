@@ -114,7 +114,7 @@ const Ticp = () => {
               get to witness a new statistic or data related to
               <b>
                 <i>
-                  increasingly high number of deaths by suicide, depression
+                   {" "}increasingly high number of deaths by suicide, depression
                   rate, severe mental health and physical health concerns like
                   chronic illnesses, heart problems, and autoimmune diseases.
                 </i>
