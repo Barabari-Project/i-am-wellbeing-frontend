@@ -1,25 +1,23 @@
 import React from "react";
 
-import stp0 from "../imgs/stp data/stp0.png";
-import stp1 from "../imgs/stp data/stp1.png";
-import stp3 from "../imgs/stp data/stp3.png";
-import stp4 from "../imgs/stp data/stp4.png";
-// import stp5 from "../imgs/stp data/stp5.png";
-import stp6 from "../imgs/stp data/stp6.png";
-import videoposter from "../imgs/stp data/stpvideo1.png";
 
-import stpnew from "../imgs/stp data2/stp1.png";
-import stp5 from "../imgs/stp data2/stp5.png";
-import stp7 from "../imgs/stp data2/stp6.png";
-import stpnew3 from "../imgs/stp data2/stpnew.png";
-import stpnew2 from "../imgs/stp data2/stpnew2.png";
+const stp3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stp3.png`;
+
+const stp0 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stp0.png`;
+const videoposter=`${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stpvideo1.png`
+
+const stpnew = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp1.png`
+const stp5 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp5.png`
+const stp7 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp6.png`
+const stpnew3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stpnew.png`
+const stpnew2 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stpnew2.png`
 
 const ShortTraining = () => {
   return (
     <>
       {/* ---------------opening page------------------------------------ */}
       <section
-        className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10 w-full relative"
+        className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10 w-full relative "
         style={{ backgroundImage: `url(${stp0})` }}
       >
         <div className="bg-customPeach opacity-80 w-full text-center">
@@ -33,7 +31,7 @@ const ShortTraining = () => {
 
         {/* Buttons Section */}
         <div className="w-full  flex items-center justify-center ">
-  <div className="w-[100%] sm:w-[78%] flex flex-col  md:flex-row flex-wrap justify-center items-center mt-[100px]">
+  <div className="w-[100%] sm:w-[78%] flex flex-col  md:flex-row flex-wrap justify-center items-center mt-[100px] 2xl:mt-56">
     <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2  max-w-[200px] xs:max-w-none">
       <a href="#objectives">Objectives</a>
     </button>
@@ -60,7 +58,7 @@ const ShortTraining = () => {
           </button>
         </div>
 
-        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[20%] leading-7">
+        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[20%] 2xl:mt-20 leading-7">
           <p>
             Questions before registering? Please read through this page. If you
             still have questions, please send us an email at
@@ -335,7 +333,7 @@ const ShortTraining = () => {
           </button>
           <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px mt-4 md:mt-0 transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1  text-[12px]">
             <a
-              href="https://www.iamwellbeing.org/imgs/Short%20Trainings%20Brochure%20Final%20.pdf"
+              href="https://drive.google.com/file/d/1TbhvNvUEv60XCQjYBHLdYNCHpQqhStJz/view?usp=sharing"
               target="_blank"
             >
               DOWNLOAD THE BROCHURE

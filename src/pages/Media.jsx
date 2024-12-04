@@ -1,17 +1,18 @@
 import React from 'react';
-import angerImg from "../imgs/mediaImg/anger.png";
-
-import backpainImg from "../imgs/mediaImg/backpain.png";
-
-import beathingImg from "../imgs/mediaImg/beathing.png";
-
-import helplessnessImg from "../imgs/mediaImg/helplessness.png";
 
 
-import safeImg from "../imgs/mediaImg/safe.png";
+const angerImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/anger.png`;
 
+const backpainImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/backpain.png`;
 
-import selfImg from "../imgs/mediaImg/self.png";
+const beathingImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/beathing.png`;
+
+const helplessnessImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/helplessness.png`;
+
+const safeImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/safe.png`;
+
+const selfImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/self.png`;
+
 
 
 const Media = () => {
