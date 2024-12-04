@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
-const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.`;
+const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.png`;
 const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer2.png`;
 const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer3.png`;
 const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/lata2.png`;
