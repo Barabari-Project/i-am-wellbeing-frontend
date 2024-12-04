@@ -1,22 +1,18 @@
 import React, { useState } from 'react'
 
-
-import ticp2Img from '../imgs/ticp-images/2.png';
-import ticp3Img from '../imgs/ticp-images/2a.png';
-import ticp4Img from '../imgs/ticp-images/2aa.png'
-// import ticp6Img from '../imgs/ticp-images/ticp4.png'
-import ticp5Img from '../imgs/ticp-images/ticp5.png'
-import trainer1 from '../imgs/ticp-images/trainer1.png'
-import trainer2 from '../imgs/ticp-images/trainer2.png'
-import trainer3 from '../imgs/ticp-images/trainer3.png'
-import trainer4 from '../imgs/ticp-images/lata2.png';
-import trainer5 from '../imgs/ticp-images/trainer5.png'
-import trainer6 from '../imgs/ticp-images/trainer4.png';
+const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
+const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
+const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
+const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.`;
+const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer2.png`;
+const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer3.png`;
+const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/lata2.png`;
+const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer5.png`;
+const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer4.png`;
 
 // import components
 import Faq from '../components/Faq';
 import Model from '../components/Model';
-
 
 const Ticp = () => {
   const [team, setTeam] = useState([

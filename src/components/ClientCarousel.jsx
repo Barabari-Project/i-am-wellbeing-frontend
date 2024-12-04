@@ -1,13 +1,13 @@
 
 import Slider from "react-slick";
+const clientOneImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/1.png`;
+const clientTwoImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/2.png`;
+const clientThreeImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/3.png`;
+const clientFourImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/4.png`;
+const clientFiveImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/5.png`;
+const clientSixImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/6.jpeg`;
+const clientSevenImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/7.png`;
 
-import  clientOneImg  from '../imgs/1.png';
-import  clientTwoImg from '../imgs/2.png';   
-import  clientThreeImg from '../imgs/3.png';
-import  clientFourImg from '../imgs/4.png';
-import  clientFiveImg from '../imgs/5.png';
-import  clientSixImg from '../imgs/6.jpeg';
-import  clientSevenImg from '../imgs/7.png';
 import { useState } from "react";
 
 

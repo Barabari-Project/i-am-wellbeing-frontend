@@ -1,8 +1,10 @@
 
 import Slider from "react-slick";
-import out1 from '../imgs/out1.png';
-import out3 from '../imgs/out3.png';
-import out5 from '../imgs/out5.png';
+const out1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/out1.png`;
+const out3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/out3.png`;
+const out5 = `${import.meta.env.VITE_PUBLIC_URL}/Home/out5.png`;
+
+
 
 const AboutUsCarousel = () => {
   var settings = {

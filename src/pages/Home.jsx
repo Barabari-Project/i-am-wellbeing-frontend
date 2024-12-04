@@ -1,11 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import about from "../imgs/about.png";
-import peoplenew from "../imgs/peoplenew.png";
-import yellowbgnew1 from "../imgs/yellow-bg.png";
-import design from "../imgs/design.png";
-import video from "../imgs/vd.mp4";
-import intro from "../imgs/intro.png";
-import bg from "../imgs/bg.png";
+
+const about = `${import.meta.env.VITE_PUBLIC_URL}/Home/about.png`;
+const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
+const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellow-bg.png`;
+const design = `${import.meta.env.VITE_PUBLIC_URL}/Home/design.png`;
+const video = `${import.meta.env.VITE_PUBLIC_URL}/Home/vd.mp4`; 
+const intro = `${import.meta.env.VITE_PUBLIC_URL}/Home/intro.png`;
+const bg = `${import.meta.env.VITE_PUBLIC_URL}/Home/bg.png`;
+// console.log(about);
+
+
 import Testimonials from "../components/Testimonials";
 import Carousel from "../components/Carousel";
 import AboutUsCarousel from "../components/AboutUsCarousel";
@@ -124,7 +128,7 @@ const Home = () => {
             <div className='bottom-background__img'>
               <img
                 src={yellowbgnew1}
-                alt='Yellow Background'
+                alt='Yellow Background gai'
                 className='w-full h-[50px] lg:h-[130px] object-cover'
               />
             </div>
