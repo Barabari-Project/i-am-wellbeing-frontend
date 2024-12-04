@@ -17,9 +17,10 @@ const ShortTraining = () => {
     <>
       {/* ---------------opening page------------------------------------ */}
       <section
-        className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10 w-full relative "
-        style={{ backgroundImage: `url(${stp0})` }}
+       
       >
+        <div  className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10  relative  "
+        style={{ backgroundImage: `url(${stp0})` ,backgroundPositionY:"2%"}}>
         <div className="bg-customPeach opacity-80 w-full text-center">
           <h1 className="text-[38px] font-black tracking-wider my-2">
             Short Trainings Program
@@ -65,6 +66,7 @@ const ShortTraining = () => {
             info@iamwellbeing.in
           </p>
         </div>
+       </div>
       </section>
 
       {/* ---------------------------------intention----------------------------- */}
