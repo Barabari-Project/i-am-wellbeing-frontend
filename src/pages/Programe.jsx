@@ -1,30 +1,42 @@
 import React from "react";
 
+
 const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
-const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellow-bg.png`;
+const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellowbgnew1.png`;
+const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/greenbg.png`;
 
-import anubho1 from "../imgs/programPageData/anubho1.png";
-import anubho2 from "../imgs/programPageData/anubho2.png";
-import anubho3 from "../imgs/programPageData/anubho3.png";
-import anubho4 from "../imgs/programPageData/anubho4.png";
-import anubho5 from "../imgs/programPageData/anubho5.png";
-import anubho6 from "../imgs/programPageData/anubho6.png";
-import anubho7 from "../imgs/programPageData/anubho7.png";
-import greenbg from "../imgs/programPageData/greenbg.png";
 
-import udan1 from "../imgs/programPageData/udan1.png";
-import udan2 from "../imgs/programPageData/udan2.png";
-import udan3 from "../imgs/programPageData/udan3.png";
-import udan4 from "../imgs/programPageData/udan4.png";
-import udan5 from "../imgs/programPageData/udan5.png";
 
-import arya1 from "../imgs/programPageData/arya1.png";
-import arya2 from "../imgs/programPageData/arya2.png";
-import arya3 from "../imgs/programPageData/arya3.png";
-import arya4 from "../imgs/programPageData/arya4.png";
-import arya5 from "../imgs/programPageData/arya5.png";
-import arya6 from "../imgs/programPageData/arya6.png";
-import arya7 from "../imgs/programPageData/arya7.png";
+
+const anubho1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho1.png`;
+const anubho2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho2.png`
+const anubho3 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho3.png`
+const anubho4 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho4.png`
+const anubho5 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho5.png`
+const anubho6 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho6.png`
+const anubho7 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho7.png`
+
+
+
+const udan1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan1.png`;
+const udan2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan2.png`
+const udan3 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan3.png`
+const udan4 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan4.png`
+const udan5 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan5.png`
+
+
+
+
+const arya1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya1.png`;
+const arya2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya2.png`
+const arya3 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya3.png`
+const arya4 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya4.png`
+const arya5 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya5.png`
+const arya6 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya6.png`
+const arya7 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya7.png`
+
+
+
 
 const Programe = () => {
   return (
