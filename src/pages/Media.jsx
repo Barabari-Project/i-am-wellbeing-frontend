@@ -13,32 +13,39 @@ const safeImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/safe.png`;
 
 const selfImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/self.png`;
 
+const angervideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/anger.mp4`;
+const backpainvideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/backpain_degkwa.mp4`;
+const beathingvideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/beathing_fnaq1s.mp4`;
+const helplessnessvideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/helplessness_aohsgg.mp4`;
+const safevideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/safe_1_kugvfm.mp4`;
+const selfvideo=`${import.meta.env.VITE_PUBLIC_URL}/mediavideos/self_fljo0n.mp4`;
+
 
 
 const Media = () => {
   const data = [
     {
-      video: "https://res.cloudinary.com/dulsc0xrw/video/upload/v1732541803/backpain_degkwa.mp4",
+      video: backpainvideo,
       img: backpainImg,
       name:"EFT Back Pain"
     },
     {
-      video: "https://res.cloudinary.com/dulsc0xrw/video/upload/v1732541663/helplessness_aohsgg.mp4",
+      video: helplessnessvideo,
       img: helplessnessImg,
        name:"EFT Helplessness"
     },
     {
-      video: "https://res.cloudinary.com/dulsc0xrw/video/upload/v1732541542/beathing_fnaq1s.mp4",
+      video: beathingvideo,
       img: beathingImg,
        name:"Breathing Exercises"
     },
     {
-      video: "https://res.cloudinary.com/dulsc0xrw/video/upload/v1732545005/safe_1_kugvfm.mp4",
+      video: safevideo,
       img: safeImg,
        name:"Safe Space Visualisation"
     },
     {
-      video: "https://res.cloudinary.com/dulsc0xrw/video/upload/v1732541269/self_fljo0n.mp4",
+      video: selfvideo,
       img: selfImg,
        name:"EFT Self Worth"
     },
@@ -50,7 +57,7 @@ const Media = () => {
   <video preload="none" controls poster={angerImg} className="lg:h-[82%] lg:w-full lg:px-[2%] ">
     <source
       type="video/mp4"
-      src="https://res.cloudinary.com/dulsc0xrw/video/upload/v1732542071/anger_vr1f5b.mp4"
+      src={angervideo}
     />
   </video>
   <h1 className="text-center font-bold text-3xl p-2">EFT for Anger</h1>
