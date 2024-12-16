@@ -90,33 +90,6 @@ const About = () => {
   return (
     <>
       <section className='section about py-16 '>
-        {/* model */}
-        {/* <div
-          className={`fixed  bg-[rgba(0,0,0,0.8)] top-0 z-20 transition-all duration-300 ease-in-out inset-0 ${
-            isOpen ? "h-full" : "h-0"
-          } overflow-hidden`}
-        >
-          <div
-            className='logo-close w-full text-right p-5 font-bold text-white'
-            onClick={() => setIsOpen(false)}
-          >
-            <i className='fas fa-times font-bold text-2xl cursor-pointer'></i>
-          </div>
-
-          <div className='model-content w-[90%]  md:max-w-3xl m-auto  '>
-            <div className='bg-white text-black p-8 max-h-[550px] md:max-h-auto overflow-y-scroll md:overflow-hidden'>
-              <h2 className='text-2xl font-semibold mb-2'>
-                {selectedTeamMember?.name}
-              </h2>
-              <h3 className='text-xl font-semibold mb-2'>
-                {selectedTeamMember?.designation}
-              </h3>
-              <p className='md:text-lg text-md'>
-                {selectedTeamMember?.description}
-              </p>
-            </div>
-          </div>
-        </div> */}
         <Model isOpen={isOpen} setIsOpen={setIsOpen}  selectedTeamMember={selectedTeamMember} />
         {/* code model */}
 
@@ -181,7 +154,7 @@ const About = () => {
               height: "120px",
             }}
           >
-            <h1 className='absolute top-[60px] sm:top-12 md:top-3 left-2'>
+            <h1 className='absolute  top-10 lg:top-5 left-2'>
               Our Team
             </h1>
           </div>
@@ -216,7 +189,7 @@ const About = () => {
               height: "140px",
             }}
           >
-            <h1 className='absolute top-[70px]  md:top-5 left-2'>
+            <h1 className='absolute top-12 lg:top-6 left-2'>
               Our consultants
             </h1>
           </div>
@@ -282,7 +255,7 @@ const About = () => {
               height: "140px",
             }}
           >
-            <h1 className='absolute top-[70px] sm:top-20 md:top-4 left-2'>
+            <h1 className='absolute top-12 lg:top-6 left-2'>
               Annual Reports
             </h1>
           </div>

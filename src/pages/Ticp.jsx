@@ -15,7 +15,7 @@ import Faq from '../components/Faq';
 import Model from '../components/Model';
 
 const Ticp = () => {
-  const [team, setTeam] = useState([
+  const [team] = useState([
     {
       imgSrc: trainer1,
       name: "Akanksha Chandele",
@@ -187,7 +187,7 @@ const Ticp = () => {
           <img src={ticp3Img} alt='table-img' />
         </div>
         <div className='beyond pl-2'>
-          <h1 className='title text-5xl font-bold '>BEYOND LEVEL-1</h1>
+          <h1 className='title text-3xl font-bold mt-3'>BEYOND LEVEL-1</h1>
           <p className='text-[22px] mt-3 font-semibold text-gray-600 text-justify w-[95%] lg:w-full'>
             Successful completion of level 1 will qualify you to apply for Level
             2 This level is a more specialized coursework, which will focus upon
@@ -280,7 +280,7 @@ const Ticp = () => {
             completing the course, a viva will be conducted to assess
             participants' knowledge and skills.
           </p>
-          <h1 className='title text-4xl font-bold mt-3'>Grading Criteria</h1>
+          <h1 className='title text-3xl font-bold mt-3'>Grading Criteria</h1>
           <div className='text-xl mt-2'>
             <p className='mb-2 text-justify'>
               Following grading criteria is used for evaluation of both
@@ -305,7 +305,7 @@ const Ticp = () => {
             Criteria for grading assignments
           </h1>
           <img src={ticp4Img} alt='ticp4Img' />
-          <h1 className='title text-4xl font-bold mb-3'>Eligibility</h1>
+          <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <p className='text-xl text-justify'>
             Students from psychology and allied field background (undergraduate
             and postgraduate) Working mental health practitioners
@@ -320,7 +320,7 @@ const Ticp = () => {
             communities. If you meet the criteria, 50% of your total course fees
             will be waived off
           </p>
-          <h1 className='title text-4xl font-bold mt-4'>HOW TO APPLY?</h1>
+          <h1 className='title text-3xl font-bold mt-4'>HOW TO APPLY?</h1>
           <div className='text-xl'>
             <p className='mt-2 text-justify'>
               Step-1: Fill out the application form. Check if you are eligible

@@ -151,6 +151,9 @@ color:#6c757d
     margin-bottom: -20px !important;
 }
 
+/* tic page */
+
+
 
 /* home page media query */
 
@@ -180,8 +183,7 @@ color:#6c757d
     
     .testimonials-slider-container{
         background-position-x: center;
-        background-size: cover;
-        background-repeat: repeat;
+        
     }
 
     .mobile-header{

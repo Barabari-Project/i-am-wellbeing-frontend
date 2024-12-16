@@ -217,11 +217,11 @@ const Home = () => {
         <div className='container mx-auto'>
           <div className='flex flex-wrap md:flex-nowrap  items-start md:justify-between justify-center gap-5 md:gap-0'>
             <div className='hidden lg:block lg:w-1/12'></div>
-            <div className='max-w-sm  flex items-start justify-between'>
+            <div className='flex items-center justify-center w-auto shadow-md rounded-md overflow-hidden'>
               <video
                 preload='none'
                 controls
-                className='max-w-sm h-[400px]'
+                className='max-w-xs lg:max-w-xl h-[400px]  '
                 poster={intro}
               >
                 <source type='video/mp4' src={video} />
@@ -285,7 +285,7 @@ const Home = () => {
         }}
       >
         <div className='row absolute top-2'>
-          <div className='ml-4 mt-10 md:mt-0'>
+          <div className='ml-4 mt-6'>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Why we do what we do?</span>
             </h2>
@@ -305,7 +305,7 @@ const Home = () => {
         }}
       >
         <div className='row mb-4 absolute top-2'>
-          <div className='ml-4 mt-10 md:mt-0'>
+          <div className='ml-4 mt-6 '>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Clients & Partners?</span>
             </h2>
@@ -314,7 +314,9 @@ const Home = () => {
       </section>
 
       <ClientCarousel />
-      <Testimonials />
+      {/* <div "> */}
+       <Testimonials />
+      {/* </div> */}
     </div>
   );
 };
