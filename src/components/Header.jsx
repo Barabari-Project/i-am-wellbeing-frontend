@@ -56,7 +56,7 @@ const Header = () => {
 
               <li className='border border-black py-1 px-4 group rounded-full text-center cursor-pointer relative'>
                 Training
-                <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390] group-hover:z-10 group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
+                <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390] group-hover:z-[10] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
                   <Link to='/ticp'>
                     <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
                       TICP

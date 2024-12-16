@@ -31,7 +31,7 @@ const Carousel = () => {
      };
   return (
     <>
-      <div className='hidden lg:block'>
+      <div className='hidden lg:block border  z-[-1] relative'>
         <Slider {...settings} className=''>
           <div className=' w-full  items-center relative flex text-center'>
             <img src={a2} alt='' className='w-full' />
@@ -39,6 +39,7 @@ const Carousel = () => {
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl font-bold'>
               <p>Mitigating</p>
               <p>the impact of</p>
+              
               <p>Adverse</p>
               <p>Childhood</p>
               <p>Experiences</p>
@@ -49,7 +50,7 @@ const Carousel = () => {
             <img src={a1} alt='' className='w-full' />
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10  left-5 text-5xl xl:text-6xl font-bold'>
               <p>Creating</p>
-              <p>Ecosystem</p>
+              <p>Ecosystems</p>
               <p>of Care</p>
             </div>
           </div>
@@ -70,6 +71,7 @@ const Carousel = () => {
         <Slider {...settings2} className=''>
           <div className=' w-full'>
             <img
+            
               src={mobileBanner2}
               alt=''
               className='w-full h-[350px] object-contain'

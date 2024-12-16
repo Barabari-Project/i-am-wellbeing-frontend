@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const quoteLeft = `${import.meta.env.VITE_PUBLIC_URL}/Home/quote-left.png`;
 const quoteRight = `${import.meta.env.VITE_PUBLIC_URL}/Home/quote-left1.png`;
@@ -7,9 +7,34 @@ const blueQuoteRight = `${import.meta.env.VITE_PUBLIC_URL}/Home/blue-quote1.png`
 const ticImage = `${import.meta.env.VITE_PUBLIC_URL}/Home/ticimage1.jpg`;
 const miniMagic = `${import.meta.env.VITE_PUBLIC_URL}/Home/mini_magick20190427-2009-ff1osr.png`;
 const tic2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/tic2.png`;
-const test1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
+// const test1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
 
+import test1 from '../imgs/home-images/testimonialImg.png';
+
+import resistImg from '../imgs/home-images/resist.png';
+import realiseImg from '../imgs/home-images/realise.png';
+import recogniseImg from '../imgs/home-images/recognise.png';
+import respondImg from '../imgs/home-images/respond.png'
 const Tic = () => {
+
+  const [cards, setCards] = useState([
+    {
+      id: 1,
+      src: realiseImg,
+    },
+    {
+      id: 2,
+      src: recogniseImg,
+    },
+    {
+      id: 3,
+      src: respondImg,
+    },
+    {
+      id: 4,
+      src: resistImg,
+    }
+  ]);
 
   return (
     <div className='container m-auto pt-5 mt-10 md:mt-0'>
@@ -129,26 +154,38 @@ const Tic = () => {
           <h2 className='lg:text-5xl text-3xl ml-2 font-bold lg:ml-12'>
             Principles of TIC
           </h2>
-          <div className='max-w-5xl m-auto'>
+          <div className='max-w-5xl m-auto mb-4'>
             <img src={miniMagic} alt='' />
-            <img src={tic2} alt='' className='text-center m-auto ' />
+            <img
+              src={tic2}
+              alt=''
+              className='text-center m-auto hidden lg:block'
+            />
+
+            <div className='tic-cards flex lg:hidden gap-2 items-center justify-center flex-col w-full '>
+              {cards.map((card, index) => (
+                <div className='card' key={index}>
+                  <img
+                    src={card.src}
+                    alt=''
+                    className={`${card.id == 1 ? "mb-2" : ""}`}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       {/* section */}
       <section
-        className='section testimonials--style-2 hidden lg:block'
+        className='section testimonials--style-2 hidden lg:block border'
         style={{ padding: "100px 0", backgroundImage: `url(${test1})` }}
       >
         <div className='container'>
           <div className='row'>
-            <div className='col-xl-1'></div>
             <div className='col-xl-10'>
               <div className='  slick-initialized slick-slider'>
-                <div
-                  className='slick-list'
-                  style={{ height: "360px" }}
-                >
+                <div className='slick-list' style={{ height: "360px" }}>
                   <div
                     className='slick-track'
                     style={{
@@ -209,21 +246,21 @@ const Tic = () => {
       {/* mobile view */}
 
       <div
-        className='testimonials-slider w-full block lg:hidden justify-center mt-10  h-auto min-h-[400px] lg:h-[400px]'
+        className='testimonials-slider w-full  block lg:hidden justify-center mt-10  h-auto min-h-[400px] lg:h-[400px]'
         style={{
           backgroundImage: `url(${test1})`,
-          backgroundPositionX: "center center",
+          backgroundPositionX: "center",
           backgroundSize: "cover",
           backgroundRepeat: "repeat",
         }}
       >
-        <div className='text-center max-w-[80%] m-auto lg:max-w-4xl   pb-0'>
+        <div className='text-center max-w-[90%] m-auto lg:max-w-4xl   pb-0'>
           <div className='testimonials-slider__item max-w-3xl mx-auto'>
-            <div className='testimonials-slider__icon text-5xl font-bold text-left'>
+            <div className='testimonials-slider__icon text-5xl font-bold text-left mt-4'>
               “
             </div>
             <div className='testimonials-slider__text text-center'>
-              <p className=' text-xl lg:text-2xl leading-[30px]'>
+              <p className='text-2xl leading-[30px] md:mt-20'>
                 {" "}
                 The most crucial aspect of therapy is the development of a good
                 therapeutic alliance with a therapist who is trauma-informed and
