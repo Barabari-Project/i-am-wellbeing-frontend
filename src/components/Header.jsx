@@ -21,17 +21,17 @@ const Header = () => {
     <>
       <header className='w-full shadow-md  border-b '>
         <div className='top-bar bg-[#029390] text-sm md:flex hidden justify-end p-2 pr-8 gap-10'>
-          <img className='w-[30px]' src={facebook} alt='' />
-          <img className='w-[30px]' src={instagram} alt='' />
-          <img className='w-[30px]' src={twitter} alt='' />
-          <img className='w-[30px]' src={youtube} alt='' />
-          <img className='w-[30px]' src={linkedin} alt='' />
+          <img loading="lazy" className='w-[30px]' src={facebook} alt='' />
+          <img loading="lazy" className='w-[30px]' src={instagram} alt='' />
+          <img loading="lazy" className='w-[30px]' src={twitter} alt='' />
+          <img loading="lazy" className='w-[30px]' src={youtube} alt='' />
+          <img loading="lazy" className='w-[30px]' src={linkedin} alt='' />
         </div>
 
         <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  md:flex hidden'>
           <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
             <Link to='/'>
-              <img src={logo} alt='' className='' />
+              <img loading="lazy" src={logo} alt='' className='' />
             </Link>
           </div>
 
@@ -98,7 +98,7 @@ const Header = () => {
       {/* sub menu list  */}
 
       <div className='flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full'>
-        <img src={logo} alt='' className='w-[80px]' />
+        <img loading="lazy" src={logo} alt='' className='w-[80px]' />
         <HiMenuAlt3
           className='text-3xl font-[300] cursor-pointer'
           onClick={() => setToggle(true)}

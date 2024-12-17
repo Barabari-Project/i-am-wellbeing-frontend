@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const borderImg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/about-us-bg.png`;  
+const borderImg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/about-us-bg.png`;
 const AkanshaChandrel = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/worker1.png`;
 const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
 const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
@@ -31,66 +31,67 @@ const annualReport3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualr
 const annualReport4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport4.jpeg`;
 
 import Model from '../components/Model'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 
 const About = () => {
 
-   const [teams, setTeam] = useState([
-     {
-       name: "Akanksha Chandele",
-       imgSrc: team1,
-       designation: "Program Manager / Therapist",
-       description:
-         "Akanksha is a Holistic Trauma Therapist actively engaged in working with survivors of abuse and trauma. Their practice is rooted in building interconnectedness and compassion for all beings and they believe in the power of mind-body-spirit healing in order to thrive and grow. Akanksha has an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and a diploma in Arts-Based Therapy.They are trained in EMDR, IEMT, Somatic Practices, and psychological first-aid. They also use Bach remedies, Access consciousness, and are a Reiki Master Practitioner.With a deep inclination to support the mental wellbeing of marginalised and vulnerable communities, they started I Am Wellbeing (Nairatmya Foundation), an organisation dedicated to trauma healing and prevention. I Am Wellbeing works with survivors of adverse life experiences and equips mental health professionals, caregivers, and educators in providing trauma-informed care to those in need.",
-     },
+  const [teams, setTeam] = useState([
+    {
+      name: "Akanksha Chandele",
+      imgSrc: team1,
+      designation: "Program Manager / Therapist",
+      description:
+        "Akanksha is a Holistic Trauma Therapist actively engaged in working with survivors of abuse and trauma. Their practice is rooted in building interconnectedness and compassion for all beings and they believe in the power of mind-body-spirit healing in order to thrive and grow. Akanksha has an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and a diploma in Arts-Based Therapy.They are trained in EMDR, IEMT, Somatic Practices, and psychological first-aid. They also use Bach remedies, Access consciousness, and are a Reiki Master Practitioner.With a deep inclination to support the mental wellbeing of marginalised and vulnerable communities, they started I Am Wellbeing (Nairatmya Foundation), an organisation dedicated to trauma healing and prevention. I Am Wellbeing works with survivors of adverse life experiences and equips mental health professionals, caregivers, and educators in providing trauma-informed care to those in need.",
+    },
 
-     {
-       name: "Pallavi Singh",
-       imgSrc: team2,
-       designation: "Program Manager / Therapist",
-       description:
-         "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
-     },
-     {
-       name: "Atufa Khan",
-       imgSrc: team3,
-       designation: "Counselling Psychologist",
-       description:
-         "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
-     },
+    {
+      name: "Pallavi Singh",
+      imgSrc: team2,
+      designation: "Program Manager / Therapist",
+      description:
+        "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
+    },
+    {
+      name: "Atufa Khan",
+      imgSrc: team3,
+      designation: "Counselling Psychologist",
+      description:
+        "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
+    },
 
-     {
-       name: "Yasha Malhotra",
-       imgSrc: team4,
-       designation: "Counselling Psychologist",
-       description:
-         "Yasha Malhotra is a psychologist with a master’s degree in clinical psychology. She uses a comprehensive approach, emphasizing on both physical and mental health, and has experience working in a variety of clinical and counseling settings. Her vision is to create an environment that is both spiritually and emotionally mindful.",
-     },
-     {
-       name: "Ishi Agarwal",
-       imgSrc: team5,
-       designation: "Content Manager, Therapist",
-       description:
-         "She has completed her Master's in Psychology and received training in different sectors of mental health such as counseling, relationship concerns, and addiction and recovery. She believes that building a deeper understanding of 'self' is the first and the most important step toward healing. She aims to help individuals build a healthier relationship with themselves and those around them. She is also a big supporter of writing and other creative activities as an outlet for pent-up emotions and tries to integrate these practices into her personal and professional life.",
-     },
-     {
-       name: "Laasya Mangalampalli",
-       imgSrc: team6,
-       designation: "Counselor",
-       description:
-         "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
-     },
-   ]);  
+    {
+      name: "Yasha Malhotra",
+      imgSrc: team4,
+      designation: "Counselling Psychologist",
+      description:
+        "Yasha Malhotra is a psychologist with a master’s degree in clinical psychology. She uses a comprehensive approach, emphasizing on both physical and mental health, and has experience working in a variety of clinical and counseling settings. Her vision is to create an environment that is both spiritually and emotionally mindful.",
+    },
+    {
+      name: "Ishi Agarwal",
+      imgSrc: team5,
+      designation: "Content Manager, Therapist",
+      description:
+        "She has completed her Master's in Psychology and received training in different sectors of mental health such as counseling, relationship concerns, and addiction and recovery. She believes that building a deeper understanding of 'self' is the first and the most important step toward healing. She aims to help individuals build a healthier relationship with themselves and those around them. She is also a big supporter of writing and other creative activities as an outlet for pent-up emotions and tries to integrate these practices into her personal and professional life.",
+    },
+    {
+      name: "Laasya Mangalampalli",
+      imgSrc: team6,
+      designation: "Counselor",
+      description:
+        "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
+    },
+  ]);
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedTeamMember, setSelectedTeamMember] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedTeamMember, setSelectedTeamMember] = useState(null);
 
-  
+
   return (
     <>
       <section className='section about py-16 '>
-        <Model isOpen={isOpen} setIsOpen={setIsOpen}  selectedTeamMember={selectedTeamMember} />
+        <Model isOpen={isOpen} setIsOpen={setIsOpen} selectedTeamMember={selectedTeamMember} />
         {/* code model */}
 
         <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto mt-10 md:mt-0'>
@@ -133,7 +134,13 @@ const About = () => {
           </div>
 
           <div className=''>
-            <img src={AkanshaChandrel} alt='img' className='max-w-sm h-auto ' />
+            {/* <img loading="lazy" src={AkanshaChandrel} alt='img' className='max-w-sm h-auto ' /> */}
+            <LazyLoadImage
+              src={AkanshaChandrel}
+              alt='img'
+              effect="blur"
+              className='max-w-sm h-auto '
+            />
             <h6
               className='text-center bg-cover bg-repeat-round font-bold'
               style={{ backgroundImage: `url(${s7})` }}
@@ -170,7 +177,13 @@ const About = () => {
                     setIsOpen(true);
                   }}
                 >
-                  <img src={team.imgSrc} alt='team' className='w-full' />
+                  {/* <img loading="lazy" src={team.imgSrc} alt='team' className='w-full' /> */}
+                  <LazyLoadImage
+                    src={team.imgSrc}
+                    alt='team'
+                    effect="blur"
+                    className='w-full'
+                  />
                 </div>
               );
             })}
@@ -194,51 +207,60 @@ const About = () => {
             </h1>
           </div>
 
-          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-10 mt-10'>
-            <img
+          <div className="team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-10 mt-10">
+            <LazyLoadImage
               src={consultant1}
-              alt='consultant1'
-              className='w-[350px] h-auto'
+              alt="consultant1"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant2}
-              alt='consultant2'
-              className='w-[350px] h-auto'
+              alt="consultant2"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant3}
-              alt='consultant3'
-              className='w-[350px] h-auto'
+              alt="consultant3"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant4}
-              alt='consultant4'
-              className='w-[350px] h-auto'
+              alt="consultant4"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant5}
-              alt='consultant5'
-              className='w-[350px] h-auto'
+              alt="consultant5"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant6}
-              alt='consultant6'
-              className='w-[350px] h-auto'
+              alt="consultant6"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant7}
-              alt='consultant7'
-              className='w-[350px] h-auto'
+              alt="consultant7"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant8}
-              alt='consultant8'
-              className='w-[350px] h-auto'
+              alt="consultant8"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
-            <img
+            <LazyLoadImage
               src={consultant9}
-              alt='consultant9'
-              className='w-[350px] h-auto'
+              alt="consultant9"
+              effect="blur"
+              className="w-[350px] h-auto"
             />
           </div>
         </div>
@@ -266,9 +288,15 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              {/* <img loading="lazy"
                 src={annualReport1}
                 alt='annualreport1'
+                className='sm:w-[300px]'
+              /> */}
+              <LazyLoadImage
+                src={annualReport1}
+                alt='annualreport1'
+                effect="blur"
                 className='sm:w-[300px]'
               />
             </a>
@@ -277,9 +305,15 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              {/* <img loading="lazy"
                 src={annualReport2}
                 alt='annualreport2'
+                className='sm:w-[300px]'
+              /> */}
+              <LazyLoadImage
+                src={annualReport2}
+                alt='annualreport2'
+                effect="blur"
                 className='sm:w-[300px]'
               />
             </a>
@@ -289,9 +323,15 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              {/* <img loading="lazy"
                 src={annualReport3}
                 alt='annualreport3'
+                className='sm:w-[300px]'
+              /> */}
+              <LazyLoadImage
+                src={annualReport3}
+                alt='annualreport3'
+                effect="blur"
                 className='sm:w-[300px]'
               />
             </a>
@@ -301,9 +341,15 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              {/* <img loading="lazy"
                 src={annualReport4}
                 alt='annualreport4'
+                className='sm:w-[300px]'
+              /> */}
+              <LazyLoadImage
+                src={annualReport4}
+                alt='annualreport4'
+                effect="blur"
                 className='sm:w-[300px]'
               />
             </a>

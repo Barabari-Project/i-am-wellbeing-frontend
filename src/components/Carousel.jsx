@@ -34,7 +34,7 @@ const Carousel = () => {
       <div className='hidden lg:block border  z-[-1] relative'>
         <Slider {...settings} className=''>
           <div className=' w-full  items-center relative flex text-center'>
-            <img src={a2} alt='' className='w-full' />
+            <img loading="lazy" src={a2} alt='' className='w-full' />
 
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl font-bold'>
               <p>Mitigating</p>
@@ -47,7 +47,7 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex'>
-            <img src={a1} alt='' className='w-full' />
+            <img loading="lazy" src={a1} alt='' className='w-full' />
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10  left-5 text-5xl xl:text-6xl font-bold'>
               <p>Creating</p>
               <p>Ecosystems</p>
@@ -56,7 +56,7 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex '>
-            <img src={a3} alt='' className='w-full' />
+            <img loading="lazy" src={a3} alt='' className='w-full' />
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl  font-bold'>
               <p>Making</p>
               <p>India</p>
@@ -70,7 +70,7 @@ const Carousel = () => {
       <div className='border-b lg:hidden block  mt-20'>
         <Slider {...settings2} className=''>
           <div className=' w-full'>
-            <img
+            <img loading="lazy"
             
               src={mobileBanner2}
               alt=''
@@ -79,7 +79,7 @@ const Carousel = () => {
           </div>
 
           <div className=' w-full'>
-            <img
+            <img loading="lazy"
               src={mobileBanner3}
               alt=''
               className='w-full h-[350px] object-contain'
@@ -87,7 +87,7 @@ const Carousel = () => {
           </div>
 
           <div className=' w-full'>
-            <img
+            <img loading="lazy"
               src={mobileBanner1}
               alt=''
               className='w-full h-[350px] object-contain'

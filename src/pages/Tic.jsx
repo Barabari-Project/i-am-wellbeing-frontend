@@ -41,7 +41,7 @@ const Tic = () => {
       <div className='content max-w-6xl m-auto mt-5 p-3'>
         <div className='understanding trauma lg:grid  lg:grid-cols-12 items-center justify-between  '>
           <div className='left text-3xl font-semibold text-center  hidden lg:block lg:col-span-5 '>
-            <img
+            <img loading="lazy"
               src={quoteRight}
               alt='quote-right'
               className='w-[50px] ml-20'
@@ -50,15 +50,15 @@ const Tic = () => {
             <br /> with a person.
             <br /> It's about what happened <br />
             to a person
-            <img src={quoteLeft} alt='quote-left' className='w-[400px] ml-10' />
+            <img loading="lazy" src={quoteLeft} alt='quote-left' className='w-[400px] ml-10' />
           </div>
           {/* mobile view */}
           <div className='left text-3xl w-[80%] m-auto font-semibold text-center   block lg:hidden  lg:col-span-5 '>
             <p className='relative'>
-              <img src={quoteRight} alt='quote-right' className='w-[40px]' />
+              <img loading="lazy" src={quoteRight} alt='quote-right' className='w-[40px]' />
               It isn't about what's wrong with a person. It's about what
               happened to a person
-              <img
+              <img loading="lazy"
                 src={quoteRight}
                 alt='quote-left'
                 className='w-[40px] absolute right-0 rotate-180'
@@ -68,7 +68,7 @@ const Tic = () => {
           {/* end mobile view */}
           {/* mobile image of teavhing students */}
           <div className='flex items-center justify-center lg:hidden mt-5  '>
-            <img
+            <img loading="lazy"
               src={ticImage}
               alt='quote-left'
               className='lg:w-[300px] w-[600px]'
@@ -94,7 +94,7 @@ const Tic = () => {
         {/* impact od trauma */}
         <div className='understanding trauma  lg:grid lg:grid-cols-12   lg:w-full p-2 lg:p-2 m-auto    '>
           <div className='left text-3xl text-center  hidden lg:flex justify-center font-semibold max col-span-5'>
-            <img src={ticImage} alt='quote-left' className='w-[350px]' />
+            <img loading="lazy" src={ticImage} alt='quote-left' className='w-[350px]' />
           </div>
           <div className='right col-span-7'>
             <h1 className='text-[38px] leading-none font-bold text-right m-0'>
@@ -131,7 +131,7 @@ const Tic = () => {
           </div>
 
           <div className='left text-lg text-center font-semibold w-[90%] m-auto  lg:col-span-3 relative top-5 lg:top-0'>
-            <img
+            <img loading="lazy"
               src={blueQuoteLeft}
               alt='quote-right'
               className='lg:w-[30px] w-[50px] '
@@ -142,7 +142,7 @@ const Tic = () => {
               rather than practices and services that may inadvertently
               re-traumatize.
             </p>
-            <img
+            <img loading="lazy"
               src={blueQuoteRight}
               alt='quote-left'
               className='w-[400px] lg:w-[200px] absolute right-0'
@@ -155,8 +155,8 @@ const Tic = () => {
             Principles of TIC
           </h2>
           <div className='max-w-5xl m-auto mb-4'>
-            <img src={miniMagic} alt='' />
-            <img
+            <img loading="lazy" src={miniMagic} alt='' />
+            <img loading="lazy"
               src={tic2}
               alt=''
               className='text-center m-auto hidden lg:block'
@@ -165,7 +165,7 @@ const Tic = () => {
             <div className='tic-cards flex lg:hidden gap-2 items-center justify-center flex-col w-full '>
               {cards.map((card, index) => (
                 <div className='card' key={index}>
-                  <img
+                  <img loading="lazy"
                     src={card.src}
                     alt=''
                     className={`${card.id == 1 ? "mb-2" : ""}`}

@@ -37,7 +37,7 @@ const ClientCarousel = () => {
       <Slider {...settings} className=' max-w-6xl m-auto p-10 desktop'>
         {clientImg.map((img , i) => (
           <div key={i} className='w-full flex items-center relative'>
-            <img
+            <img loading="lazy"
               className='w-[300px] h-auto object-contain'
               src={img}
               alt=''
@@ -49,7 +49,7 @@ const ClientCarousel = () => {
       <Slider {...settings2} className='m-auto  max-w-xs mobile mt-10 mb-10'>
         {clientImg.map((img , i) => (
           <div key={i} className='w-full flex items-center relative'>
-            <img
+            <img loading="lazy"
               className='w-[200px] h-auto m-auto object-contain'
               src={img}
               alt=''

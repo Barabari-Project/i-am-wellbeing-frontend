@@ -12,7 +12,7 @@ const Footer = () => {
           <div className='footer-contacts '>
             <div className='footer-logo'>
               <a className='footer-logo__link' href='index.html'>
-                <img
+                <img loading="lazy"
                   className='footer-logo__img w-[200px]'
                   src={logo}
                   alt='logo'
@@ -146,7 +146,7 @@ const Footer = () => {
 
         <div className='footer-logo lg:hidden mobile-logo'>
           <a className='footer-logo__link' href='index.html'>
-            <img className='footer-logo__img w-[100px]' src={logo} alt='logo' />
+            <img loading="lazy" className='footer-logo__img w-[100px]' src={logo} alt='logo' />
           </a>
         </div>
 

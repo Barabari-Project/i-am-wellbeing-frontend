@@ -176,15 +176,15 @@ const Ticp = () => {
               <span>Case submissions: 5</span>
               <span>Supervision sessions: 8</span>
             </p>
-            <img
+            <img loading="lazy"
               src='https://www.iamwellbeing.org/imgs/ticp4.png'
               alt='teammate'
               className='w-[500px] mt-5 lg:mt-0'
             />
           </div>
 
-          <img src={ticp2Img} alt='curriculum' />
-          <img src={ticp3Img} alt='table-img' />
+          <img loading="lazy" src={ticp2Img} alt='curriculum' />
+          <img loading="lazy" src={ticp3Img} alt='table-img' />
         </div>
         <div className='beyond pl-2'>
           <h1 className='title text-3xl font-bold mt-3'>BEYOND LEVEL-1</h1>
@@ -304,7 +304,7 @@ const Ticp = () => {
           <h1 className='title text-3xl font-bold mb-3'>
             Criteria for grading assignments
           </h1>
-          <img src={ticp4Img} alt='ticp4Img' />
+          <img loading="lazy" src={ticp4Img} alt='ticp4Img' />
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <p className='text-xl text-justify'>
             Students from psychology and allied field background (undergraduate
@@ -404,7 +404,7 @@ const Ticp = () => {
                     setSelectedTeamMember(trainer);
                   }}
                 >
-                  <img
+                  <img loading="lazy"
                     src={trainer.imgSrc}
                     alt='trainner-img'
                     className='w-[300px]  lg:w-[250px] object-cover h-[400px] lg:h-[300px]'
