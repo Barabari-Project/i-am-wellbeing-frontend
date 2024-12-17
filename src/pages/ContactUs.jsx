@@ -1,5 +1,4 @@
 import React from 'react';
-// import team from '../imgs/team2.png';
 
 const team = `${import.meta.env.VITE_PUBLIC_URL}/Home/team2.png`;
 
