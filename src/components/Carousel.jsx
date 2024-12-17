@@ -31,7 +31,7 @@ const Carousel = () => {
      };
   return (
     <>
-      <div className='hidden lg:block border  z-[-1] relative'>
+      <div className='hidden lg:block border   relative cursor-pointer'>
         <Slider {...settings} className=''>
           <div className=' w-full  items-center relative flex text-center'>
             <img src={a2} alt='' className='w-full' />
