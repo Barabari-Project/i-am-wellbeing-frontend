@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Faq = () => {
-    const [questions , setQuestions] = useState([
+    const [questions] = useState([
         {ques : "Is attendance compulsory for all classes?" , answer : "Yes, full attendance is compulsory to receive the certificate."},        
         {ques : "What is the modality and duration of the course?" , answer : "The course will be held online via Zoom on Saturdays and Sundays 10 am to 12 pm. Duration: 6 months (2 months of classes and 4 months of supervision)"},
         {ques : "What is the TICP course?" , answer : "Trauma-Informed Care Practices Certificate Course is a 62 hours course on trauma-informed care and healing. The coursework intends to build a trauma- informed task force of mental health professionals."},
@@ -17,7 +17,7 @@ const Faq = () => {
      };
 
     return (
-     <div className='bg-yellow-300  mt-10 pb-6 mb-1  pt-2 pr-2 lg:pl-2'>
+     <div className='bg-yellow-300  mt-10 pb-1  pt-2 pr-2 lg:pl-2'>
        <h1 className='text-4xl font-bold m-4 mb-0'>FAQ:</h1>
        <div className="grid lg:grid-cols-2 items-start justify-center gap-5 lg:gap-10 p-4 ">
        {questions.map((question , index) => {

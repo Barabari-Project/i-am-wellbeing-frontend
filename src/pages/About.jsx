@@ -36,7 +36,7 @@ import Model from '../components/Model'
 
 const About = () => {
 
-   const [teams, setTeam] = useState([
+   const [teams] = useState([
      {
        name: "Akanksha Chandele",
        imgSrc: team1,
@@ -90,7 +90,11 @@ const About = () => {
   return (
     <>
       <section className='section about py-16 '>
-        <Model isOpen={isOpen} setIsOpen={setIsOpen}  selectedTeamMember={selectedTeamMember} />
+        <Model
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          selectedTeamMember={selectedTeamMember}
+        />
         {/* code model */}
 
         <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto mt-10 md:mt-0'>
@@ -144,19 +148,16 @@ const About = () => {
         </div>
         <div className='our-team mt-10'>
           <div
-            className='text-4xl md:text-6xl text-white font-bold relative p-1'
+            className='text-4xl md:text-6xl text-white font-bold relative p-1 h-[80px] lg:h-[120px]'
             style={{
               backgroundColor: "#029390",
               backgroundImage: `url(${greenBg})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-x",
               backgroundPosition: "bottom left",
-              height: "120px",
             }}
           >
-            <h1 className='absolute  top-10 lg:top-5 left-2'>
-              Our Team
-            </h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2'>Our Team</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6  md:grid-cols-3 max-w-3xl m-auto  mt-10'>
@@ -179,19 +180,16 @@ const About = () => {
 
         <div className='our-consultant mt-10'>
           <div
-            className='text-4xl md:text-6xl text-white font-bold relative'
+            className='text-4xl md:text-6xl text-white font-bold relative h-[80px] lg:h-[120px]'
             style={{
               backgroundColor: "#029390",
               backgroundImage: `url(${greenBg})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-x",
               backgroundPosition: "bottom left",
-              height: "140px",
             }}
           >
-            <h1 className='absolute top-12 lg:top-6 left-2'>
-              Our consultants
-            </h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2'>Our consultants</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-10 mt-10'>
@@ -245,19 +243,16 @@ const About = () => {
 
         <div className='annual-reports'>
           <div
-            className='text-4xl md:text-6xl text-white font-bold relative'
+            className='text-4xl md:text-6xl text-white font-bold relative h-[80px] lg:h-[120px]'
             style={{
               backgroundColor: "#029390",
               backgroundImage: `url(${greenBg})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "repeat-x",
               backgroundPosition: "bottom left",
-              height: "140px",
             }}
           >
-            <h1 className='absolute top-12 lg:top-6 left-2'>
-              Annual Reports
-            </h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2'>Annual Reports</h1>
           </div>
 
           <div className='annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-10 mt-10'>

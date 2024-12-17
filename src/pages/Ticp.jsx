@@ -10,6 +10,8 @@ const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/lata2.png`;
 const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer5.png`;
 const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer4.png`;
 
+const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
+
 // import components
 import Faq from '../components/Faq';
 import Model from '../components/Model';
@@ -70,7 +72,10 @@ const Ticp = () => {
         selectedTeamMember={selectedTeamMember}
       />
       <div
-        className={`ticp-banner flex items-center mt-10 justify-center w-full bg-red-300 md:mt-0 `}
+        className={`ticp-banner flex items-center mt-10 justify-center w-full bg-red-800 md:mt-0 `}
+        style={{
+          backgroundImage: `url(${banner})`,
+        }}
       >
         <div className='text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col'>
           <h2 className='text-black  text-4xl font-bold text-center '>

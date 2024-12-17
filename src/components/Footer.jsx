@@ -31,7 +31,6 @@ const Footer = () => {
                     href='https://m.facebook.com/iamwellbeingservices/'
                     target='_blank'
                   >
-                    {/* <i className='fas fa-facebook' aria-hidden='true'></i> */}
                     <i className='fa-brands fa-facebook-f'></i>
                   </a>
                 </li>
