@@ -9,15 +9,18 @@ const miniMagic = `${import.meta.env.VITE_PUBLIC_URL}/Home/mini_magick20190427-2
 const tic2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/tic2.png`;
 const test1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
 
-// import test1 from '../imgs/home-images/testimonialImg.png';
+const resistImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/resist.png`;
+const realiseImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/realise.png`;
+const recogniseImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/recognise.png`;
+const respondImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/respond.png`
 
-import resistImg from '../imgs/home-images/resist.png';
-import realiseImg from '../imgs/home-images/realise.png';
-import recogniseImg from '../imgs/home-images/recognise.png';
-import respondImg from '../imgs/home-images/respond.png'
+
+
+
+
 const Tic = () => {
 
-  const [cards, setCards] = useState([
+  const [cards] = useState([
     {
       id: 1,
       src: realiseImg,
