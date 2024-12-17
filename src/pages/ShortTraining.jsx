@@ -31,22 +31,22 @@ const ShortTraining = () => {
         </div>
 
         {/* Buttons Section */}
-        <div className="w-full  flex items-center justify-center ">
-  <div className="w-[100%] sm:w-[78%] flex flex-col  md:flex-row flex-wrap justify-center items-center mt-[100px] 2xl:mt-56">
-    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2  max-w-[200px] xs:max-w-none">
-      <a href="#objectives">Objectives</a>
-    </button>
-    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
-      <a href="#Key-Features">Key Features</a>
-    </button>
-    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
-      <a href="#training">Training Schedule</a>
-    </button>
-    <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
-      <a href="#eligibilty">Eligibility</a>
-    </button>
-  </div>
-</div>
+     <div className="w-full  flex items-center justify-center ">
+      <div className="w-[100%] sm:w-[78%] flex flex-col  md:flex-row flex-wrap justify-center items-center mt-[100px] 2xl:mt-56">
+        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2  max-w-[200px] xs:max-w-none">
+          <a href="#objectives">Objectives</a>
+        </button>
+        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
+          <a href="#Key-Features">Key Features</a>
+        </button>
+        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
+          <a href="#training">Training Schedule</a>
+        </button>
+        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
+          <a href="#eligibilty">Eligibility</a>
+        </button>
+      </div>
+     </div>
         {/* Apply Now Button */}
         <div className="flex justify-center my-7">
           <button className="bg-customPeach text-white px-[62px] py-[12px] rounded-md font-extrabold text-[14px] md:text-[18px]">
@@ -114,8 +114,8 @@ const ShortTraining = () => {
         id="Key-Features"
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-16  2xl:px-[20%] "
       >
-        <h1 className="text-[40px] mb-2 font-black">key features</h1>
-        {/* <img loading="lazy" src={stp4} alt="img" className="md:w-[98%]"/> */}
+        <h1 className="text-[40px] mb-2 font-black">Key Features</h1>
+        {/* <img src={stp4} alt="img" className="md:w-[98%]"/> */}
 
         <div>
           <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px]  2xl:w-[97%] 2xl:text-[20px] rounded-md">
@@ -171,20 +171,20 @@ const ShortTraining = () => {
       </section>
 
       {/* ----------------------------------training--------------------------------- */}
-      <section
+      {/* <section
         id="training"
         className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-5 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-6 font-black">Training schedule</h1>
-        <img loading="lazy" src={stp3} alt="img" className="md:w-[64%] 2xl:w-[100%]" />
-      </section>
+        <img src={stp3} alt="img" className="md:w-[64%] 2xl:w-[100%]" />
+      </section> */}
       {/* ----------------------------Eligibility------------------------------- */}
       <section
         id="eligibilty"
         className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
-        <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
+        <ul className="list-disc pl-[4%]  leading-9 text-[22px]">
           <li>
             Students from psychology and allied fields (postgraduate students
             only).
@@ -195,7 +195,7 @@ const ShortTraining = () => {
       {/* -------------------------------contribution--------------------------- */}
       <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%] ">
         <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
-        <ul class="list-disc pl-[4%]  leading-9 text-[22px]">
+        <ul className="list-disc pl-[4%]  leading-9 text-[22px]">
           <li>
             Kindly note that the minimum contribution per training is INR 500
             (Five Hundred Rupees Only). However, you can choose to contribute

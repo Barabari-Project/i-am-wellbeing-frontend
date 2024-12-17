@@ -9,7 +9,6 @@ const design = `${import.meta.env.VITE_PUBLIC_URL}/Home/design.png`;
 const video = `${import.meta.env.VITE_PUBLIC_URL}/Home/vd.mp4`;
 const intro = `${import.meta.env.VITE_PUBLIC_URL}/Home/intro.png`;
 const bg = `${import.meta.env.VITE_PUBLIC_URL}/Home/bg.png`;
-// console.log(about);
 
 
 import Testimonials from "../components/Testimonials";
@@ -302,7 +301,7 @@ const Home = () => {
       </section>
 
       <section
-        className='section elements bg-yellow-300 relative h-[100px] lg:h-[120px] '
+        className='section elements bg-yellow-300 relative h-[60px] sm:h-[80px] lg:h-[120px] '
         style={{
           backgroundImage: `url(${bg})`,
           backgroundPosition: "bottom left",
@@ -311,7 +310,7 @@ const Home = () => {
         }}
       >
         <div className='row absolute top-2'>
-          <div className='ml-4 mt-6'>
+          <div className='ml-2 '>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Why we do what we do?</span>
             </h2>
@@ -319,10 +318,10 @@ const Home = () => {
         </div>
       </section>
 
-      <AboutUsCarousel className='max-w-xl' />
+      <AboutUsCarousel className='max-w-xl border' />
 
       <section
-        className='section elements bg-yellow-300 h-[100px] lg:h-[120px] relative'
+        className='section elements bg-yellow-300 h-[60px] sm:h-[80px] lg:h-[120px] relative'
         style={{
           backgroundImage: `url(${bg})`,
           backgroundPosition: "bottom left",
@@ -331,7 +330,7 @@ const Home = () => {
         }}
       >
         <div className='row mb-4 absolute top-2'>
-          <div className='ml-4 mt-6 '>
+          <div className='ml-2  '>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Clients & Partners?</span>
             </h2>
@@ -340,9 +339,7 @@ const Home = () => {
       </section>
 
       <ClientCarousel />
-      {/* <div "> */}
       <Testimonials />
-      {/* </div> */}
     </div>
   );
 };

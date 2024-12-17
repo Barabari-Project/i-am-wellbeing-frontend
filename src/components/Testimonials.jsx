@@ -1,8 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-// const testimonialsImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
-
-import testimonialsImg from '../imgs/home-images/testimonialImg.png'
+const testimonialsImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
 
 const Testimonials = () => {
   var settings = {
@@ -15,9 +13,8 @@ const Testimonials = () => {
   };
 
   return (
-    // <div className='justify-end w-full bg-red-300 '>
       <div
-        className='testimonials-slider-container text-center m-auto md:w-[90%] lg:w-[100%] h-auto min-h-[500px]  lg:h-[600px] flex items-center justify-center'
+        className='testimonials-slider-container text-center m-auto md:w-[100%] lg:w-[100%] h-auto min-h-[500px]  lg:h-[600px] flex items-center justify-center'
         style={{
           backgroundPositionX: "center",
           backgroundImage: `url(${testimonialsImg})`,
@@ -86,7 +83,6 @@ const Testimonials = () => {
           </div>
         </Slider>
       </div>
-    // </div>
   );
 };
 

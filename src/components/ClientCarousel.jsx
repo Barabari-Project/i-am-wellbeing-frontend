@@ -13,7 +13,7 @@ import { useState } from "react";
 
 
 const ClientCarousel = () => {
-  const [clientImg , setClientImg] = useState([clientOneImg , clientTwoImg , clientThreeImg , clientFourImg , clientFiveImg , clientSixImg , clientSevenImg]);  
+  const [clientImg] = useState([clientOneImg , clientTwoImg , clientThreeImg , clientFourImg , clientFiveImg , clientSixImg , clientSevenImg]);  
   var settings = {
     dots: true,
     infinite: true,
