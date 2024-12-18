@@ -4,8 +4,8 @@ import React from 'react'
 const Model = ({isOpen , setIsOpen , selectedTeamMember}) => {
   return (
     <div
-      className={`fixed  bg-[rgba(0,0,0,0.8)] top-0 z-20 transition-all duration-300 ease-in-out inset-0 ${
-        isOpen ? "h-full" : "h-0"
+      className={`fixed  bg-[rgba(0,0,0,0.8)] top-0 transition-all duration-300 ease-in-out inset-0 ${
+        isOpen ? "h-full z-[20]" : "h-0 z-[-2]"
       } overflow-hidden`}
     >
       <div
