@@ -72,7 +72,7 @@ const Ticp = () => {
         selectedTeamMember={selectedTeamMember}
       />
       <div
-        className={`ticp-banner flex items-center mt-10 justify-center w-full bg-red-800 md:mt-0 `}
+        className={`ticp-banner flex items-center mt-10 justify-center w-full  md:mt-0 `}
         style={{
           backgroundImage: `url(${banner})`,
         }}
