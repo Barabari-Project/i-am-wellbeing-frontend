@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
 
 const about = `${import.meta.env.VITE_PUBLIC_URL}/Home/about.png`;
 const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
@@ -96,6 +97,7 @@ const Home = () => {
                 alt="About Us" // Alt text
                 effect="blur" // Blur effect while loading
                 className="d-block w-[80%] m-auto h-full lg:w-full" // Tailwind CSS classes
+                placeholder={<BlurryImages imgUrl="Home/about-small.png"/>}
               />
             </div>
             <div className='w-full lg:w-1/2 xl:w-2/3 p-4'>
@@ -126,30 +128,32 @@ const Home = () => {
         <div className='container mx-auto'>
           <div className='flex flex-col items-center'>
             <div className='bottom-background__img w-full'>
-              {/* <img loading="lazy"
+              <img loading="lazy"
                 src={peoplenew}
                 alt='People'
                 className='w-full lg:-[200px] h-full object-cover'
-              /> */}
-              <LazyLoadImage
+              />
+              {/* <LazyLoadImage
                 src={peoplenew}
                 alt='People'
                 effect="blur"
                 className='w-full lg:-[200px] h-full object-cover'
-              />
+                placeholder={<BlurryImages imgUrl="Home/peoplenew-small.png"/>}
+              /> */}
             </div>
             <div className='bottom-background__img'>
-              {/* <img loading="lazy"
+              <img loading="lazy"
                 src={yellowbgnew1}
                 alt='Yellow Background gai'
                 className='w-full h-[50px] lg:h-[130px] object-cover'
-              /> */}
-              <LazyLoadImage
+              />
+              {/* <LazyLoadImage
                 src={yellowbgnew1}
                 alt='Yellow Background gai'
                 effect="blur"
                 className='w-full h-[50px] lg:h-[130px] object-cover'
-              />
+                placeholder={<BlurryImages imgUrl="Home/yellow-bg-small.png"/>}
+              /> */}
             </div>
           </div>
 
@@ -255,6 +259,7 @@ const Home = () => {
                   alt='Design'
                   effect="blur"
                   className='w-[300px] m-auto'
+                  placeholder={<BlurryImages imgUrl="Home/design-small.png"/>}
                 />
               </div>
 

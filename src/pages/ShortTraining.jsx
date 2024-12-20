@@ -1,4 +1,7 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
 
 
 const stp3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stp3.png`;
@@ -102,11 +105,20 @@ const ShortTraining = () => {
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
-        <img loading="lazy"
+        {/* <img loading="lazy"
           src={stpnew}
           className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
           alt="img"
-        />
+        /> */}
+        <LazyLoadImage
+              src={stpnew}
+              className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
+              alt="img"
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="stp%20data2/stp1-small.png" />
+              }
+            />
       </section>
 
       {/* ----------------------------------------key features------------------------------ */}
@@ -231,6 +243,8 @@ const ShortTraining = () => {
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
 
+
+
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
                 Shambhavi Singh (She/Her)
@@ -255,6 +269,16 @@ const ShortTraining = () => {
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
+
+{/* <LazyLoadImage
+             src={stp7}
+             alt="img"
+             className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="stp%20data2/stp6-small.png" />
+              }
+            /> */}
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
@@ -285,6 +309,16 @@ const ShortTraining = () => {
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
 
+{/* <LazyLoadImage
+              src={stpnew3}
+              alt="img"
+              className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="stp%20data2/stpnew-small.png" />
+              }
+            /> */}
+
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
                 Rakshita Goel (She/Her)
@@ -308,6 +342,16 @@ const ShortTraining = () => {
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
+
+{/* <LazyLoadImage
+              src={stpnew2}
+              alt="img"
+              className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="stp%20data2/stpnew2-small.png" />
+              }
+            /> */}
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
