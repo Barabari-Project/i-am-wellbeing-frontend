@@ -1,13 +1,21 @@
 import React from 'react'
-import work1 from "../imgs/home-images/work_1.png"
 const url = `${import.meta.env.VITE_PUBLIC_URL}/imgs-20/`
 
 const BlurryImages = ({imgUrl}) => {
-    console.log(imgUrl)
+
   return (
-      <div>
-           <img src={`${url}${imgUrl}`} />
-   </div>
+     
+    // <img src={`${url}${imgUrl}`} />
+    
+    <div
+    className="d-block w-[80%] m-auto h-full lg:w-full"
+    style={{
+      backgroundImage: `url(${url}${imgUrl})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  />
+ 
    
   )
 }

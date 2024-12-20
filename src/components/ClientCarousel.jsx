@@ -1,8 +1,5 @@
 
 import Slider from "react-slick";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import "react-lazy-load-image-component/src/effects/blur.css";
-import BlurryImages from '../components/BlurryImages';
 const clientOneImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/1.png`;
 const clientTwoImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/2.png`;
 const clientThreeImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/3.png`;
@@ -40,16 +37,10 @@ const ClientCarousel = () => {
       <Slider {...settings} className=' max-w-6xl m-auto p-10 desktop'>
         {clientImg.map((img , i) => (
           <div key={i} className='w-full flex items-center relative'>
-            {/* <img loading="lazy"
+            <img loading="lazy"
               className='w-[300px] h-auto object-contain'
               src={img}
               alt=''
-            /> */}
-             <LazyLoadImage
-              className='w-[300px] h-auto object-contain'
-              src={img}
-              alt=''
-              effect="blur" // Blur effect while loading
             />
           </div>
         ))}
@@ -58,16 +49,10 @@ const ClientCarousel = () => {
       <Slider {...settings2} className='m-auto  max-w-xs mobile mt-10 mb-10'>
         {clientImg.map((img , i) => (
           <div key={i} className='w-full flex items-center relative'>
-            {/* <img loading="lazy"
+            <img loading="lazy"
               className='w-[200px] h-auto m-auto object-contain'
               src={img}
               alt=''
-            /> */}
-             <LazyLoadImage
-              className='w-[200px] h-auto m-auto object-contain'
-              src={img}
-              alt=''
-              effect="blur" // Blur effect while loading
             />
           </div>
         ))}

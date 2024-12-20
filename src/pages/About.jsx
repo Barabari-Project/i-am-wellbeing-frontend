@@ -145,7 +145,7 @@ const About = () => {
           </div>
 
           <div className=''>
-            {/* <img loading="lazy" src={AkanshaChandrel} alt='img' className='max-w-sm h-auto ' /> */}
+          
             <LazyLoadImage
               src={AkanshaChandrel}
               alt='img'
@@ -186,7 +186,7 @@ const About = () => {
                     setIsOpen(true);
                   }}
                 >
-                  {/* <img loading="lazy" src={team.imgSrc} alt='team' className='w-full' /> */}
+                  
                   <LazyLoadImage
                     src={team.imgSrc}
                     alt='team'
@@ -302,11 +302,7 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              {/* <img loading="lazy"
-                src={annualReport1}
-                alt='annualreport1'
-                className='sm:w-[300px]'
-              /> */}
+              
               <LazyLoadImage
                 src={annualReport1}
                 alt='annualreport1'
@@ -320,11 +316,7 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              {/* <img loading="lazy"
-                src={annualReport2}
-                alt='annualreport2'
-                className='sm:w-[300px]'
-              /> */}
+              
               <LazyLoadImage
                 src={annualReport2}
                 alt='annualreport2'
@@ -339,11 +331,7 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              {/* <img loading="lazy"
-                src={annualReport3}
-                alt='annualreport3'
-                className='sm:w-[300px]'
-              /> */}
+             
               <LazyLoadImage
                 src={annualReport3}
                 alt='annualreport3'
@@ -358,11 +346,7 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              {/* <img loading="lazy"
-                src={annualReport4}
-                alt='annualreport4'
-                className='sm:w-[300px]'
-              /> */}
+              
               <LazyLoadImage
                 src={annualReport4}
                 alt='annualreport4'

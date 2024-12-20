@@ -37,7 +37,7 @@ const Carousel = () => {
       <div className='hidden lg:block border  relative cursor-pointer'>
         <Slider {...settings} className=''>
           <div className=' w-full  items-center relative flex text-center'>
-            {/* <img loading="lazy" src={a2} alt='' className='w-full' /> */}
+           
             <LazyLoadImage
               src={a2} alt='' className='w-full'
               effect="blur" // Blur effect while loading
@@ -57,7 +57,7 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex'>
-            {/* <img loading="lazy" src={a1} alt='' className='w-full' /> */}
+          
             <LazyLoadImage
               src={a1} alt='' className='w-full'
               effect="blur" // Blur effect while loading
@@ -73,7 +73,7 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex '>
-            {/* <img loading="lazy" src={a3} alt='' className='w-full' /> */}
+            
             <LazyLoadImage
               src={a3} alt='' className='w-full'
               effect="blur" // Blur effect while loading
@@ -94,12 +94,7 @@ const Carousel = () => {
       <div className='border-b lg:hidden block  mt-20'>
         <Slider {...settings2} className=''>
           <div className=' w-full'>
-            {/* <img loading="lazy"
-            
-              src={mobileBanner2}
-              alt=''
-              className='w-full h-[350px] object-contain'
-            /> */}
+           
              <LazyLoadImage
                src={mobileBanner2}
                alt=''
@@ -112,11 +107,7 @@ const Carousel = () => {
           </div>
 
           <div className=' w-full'>
-            {/* <img loading="lazy"
-              src={mobileBanner3}
-              alt=''
-              className='w-full h-[350px] object-contain'
-            /> */}
+           
              <LazyLoadImage
              src={mobileBanner3}
              alt=''
@@ -129,11 +120,7 @@ const Carousel = () => {
           </div>
 
           <div className=' w-full'>
-            {/* <img loading="lazy"
-              src={mobileBanner1}
-              alt=''
-              className='w-full h-[350px] object-contain'
-            /> */}
+            
              <LazyLoadImage
              src={mobileBanner1}
              alt=''

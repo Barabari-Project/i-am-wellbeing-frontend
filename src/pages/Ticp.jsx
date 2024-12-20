@@ -191,11 +191,7 @@ const Ticp = () => {
               <span>Case submissions: 5</span>
               <span>Supervision sessions: 8</span>
             </p>
-            {/* <img loading="lazy"
-              src='https://www.iamwellbeing.org/imgs/ticp4.png'
-              alt='teammate'
-              className='w-[500px] mt-5 lg:mt-0'
-            /> */}
+           
             <LazyLoadImage
              src='https://www.iamwellbeing.org/imgs/ticp4.png'
              alt='teammate'
@@ -207,7 +203,7 @@ const Ticp = () => {
             />
           </div>
 
-          {/* <img loading="lazy" src={ticp2Img} alt='curriculum' /> */}
+         
           <LazyLoadImage
              src={ticp2Img} alt='curriculum'
               effect="blur" // Blur effect while loading
@@ -215,7 +211,7 @@ const Ticp = () => {
                 <BlurryImages imgUrl="ticp-images/2-small.png" />
               }
             />
-          {/* <img loading="lazy" src={ticp3Img} alt='table-img' /> */}
+          
 
           <LazyLoadImage
              src={ticp3Img} alt='table-img'
@@ -344,7 +340,7 @@ const Ticp = () => {
           <h1 className='title text-3xl font-bold mb-3'>
             Criteria for grading assignments
           </h1>
-          {/* <img loading="lazy" src={ticp4Img} alt='ticp4Img' /> */}
+          
           <LazyLoadImage
              src={ticp4Img} alt='ticp4Img'
               effect="blur" // Blur effect while loading
@@ -451,11 +447,7 @@ const Ticp = () => {
                     setSelectedTeamMember(trainer);
                   }}
                 >
-                  {/* <img loading="lazy"
-                    src={trainer.imgSrc}
-                    alt='trainner-img'
-                    className='w-[300px]  lg:w-[250px] object-cover h-[400px] lg:h-[300px]'
-                  /> */}
+                  
                   <LazyLoadImage
              src={trainer.imgSrc}
                     alt='trainner-img'

@@ -30,55 +30,16 @@ const Header = () => {
           <img loading="lazy" className='w-[30px]' src={youtube} alt='' />
           <img loading="lazy" className='w-[30px]' src={linkedin} alt='' />
 
-{/* <LazyLoadImage
-              className='w-[30px]' src={facebook} alt=''
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a2-small.png" />
-              }
-          /> */}
-          
-          {/* <LazyLoadImage
-             className='w-[30px]' src={instagram} alt=''
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a2-small.png" />
-              }
-          />
-          
-          <LazyLoadImage
-              className='w-[30px]' src={twitter} alt=''
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a2-small.png" />
-              }
-          />
-          
 
-          <LazyLoadImage
-              className='w-[30px]' src={youtube} alt=''
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a2-small.png" />
-              }
-          />
-          
-          <LazyLoadImage
-              src={a2} alt='' className='w-full'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a2-small.png" />
-              }
-            /> */}
         </div>
 
         <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  md:flex hidden'>
           <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
             <Link to='/'>
-              {/* <img loading="lazy" src={logo} alt='' className='' /> */}
+              
               <LazyLoadImage
               src={logo} alt='' className=''
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="Home/logonew-small.png" />
               }

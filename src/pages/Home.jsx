@@ -87,18 +87,12 @@ const Home = () => {
         <div className='max-w-6xl 2xl:max-w-7xl  mx-auto'>
           <div className='flex flex-col lg:flex-row '>
             <div className='w-full lg:w-1/2 xl:w-1/3'>
-              {/* <img loading="lazy"
+              <img loading="lazy"
                 className='d-block w-[80%] m-auto h-full lg:w-full'
                 src={about}
                 alt='About Us'
-              /> */}
-              <LazyLoadImage
-                src={about} // Image source
-                alt="About Us" // Alt text
-                effect="blur" // Blur effect while loading
-                className="d-block w-[80%] m-auto h-full lg:w-full" // Tailwind CSS classes
-                placeholder={<BlurryImages imgUrl="Home/about-small.png"/>}
               />
+             
             </div>
             <div className='w-full lg:w-1/2 xl:w-2/3 p-4'>
               <p className='text-lg text-black'>
@@ -133,13 +127,7 @@ const Home = () => {
                 alt='People'
                 className='w-full lg:-[200px] h-full object-cover'
               />
-              {/* <LazyLoadImage
-                src={peoplenew}
-                alt='People'
-                effect="blur"
-                className='w-full lg:-[200px] h-full object-cover'
-                placeholder={<BlurryImages imgUrl="Home/peoplenew-small.png"/>}
-              /> */}
+              
             </div>
             <div className='bottom-background__img'>
               <img loading="lazy"
@@ -147,13 +135,7 @@ const Home = () => {
                 alt='Yellow Background gai'
                 className='w-full h-[50px] lg:h-[130px] object-cover'
               />
-              {/* <LazyLoadImage
-                src={yellowbgnew1}
-                alt='Yellow Background gai'
-                effect="blur"
-                className='w-full h-[50px] lg:h-[130px] object-cover'
-                placeholder={<BlurryImages imgUrl="Home/yellow-bg-small.png"/>}
-              /> */}
+             
             </div>
           </div>
 
@@ -253,7 +235,7 @@ const Home = () => {
 
             <div className='lg:w-4/12 xl:w-6/12  flex items-center flex-col h-full '>
               <div className=' flex'>
-                {/* <img loading="lazy" src={design} alt='Design' className='w-[300px] m-auto' /> */}
+               
                 <LazyLoadImage
                   src={design}
                   alt='Design'

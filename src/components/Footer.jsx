@@ -16,16 +16,12 @@ const Footer = () => {
           <div className='footer-contacts '>
             <div className='footer-logo'>
               <a className='footer-logo__link' href='index.html'>
-                {/* <img loading="lazy"
-                  className='footer-logo__img w-[200px]'
-                  src={logo}
-                  alt='logo'
-                /> */}
+                
                  <LazyLoadImage
                className='footer-logo__img w-[200px]'
                src={logo}
                alt='logo'
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="Home/logonew-small.png" />
               }
@@ -158,10 +154,10 @@ const Footer = () => {
 
         <div className='footer-logo lg:hidden mobile-logo'>
           <a className='footer-logo__link' href='index.html'>
-            {/* <img loading="lazy" className='footer-logo__img w-[100px]' src={logo} alt='logo' /> */}
+           
             <LazyLoadImage
              className='footer-logo__img w-[100px]' src={logo} alt='logo' 
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="Home/logonew-small.png" />
               }

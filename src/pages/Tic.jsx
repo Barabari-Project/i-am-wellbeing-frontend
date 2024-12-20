@@ -52,11 +52,7 @@ const Tic = () => {
       <div className="content max-w-6xl m-auto mt-5 p-3">
         <div className="understanding trauma lg:grid  lg:grid-cols-12 items-center justify-between  ">
           <div className="left text-3xl font-semibold text-center  hidden lg:block lg:col-span-5 ">
-            {/* <img loading="lazy"
-              src={quoteRight}
-              alt='quote-right'
-              className='w-[50px] ml-20'
-            /> */}
+           
             <LazyLoadImage
               src={quoteRight} // Image source
               alt="quoteRight" // Alt text
@@ -70,16 +66,11 @@ const Tic = () => {
             <br /> with a person.
             <br /> It's about what happened <br />
             to a person
-            {/* <img
-              loading="lazy"
-              src={quoteLeft}
-              alt="quote-left"
-              className="w-[400px] ml-10"
-            /> */}
+            
              <LazyLoadImage
-              src={quoteLeft} // Image source
-              alt="quote-left" // Alt text
-              effect="blur" // Blur effect while loading
+              src={quoteLeft} 
+              alt="quote-left" 
+              effect="blur" 
              className="w-[400px] ml-10"
               placeholder={
                 <BlurryImages imgUrl="Home/quote-left-small.png" />
@@ -89,12 +80,7 @@ const Tic = () => {
           {/* mobile view */}
           <div className="left text-3xl w-[80%] m-auto font-semibold text-center   block lg:hidden  lg:col-span-5 ">
             <p className="relative">
-              {/* <img
-                loading="lazy"
-                src={quoteRight}
-                alt="quote-right"
-                className="w-[40px]"
-              /> */}
+             
                <LazyLoadImage
               src={quoteRight}
               alt="quote-right"
@@ -106,12 +92,7 @@ const Tic = () => {
             />
               It isn't about what's wrong with a person. It's about what
               happened to a person
-              {/* <img
-                loading="lazy"
-                src={quoteRight}
-                alt="quote-left"
-                className="w-[40px] absolute right-0 rotate-180"
-              /> */}
+              
                <LazyLoadImage
               src={quoteRight}
               alt="quote-left"
@@ -126,12 +107,7 @@ const Tic = () => {
           {/* end mobile view */}
           {/* mobile image of teavhing students */}
           <div className="flex items-center justify-center lg:hidden mt-5  ">
-            {/* <img
-              loading="lazy"
-              src={ticImage}
-              alt="quote-left"
-              className="lg:w-[300px] w-[600px]"
-            /> */}
+            
 
 <LazyLoadImage
               src={ticImage}
@@ -163,12 +139,7 @@ const Tic = () => {
         {/* impact od trauma */}
         <div className="understanding trauma  lg:grid lg:grid-cols-12   lg:w-full p-2 lg:p-2 m-auto    ">
           <div className="left text-3xl text-center  hidden lg:flex justify-center font-semibold max col-span-5">
-            {/* <img
-              loading="lazy"
-              src={ticImage}
-              alt="quote-left"
-              className="w-[350px]"
-            /> */}
+            
              <LazyLoadImage
              src={ticImage}
              alt="quote-left"
@@ -214,12 +185,7 @@ const Tic = () => {
           </div>
 
           <div className="left text-lg text-center font-semibold w-[90%] m-auto  lg:col-span-3 relative top-5 lg:top-0">
-            {/* <img
-              loading="lazy"
-              src={blueQuoteLeft}
-              alt="quote-right"
-              className="lg:w-[30px] w-[50px] "
-            /> */}
+           
              <LazyLoadImage
               src={blueQuoteLeft}
               alt="quote-right"
@@ -235,12 +201,7 @@ const Tic = () => {
               rather than practices and services that may inadvertently
               re-traumatize.
             </p>
-            {/* <img
-              loading="lazy"
-              src={blueQuoteRight}
-              alt="quote-left"
-              className="w-[400px] lg:w-[200px] absolute right-0"
-            /> */}
+            
              <LazyLoadImage
               src={blueQuoteRight}
               alt="quote-left"
@@ -258,7 +219,7 @@ const Tic = () => {
             Principles of TIC
           </h2>
           <div className="max-w-5xl m-auto mb-4">
-            {/* <img loading="lazy" src={miniMagic} alt="" /> */}
+           
             <LazyLoadImage
              src={miniMagic} alt="" 
               effect="blur" // Blur effect while loading
@@ -267,12 +228,7 @@ const Tic = () => {
               }
             />
 
-            {/* <img
-              loading="lazy"
-              src={tic2}
-              alt=""
-              className="text-center m-auto hidden lg:block"
-            /> */}
+           
 
 <LazyLoadImage
              src={tic2}
@@ -287,14 +243,7 @@ const Tic = () => {
             <div className="tic-cards flex lg:hidden gap-2 items-center justify-center flex-col w-full ">
               {cards.map((card, index) => (
                 <div className="card" key={index}>
-                  {/* <img
-                    loading="lazy"
-                    src={card.src}
-                    alt=""
-                    className={`${card.id == 1 ? "mb-2" : ""}`}
-                  /> */}
-
-                  {/* //idhar se  */}
+                  
 
 <LazyLoadImage
              src={card.src}

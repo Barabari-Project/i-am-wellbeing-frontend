@@ -105,16 +105,12 @@ const ShortTraining = () => {
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
-        {/* <img loading="lazy"
-          src={stpnew}
-          className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
-          alt="img"
-        /> */}
+        
         <LazyLoadImage
               src={stpnew}
               className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
               alt="img"
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="stp%20data2/stp1-small.png" />
               }
@@ -127,8 +123,7 @@ const ShortTraining = () => {
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-16  2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Key Features</h1>
-        {/* <img src={stp4} alt="img" className="md:w-[98%]"/> */}
-
+       
         <div>
           <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px]  2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Who is it for?</h1>
@@ -270,15 +265,7 @@ const ShortTraining = () => {
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
 
-{/* <LazyLoadImage
-             src={stp7}
-             alt="img"
-             className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="stp%20data2/stp6-small.png" />
-              }
-            /> */}
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
@@ -309,15 +296,7 @@ const ShortTraining = () => {
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
 
-{/* <LazyLoadImage
-              src={stpnew3}
-              alt="img"
-              className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="stp%20data2/stpnew-small.png" />
-              }
-            /> */}
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
@@ -343,15 +322,7 @@ const ShortTraining = () => {
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
 
-{/* <LazyLoadImage
-              src={stpnew2}
-              alt="img"
-              className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="stp%20data2/stpnew2-small.png" />
-              }
-            /> */}
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">

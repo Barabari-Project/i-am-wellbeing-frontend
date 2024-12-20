@@ -43,10 +43,10 @@ useEffect(() => {
   return (
     <Slider {...settings} className=' max-w-5xl m-auto'>
       <div className='w-full flex items-center relative'>
-        {/* <img src={work_1_Img} alt='' className='h-[200px] w-full object-fit: cover' /> */}
+        
         <LazyLoadImage
               src={work_1_Img} alt='' className='h-[200px] w-full object-fit: cover'
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="home-images/work_1-small.png" />
               }
@@ -54,10 +54,10 @@ useEffect(() => {
       </div>
 
       <div className='w-full flex items-center relative'>
-        {/* <img src={work_2_Img} alt='' className='h-[200px] w-full object-fit: cover' /> */}
+       
         <LazyLoadImage
                src={work_2_Img} alt='' className='h-[200px] w-full object-fit: cover'
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="home-images/work_2-small.png" />
               }
@@ -65,10 +65,10 @@ useEffect(() => {
       </div>
 
       <div className=' w-full flex items-center relative'>
-        {/* <img src={work_3_Img} alt='' className='h-[200px] w-full object-fit: cover' /> */}
+       
         <LazyLoadImage
               src={work_3_Img} alt='' className='h-[200px] w-full object-fit: cover'
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="home-images/work_3-small.png" />
               }
@@ -76,10 +76,10 @@ useEffect(() => {
       </div>
 
       <div className=' w-full flex items-center relative'>
-        {/* <img src={work_4_Img} alt='' className='h-[200px] w-full object-fit: cover' /> */}
+        
         <LazyLoadImage
               src={work_4_Img} alt='' className='h-[200px] w-full object-fit: cover'
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="home-images/work_4-small.png" />
               }
@@ -87,10 +87,10 @@ useEffect(() => {
       </div>
 
       <div className=' w-full flex items-center relative'>
-        {/* <img src={work_5_Img} alt='' className='h-[200px] w-full object-fit: cover' /> */}
+        
         <LazyLoadImage
               src={work_5_Img} alt='' className='h-[200px] w-full object-fit: cover'
-              effect="blur" // Blur effect while loading
+              effect="blur"
               placeholder={
                 <BlurryImages imgUrl="home-images/work_5-small.png" />
               }
@@ -98,10 +98,10 @@ useEffect(() => {
       </div>
 
       <div className=' w-full flex items-center relative'>
-        {/* <img src={work_6_Img} alt='' className='h-[200px] w-full object-fit: cover' /> */}
+       
         <LazyLoadImage
               src={work_6_Img} alt='' className='h-[200px] w-full object-fit: cover'
-              effect="blur" // Blur effect while loading
+              effect="blur" 
               placeholder={
                 <BlurryImages imgUrl="home-images/work_6-small.png" />
               }
