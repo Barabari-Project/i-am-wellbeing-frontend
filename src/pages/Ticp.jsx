@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
+
 const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.png`;
 const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer2.png`;
 const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer3.png`;
@@ -20,6 +24,7 @@ const Ticp = () => {
   const [team] = useState([
     {
       imgSrc: trainer1,
+      blurSrc:"ticp-images/trainer1-small.png",
       name: "Akanksha Chandele",
       designation: "Director / Senior supervisor",
       description:
@@ -27,6 +32,7 @@ const Ticp = () => {
     },
     {
       imgSrc: trainer2,
+      blurSrc:"ticp-images/trainer2-small.png",
       name: "Pallavi Singh",
       designation: "Program Manager / Therapist",
       description:
@@ -34,6 +40,7 @@ const Ticp = () => {
     },
     {
       imgSrc: trainer3,
+      blurSrc:"ticp-images/trainer3-small.png",
       name: "Maitreyi Nigwekar",
       designation: "Consultant, Curriculum Development",
       description:
@@ -41,6 +48,7 @@ const Ticp = () => {
     },
     {
       imgSrc: trainer4,
+      blurSrc:"ticp-images/lata2-small.png",
       name: "Shambhavi Singh",
       designation: "Trainer",
       description:
@@ -48,6 +56,7 @@ const Ticp = () => {
     },
     {
       imgSrc: trainer6,
+      blurSrc:"ticp-images/trainer4-small.png",
       name: "Veena Hari",
       designation: "Consultant, Research",
       description:
@@ -55,6 +64,7 @@ const Ticp = () => {
     },
     { 
       imgSrc: trainer5,
+      blurSrc:"ticp-images/trainer5-small.png",
       name: "Preeta Ganguli",
       designation: "Missing",
       description:
@@ -181,15 +191,36 @@ const Ticp = () => {
               <span>Case submissions: 5</span>
               <span>Supervision sessions: 8</span>
             </p>
-            <img
-              src='https://www.iamwellbeing.org/imgs/ticp4.png'
-              alt='teammate'
-              className='w-[500px] mt-5 lg:mt-0'
+           
+            <LazyLoadImage
+             src='https://www.iamwellbeing.org/imgs/ticp4.png'
+             alt='teammate'
+             className='w-[500px] mt-5 lg:mt-0'
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="Home/ticimage1-small.jpg" />
+              }
             />
           </div>
 
-          <img src={ticp2Img} alt='curriculum' />
-          <img src={ticp3Img} alt='table-img' />
+         
+          <LazyLoadImage
+             src={ticp2Img} alt='curriculum'
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="ticp-images/2-small.png" />
+              }
+            />
+          
+
+          <LazyLoadImage
+             src={ticp3Img} alt='table-img'
+            
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="ticp-images/2a-small.png" />
+              }
+            />
         </div>
         <div className='beyond pl-2'>
           <h1 className='title text-3xl font-bold mt-3'>BEYOND LEVEL-1</h1>
@@ -309,7 +340,14 @@ const Ticp = () => {
           <h1 className='title text-3xl font-bold mb-3'>
             Criteria for grading assignments
           </h1>
-          <img src={ticp4Img} alt='ticp4Img' />
+          
+          <LazyLoadImage
+             src={ticp4Img} alt='ticp4Img'
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl="ticp-images/2aa-small.png" />
+              }
+            />
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <p className='text-xl text-justify'>
             Students from psychology and allied field background (undergraduate
@@ -409,11 +447,15 @@ const Ticp = () => {
                     setSelectedTeamMember(trainer);
                   }}
                 >
-                  <img
-                    src={trainer.imgSrc}
+                  
+                  <LazyLoadImage
+             src={trainer.imgSrc}
                     alt='trainner-img'
-                    className='w-[300px]  lg:w-[250px] object-cover h-[400px] lg:h-[300px]'
-                  />
+              effect="blur" // Blur effect while loading
+              placeholder={
+                <BlurryImages imgUrl={trainer.blurSrc} />
+              }
+            />
                 </div>
               );
             })}

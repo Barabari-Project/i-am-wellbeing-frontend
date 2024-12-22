@@ -1,4 +1,7 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
 
 
 const stp3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stp3.png`;
@@ -102,11 +105,16 @@ const ShortTraining = () => {
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
-        <img
-          src={stpnew}
-          className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
-          alt="img"
-        />
+        
+        <LazyLoadImage
+              src={stpnew}
+              className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
+              alt="img"
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="stp%20data2/stp1-small.png" />
+              }
+            />
       </section>
 
       {/* ----------------------------------------key features------------------------------ */}
@@ -115,8 +123,7 @@ const ShortTraining = () => {
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-16  2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Key Features</h1>
-        {/* <img src={stp4} alt="img" className="md:w-[98%]"/> */}
-
+       
         <div>
           <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px]  2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Who is it for?</h1>
@@ -222,14 +229,16 @@ const ShortTraining = () => {
         <h1 className="text-3xl sm:text-[40px] mb-2 font-black">
           Know Your Trainers
         </h1>
-        {/* <img src={stp5} alt="img"/> */}
+        {/* <img loading="lazy" src={stp5} alt="img"/> */}
         <div className="lg:px-[2%]">
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img
+            <img loading="lazy"
               src={stp5}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
+
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
@@ -250,11 +259,13 @@ const ShortTraining = () => {
           </div>
 
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img
+            <img loading="lazy"
               src={stp7}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
+
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
@@ -279,11 +290,13 @@ const ShortTraining = () => {
       <section className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%]  ">
         <div className="lg:px-[2%]">
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img
+            <img loading="lazy"
               src={stpnew3}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
+
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
@@ -303,11 +316,13 @@ const ShortTraining = () => {
           </div>
 
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img
+            <img loading="lazy"
               src={stpnew2}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
+
+
 
             <div className="md:ml-6 text-xl">
               <h2 className="text-lg md:text-2xl font-bold mb-2">
