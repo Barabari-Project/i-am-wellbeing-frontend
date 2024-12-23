@@ -73,7 +73,7 @@ const ShortTraining = () => {
       </section>
 
       {/* ---------------------------------intention----------------------------- */}
-      <section className="mx-[10%] lg:mx-[3.5%] py-16  2xl:px-[17%] ">
+      <section className="mx-[10%] lg:mx-[3.5%] py-8  2xl:px-[17%] ">
         <h1 className="text-[40px] mb-2 font-black">Intention</h1>
         <p className="text-justify leading-9 text-[22px] 2xl:text-[23px]">
           With the intention of building the capacity of young mental health
@@ -120,7 +120,7 @@ const ShortTraining = () => {
       {/* ----------------------------------------key features------------------------------ */}
       <section
         id="Key-Features"
-        className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-16  2xl:px-[20%] "
+        className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-8  2xl:px-[20%] "
       >
         <h1 className="text-[40px] mb-2 font-black">Key Features</h1>
        
@@ -338,6 +338,10 @@ const ShortTraining = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex  justify-center mt-8 text-[18px] xs:text-xl sm:text-2xl md:text-3xl font-bold">
+          <i>Stay tuned for information about the next batch
+          </i>
         </div>
         <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8 ">
           <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-[12px]">
