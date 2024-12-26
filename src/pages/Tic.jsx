@@ -133,13 +133,13 @@ const Tic = () => {
             </div>
           </div>
 
-          <div className='left text-lg text-center font-semibold w-[90%] m-auto  lg:col-span-3 relative top-5 lg:top-0'>
+          <div className='left text-lg text-center font-semibold w-[90%] m-auto   lg:col-span-3 relative top-5 lg:top-0'>
             <img
               src={blueQuoteLeft}
               alt='quote-right'
               className='lg:w-[30px] w-[50px] '
             />
-            <p className='text-2xl lg:text-2xl relative '>
+            <p className='text-xl lg:text-lg lg:text-justify relative'>
               Trauma-Informed Care understands and considers the pervasive
               nature of trauma and promotes environments of healing and recovery
               rather than practices and services that may inadvertently
@@ -165,9 +165,9 @@ const Tic = () => {
               className='text-center m-auto hidden lg:block'
             />
 
-            <div className='tic-cards flex lg:hidden gap-2 items-center justify-center flex-col w-full '>
+            <div className='tic-cards flex  lg:hidden gap-2 items-center justify-center flex-col w-full '>
               {cards.map((card, index) => (
-                <div className='card' key={index}>
+                <div className='card ' key={index}>
                   <img
                     src={card.src}
                     alt=''

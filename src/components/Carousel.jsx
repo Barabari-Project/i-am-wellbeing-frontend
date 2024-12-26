@@ -4,10 +4,10 @@ import Slider from "react-slick";
 const a1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a1.png`;
 const a2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a2.png`;
 const a3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a3.png`;  
-const mobileBanner1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner.png`;
 const mobileBanner2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-2.png`;
 const mobileBanner3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-3.png`;
 
+import banner3 from '../imgs/home-images/banner3.png'
 
 const Carousel = () => {
      var settings = {
@@ -39,7 +39,7 @@ const Carousel = () => {
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl font-bold'>
               <p>Mitigating</p>
               <p>the impact of</p>
-              
+
               <p>Adverse</p>
               <p>Childhood</p>
               <p>Experiences</p>
@@ -71,7 +71,6 @@ const Carousel = () => {
         <Slider {...settings2} className=''>
           <div className=' w-full'>
             <img
-            
               src={mobileBanner2}
               alt=''
               className='w-full h-[350px] object-contain'
@@ -86,9 +85,14 @@ const Carousel = () => {
             />
           </div>
 
-          <div className=' w-full'>
+          <div className='w-full text-center items-center justify-center pt-10 outline-none'>
+            <h1 className='xs:4xl text-5xl font-bold flex flex-col gap-4 trauma-text'>
+              <span>Making</span>
+              <span>India </span>
+              <span>Trauma-Informed</span>
+            </h1>
             <img
-              src={mobileBanner1}
+              src={banner3}
               alt=''
               className='w-full h-[350px] object-contain'
             />

@@ -15,6 +15,7 @@ const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
 const Header = () => {
   const [show , setShow] = useState(false); // state for show sub menu 
   const [toggle , setToggle] = useState(false); // state for side bar array to show and hide
+  const [isOpen , setIsOpen] = useState(false); // state for side bar array to show and hide
    
 
   return (
@@ -28,29 +29,41 @@ const Header = () => {
           <img className='w-[30px]' src={linkedin} alt='' />
         </div>
 
-        <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  md:flex hidden'>
+        <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  sm:flex hidden'>
           <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
             <Link to='/'>
               <img src={logo} alt='' className='' />
             </Link>
           </div>
 
-          <div className=' absolute right-0'>
-            <ul className='flex sm:gap-5 lg:gap-10 gap-10 pr-2 relative flex-end '>
+          <div className='absolute right-0'>
+            <ul className='flex sm:gap-4 lg:gap-6 gap-10 pr-2 relative flex-end '>
               <Link to='/'>
                 <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
                   Home
                 </li>
               </Link>
-              <Link to='/about-us'>
-                <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
+              {/* <Link to='/about-us'> */}
+                <li className='border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer'>
                   About us
+                  <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390]  z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
+                    <Link to='/about-us'>
+                      <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
+                        Our Team
+                      </li>
+                    </Link>
+                    <Link to='/programs'>
+                      <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
+                        Our Programs
+                      </li>
+                    </Link>
+                  </ul>
                 </li>
-              </Link>
+              {/* </Link> */}
 
               <Link to='/tic'>
                 <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
-                  TIC
+                  Trauma-Informed Care
                 </li>
               </Link>
 
@@ -64,7 +77,7 @@ const Header = () => {
                   </Link>
                   <Link to='/short-training'>
                     <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
-                      Short Training
+                      Short Trainings
                     </li>
                   </Link>
                 </ul>
@@ -140,13 +153,36 @@ const Header = () => {
             HOME
           </Link>
 
-          <Link
+          {/* <Link
             to='/about-us'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
             onClick={() => setToggle(false)}
           >
             ABOUT US
-          </Link>
+          </Link> */}
+
+          <a
+            className='font-[300] text-[#282A43] p-2  rounded-md '
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span className='flex items-center gap-2'>
+              About {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
+            </span>
+            <div
+              className={`overflow-hidden transition-all duration-500 ${
+                isOpen ? "max-h-96" : "max-h-0"
+              }`}
+            >
+              <ul className='ml-6 mt-5 flex flex-col gap-4'>
+                <Link to='/ticp' onClick={() => setToggle(false)}>
+                  <li className='text-gray-500'>Our Team</li>
+                </Link>
+                <Link to='/programs' onClick={() => setToggle(false)}>
+                  <li className='text-gray-500'>Our Programs</li>
+                </Link>
+              </ul>
+            </div>
+          </a>
 
           <Link
             to='/tic'

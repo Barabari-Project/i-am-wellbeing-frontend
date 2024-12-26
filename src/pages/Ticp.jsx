@@ -90,7 +90,7 @@ const Ticp = () => {
           <h2 className='title text-4xl font-bold pl-4 mt-10 lg:mt-0'>
             About us
           </h2>
-          <p className='mt-2 pl-4 leading-8 text-justify lg:text-wrap w-[95%] lg:w-full'>
+          <p className='mt-2 pl-4 pr-4 leading-8 text-justify lg:text-wrap w-[95%] lg:w-full'>
             Trauma is the most unaddressed and unseen epidemic in today’s time.
             Seven out of ten children in India experience some form of adversity
             at an early age. If left unaddressed, these painful experiences can
@@ -98,7 +98,7 @@ const Ticp = () => {
             mental, emotional, and physical wellbeing.
           </p>
 
-          <p className='pl-4 leading-8 text-justify w-[95%] lg:w-full'>
+          <p className='pl-4 pr-4 leading-8 text-justify w-[95%] lg:w-full'>
             I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
             profit organization dedicated to supporting such young lives
             struggling with adverse childhood experiences and building an
@@ -119,7 +119,8 @@ const Ticp = () => {
               get to witness a new statistic or data related to
               <b>
                 <i>
-                   {" "}increasingly high number of deaths by suicide, depression
+                  {" "}
+                  increasingly high number of deaths by suicide, depression
                   rate, severe mental health and physical health concerns like
                   chronic illnesses, heart problems, and autoimmune diseases.
                 </i>
@@ -191,9 +192,9 @@ const Ticp = () => {
           <img src={ticp2Img} alt='curriculum' />
           <img src={ticp3Img} alt='table-img' />
         </div>
-        <div className='beyond pl-2'>
+        <div className='beyond pl-2  w-[95%]'>
           <h1 className='title text-3xl font-bold mt-3'>BEYOND LEVEL-1</h1>
-          <p className='text-[22px] mt-3 font-semibold text-gray-600 text-justify w-[95%] lg:w-full'>
+          <p className='text-[15px] lg:text-[20px] mt-3 font-semibold text-[#333333] text-justify w-[95%] lg:w-full'>
             Successful completion of level 1 will qualify you to apply for Level
             2 This level is a more specialized coursework, which will focus upon
             topics like:
@@ -294,7 +295,7 @@ const Ticp = () => {
             <p className='mb-2'>Above 85%- 5( Excellent) </p>
             <p className='mb-2'>70-85% - 4 (Good) </p>
             <p className='mb-2'>51-65% - 3( Above Average)</p>
-            <p className='mb-2'>31-50- 2 (Average)  30%- 1 (Below Average)</p>
+            <p className='mb-2'>31-50- 2 (Average) 30%- 1 (Below Average)</p>
           </div>
 
           <h1 className='title text-3xl font-bold mb-3'>
@@ -306,10 +307,12 @@ const Ticp = () => {
             <p className='mb-2'>Complete supervision hours </p>
             <p className='mb-2'>Case submission and presentation</p>
           </div>
-          <h1 className='title text-3xl font-bold mb-3'>
+          <h1 className='title text-2xl font-bold mb-3'>
             Criteria for grading assignments
           </h1>
-          <img src={ticp4Img} alt='ticp4Img' />
+          <div className=' w-full  pr-4'>
+           <img src={ticp4Img} alt='ticp4Img' className='w-full object-cover' />
+          </div>
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <p className='text-xl text-justify'>
             Students from psychology and allied field background (undergraduate
@@ -351,7 +354,7 @@ const Ticp = () => {
             will provide participants with a foundational understanding of
             trauma, effects on the brain, culturally sensitive & evidence based
             approaches and resources to equip mental health professionals in
-            trauma-informed care and therapy. This understand would further lead
+            trauma-informed care and therapy. This understanding would further lead
             to:
           </p>
           <ul className='list-disc ml-6 text-xl mt-6'>
@@ -371,7 +374,7 @@ const Ticp = () => {
             <li className='mt-2'>
               Shift to holistic interventions that caters to the
             </li>
-            <li className='mt-2'>connection between mind, body and soul</li>
+            <li className='mt-2'>Connection between mind, body and soul</li>
           </ul>
 
           <h1 className='title text-4xl font-bold mt-3'>Key Takeaways</h1>
@@ -397,7 +400,7 @@ const Ticp = () => {
         </div>
 
         <div className='know-your-trainner pl-2'>
-          <h1 className='text-4xl font-bold'>Know Your Trainers:</h1>
+          <h1 className='text-4xl font-bold'>Know Your Trainers</h1>
           <div className='trainners grid items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10'>
             {team.map((trainer) => {
               return (
