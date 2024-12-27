@@ -46,14 +46,14 @@ const Programe = () => {
         <div className="container mx-auto  md:w-[93%]">
           <div className="flex flex-col items-center">
             <div className="bottom-background__img w-full">
-              <img
+              <img loading="lazy"
                 src={peoplenew}
                 alt="People"
                 className="w-full lg:-[100px] h-full object-cover "
               />
             </div>
             <div className="bottom-background__img w-full">
-              <img
+              <img loading="lazy"
                 src={yellowbgnew1}
                 alt="Yellow Background"
                 className="w-full h-[50px] lg:h-[130px] object-cover "
@@ -153,7 +153,7 @@ const Programe = () => {
           {/* top img of anubho */}
         <div className="lg:flex m-auto  px-4 lg:px-11 lg:gap-4 ">
           <div className="m-auto">
-            <img src={anubho1} alt="anubho image"></img>
+            <img loading="lazy" src={anubho1} alt="anubho image"></img>
           </div>
           <div className="w-full sm:p-3  ">
             <h1 className="text-right w-[99%] font-bold text-4xl pb-4">
@@ -171,16 +171,16 @@ const Programe = () => {
         </div>
         {/* 3slides of anubho */}
         <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
-          <img src={anubho2} alt="img" className=" sm:w-1/5" />
-          <img src={anubho3} alt="img" className=" sm:w-1/5" />
-          <img src={anubho4} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={anubho2} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={anubho3} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={anubho4} alt="img" className=" sm:w-1/5" />
         </div>
         {/* content data */}
         <div className="px-4 lg:px-11">
           <h1 className="text-5xl font-bold">Ripples of change</h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
-            <img
+            <img loading="lazy"
               src={anubho5}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"
@@ -210,7 +210,7 @@ const Programe = () => {
                 - P, participant, TICP Cohort 1 (2022)
               </span>{" "}
             </p>
-            <img
+            <img loading="lazy"
               src={anubho6}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"
@@ -218,7 +218,7 @@ const Programe = () => {
           </div>
           {/* ---------------------------------------- */}
           <div className="sm:flex  sm:mt-[1%] gap-5 leading-8">
-            <img
+            <img loading="lazy"
               src={anubho7}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"
@@ -265,21 +265,21 @@ const Programe = () => {
             </p>
           </div>
           <div className="w-[100%] lg:w-[70%] sm:pr-10  m-auto ">
-            <img src={udan1} alt="anubho image"></img>
+            <img loading="lazy" src={udan1} alt="anubho image"></img>
           </div>
         </div>
          {/* 3slides of udan */}
         <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
-          <img src={udan2} alt="img" className=" sm:w-1/5" />
-          <img src={udan3} alt="img" className="  sm:w-1/5" />
-          <img src={udan4} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={udan2} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={udan3} alt="img" className="  sm:w-1/5" />
+          <img loading="lazy" src={udan4} alt="img" className=" sm:w-1/5" />
         </div>
         {/* content data */}
         <div className="px-4 lg:px-14">
           <h1 className="text-5xl font-bold text-right">Story of change</h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-10">
-            <img
+            <img loading="lazy"
               src={udan5}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"
@@ -346,7 +346,7 @@ const Programe = () => {
            {/* top img of arya */}
         <div className="lg:flex m-auto  px-4 lg:px-11 lg:gap-3">
           <div className="w-[100%] lg:w-[70%] ">
-            <img src={arya1} alt="anubho image"></img>
+            <img loading="lazy" src={arya1} alt="anubho image"></img>
           </div>
           <div className="w-full sm:p-3  ">
             <h1 className="text-right w-[99%] font-bold text-4xl pb-4">
@@ -366,16 +366,16 @@ const Programe = () => {
         </div>
          {/* 3slides of arya */}
         <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
-          <img src={arya2} alt="img" className=" sm:w-1/5" />
-          <img src={arya3} alt="img" className="  sm:w-1/5" />
-          <img src={arya4} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={arya2} alt="img" className=" sm:w-1/5" />
+          <img loading="lazy" src={arya3} alt="img" className="  sm:w-1/5" />
+          <img loading="lazy" src={arya4} alt="img" className=" sm:w-1/5" />
         </div>
         {/* content data */}
         <div className="px-4 lg:px-11">
           <h1 className="text-5xl font-bold">Agents of change</h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
-            <img
+            <img loading="lazy"
               src={arya5}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"
@@ -402,7 +402,7 @@ const Programe = () => {
               - A, 15 years old, Mental Health Peer Leader
               </span>{" "}
             </p>
-            <img
+            <img loading="lazy"
               src={arya6}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"
@@ -410,7 +410,7 @@ const Programe = () => {
           </div>
           {/* ---------------------------------------- */}
           <div className="sm:flex sm:mt-[1%] gap-5 leading-8">
-            <img
+            <img loading="lazy"
               src={arya7}
               alt="img"
               className="justify-center sm:w-[14%] h-[90%]"

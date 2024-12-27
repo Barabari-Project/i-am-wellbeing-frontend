@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const borderImg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/about-us-bg.png`;  
+const borderImg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/about-us-bg.png`;
 const AkanshaChandrel = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/worker1.png`;
 const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
 const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
@@ -53,10 +53,14 @@ const annualReport3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualr
 const annualReport4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport4.jpeg`;
 
 import Model from '../components/Model'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
 
 
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedTeamMember , setSelectedTeamMember] = useState(null);
 
    const [teams] = useState([
      {
@@ -111,8 +115,6 @@ const About = () => {
     //  },
    ]);  
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedTeamMember, setSelectedTeamMember] = useState(null);
 
     const [consultants] = useState([
       {name : "Preeta Ganguli" , designation : "Training", imgSrc : consultant1},
@@ -178,7 +180,14 @@ const About = () => {
           </div>
 
           <div className=''>
-            <img src={AkanshaChandrel} alt='img' className='max-w-sm h-auto ' />
+          
+            <LazyLoadImage
+              src={AkanshaChandrel}
+              alt='img'
+              effect="blur"
+              className='max-w-sm h-auto '
+              placeholder={<BlurryImages imgUrl="aboutus-images/worker1-small.png"/>}
+            />
             <h6
               className='text-center bg-cover bg-repeat-round font-bold'
               style={{ backgroundImage: `url(${s7})` }}
@@ -284,10 +293,13 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              
+              <LazyLoadImage
                 src={annualReport1}
                 alt='annualreport1'
+                effect="blur"
                 className='sm:w-[300px]'
+                placeholder={<BlurryImages imgUrl="aboutus-images/annualreport1-small.png"/>}
               />
             </a>
             <a
@@ -295,10 +307,13 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              
+              <LazyLoadImage
                 src={annualReport2}
                 alt='annualreport2'
+                effect="blur"
                 className='sm:w-[300px]'
+                placeholder={<BlurryImages imgUrl="aboutus-images/annualreport2-small.png"/>}
               />
             </a>
 
@@ -307,10 +322,13 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+             
+              <LazyLoadImage
                 src={annualReport3}
                 alt='annualreport3'
+                effect="blur"
                 className='sm:w-[300px]'
+                placeholder={<BlurryImages imgUrl="aboutus-images/annualreport3-small.png"/>}
               />
             </a>
 
@@ -319,10 +337,13 @@ const About = () => {
               target='_blank'
               className='cursor-pointer'
             >
-              <img
+              
+              <LazyLoadImage
                 src={annualReport4}
                 alt='annualreport4'
+                effect="blur"
                 className='sm:w-[300px]'
+                placeholder={<BlurryImages imgUrl="aboutus-images/annualreport4-small.jpeg"/>}
               />
             </a>
           </div>

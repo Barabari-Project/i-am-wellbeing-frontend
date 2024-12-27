@@ -1,13 +1,18 @@
 
 import Slider from "react-slick";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
 
-import work_1_Img from '../imgs/home-images/work_1.png'
-import work_2_Img from '../imgs/home-images/work_2.png'
-import work_3_Img from '../imgs/home-images/work_3.png'
-import work_4_Img from '../imgs/home-images/work_4.png'
-import work_5_Img from '../imgs/home-images/work_5.png'
-import work_6_Img from '../imgs/home-images/work_6.png'
+
 import { useEffect, useState } from "react";
+
+const work_1_Img =`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_1.png`
+const work_2_Img =`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_2.png`
+const work_3_Img =`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_3.png`
+const work_4_Img =`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_4.png`
+const work_5_Img =`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_5.png`
+const work_6_Img=`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_6.png`
 
 
 
@@ -38,27 +43,69 @@ useEffect(() => {
   return (
     <Slider {...settings} className=' max-w-5xl m-auto'>
       <div className='w-full flex items-center relative'>
-        <img src={work_1_Img} alt='' className='h-[200px] w-full object-fit: cover' />
+        
+        <LazyLoadImage
+              src={work_1_Img} alt='' className='h-[200px] w-full object-fit: cover'
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="home-images/work_1-small.png" />
+              }
+            />
       </div>
 
       <div className='w-full flex items-center relative'>
-        <img src={work_2_Img} alt='' className='h-[200px] w-full object-fit: cover' />
+       
+        <LazyLoadImage
+               src={work_2_Img} alt='' className='h-[200px] w-full object-fit: cover'
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="home-images/work_2-small.png" />
+              }
+            />
       </div>
 
       <div className=' w-full flex items-center relative'>
-        <img src={work_3_Img} alt='' className='h-[200px] w-full object-fit: cover' />
+       
+        <LazyLoadImage
+              src={work_3_Img} alt='' className='h-[200px] w-full object-fit: cover'
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="home-images/work_3-small.png" />
+              }
+            />
       </div>
 
       <div className=' w-full flex items-center relative'>
-        <img src={work_4_Img} alt='' className='h-[200px] w-full object-fit: cover' />
+        
+        <LazyLoadImage
+              src={work_4_Img} alt='' className='h-[200px] w-full object-fit: cover'
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="home-images/work_4-small.png" />
+              }
+            />
       </div>
 
       <div className=' w-full flex items-center relative'>
-        <img src={work_5_Img} alt='' className='h-[200px] w-full object-fit: cover' />
+        
+        <LazyLoadImage
+              src={work_5_Img} alt='' className='h-[200px] w-full object-fit: cover'
+              effect="blur"
+              placeholder={
+                <BlurryImages imgUrl="home-images/work_5-small.png" />
+              }
+            />
       </div>
 
       <div className=' w-full flex items-center relative'>
-        <img src={work_6_Img} alt='' className='h-[200px] w-full object-fit: cover' />
+       
+        <LazyLoadImage
+              src={work_6_Img} alt='' className='h-[200px] w-full object-fit: cover'
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="home-images/work_6-small.png" />
+              }
+            />
       </div>
     </Slider>
   );

@@ -1,4 +1,8 @@
 import React from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from '../components/BlurryImages';
+
 
 const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
 
@@ -12,11 +16,16 @@ const Footer = () => {
           <div className='footer-contacts '>
             <div className='footer-logo'>
               <a className='footer-logo__link' href='index.html'>
-                <img
-                  className='footer-logo__img w-[200px]'
-                  src={logo}
-                  alt='logo'
-                />
+                
+                 <LazyLoadImage
+               className='footer-logo__img w-[200px]'
+               src={logo}
+               alt='logo'
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="Home/logonew-small.png" />
+              }
+            />
               </a>
             </div>
 
@@ -145,7 +154,14 @@ const Footer = () => {
 
         <div className='footer-logo lg:hidden mobile-logo'>
           <a className='footer-logo__link' href='index.html'>
-            <img className='footer-logo__img w-[100px]' src={logo} alt='logo' />
+           
+            <LazyLoadImage
+             className='footer-logo__img w-[100px]' src={logo} alt='logo' 
+              effect="blur" 
+              placeholder={
+                <BlurryImages imgUrl="Home/logonew-small.png" />
+              }
+            />
           </a>
         </div>
 
