@@ -13,12 +13,12 @@ const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
 // const team5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/tttt5.png`;
 // const team6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt6.png`;
 
-// import team1 from '../imgs/home-images/team_1.png'
+import team1 from '../imgs/home-images/team_1.png'
 import team2 from '../imgs/home-images/team_2.png';
 import team3 from '../imgs/home-images/team_3.png';
 import team4 from '../imgs/home-images/team_4.png';
-// import team5 from '../imgs/home-images/team_5.png';
-import team6 from '../imgs/home-images/team_6.png';
+import team5 from '../imgs/home-images/team_5.png';
+// import team6 from '../imgs/home-images/team_6.png';
 
 
 
@@ -46,6 +46,8 @@ import consultant7 from '../imgs/home-images/consultant_7.png';
 import consultant8 from '../imgs/home-images/consultant_8.png';
 import consultant9 from '../imgs/home-images/consultant_9.png';
 import consultant10 from '../imgs/home-images/consultant_10.png';
+import consultant11 from '../imgs/home-images/consultant_11.png';
+import consultant12 from '../imgs/home-images/consultant_12.png';
 // annual reports images
 const annualReport1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport1.png`;
 const annualReport2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport2.png`;
@@ -65,7 +67,7 @@ const About = () => {
    const [teams] = useState([
      {
        name: "Akanksha Chandele",
-       imgSrc: team2,
+       imgSrc: team1,
        designation: "Director/Senior Supervisor",
        specialist: "Program Manager / Therapist",
        description:
@@ -74,7 +76,7 @@ const About = () => {
 
      {
        name: "Pallavi Singh",
-       imgSrc: team3,
+       imgSrc: team2,
        designation: "Program Manager / Therapist",
        specialist: "Program Manager / Therapist",
        description:
@@ -82,52 +84,70 @@ const About = () => {
      },
      {
        name: "Atufa Khan",
-       imgSrc: team4,
+       imgSrc: team3,
        designation: "Reasearch Coordiinator / Therapist",
        specialist: "Counselling Psychologist",
        description:
          "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
      },
 
-    //  {
-    //    name: "Yasha Malhotra",
-    //    imgSrc: team5,
-    //    designation: "Training Coordinator / Therapist",
-    //    specialist: "Counselling Psychologist",
-    //    description:
-    //      "Yasha Malhotra is a psychologist with a master’s degree in clinical psychology. She uses a comprehensive approach, emphasizing on both physical and mental health, and has experience working in a variety of clinical and counseling settings. Her vision is to create an environment that is both spiritually and emotionally mindful.",
-    //  },
+     {
+       name: "Neeti Kaushal",
+       imgSrc: team5,
+       designation: "Training Coordinator / Therapist",
+       specialist: "Counselling Psychologist",
+       description:
+         "Neeti Kaushal is a Psychologist, with a Masters degree in Psychology from Delhi University. She has been working in the field of Psychology since the last two years. She is instrumental in Counselling and Psychological Testing. She also has experience in facilitating listening circles. She wished she had a listening ear in childhood to help her through personal struggles. She chose the field of Psychology as her career path to be that source of help and healing for children, adolescents, and young adults. She believes in the power of early intervention in childhood and breaking the cycle of intergenerational trauma.  As an individual, she is an empathetic person and a good listener. She is a creative soul who enjoys painting, music, and dance. She is equally passionate about fitness and sports. Some of the values she lives by are kindness, compassion, and honesty. ",
+     },
      {
        name: "Ishi Agarwal",
-       imgSrc: team6,
-       designation: "Content Manager/Therapist", 
+       imgSrc: team4,
+       designation: "Content Manager/Therapist",
        specialist: "Content Manager, Therapist",
        description:
          "She has completed her Master's in Psychology and received training in different sectors of mental health such as counseling, relationship concerns, and addiction and recovery. She believes that building a deeper understanding of 'self' is the first and the most important step toward healing. She aims to help individuals build a healthier relationship with themselves and those around them. She is also a big supporter of writing and other creative activities as an outlet for pent-up emotions and tries to integrate these practices into her personal and professional life.",
      },
-    //  {
-    //    name: "Laasya Mangalampalli",
-    //    imgSrc: team1,
-    //    designation: "Therapist",
-    //    specialist: "Counselor",
-    //    description:
-    //      "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
-    //  },
+     //  {
+     //    name: "Laasya Mangalampalli",
+     //    imgSrc: team1,
+     //    designation: "Therapist",
+     //    specialist: "Counselor",
+     //    description:
+     //      "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
+     //  },
    ]);  
 
 
     const [consultants] = useState([
-      {name : "Preeta Ganguli" , designation : "Training", imgSrc : consultant1},
-      {name : "Maitreyi Nigwekar" , designation : "Training", imgSrc : consultant2},
-      {name : "Venna Hari" , designation : "Training", imgSrc : consultant3},
-      {name : "Rakshita Goel" , designation : "Training", imgSrc : consultant4},
-      {name : "Dr Shiraz" , designation : "Psychiatrist", imgSrc : consultant5},
-      {name : "Sukun Chandele" , designation : "Legal", imgSrc : consultant6},
-      {name : "Faseeh Amin" , designation : "Research", imgSrc : consultant7},
-      {name : "Anupam Parashar" , designation : "Finace", imgSrc : consultant8},
-      {name : "Shambhavi Singh" , designation : "Training", imgSrc : consultant9},
-      {name : "Yasha Malhotra" , designation : "Training Coordiinator/Therapist", imgSrc : consultant10},
-    ])
+      { name: "Preeta Ganguli", designation: "Training", imgSrc: consultant1 },
+      {
+        name: "Maitreyi Nigwekar",
+        designation: "Training",
+        imgSrc: consultant2,
+      },
+      { name: "Venna Hari", designation: "Training", imgSrc: consultant3 },
+      { name: "Rakshita Goel", designation: "Training", imgSrc: consultant4 },
+      { name: "Dr Shiraz", designation: "Psychiatrist", imgSrc: consultant5 },
+      { name: "Sukun Chandele", designation: "Legal", imgSrc: consultant6 },
+      { name: "Faseeh Amin", designation: "Research", imgSrc: consultant7 },
+      { name: "Anupam Parashar", designation: "Finace", imgSrc: consultant8 },
+      { name: "Shambhavi Singh", designation: "Training", imgSrc: consultant9 },
+      {
+        name: "Yasha Malhotra",
+        designation: "Training Coordiinator/Therapist",
+        imgSrc: consultant10,
+      },
+      {
+        name: "Dr Nishtha Lamba",
+        designation: "Research",
+        imgSrc: consultant11,
+      },
+      {
+        name: "Alisha Sethi",
+        designation: "Outreach",
+        imgSrc: consultant12,
+      },
+    ]);
 
   
   return (
@@ -214,17 +234,17 @@ const About = () => {
             {teams.map((team) => {
               return (
                 <div
-                  className='team-card w-[100%]  m-auto cursor-pointer '
+                  className='team-card w-[100%]  m-auto cursor-pointer relative'
                   key={team.name}
                   onClick={() => {
                     setSelectedTeamMember(team);
                     setIsOpen(true);
                   }}
                 >
-                  <img src={team.imgSrc} alt='team' className='w-full' />
-                  <div className='details text-center'>
-                    <h6 className='font-bold uppercase'>{team.name}</h6>
-                    <p className='text text-gray-600 font-[600] text-sm'>
+                  <img src={team.imgSrc} alt='team' className='w-full lg:min-h-[300px]    object-cover' />
+                  <div className='details  w-full lg:absolute lg:left-8  lg:bottom-1 text-center lg:text-left  '>
+                    <h6 className='font-bold uppercase text-lg'>{team.name}</h6>
+                    <p className='text text-gray-600 font-[500] text-md'>
                       {team.designation}
                     </p>
                   </div>
@@ -251,18 +271,18 @@ const About = () => {
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-6 mt-10'>
             {consultants.map((consultant , index) => {
               return (
-                <div key={index}>
+                <div key={index} className='relative'>
                   <img
                     src={consultant.imgSrc}
-                    alt='consultant1'
-                    className='w-[350px] h-auto'
+                    alt='team'
+                    className='w-full min-h-[300px] object-cover'
                   />
 
-                  <div className='details text-center'>
-                    <h6 className='font-bold uppercase'>
+                  <div className='details  details  w-full absolute lg:bottom-0 text-center lg:text-left bottom-6'>
+                    <h6 className='font-bold text-black uppercase text-lg text-center'>
                       {consultant.name}
                     </h6>
-                    <p className='text text-gray-600 font-[600] text-md '>
+                    <p className='text text-gray-800 font-[500] text-lg text-center'>
                       {consultant.designation}
                     </p>
                   </div>
@@ -273,7 +293,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className='annual-reports mt-3'>
+        <div className='annual-reports mt-14'>
           <div
             className='text-4xl md:text-6xl text-white font-bold relative h-[80px] lg:h-[120px]'
             style={{

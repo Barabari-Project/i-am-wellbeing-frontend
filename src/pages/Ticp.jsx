@@ -7,12 +7,19 @@ const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
 
-const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.png`;
-const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer2.png`;
-const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer3.png`;
-const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/lata2.png`;
-const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer5.png`;
-const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer4.png`;
+// const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.png`;
+// const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer2.png`;
+// const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer3.png`;
+// const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/lata2.png`;
+// const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer5.png`;
+// const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer4.png`;
+
+import trainer1 from '../imgs/home-images/trainer1.png';
+import trainer2 from '../imgs/home-images/trainer2.png';
+import trainer3 from '../imgs/home-images/trainer3.png';
+import trainer4 from '../imgs/home-images/trainer4.png';
+import trainer5 from '../imgs/home-images/trainer5.png';
+import trainer6 from '../imgs/home-images/trainer6.png';
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
 
@@ -448,15 +455,18 @@ const Ticp = () => {
                     setSelectedTeamMember(trainer);
                   }}
                 >
-                  
                   <LazyLoadImage
-                      src={trainer.imgSrc}
-                      alt='trainner-img'
-                      effect="blur" // Blur effect while loading
-                      placeholder={
-                        <BlurryImages imgUrl={trainer.blurSrc} />
-              }
-            />
+                    src={trainer.imgSrc}
+                    alt='trainner-img'
+                    effect='blur' // Blur effect while loading
+                    placeholder={<BlurryImages imgUrl={trainer.blurSrc} />}
+                  />
+                  <div className="flex flex-col items-center justify-center w-full gap-3">
+                  <h1 className='text-xl text-center  font-bold mt-2'>
+                    {trainer.name}
+                  </h1>
+                  <button className='text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white'>Know More</button>
+                  </div>
                 </div>
               );
             })}
