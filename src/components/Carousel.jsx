@@ -11,6 +11,7 @@ const mobileBanner2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-2.p
 const mobileBanner3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-3.png`;
 
 import banner3 from '../imgs/home-images/banner3.png'
+import bannerText3 from '../imgs/home-images/banner3Text.png'
 
 const Carousel = () => {
      var settings = {
@@ -111,11 +112,13 @@ const Carousel = () => {
           </div>
 
           <div className='w-full text-center items-center justify-center pt-10 outline-none'>
-            <h1 className='xs:4xl text-5xl font-bold flex flex-col gap-4 trauma-text'>
-              <span>Making</span>
-              <span>India </span>
-              <span>Trauma-Informed</span>
-            </h1>
+            <LazyLoadImage
+              src={bannerText3}
+              effect='blur'
+              alt=''
+              className='w-full h-[350px] object-contain'
+              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
+            />
             <LazyLoadImage
               src={banner3}
               effect='blur'
