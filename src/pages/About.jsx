@@ -6,23 +6,25 @@ const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
 const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
 
 // team images
-const team1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt1.png`;
-const team2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt2.png`;
-const team3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt3.png`;
-const team4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt4.png`;
-const team5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/tttt5.png`;
-const team6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt6.png`;
+const team1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_1.png`;
+const team2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_2.png`;
+const team3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_3.png`;
+const team4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_4.png`;
+const team5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_5.png`;
 
 // consultant images
-const consultant1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa1.png`;
-const consultant2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa2.png`;
-const consultant3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa3.png`;
-const consultant4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa4.png`;
-const consultant5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa5.png`;
-const consultant6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa6.png`;
-const consultant7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa7.png`;
-const consultant8 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa8.png`;
-const consultant9 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa9.png`;
+const consultant1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_1.png`;
+const consultant2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_2.png`;
+const consultant3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_3.png`;
+const consultant4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_4.png`;
+const consultant5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_5.png`;
+const consultant6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_6.png`;
+const consultant7 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_7.png`;
+const consultant8 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_8.png`;
+const consultant9 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_9.png`;
+const consultant10 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_10.png`;
+const consultant11 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_11.png`;
+const consultant12 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_12.png`;
 
 // annual reports images
 const annualReport1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport1.png`;
@@ -37,64 +39,144 @@ import BlurryImages from '../components/BlurryImages';
 
 
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedTeamMember , setSelectedTeamMember] = useState(null);
 
    const [teams] = useState([
      {
        name: "Akanksha Chandele",
        imgSrc: team1,
-       imgblurSrc:"aboutus-images/ttt1-small.png",
-       designation: "Program Manager / Therapist",
+       smallImgSrc: "team_1-small.png",
+       designation: "Director/Senior Supervisor",
+       specialist: "Program Manager / Therapist",
        description:
          "Akanksha is a Holistic Trauma Therapist actively engaged in working with survivors of abuse and trauma. Their practice is rooted in building interconnectedness and compassion for all beings and they believe in the power of mind-body-spirit healing in order to thrive and grow. Akanksha has an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and a diploma in Arts-Based Therapy.They are trained in EMDR, IEMT, Somatic Practices, and psychological first-aid. They also use Bach remedies, Access consciousness, and are a Reiki Master Practitioner.With a deep inclination to support the mental wellbeing of marginalised and vulnerable communities, they started I Am Wellbeing (Nairatmya Foundation), an organisation dedicated to trauma healing and prevention. I Am Wellbeing works with survivors of adverse life experiences and equips mental health professionals, caregivers, and educators in providing trauma-informed care to those in need.",
      },
 
-    {
-      name: "Pallavi Singh",
-      imgSrc: team2,
-      imgblurSrc:"aboutus-images/ttt2-small.png",
-      designation: "Program Manager / Therapist",
-      description:
-        "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
-    },
-    {
-      name: "Atufa Khan",
-      imgSrc: team3,
-      imgblurSrc:"aboutus-images/ttt3-small.png",
-      designation: "Counselling Psychologist",
-      description:
-        "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
-    },
+     {
+       name: "Pallavi Singh",
+       imgSrc: team2,
+       smallImgSrc: "team_2-small.png",
+       designation: "Program Manager / Therapist",
+       specialist: "Program Manager / Therapist",
+       description:
+         "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
+     },
+     {
+       name: "Atufa Khan",
+       imgSrc: team3,
+       smallImgSrc: "team_3-small.png",
+       designation: "Reasearch Coordiinator / Therapist",
+       specialist: "Counselling Psychologist",
+       description:
+         "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
+     },
 
-    {
-      name: "Yasha Malhotra",
-      imgSrc: team4,
-      imgblurSrc:"aboutus-images/ttt4-small.png",
-      designation: "Counselling Psychologist",
-      description:
-        "Yasha Malhotra is a psychologist with a master’s degree in clinical psychology. She uses a comprehensive approach, emphasizing on both physical and mental health, and has experience working in a variety of clinical and counseling settings. Her vision is to create an environment that is both spiritually and emotionally mindful.",
-    },
-    {
-      name: "Ishi Agarwal",
-      imgSrc: team5,
-      imgblurSrc:"aboutus-images/tttt5-small.png",
-      designation: "Content Manager, Therapist",
-      description:
-        "She has completed her Master's in Psychology and received training in different sectors of mental health such as counseling, relationship concerns, and addiction and recovery. She believes that building a deeper understanding of 'self' is the first and the most important step toward healing. She aims to help individuals build a healthier relationship with themselves and those around them. She is also a big supporter of writing and other creative activities as an outlet for pent-up emotions and tries to integrate these practices into her personal and professional life.",
-    },
-    {
-      name: "Laasya Mangalampalli",
-      imgSrc: team6,
-      imgblurSrc:"aboutus-images/ttt6-small.png",
-      designation: "Counselor",
-      description:
-        "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
-    },
-  ]);
+     {
+       name: "Neeti Kaushal",
+       imgSrc: team5,
+       smallImgSrc: "team_5-small.png",
+       designation: "Training Coordinator / Therapist",
+       specialist: "Counselling Psychologist",
+       description:
+         "Neeti Kaushal is a Psychologist, with a Masters degree in Psychology from Delhi University. She has been working in the field of Psychology since the last two years. She is instrumental in Counselling and Psychological Testing. She also has experience in facilitating listening circles. She wished she had a listening ear in childhood to help her through personal struggles. She chose the field of Psychology as her career path to be that source of help and healing for children, adolescents, and young adults. She believes in the power of early intervention in childhood and breaking the cycle of intergenerational trauma.  As an individual, she is an empathetic person and a good listener. She is a creative soul who enjoys painting, music, and dance. She is equally passionate about fitness and sports. Some of the values she lives by are kindness, compassion, and honesty. ",
+     },
+     {
+       name: "Ishi Agarwal",
+       imgSrc: team4,
+       smallImgSrc: "team_4-small.png",
+       designation: "Content Manager/Therapist",
+       specialist: "Content Manager, Therapist",
+       description:
+         "She has completed her Master's in Psychology and received training in different sectors of mental health such as counseling, relationship concerns, and addiction and recovery. She believes that building a deeper understanding of 'self' is the first and the most important step toward healing. She aims to help individuals build a healthier relationship with themselves and those around them. She is also a big supporter of writing and other creative activities as an outlet for pent-up emotions and tries to integrate these practices into her personal and professional life.",
+     },
+     //  {
+     //    name: "Laasya Mangalampalli",
+     //    imgSrc: team1,
+     //    designation: "Therapist",
+     //    specialist: "Counselor",
+     //    description:
+     //      "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
+     //  },
+   ]);  
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedTeamMember, setSelectedTeamMember] = useState(null);
 
+    const [consultants] = useState([
+      {
+        name: "Preeta Ganguli",
+        designation: "Training",
+        imgSrc: consultant1,
+        smallImgSrc: "consultant_1-small.png",
+      },
+      {
+        name: "Maitreyi Nigwekar",
+        designation: "Training",
+        imgSrc: consultant2,
+        smallImgSrc: "consultant_2-small.png",
+      },
+      {
+        name: "Venna Hari",
+        designation: "Training",
+        imgSrc: consultant3,
+        smallImgSrc: "consultant_3-small.png",
+      },
+      {
+        name: "Rakshita Goel",
+        designation: "Training",
+        imgSrc: consultant4,
+        smallImgSrc: "consultant_4-small.png",
+      },
+      {
+        name: "Dr Shiraz",
+        designation: "Psychiatrist",
+        imgSrc: consultant5,
+        smallImgSrc: "consultant_5-small.png",
+      },
+      {
+        name: "Sukun Chandele",
+        designation: "Legal",
+        imgSrc: consultant6,
+        smallImgSrc: "consultant_6-small.png",
+      },
+      {
+        name: "Faseeh Amin",
+        designation: "Research",
+        imgSrc: consultant7,
+        smallImgSrc: "consultant_7-small.png",
+      },
+      {
+        name: "Anupam Parashar",
+        designation: "Finace",
+        imgSrc: consultant8,
+        smallImgSrc: "consultant_8-small.png",
+      },
+      {
+        name: "Shambhavi Singh",
+        designation: "Training",
+        imgSrc: consultant9,
+        smallImgSrc: "consultant_9-small.png",
+      },
+      {
+        name: "Yasha Malhotra",
+        designation: "Training Coordiinator/Therapist",
+        imgSrc: consultant10,
+        smallImgSrc: "consultant_10-small.png",
+      },
+      {
+        name: "Dr Nishtha Lamba",
+        designation: "Research",
+        imgSrc: consultant11,
+        smallImgSrc: "consultant_11-small.png",
+      },
+      {
+        name: "Alisha Sethi",
+        designation: "Outreach",
+        imgSrc: consultant12,
+        smallImgSrc: "consultant_12-small.png",
+      },
+    ]);
 
+  
   return (
     <>
       <section className='section about py-16 '>
@@ -118,7 +200,7 @@ const About = () => {
                 borderImageOutset: 0 /* Optional: Adjust spacing */,
               }}
             >
-              <p className='text-xl leading-10'>
+              <p className='text-xl leading-8 text-justify'>
                 My very first day at work brought me face to face with 55 young
                 girls living at a childcare home who had survived sexual abuse,
                 physical abuse, and neglect at a very young age. Interacting
@@ -144,8 +226,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className=''>
-          
+          <div className=''>          
             <LazyLoadImage
               src={AkanshaChandrel}
               alt='img'
@@ -172,28 +253,38 @@ const About = () => {
               backgroundPosition: "bottom left",
             }}
           >
-            <h1 className='absolute  top-4 lg:top-5 left-2'>Our Team</h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2'>Core Team</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6  md:grid-cols-3 max-w-3xl m-auto  mt-10'>
             {teams.map((team) => {
+              // console.log(`home-images/${team.smallImgSrc}`);
               return (
                 <div
-                  className='team-card w-[100%]  m-auto cursor-pointer'
+                  className='team-card w-[100%]  m-auto cursor-pointer relative'
                   key={team.name}
                   onClick={() => {
                     setSelectedTeamMember(team);
                     setIsOpen(true);
                   }}
                 >
-                  
                   <LazyLoadImage
                     src={team.imgSrc}
                     alt='team'
-                    effect="blur"
-                    className='w-full'
-                    placeholder={<BlurryImages imgUrl={team.imgblurSrc } />}
+                    className='w-full lg:min-h-[300px]   object-cover'
+                    placeholder={
+                      <BlurryImages
+                        imgUrl={`home-images/${team.smallImgSrc}`}
+                      />
+                      // aboutus-images/worker1-small.png
+                    }
                   />
+                  <div className='details  w-full lg:absolute lg:left-8  lg:bottom-1 text-center lg:text-left  '>
+                    <h6 className='font-bold uppercase text-lg'>{team.name}</h6>
+                    <p className='text text-gray-600 font-[500] text-md'>
+                      {team.designation}
+                    </p>
+                  </div>
                 </div>
               );
             })}
@@ -214,75 +305,44 @@ const About = () => {
             <h1 className='absolute  top-4 lg:top-5 left-2'>Our consultants</h1>
           </div>
 
-          <div className="team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-10 mt-10">
-            <LazyLoadImage
-              src={consultant1}
-              alt="consultant1"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa1-small.png"/>}
-              
-            />
-            <LazyLoadImage
-              src={consultant2}
-              alt="consultant2"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa2-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant3}
-              alt="consultant3"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa3-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant4}
-              alt="consultant4"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa4-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant5}
-              alt="consultant5"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa5-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant6}
-              alt="consultant6"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa6-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant7}
-              alt="consultant7"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa7-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant8}
-              alt="consultant8"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa8-small.png"/>}
-            />
-            <LazyLoadImage
-              src={consultant9}
-              alt="consultant9"
-              effect="blur"
-              className="w-[350px] h-auto"
-              placeholder={<BlurryImages imgUrl="aboutus-images/aaaa9-small.png"/>}
-            />
+          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-6 mt-10'>
+            {consultants.map((consultant , index) => {
+              return (
+                <div key={index} className='relative'>
+                  {/* <img
+                    src={consultant.imgSrc}
+                    alt='team'
+                    className='w-full min-h-[300px] object-cover'
+                  /> */}
+
+                  <LazyLoadImage
+                    src={consultant.imgSrc}
+                    alt='team'
+                    className='w-full lg:min-h-[300px]   object-cover'
+                    placeholder={
+                      <BlurryImages
+                        imgUrl={`home-images/${consultant.smallImgSrc}`}
+                      />
+                      // aboutus-images/worker1-small.png
+                    }
+                  />
+
+                  <div className='details  details  w-full absolute lg:bottom-0 text-center lg:text-left bottom-6'>
+                    <h6 className='font-bold text-black uppercase text-lg text-center'>
+                      {consultant.name}
+                    </h6>
+                    <p className='text text-gray-800 font-[500] text-lg text-center'>
+                      {consultant.designation}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+            
           </div>
         </div>
 
-        <div className='annual-reports'>
+        <div className='annual-reports mt-14'>
           <div
             className='text-4xl md:text-6xl text-white font-bold relative h-[80px] lg:h-[120px]'
             style={{
@@ -296,7 +356,7 @@ const About = () => {
             <h1 className='absolute  top-4 lg:top-5 left-2'>Annual Reports</h1>
           </div>
 
-          <div className='annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-10 mt-10'>
+          <div className='annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-8 mt-10'>
             <a
               href='https://drive.google.com/file/d/1O2lsC6jPYwwu_HR-qmm7_vgxRpKYNBDu/view?usp=sharing&embedded=true'
               target='_blank'

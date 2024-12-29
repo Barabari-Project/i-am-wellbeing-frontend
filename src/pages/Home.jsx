@@ -95,7 +95,7 @@ const Home = () => {
              
             </div>
             <div className='w-full lg:w-1/2 xl:w-2/3 p-4'>
-              <p className='text-lg text-black'>
+              <p className='text-lg text-black text-justify'>
                 <span className='text-6xl'>T</span>rauma is the most unaddressed
                 and invisibilized epidemic in today’s time. 7 out of 10 children
                 in India experience some form of adversity at an early age. If

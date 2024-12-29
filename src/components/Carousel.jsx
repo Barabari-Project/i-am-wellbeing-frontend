@@ -7,10 +7,12 @@ import BlurryImages from '../components/BlurryImages';
 const a1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a1.png`;
 const a2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a2.png`;
 const a3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a3.png`;  
-const mobileBanner1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner.png`;
 const mobileBanner2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-2.png`;
 const mobileBanner3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-3.png`;
 
+
+const banner3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/banner3.png`;
+const bannerText3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/banner3Text.png`;
 
 const Carousel = () => {
      var settings = {
@@ -37,19 +39,18 @@ const Carousel = () => {
       <div className='hidden lg:block border  relative cursor-pointer'>
         <Slider {...settings} className=''>
           <div className=' w-full  items-center relative flex text-center'>
-           
             <LazyLoadImage
-              src={a2} alt='' className='w-full'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a2-small.png" />
-              }
+              src={a2}
+              alt=''
+              className='w-full'
+              effect='blur' // Blur effect while loading
+              placeholder={<BlurryImages imgUrl='Home/a2-small.png' />}
             />
 
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl font-bold'>
               <p>Mitigating</p>
               <p>the impact of</p>
-              
+
               <p>Adverse</p>
               <p>Childhood</p>
               <p>Experiences</p>
@@ -57,13 +58,12 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex'>
-          
             <LazyLoadImage
-              src={a1} alt='' className='w-full'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a1-small.png" />
-              }
+              src={a1}
+              alt=''
+              className='w-full'
+              effect='blur' // Blur effect while loading
+              placeholder={<BlurryImages imgUrl='Home/a1-small.png' />}
             />
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10  left-5 text-5xl xl:text-6xl font-bold'>
               <p>Creating</p>
@@ -73,13 +73,12 @@ const Carousel = () => {
           </div>
 
           <div className='w-full items-center relative flex '>
-            
             <LazyLoadImage
-              src={a3} alt='' className='w-full'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/a3-small.png" />
-              }
+              src={a3}
+              alt=''
+              className='w-full'
+              effect='blur' // Blur effect while loading
+              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
             />
             <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl  font-bold'>
               <p>Making</p>
@@ -94,41 +93,39 @@ const Carousel = () => {
       <div className='border-b lg:hidden block  mt-20'>
         <Slider {...settings2} className=''>
           <div className=' w-full'>
-           
-             <LazyLoadImage
-               src={mobileBanner2}
-               alt=''
-               className='w-full h-[350px] object-contain'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/mobile-banner-2-small.png" />
-              }
+            <LazyLoadImage
+              src={mobileBanner2}
+              effect='blur'
+              alt=''
+              className='w-full h-[350px] object-contain'
+              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
             />
           </div>
 
           <div className=' w-full'>
-           
-             <LazyLoadImage
-             src={mobileBanner3}
-             alt=''
-             className='w-full h-[350px] object-contain'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/mobile-banner-3-small.png" />
-              }
+            <LazyLoadImage
+              src={mobileBanner3}
+              effect='blur'
+              alt=''
+              className='w-full h-[350px] object-contain'
+              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
             />
           </div>
 
-          <div className=' w-full'>
-            
-             <LazyLoadImage
-             src={mobileBanner1}
-             alt=''
-             className='w-full h-[350px] object-contain'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/mobile-banner-small.png" />
-              }
+          <div className='w-full text-center items-center justify-center pt-10 outline-none'>
+            <LazyLoadImage
+              src={bannerText3}
+              effect='blur'
+              alt=''
+              className='w-full h-[350px] object-contain'
+              placeholder={<BlurryImages imgUrl='home-images/banner3Text-small.png' />}
+            />
+            <LazyLoadImage
+              src={banner3}
+              effect='blur'
+              alt=''
+              className='w-full h-[350px] object-contain'
+              placeholder={<BlurryImages imgUrl='home-images/banner3-small.png' />}
             />
           </div>
         </Slider>

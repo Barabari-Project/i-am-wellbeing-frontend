@@ -21,7 +21,7 @@ const Model = ({isOpen , setIsOpen , selectedTeamMember}) => {
             {selectedTeamMember?.name}
           </h2>
           <h3 className='text-xl font-semibold mb-2'>
-            {selectedTeamMember?.designation}
+            {selectedTeamMember?.specialist}
           </h3>
           <p className='md:text-lg text-md'>
             {selectedTeamMember?.description}
