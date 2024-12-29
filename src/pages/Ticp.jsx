@@ -7,19 +7,12 @@ const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
 
-// const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer1.png`;
-// const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer2.png`;
-// const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer3.png`;
-// const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/lata2.png`;
-// const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer5.png`;
-// const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/trainer4.png`;
-
-import trainer1 from '../imgs/home-images/trainer1.png';
-import trainer2 from '../imgs/home-images/trainer2.png';
-import trainer3 from '../imgs/home-images/trainer3.png';
-import trainer4 from '../imgs/home-images/trainer4.png';
-import trainer5 from '../imgs/home-images/trainer5.png';
-import trainer6 from '../imgs/home-images/trainer6.png';
+const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer1.png`;
+const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer2.png`;
+const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer3.png`;
+const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer4.png`;
+const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer5.png`;
+const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
 
@@ -31,51 +24,51 @@ const Ticp = () => {
   const [team] = useState([
     {
       imgSrc: trainer1,
-      blurSrc:"ticp-images/trainer1-small.png",
       name: "Akanksha Chandele",
+      smallImgSrc: "trainer1-small.png",
       designation: "Director / Senior supervisor",
       description:
         "Akanksha is a Holistic Trauma Therapist actively engaged in working with survivors of abuse and trauma. Their practice is rooted in building interconnectedness and compassion for all beings and they believe in the power of mind-body-spirit healing in order to thrive and grow. Akanksha has an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and a diploma in Arts-Based Therapy.They are trained in EMDR, IEMT, Somatic Practices, and psychological first-aid. They also use Bach remedies, Access consciousness, and are a Reiki Master Practitioner.With a deep inclination to support the mental wellbeing of marginalised and vulnerable communities, they started I Am Wellbeing (Nairatmya Foundation), an organisation dedicated to trauma healing and prevention. I Am Wellbeing works with survivors of adverse life experiences and equips mental health professionals, caregivers, and educators in providing trauma-informed care to those in need",
     },
     {
       imgSrc: trainer2,
-      blurSrc:"ticp-images/trainer2-small.png",
       name: "Pallavi Singh",
+      smallImgSrc: "trainer2-small.png",
       designation: "Program Manager / Therapist",
       description:
         "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
     },
     {
       imgSrc: trainer3,
-      blurSrc:"ticp-images/trainer3-small.png",
       name: "Maitreyi Nigwekar",
+      smallImgSrc: "trainer3-small.png",
       designation: "Consultant, Curriculum Development",
       description:
         "Maitreyi has an MSc in Psychological Approaches to Health from the University of Leeds (UK, 2009), and an MA in Counseling Psychology from SNDT University (India, 2012). She also holds a Diploma in Arts-Based Therapy and is an NLP Practitioner, a Reiki Master-Teacher, and a Clinical Hypnotherapist. Most of her work experience has been in the developmental sector, working with patients and caregivers of chronic conditions, children, and women. She has also worked with Aangan Trust, an NGO that works toward child protection. Currently, she works with teens, young adults, caregivers, and individuals from dysfunctional families surviving struggling from trauma and abuse in her private practice.",
     },
     {
       imgSrc: trainer4,
-      blurSrc:"ticp-images/lata2-small.png",
       name: "Shambhavi Singh",
+      smallImgSrc: "trainer4-small.png",
       designation: "Trainer",
       description:
         "Shambhavi has studied Child and Adolescent Psychologist at Queen's University, Belfast. She is a Trauma Informed Arts Based Therapist; Solution Focussed Brief Therapist Who expertises in Social-Emotional Concerns and Parenting. She has been working since 13 years and uses Arts based mediums to work with trauma and learn regulation. In her personal life, she lives by Buddhist philosophy, enjoys coloring, cleaning and reality TV in her free time.",
     },
     {
-      imgSrc: trainer6,
-      blurSrc:"ticp-images/trainer4-small.png",
-      name: "Veena Hari",
-      designation: "Consultant, Research",
-      description:
-        "Veena Hari is a Mental Health Practitioner with a Master's in Clinical Psychology and around 10 years of experience across the mental health and development sector. She is also the founder of Bhavati Foundation, a not-for-profit organisation working on reproductive mental health in India. She has also completed an advanced perinatal psychotherapy course. Veena, mother to a three-year-old, is also the host of the podcast Mothering and describes herself as a passionate and imperfect feminist.",
-    },
-    { 
       imgSrc: trainer5,
-      blurSrc:"ticp-images/trainer5-small.png",
-      name: "Preeta Ganguli",
+      name: "Veena Hari",
+      smallImgSrc: "trainer5-small.png",
       designation: "Missing",
       description:
         "Preeta is a trauma-informed therapist & mental wellbeing consultant., She honours and addresses the triad of the mind, body, & spirit in her work. She holds a Master's Degree in Applied Psychology and is an NLP and shamanic practitioner. Over her 10 years of experience in the field, she has worked closely with children and adolescents, teachers and caregivers, and young adults across corporates, schools, and NGOs. In addition to therapy, Preeta has focused greatly on preventive work as well, and has designed programs, workshops, curricula, & manuals at various organisations to the same end. Deeply passionate about the development sector, Preeta has been a part of the founding/ core team of 2 social entrepreneurships in the mental health space and continues to be associated with multiple non-profit organisations in addition to her private practice. She believes that every individual deserves compassion, connection, and hope and works towards achieving this, one step at a time.",
+    },
+    {
+      imgSrc: trainer6,
+      name: "Preeta Ganguli",
+      smallImgSrc: "trainer6-small.png",
+      designation: "Consultant, Research",
+      description:
+        "Veena Hari is a Mental Health Practitioner with a Master's in Clinical Psychology and around 10 years of experience across the mental health and development sector. She is also the founder of Bhavati Foundation, a not-for-profit organisation working on reproductive mental health in India. She has also completed an advanced perinatal psychotherapy course. Veena, mother to a three-year-old, is also the host of the podcast Mothering and describes herself as a passionate and imperfect feminist.",
     },
   ]);
 
@@ -459,10 +452,10 @@ const Ticp = () => {
                     src={trainer.imgSrc}
                     alt='trainner-img'
                     effect='blur' // Blur effect while loading
-                    placeholder={<BlurryImages imgUrl={trainer.blurSrc} />}
+                    placeholder={<BlurryImages imgUrl={`home-images/${trainer.smallImgSrc}`} />}
                   />
                   <div className="flex flex-col items-center justify-center w-full gap-3">
-                  <h1 className='text-xl text-center  font-bold mt-2'>
+                  <h1 className='text-xl text-center  font-[600] mt-2 uppercase'>
                     {trainer.name}
                   </h1>
                   <button className='text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white'>Know More</button>

@@ -6,48 +6,26 @@ const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
 const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
 
 // team images
-// const team1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt1.png`;
-// const team2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt2.png`;
-// const team3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt3.png`;
-// const team4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt4.png`;
-// const team5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/tttt5.png`;
-// const team6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/ttt6.png`;
-
-import team1 from '../imgs/home-images/team_1.png'
-import team2 from '../imgs/home-images/team_2.png';
-import team3 from '../imgs/home-images/team_3.png';
-import team4 from '../imgs/home-images/team_4.png';
-import team5 from '../imgs/home-images/team_5.png';
-// import team6 from '../imgs/home-images/team_6.png';
-
-
-
-
-
+const team1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_1.png`;
+const team2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_2.png`;
+const team3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_3.png`;
+const team4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_4.png`;
+const team5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_5.png`;
 
 // consultant images
-// const consultant1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa1.png`;
-// const consultant2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa2.png`;
-// const consultant3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa3.png`;
-// const consultant4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa4.png`;
-// const consultant5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa5.png`;
-// const consultant6 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa6.png`;
-// const consultant7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa7.png`;
-// const consultant8 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa8.png`;
-// const consultant9 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/aaaa9.png`;
+const consultant1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_1.png`;
+const consultant2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_2.png`;
+const consultant3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_3.png`;
+const consultant4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_4.png`;
+const consultant5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_5.png`;
+const consultant6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_6.png`;
+const consultant7 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_7.png`;
+const consultant8 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_8.png`;
+const consultant9 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_9.png`;
+const consultant10 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_10.png`;
+const consultant11 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_11.png`;
+const consultant12 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/consultant_12.png`;
 
-import consultant1 from '../imgs/home-images/consultant_1.png';
-import consultant2 from '../imgs/home-images/consultant_2.png';
-import consultant3 from '../imgs/home-images/consultant_3.png';
-import consultant4 from '../imgs/home-images/consultant_4.png';
-import consultant5 from '../imgs/home-images/consultant_5.png';
-import consultant6 from '../imgs/home-images/consultant_6.png';
-import consultant7 from '../imgs/home-images/consultant_7.png';
-import consultant8 from '../imgs/home-images/consultant_8.png';
-import consultant9 from '../imgs/home-images/consultant_9.png';
-import consultant10 from '../imgs/home-images/consultant_10.png';
-import consultant11 from '../imgs/home-images/consultant_11.png';
-import consultant12 from '../imgs/home-images/consultant_12.png';
 // annual reports images
 const annualReport1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport1.png`;
 const annualReport2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/annualreport2.png`;
@@ -68,6 +46,7 @@ const About = () => {
      {
        name: "Akanksha Chandele",
        imgSrc: team1,
+       smallImgSrc: "team_1-small.png",
        designation: "Director/Senior Supervisor",
        specialist: "Program Manager / Therapist",
        description:
@@ -77,6 +56,7 @@ const About = () => {
      {
        name: "Pallavi Singh",
        imgSrc: team2,
+       smallImgSrc: "team_2-small.png",
        designation: "Program Manager / Therapist",
        specialist: "Program Manager / Therapist",
        description:
@@ -85,6 +65,7 @@ const About = () => {
      {
        name: "Atufa Khan",
        imgSrc: team3,
+       smallImgSrc: "team_3-small.png",
        designation: "Reasearch Coordiinator / Therapist",
        specialist: "Counselling Psychologist",
        description:
@@ -94,6 +75,7 @@ const About = () => {
      {
        name: "Neeti Kaushal",
        imgSrc: team5,
+       smallImgSrc: "team_5-small.png",
        designation: "Training Coordinator / Therapist",
        specialist: "Counselling Psychologist",
        description:
@@ -102,6 +84,7 @@ const About = () => {
      {
        name: "Ishi Agarwal",
        imgSrc: team4,
+       smallImgSrc: "team_4-small.png",
        designation: "Content Manager/Therapist",
        specialist: "Content Manager, Therapist",
        description:
@@ -119,33 +102,77 @@ const About = () => {
 
 
     const [consultants] = useState([
-      { name: "Preeta Ganguli", designation: "Training", imgSrc: consultant1 },
+      {
+        name: "Preeta Ganguli",
+        designation: "Training",
+        imgSrc: consultant1,
+        smallImgSrc: "consultant_1-small.png",
+      },
       {
         name: "Maitreyi Nigwekar",
         designation: "Training",
         imgSrc: consultant2,
+        smallImgSrc: "consultant_2-small.png",
       },
-      { name: "Venna Hari", designation: "Training", imgSrc: consultant3 },
-      { name: "Rakshita Goel", designation: "Training", imgSrc: consultant4 },
-      { name: "Dr Shiraz", designation: "Psychiatrist", imgSrc: consultant5 },
-      { name: "Sukun Chandele", designation: "Legal", imgSrc: consultant6 },
-      { name: "Faseeh Amin", designation: "Research", imgSrc: consultant7 },
-      { name: "Anupam Parashar", designation: "Finace", imgSrc: consultant8 },
-      { name: "Shambhavi Singh", designation: "Training", imgSrc: consultant9 },
+      {
+        name: "Venna Hari",
+        designation: "Training",
+        imgSrc: consultant3,
+        smallImgSrc: "consultant_3-small.png",
+      },
+      {
+        name: "Rakshita Goel",
+        designation: "Training",
+        imgSrc: consultant4,
+        smallImgSrc: "consultant_4-small.png",
+      },
+      {
+        name: "Dr Shiraz",
+        designation: "Psychiatrist",
+        imgSrc: consultant5,
+        smallImgSrc: "consultant_5-small.png",
+      },
+      {
+        name: "Sukun Chandele",
+        designation: "Legal",
+        imgSrc: consultant6,
+        smallImgSrc: "consultant_6-small.png",
+      },
+      {
+        name: "Faseeh Amin",
+        designation: "Research",
+        imgSrc: consultant7,
+        smallImgSrc: "consultant_7-small.png",
+      },
+      {
+        name: "Anupam Parashar",
+        designation: "Finace",
+        imgSrc: consultant8,
+        smallImgSrc: "consultant_8-small.png",
+      },
+      {
+        name: "Shambhavi Singh",
+        designation: "Training",
+        imgSrc: consultant9,
+        smallImgSrc: "consultant_9-small.png",
+      },
       {
         name: "Yasha Malhotra",
         designation: "Training Coordiinator/Therapist",
         imgSrc: consultant10,
+        smallImgSrc: "consultant_10-small.png",
       },
       {
         name: "Dr Nishtha Lamba",
         designation: "Research",
         imgSrc: consultant11,
+        smallImgSrc: "consultant_11-small.png",
       },
       {
         name: "Alisha Sethi",
         designation: "Outreach",
         imgSrc: consultant12,
+        smallImgSrc: "consultant_12-small.png",
       },
     ]);
 
@@ -199,8 +226,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className=''>
-          
+          <div className=''>          
             <LazyLoadImage
               src={AkanshaChandrel}
               alt='img'
@@ -232,6 +258,7 @@ const About = () => {
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6  md:grid-cols-3 max-w-3xl m-auto  mt-10'>
             {teams.map((team) => {
+              // console.log(`home-images/${team.smallImgSrc}`);
               return (
                 <div
                   className='team-card w-[100%]  m-auto cursor-pointer relative'
@@ -241,7 +268,17 @@ const About = () => {
                     setIsOpen(true);
                   }}
                 >
-                  <img src={team.imgSrc} alt='team' className='w-full lg:min-h-[300px]    object-cover' />
+                  <LazyLoadImage
+                    src={team.imgSrc}
+                    alt='team'
+                    className='w-full lg:min-h-[300px]   object-cover'
+                    placeholder={
+                      <BlurryImages
+                        imgUrl={`home-images/${team.smallImgSrc}`}
+                      />
+                      // aboutus-images/worker1-small.png
+                    }
+                  />
                   <div className='details  w-full lg:absolute lg:left-8  lg:bottom-1 text-center lg:text-left  '>
                     <h6 className='font-bold uppercase text-lg'>{team.name}</h6>
                     <p className='text text-gray-600 font-[500] text-md'>
@@ -272,10 +309,22 @@ const About = () => {
             {consultants.map((consultant , index) => {
               return (
                 <div key={index} className='relative'>
-                  <img
+                  {/* <img
                     src={consultant.imgSrc}
                     alt='team'
                     className='w-full min-h-[300px] object-cover'
+                  /> */}
+
+                  <LazyLoadImage
+                    src={consultant.imgSrc}
+                    alt='team'
+                    className='w-full lg:min-h-[300px]   object-cover'
+                    placeholder={
+                      <BlurryImages
+                        imgUrl={`home-images/${consultant.smallImgSrc}`}
+                      />
+                      // aboutus-images/worker1-small.png
+                    }
                   />
 
                   <div className='details  details  w-full absolute lg:bottom-0 text-center lg:text-left bottom-6'>

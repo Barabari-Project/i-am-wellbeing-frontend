@@ -10,8 +10,9 @@ const a3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a3.png`;
 const mobileBanner2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-2.png`;
 const mobileBanner3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-3.png`;
 
-import banner3 from '../imgs/home-images/banner3.png'
-import bannerText3 from '../imgs/home-images/banner3Text.png'
+
+const banner3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/banner3.png`;
+const bannerText3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/banner3Text.png`;
 
 const Carousel = () => {
      var settings = {
@@ -117,14 +118,14 @@ const Carousel = () => {
               effect='blur'
               alt=''
               className='w-full h-[350px] object-contain'
-              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
+              placeholder={<BlurryImages imgUrl='home-images/banner3Text-small.png' />}
             />
             <LazyLoadImage
               src={banner3}
               effect='blur'
               alt=''
               className='w-full h-[350px] object-contain'
-              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
+              placeholder={<BlurryImages imgUrl='home-images/banner3-small.png' />}
             />
           </div>
         </Slider>
