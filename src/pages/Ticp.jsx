@@ -435,7 +435,7 @@ const Ticp = () => {
           </ul>
         </div>
 
-        <div className='know-your-trainner pl-2'>
+        <div className='know-your-trainner pl-2 mt-5'>
           <h1 className='text-4xl font-bold'>Know Your Trainers</h1>
           <div className='trainners grid items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10'>
             {team.map((trainer) => {
