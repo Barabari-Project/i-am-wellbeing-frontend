@@ -20,7 +20,7 @@ const helplessnessvideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/helple
 const safevideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/safe_1_kugvfm.mp4`;
 const selfvideo=`${import.meta.env.VITE_PUBLIC_URL}/mediavideos/self_fljo0n.mp4`;
 
-import yellowbgnew1 from "../imgs/program-images/yellowBgNew.png";
+import greenbg from "../imgs/program-images/greenbg.png"
 const calendarBg=`${import.meta.env.VITE_PUBLIC_URL}/phase-2/calender%20bg.svg`
 
 
@@ -62,7 +62,7 @@ const Media = () => {
 {/* header of arya */}
         <div
           className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-center"
-          style={{ backgroundImage: `url(${yellowbgnew1})` }}
+          style={{ backgroundImage: `url(${greenbg})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl">Resources</h1>
         </div>
