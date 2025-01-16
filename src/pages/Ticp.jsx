@@ -88,9 +88,20 @@ const Ticp = () => {
         }}
       >
         <div className='text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col'>
-          <h2 className='text-black  text-4xl font-bold text-center '>
-            Certificate course on Trauma-Informed Care Practices
-          </h2>
+        <h2 className="text-black text-4xl font-bold text-center">
+  Certificate course on Trauma-Informed Care Practices
+  <span
+    className="relative text-xl font-bold text-red-600 border border-red-800 rounded-full w-5 h-5 ml-1 inline-flex items-center justify-center"
+    style={{ verticalAlign: 'super' }}
+  >
+    c
+  </span>
+</h2>
+
+
+
+
+
           <p className='text-sm'>First-of-its-kind in India</p>
         </div>
       </div>
@@ -241,7 +252,7 @@ const Ticp = () => {
           </ul>
         </div>
 
-        <div className='course policy mt-4 bg-[#FFDE59] p-4'>
+        <div className='course policy mt-4 bg-[#FFDE59] p-6'>
           <h1 className='title text-4xl font-bold mb-1'>Course Policies</h1>
           <h1 className='title text-2xl font-bold mb-3'>Contribution*</h1>
           <div className='text-xl flex flex-col gap-5'>
@@ -326,17 +337,18 @@ const Ticp = () => {
             <p className='mb-2'>Above 85%- 5( Excellent) </p>
             <p className='mb-2'>70-85% - 4 (Good) </p>
             <p className='mb-2'>51-65% - 3( Above Average)</p>
-            <p className='mb-2'>31-50- 2 (Average) 30%- 1 (Below Average)</p>
+            <p className='mb-2'>31-50- 2 (Average) </p>
+            <p className='mb-2'>30%- 1 (Below Average) </p>
           </div>
 
           <h1 className='title text-3xl font-bold mb-3'>
             Overall Passing criteria
           </h1>
           <div className='text-xl'>
-            <p className='mb-2'>All classes must be attended </p>
-            <p className='mb-2'>Timely assignment submission </p>
-            <p className='mb-2'>Complete supervision hours </p>
-            <p className='mb-2'>Case submission and presentation</p>
+            <li className='mb-2'>All classes must be attended </li>
+            <li className='mb-2'>Timely assignment submission </li>
+            <li className='mb-2'>Complete supervision hours </li>
+            <li className='mb-2'>Case submission and presentation</li>
           </div>
           <h1 className='title text-2xl font-bold mb-3'>
             Criteria for grading assignments
