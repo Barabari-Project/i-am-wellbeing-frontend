@@ -1,14 +1,18 @@
 import React from "react";
+import { FaMapMarkerAlt } from 'react-icons/fa'; // Location icon
+import { motion } from 'framer-motion'; // Framer Motion for animation
+import WalkingPerson from "../components/WalkingPerson";
 
 
 const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
-const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellowbgnew1.png`;
-const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/greenbg.png`;
+// const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/6.svg`;
+// const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/2.svg`;
 
 
 
 
-const anubho1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho1.png`;
+
+const anubho1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/1.svg`;
 const anubho2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho2.png`
 const anubho3 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho3.png`
 const anubho4 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho4.png`
@@ -27,7 +31,7 @@ const udan5 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan5.png`
 
 
 
-const arya1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya1.png`;
+const arya1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/5.svg`;
 const arya2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya2.png`
 const arya3 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya3.png`
 const arya4 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya4.png`
@@ -36,9 +40,30 @@ const arya6 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya6.png`
 const arya7 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya7.png`
 
 
+const peoples= `${import.meta.env.VITE_PUBLIC_URL}/phase-2/4.svg`
+
+const yelloShadow=`${import.meta.env.VITE_PUBLIC_URL}/phase-2/bg.svg`
+
+//animations
+import animation1 from '../imgs/program-images/animation1.gif'
+
+import textBorder from '../imgs/program-images/text-border.png'
+
+import map from '../imgs/program-images/map.png';
+
+
+import CollageImage from "../components/CollageImage";
+import BodyImagePart from "../components/BodyImagePart";
+import yellowbgnew1 from "../imgs/program-images/yellowBgNew.png";
+import greenbg from "../imgs/program-images/greenbg.png"
+
 
 
 const Programe = () => {
+  const iconVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
   return (
     <>
       {/* programe first page */}
@@ -144,7 +169,7 @@ const Programe = () => {
       <section id="anubho" className="mb-9 ">
         {/* header of anubho */}
         <div
-          className="bg-cover  px-5 pt-5 pb-16 "
+          className="  px-5 pt-10 pb-16  bg-cover bg-no-repeat bg-center "
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl align-text-bottom">Anubhoo</h1>
@@ -169,81 +194,132 @@ const Programe = () => {
             </p>
           </div>
         </div>
+
+          
+
         {/* 3slides of anubho */}
-        <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
-          <img loading="lazy" src={anubho2} alt="img" className=" sm:w-1/5" />
-          <img loading="lazy" src={anubho3} alt="img" className=" sm:w-1/5" />
-          <img loading="lazy" src={anubho4} alt="img" className=" sm:w-1/5" />
-        </div>
-        {/* content data */}
-        <div className="px-4 lg:px-11">
-          <h1 className="text-5xl font-bold">Ripples of change</h1>
+        <div className="flex flex-wrap justify-center gap-10 m-auto mb-10">
+  {/* Card 1 */}
+  <div className="flex flex-col justify-center items-center xs:h-auto xs:w-[70%] sm:w-[28%] md:w-[24%] lg:w-[24%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium text-2xl p-8 sm:text-sm sm:p-2 md:text-xl  md:p-4 lg:text-2xl lg:p-8">
+      Specialized curriculum for trauma-informed training
+    </p>
+  </div>
+
+  {/* Card 2 */}
+  <div className="flex flex-col justify-center items-center xs:w-[70%] sm:w-[28%] md:w-[24%] lg:w-[24%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium  text-2xl p-14  sm:text-sm sm:p-2 md:text-xl  md:p-4 lg:text-2xl lg:p-8">
+    Rooted in the socio-cultural context of India 
+    </p>
+  </div>
+
+  {/* Card 3 */}
+  <div className="flex flex-col justify-center items-center xs:w-[70%] sm:w-[28%] md:w-[24%] lg:w-[24%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium text-2xl p-8 sm:text-sm sm:p-2 md:text-xl md:p-4 lg:text-2xl lg:p-8">
+    Identification, assessment, and working with trauma 
+    </p>
+            </div>
+            
+           
+
+          </div>
+
+          
+
+          <h1 className="text-4xl font-bold px-4 lg:px-11" >Depth of change</h1>
+
+          <div className="px-4 lg:px-11 flex flex-col-reverse  md:flex-row ">
+  <div className="mt-[4%] leading-8 flex-[60%]">
+    <p className="text-justify text-[20px] font-thin">
+      The change we aim to bring through our training initiatives, especially
+      the TICP course reaches the depths of the nervous system. Shifts observed
+      over the past cohorts have been nothing short of transformative. From
+      individual shifts to professional growth to relational health, the
+      participants have observed a complete change in their perspective and
+      procedures. This course works at a deeper level, building a strong
+      foundation for those just starting out and a whole new lens of
+      understanding for experienced professionals. <br /><br />
+      Additionally, our Short Training programme has been a successful capsule
+      for introducing young professionals in the field to different modalities
+      of intervention. These trainings have provided a safe space for
+      individuals to explore how their nervous systems interact with different
+      approaches.
+    </p>
+  </div>
+  <div className="flex-[40%]">
+    <BodyImagePart className="w-full h-auto object-cover" />
+  </div>
+</div>
+
+
+
+          <div className="px-4 lg:px-11">
+          <h1 className="text-4xl font-bold">Corporate and Institutional Trainings</h1>
           {/* ------------------------------- */}
-          <div className="sm:flex mt-[4%] gap-5 leading-8">
-            <img loading="lazy"
-              src={anubho5}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
+          <div className="sm:flex mt-[4%] gap-5 leading-8 mb-4">
+            
             <p className="text-justify text-[20px] font-thin">
-              "I think all of us have agreed on how comforting and safe this
-              space has been. I had a space to talk and ask whatever questions I
-              wanted to, and any opinion that I had was taken very well. I also
-              really appreciate how the course has played an important part in
-              understanding my journey and my own trauma."
-              <br />
-              <span className="text-gray-800 font-semibold">
-                - A, participant, TICP Cohort 1 (2022)
-              </span>{" "}
+            In addition to training mental health professionals in the field, we are dedicated to creating a holistic system of support for anyone engaging in meaningful interactions with other human beings. Our efforts extend beyond traditional mental health settings to include the facilitation of diverse corporate and institutional training programs aimed at enhancing individual and collective well-being. <br/> <br/>
+
+For corporate settings, we provide specialized training such as POSH (Prevention of Sexual Harassment) to ensure safe and inclusive workplaces, training aimed at Team Building and Communication to strengthen interpersonal dynamics, and developing a Healthy Work Environment to boost productivity and team satisfaction. <br/> <br/>
+
+In educational and institutional contexts, we prioritize the well-being of all individuals by offering programmes focused on Teachers' Well-being, equipping them with Emotional Regulation Tools to navigate stress, build mindfulness, and foster a healthier and safer environment for both students and teachers. <br/> <br/>
+
+Our comprehensive approach acknowledges that mental and emotional health are integral to every aspect of human interaction. By addressing these areas, we aim to cultivate environments where individuals and teams can feel a sense of safety and security and thrive both personally and professionally.
             </p>
-          </div>
-          {/* ------------------------------------ */}
-          <div className="sm:flex mt-[1%] gap-5 leading-8">
-            <p className="text-justify text-[20px] font-thin">
-              "As the course went on, I felt really confident, and my
-              understanding of people really shifted—not just my clients, but
-              also whenever I have conflicts with people now, I usually take a
-              step back and try to understand them. There has been a complete
-              shift."
-              <br />
-              <span className="text-gray-800 font-semibold">
-                - P, participant, TICP Cohort 1 (2022)
-              </span>{" "}
-            </p>
-            <img loading="lazy"
-              src={anubho6}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
-          </div>
-          {/* ---------------------------------------- */}
-          <div className="sm:flex  sm:mt-[1%] gap-5 leading-8">
-            <img loading="lazy"
-              src={anubho7}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
-            <p className="text-justify text-[20px] font-thin">
-              "I used to think that whatever I had gone through was nothing
-              compared to what others had gone through. But this course made me
-              realise that our experiences cannot be compared. There can be no
-              scale of suffering. "<br />
-              <span className="text-gray-800 font-semibold">
-                - R, participant, TICP Cohort 1 (2022)
-              </span>{" "}
-            </p>
-          </div>
+            </div>
+            {/* collage image */}
+            {/* <img src={collage} alt="collage" className="md:w-[80%] md:h-[30%] object-cover m-auto mt-10"/> */}
+
+           
+            <CollageImage/>
+
+
+
+           <div>
+
+            </div>
+          
+         
+            
+           
         </div>
+          
+
+          {/* content data */}
+          
+       
         </div>
       </section>
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[20vh] w-[100vw] bg-cover bg-repeat">
+                 
+                 </div>
 
 
 
       {/* udaan page */}
-      <section id="udaan" className="mb-9">
+      <section id="udaan" >
          {/* header of udan */}
         <div
-          className="bg-cover bg-center px-5 pt-5 pb-16"
+          className=" px-5 pt-10 pb-16 bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl text-white">Udaan</h1>
@@ -257,11 +333,7 @@ const Programe = () => {
               Quality therapeutic intervention
             </h1>
             <p className="text-[20px] leading-9 text-justify tracking-wider ">
-              Through udaan, we build a safe therapeutic space for adolescents
-              and young adults from marginalized communities. Trauma focussed
-              therapy aims at establishing safety & then progresses towards
-              processing deep rooted trauma stemming from experiences of
-              marginalisation from a young age.
+            Through Udaan, we build a safe therapeutic space for individuals from marginalized communities. Trauma-focussed therapy aims at establishing safety & then progresses towards processing deep-rooted trauma stemming from experiences of marginalisation and adversities from a young age. Our low-cost therapy initiative aims to reach a diverse audience, providing a safe and supportive environment for many individuals. Our team of trauma-informed therapists offer regular sessions tailored to young and middle-aged adults facing mental health challenges.
             </p>
           </div>
           <div className="w-[100%] lg:w-[70%] sm:pr-10  m-auto ">
@@ -269,75 +341,229 @@ const Programe = () => {
           </div>
         </div>
          {/* 3slides of udan */}
-        <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
-          <img loading="lazy" src={udan2} alt="img" className=" sm:w-1/5" />
-          <img loading="lazy" src={udan3} alt="img" className="  sm:w-1/5" />
-          <img loading="lazy" src={udan4} alt="img" className=" sm:w-1/5" />
-        </div>
+         <div className="flex flex-wrap justify-center gap-10 m-auto mb-10">
+  {/* Card 1 */}
+  <div className="flex flex-col justify-center items-center xs:h-auto xs:w-[70%] sm:w-[28%] md:w-[24%] lg:w-[24%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium text-2xl p-8 sm:text-sm sm:p-2 md:text-[18px]  md:p-4 lg:text-2xl lg:p-6">
+    Holistic, long-term and consistent therapeutic support
+    </p>
+  </div>
+
+  {/* Card 2 */}
+  <div className="flex flex-col justify-center items-center xs:w-[70%] sm:w-[28%] md:w-[24%] lg:w-[24%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium  text-2xl p-14  sm:text-sm sm:p-2 md:text-[18px] md:p-4 lg:text-2xl lg:p-6">
+    Safe, supportive, and compassionate space for the clients
+    </p>
+  </div>
+
+  {/* Card 3 */}
+  <div className="flex flex-col justify-center items-center xs:w-[70%] sm:w-[28%] md:w-[24%] lg:w-[24%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium text-2xl p-8 sm:text-sm sm:p-2 md:text-[18px] md:p-4 lg:text-2xl lg:p-6">
+    Exploring and processing deep-rooted underlying trauma
+    </p>
+            </div>
+            </div>
         {/* content data */}
         <div className="px-4 lg:px-14">
-          <h1 className="text-5xl font-bold text-right">Story of change</h1>
+          <h1 className="text-5xl font-bold mb-[3%]">Reach of change</h1>
           {/* ------------------------------- */}
-          <div className="sm:flex mt-[4%] gap-5 leading-10">
-            <img loading="lazy"
-              src={udan5}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
-            <p className="text-justify text-[22.5px] font-thin">
-              “14-year-old Chandni (name changed) used to be a young spirited
-              girl until she was abandoned by her mother and physically and
-              sexually abused by her own father and uncle. She was held captive
-              in her own house. The home was not a safe space for her. The walls
-              of her house which saw her grow into a young girl was now a
-              witness to her pain and suffering.
-            </p>
-          </div>
+         
           {/* ------------------------------------ */}
-          <div className="sm:flex mt-[1%] gap-5 leading-9 mb-[3%]">
-            <p className="text-justify text-[22px] font-thin ">
-              And then came a day when she decided to finally break free from
-              the abusive environment she was in and escape. To her, it was the
-              end of her suffering and a new beginning as she entered a safe
-              abode of a child care institution. Although her external
-              environment changed, the imprint of trauma remained in her mind
-              and body. Living there, Chandni started giving out what she had
-              received and began hitting other children, fighting with the staff
-              members, wanting to run away, not trusting anyone, and was
-              minimally participative and involved in activities.
-              <br /> For adults around her, Chandni’s behaviour was disruptive
-              and required disciplinary action. In her eyes, she was not
-              understood for what she was going through. Everyone failed to
-              understand that she was still trying to fight the danger that was
-              not there anymore.
-              <br /> It was only after she was sent for trauma-informed therapy
-              and intensive work, she started finding safety within her body and
-              experienced safety with other people. Trauma Research and studies
-              indicate that having one trusted available adult can mitigate the
-              impact of Adverse Childhood Experiences. She was able to find out
-              that one trusted available adult in the ecosystem facilitated her
-              journey of healing. She started using dance as a way to express
-              herself. She did run away but got in touch with her trusted
-              anchors to bring her back. These little shifts gradually helped
-              her to take academic support, develop peer relations, participate
-              in activities and stay at the institution. With support and
-              intervention, Chandni started to take charge of her life and
-              became a hero of her own story rather than being on an autopilot
-              mode.”
-            </p>
-          </div>
-          {/* ---------------------------------------- */}
-        </div>
-        </div>
-      </section>
+         <div className="flex flex-col lg:flex-row gap-8 mt-8">
+  {/* Left Section with Map */}
+  <div className="relative w-full lg:w-1/2">
+      {/* Map Image */}
+      <img src={map} alt="Map Illustration" className="w-full h-full" />
 
+      {/* Location Icons */}
+      <motion.div
+        className="absolute top-[15%] left-[24%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 1 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[25%] left-[35%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 1.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[37%] left-[60%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 2 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[45%] left-[26%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 2.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[45%] left-[55%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 3 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[55%] left-[45%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 3.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[60%] left-[18%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 4 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[65%] left-[39%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 4.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[70%] left-[30%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[75%] left-[24%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 5.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[80%] left-[32%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 6 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[85%] left-[30%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 6.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+    </div>
+
+  {/* Right Section with Text and Illustration */}
+  <div className="w-full lg:w-1/2">
+    <p className="text-justify text-lg font-light ">
+      People from different demographics of the country reached out to us, from Tier-2 cities like Rourkela and Suratgarh to Metropolitans like Bengaluru and Mumbai.
+    </p>
+    <p className="text-justify text-lg font-light mt-4">
+      We are breaking cycles of intergenerational trauma and rebuilding trust for so many people through the process and the profession of therapy. Individuals are able to reconnect with different versions of their self, body, and mind, reconceptualize their concerns, and feel a sense of compassion and empowerment.
+    </p>
+    <div className="mt-4 lg:mt-[28%]">
+      <img
+        src={peoples} // Replace with a random illustration image URL
+        alt="Illustration"
+        className="w-full h-auto"
+      />
+                </div>
+                
+              </div>
+              
+            </div>
+           
+          {/* ---------------------------------------- */}
+          </div>
+          
+        </div>
+        
+      </section>
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[20vh] w-[100vw] bg-cover bg-repeat">
+                 
+                 </div>
+      
 
 
                            {/* project arya page */}
       <section id="arya" className="mb-9">
 {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-5 pb-16"
+          className=" px-5 pt-10 pb-16 bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl">Project Arya</h1>
@@ -350,81 +576,72 @@ const Programe = () => {
           </div>
           <div className="w-full sm:p-3  ">
             <h1 className="text-right w-[99%] font-bold text-4xl pb-4">
-              Social emotional psychological wellbeing
+            Bio-Psycho-Socio Wellbeing
             </h1>
             <p className="text-[22px] leading-9 text-justify">
-              Children facing adversities require specific support to enhance
-              their overall development. Project Arya, is a unique
-              social-emotional learning program based on the CASEL framework
-              with a trauma-informed lens in order to cater to the specific
-              needs of marginalized young lives. It is a year-long program under
-              which several trauma-informed facilitators conduct SEL modules
-              designed specifically for the children from marginalized
-              communities.
+            Individuals facing adversities require specific support to enhance their overall development. Project Arya is a unique Social-Emotional Learning program based on the CASEL framework with a trauma-informed lens that caters to the particular needs of marginalized young lives. We support our participants in navigating unprecedented challenges through art, play, drama, music, and movement to facilitate holistic development, foster safe connections, and build social skills, creativity and self-expression.
             </p>
           </div>
         </div>
          {/* 3slides of arya */}
-        <div className="flex flex-wrap   justify-center gap-1 sm:gap-10 m-auto ">
-          <img loading="lazy" src={arya2} alt="img" className=" sm:w-1/5" />
-          <img loading="lazy" src={arya3} alt="img" className="  sm:w-1/5" />
-          <img loading="lazy" src={arya4} alt="img" className=" sm:w-1/5" />
-        </div>
+         <div className="flex flex-wrap justify-center gap-10 m-auto mb-10">
+  {/* Card 1 */}
+  <div className="flex flex-col justify-center items-center xs:h-auto xs:w-[70%] sm:w-[28%] md:w-[26%] lg:w-[26%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium text-2xl p-8 sm:text-sm sm:p-2 md:text-[18px]  md:p-4 lg:text-2xl lg:p-6">
+    Trauma-informed group work for holistic wellbeing
+    </p>
+  </div>
+
+  {/* Card 2 */}
+  <div className="flex flex-col justify-center items-center xs:w-[70%] sm:w-[28%] md:w-[26%] lg:w-[26%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium  text-2xl p-14  sm:text-sm sm:p-2 md:text-[18px] md:p-4 lg:text-2xl lg:p-6">
+    Creating a system for support and a community safety net
+    </p>
+  </div>
+
+  {/* Card 3 */}
+  <div className="flex flex-col justify-center items-center xs:w-[70%] sm:w-[28%] md:w-[26%] lg:w-[27%] relative">
+    <img
+      loading="lazy"
+      src={textBorder}
+      alt="img"
+      className="sm:w-full"
+    />
+    <p className="absolute inset-0 flex justify-center items-center text-center text-black font-medium text-2xl p-8 sm:text-sm sm:p-2 md:text-[18px] md:p-2 lg:text-2xl lg:p-6">
+    Designed specifically for people from different marginalised communities 
+    </p>
+            </div>
+            </div>
         {/* content data */}
         <div className="px-4 lg:px-11">
-          <h1 className="text-5xl font-bold">Agents of change</h1>
+          <h1 className="text-5xl font-bold">Community level change</h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
-            <img loading="lazy"
-              src={arya5}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
+            
             <p className="text-justify text-[20px] font-thin">
-              "Earlier I wasn't able to communicate, form groups, or work as a
-              team very effectively. Since I have become a Peer Leader, now I
-              feel confident to work as a leader with anyone"
-              <br />
-              <span className="text-gray-800 font-semibold">
-                - S, 16 years old, Mental Health Peer Leader
-              </span>{" "}
+            We are creating ripples of change at diverse developmental stages in life. Each program is designed specifically to address the needs of different populations, be it students from middle school or individuals engaged in daily labour. The idea is to impact the community and build a safety net at each level. From being unable to speak up at all, to expressing in front of the entire group, there has been an immense shift in self-confidence, emotional understanding and regulation in our participants. We plant a seed of openness and curiosity by making them feel safe and encouraging them to explore the intricacies of their selves. Starting from building awareness about their bodies we delve deeper into the concept and different parts of the self, slowly building a connection to others, how relationships impact our mental health, and how we can support ourselves. Taking young individuals and turning them into leaders of the society thereby fulfilling our mission of #makingindiatraumainformed. 
             </p>
           </div>
           {/* ------------------------------------ */}
-          <div className="sm:flex mt-[1%] gap-5 leading-8">
-            <p className="text-justify text-[20px] font-thin">
-              "By joining Peer Leadership Program, I got the confidence to put
-              my points forward. Earlier I never had the courage to voice out my
-              opinion or take a stand for myself. This journey has empowered me
-              to take an action towards what I feel is not right."
-              <br />
-              <span className="text-gray-800 font-semibold">
-              - A, 15 years old, Mental Health Peer Leader
-              </span>{" "}
-            </p>
-            <img loading="lazy"
-              src={arya6}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
-          </div>
-          {/* ---------------------------------------- */}
-          <div className="sm:flex sm:mt-[1%] gap-5 leading-8">
-            <img loading="lazy"
-              src={arya7}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
-            <p className="text-justify text-[20px] font-thin">
-            "I have gained a lot of confidence and I can speak well in front of others. Off lately all my teachers at school have started recognising and appreciating this change in me. I told them this is because of the sessions I attend."<br />
-              <span className="text-gray-800 font-semibold">
-              - G, 14 years old, Mental Health Peer Leader
-              </span>{" "}
-            </p>
-          </div>
+         
+            {/* <img src={ animation1 } alt="animation"/> */}
+            <WalkingPerson/>
         </div>
         </div>
       </section>
+      
     </>
   );
 };
