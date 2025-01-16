@@ -1,0 +1,134 @@
+.nerve {
+    transform: scale(0.5);
+    animation: zoomOut 2s ease-in-out forwards;
+  }
+  
+  .label {
+    transform: scale(0.5);
+    animation: zoomOut 2s ease-in-out forwards;
+  }
+  
+  .label.top {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+  }
+  
+  .label.top-right {
+    top: 50px;
+    right: 10px;
+    transform: scale(0.5);
+  }
+  
+  .label.right {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) scale(0.5);
+  }
+  
+  .label.bottom-right {
+    bottom: 50px;
+    right: 10px;
+    transform: scale(0.5);
+  }
+  
+  .label.bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+  }
+  
+  .label.bottom-left {
+    bottom: 50px;
+    left: 10px;
+    transform: scale(0.5);
+  }
+  
+  .label.left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) scale(0.5);
+  }
+  
+  .label.top-left {
+    top: 50px;
+    left: 10px;
+    transform: scale(0.5);
+  }
+  
+  @keyframes zoomOut {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 640px) {
+    .nerve {
+      transform: scale(0.7);
+      width: 80%;
+      height: auto;
+    }
+  
+    .label {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      text-align: left;
+      transform: scale(1);
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+  
+    .label.top,
+    .label.top-right,
+    .label.right,
+    .label.bottom-right,
+    .label.bottom,
+    .label.bottom-left,
+    .label.left,
+    .label.top-left {
+      position: static;
+      transform: none;
+    }
+  }
+
+
+  /* map */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .icon {
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+
+  .icon-1 {
+    animation-delay: 1s; 
+  }
+  .icon-2 {
+    animation-delay: 2s; 
+  }
+  .icon-3 {
+    animation-delay: 3s; 
+  }
+  .icon-4 {
+    animation-delay: 4s; 
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  

@@ -20,7 +20,12 @@ const helplessnessvideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/helple
 const safevideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/safe_1_kugvfm.mp4`;
 const selfvideo=`${import.meta.env.VITE_PUBLIC_URL}/mediavideos/self_fljo0n.mp4`;
 
-const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellowbgnew1.png`;
+import yellowbgnew1 from "../imgs/program-images/yellowBgNew.png";
+const calendarBg=`${import.meta.env.VITE_PUBLIC_URL}/phase-2/calender%20bg.svg`
+
+
+import calendar from '../imgs/program-images/calendar.webp'
+import support from '../imgs/program-images/support.webp'
 
 
 const Media = () => {
@@ -53,10 +58,10 @@ const Media = () => {
   ]
   return (
     <>
-        <section id="arya" className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%]">
+        <section  className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%]">
 {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-5 pb-16"
+          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl">Resources</h1>
@@ -83,6 +88,57 @@ Try it for yourself. Make sure to sit in a comfortable place and have some water
 Take breaks and enter this space with curiosity!  
             </p>
           </div>
+          {/* ------------------------------------ */}
+         
+            
+            
+          </div>
+          {/* Grief Support Booklet  */}
+          <div className="px-4 lg:px-11 mt-6">
+          <h1 className="text-5xl font-bold">Grief Support Booklet </h1>
+          {/* ------------------------------- */}
+          <div className="sm:flex mt-[4%] gap-5 leading-8">
+            
+            <p className="text-justify text-[20px] font-thin">
+            Grief is an ocean that is ever-consuming and ever-flowing. It is not something to get rid of and definitely not easy to live with. There is no right way to work with it. All we can try is to hold space for it, be gentle with it, and allow it to move at its own pace. 
+            </p>
+            </div>
+            <div className='flex mt-8 gap-8 mb-0  '>
+
+              <div className='w-[40%] mt-6  '>
+                <p className='text-justify text-[20px] font-thin '>Here is a booklet that we have designed to add a drop of support in the ocean of this unknown. This booklet is for anyone supporting a dear one through their journey with grief.</p>
+              </div>
+              <div className='w-[60%] mt-6  p-3' style={{backgroundImage:`url(${calendarBg})`}} >
+                <img loading="lazy" src={support} alt="support" className='sm:h-[70%] w-[100%] '/>
+              </div>
+            </div>
+           
+          {/* ------------------------------------ */}
+         
+          </div>
+          
+          {/* Self-Care Calendar  */}
+
+          <div className="px-4 lg:px-11 sm:-mt-[20%]">
+          <h1 className="text-5xl font-bold">Self-Care Calendar </h1>
+          {/* ------------------------------- */}
+          <div className="sm:flex mt-[4%] gap-5 leading-8">
+            
+            <p className="text-justify text-[20px] font-thin">
+            Self-Care Calendar, as the name suggests, is a thoughtfully designed tool that can be used by anyone to support them in their healing journey. It incorporates the mind-body-spirit triad and focuses on regulation and slow integration.  Whether you are looking for some grounding exercises or just simple ways of connecting with yourself, this self-care calendar takes you on a journey that slowly enhances your ability to support yourself. <br/><br/>
+
+Taking care of ourselves is the truest form of self-acknowledgement and acceptance. It is a step we take not to change anything about ourselves but to allow our body to receive rest, compassion, and nurturance. <br/><br/>
+
+Build in this 30-day Self-Care routine and allow yourself to soak in rest and slowness. If you find this helpful, write to us at info@iamwellbeing.in with your feedback and suggestions. <br/><br/>
+            </p>
+            </div>
+
+            <div style={{backgroundImage:`url(${calendarBg})`}} className='p-10' >
+            <img loading="lazy" src={calendar} alt="selfcare" className='md:w-[80%] h-[80vh] m-auto'/>
+          </div>
+            <div>
+              
+            </div>
           {/* ------------------------------------ */}
          
             

@@ -1,10 +1,12 @@
 import React from "react";
+import { FaMapMarkerAlt } from 'react-icons/fa'; // Location icon
+import { motion } from 'framer-motion'; // Framer Motion for animation
 import WalkingPerson from "../components/WalkingPerson";
 
 
 const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
-const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/yellowbgnew1.png`;
-const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/greenbg.png`;
+// const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/6.svg`;
+// const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/2.svg`;
 
 
 
@@ -38,16 +40,30 @@ const arya6 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya6.png`
 const arya7 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya7.png`
 
 
+const peoples= `${import.meta.env.VITE_PUBLIC_URL}/phase-2/4.svg`
 
-
+const yelloShadow=`${import.meta.env.VITE_PUBLIC_URL}/phase-2/bg.svg`
 
 //animations
 import animation1 from '../imgs/program-images/animation1.gif'
-import peopleAnubho from '../imgs/program-images/peopleAnubho.jpg'
+
 import textBorder from '../imgs/program-images/text-border.png'
+
+import map from '../imgs/program-images/map.png';
+
+
+import CollageImage from "../components/CollageImage";
+import BodyImagePart from "../components/BodyImagePart";
+import yellowbgnew1 from "../imgs/program-images/yellowBgNew.png";
+import greenbg from "../imgs/program-images/greenbg.png"
+
 
 
 const Programe = () => {
+  const iconVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 },
+  };
   return (
     <>
       {/* programe first page */}
@@ -153,7 +169,7 @@ const Programe = () => {
       <section id="anubho" className="mb-9 ">
         {/* header of anubho */}
         <div
-          className="bg-cover  px-5 pt-5 pb-16 "
+          className="  px-5 pt-10 pb-16  bg-cover bg-no-repeat bg-center "
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl align-text-bottom">Anubhoo</h1>
@@ -222,10 +238,43 @@ const Programe = () => {
     </p>
             </div>
             
-            <div className="px-4 lg:px-11">
+           
+
+          </div>
+
+          
+
+          <h1 className="text-4xl font-bold px-4 lg:px-11" >Depth of change</h1>
+
+          <div className="px-4 lg:px-11 flex flex-col-reverse  md:flex-row ">
+  <div className="mt-[4%] leading-8 flex-[60%]">
+    <p className="text-justify text-[20px] font-thin">
+      The change we aim to bring through our training initiatives, especially
+      the TICP course reaches the depths of the nervous system. Shifts observed
+      over the past cohorts have been nothing short of transformative. From
+      individual shifts to professional growth to relational health, the
+      participants have observed a complete change in their perspective and
+      procedures. This course works at a deeper level, building a strong
+      foundation for those just starting out and a whole new lens of
+      understanding for experienced professionals. <br /><br />
+      Additionally, our Short Training programme has been a successful capsule
+      for introducing young professionals in the field to different modalities
+      of intervention. These trainings have provided a safe space for
+      individuals to explore how their nervous systems interact with different
+      approaches.
+    </p>
+  </div>
+  <div className="flex-[40%]">
+    <BodyImagePart className="w-full h-auto object-cover" />
+  </div>
+</div>
+
+
+
+          <div className="px-4 lg:px-11">
           <h1 className="text-4xl font-bold">Corporate and Institutional Trainings</h1>
           {/* ------------------------------- */}
-          <div className="sm:flex mt-[4%] gap-5 leading-8">
+          <div className="sm:flex mt-[4%] gap-5 leading-8 mb-4">
             
             <p className="text-justify text-[20px] font-thin">
             In addition to training mental health professionals in the field, we are dedicated to creating a holistic system of support for anyone engaging in meaningful interactions with other human beings. Our efforts extend beyond traditional mental health settings to include the facilitation of diverse corporate and institutional training programs aimed at enhancing individual and collective well-being. <br/> <br/>
@@ -236,28 +285,41 @@ In educational and institutional contexts, we prioritize the well-being of all i
 
 Our comprehensive approach acknowledges that mental and emotional health are integral to every aspect of human interaction. By addressing these areas, we aim to cultivate environments where individuals and teams can feel a sense of safety and security and thrive both personally and professionally.
             </p>
-          </div>
+            </div>
+            {/* collage image */}
+            {/* <img src={collage} alt="collage" className="md:w-[80%] md:h-[30%] object-cover m-auto mt-10"/> */}
+
+           
+            <CollageImage/>
+
+
+
+           <div>
+
+            </div>
           
          
             
            
         </div>
-
-</div>
+          
 
           {/* content data */}
           
        
         </div>
       </section>
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[20vh] w-[100vw] bg-cover bg-repeat">
+                 
+                 </div>
 
 
 
       {/* udaan page */}
-      <section id="udaan" className="mb-9">
+      <section id="udaan" >
          {/* header of udan */}
         <div
-          className="bg-cover bg-center px-5 pt-5 pb-16"
+          className=" px-5 pt-10 pb-16 bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl text-white">Udaan</h1>
@@ -321,68 +383,187 @@ Our comprehensive approach acknowledges that mental and emotional health are int
             </div>
         {/* content data */}
         <div className="px-4 lg:px-14">
-          <h1 className="text-5xl font-bold text-right">Story of change</h1>
+          <h1 className="text-5xl font-bold mb-[3%]">Reach of change</h1>
           {/* ------------------------------- */}
-          <div className="sm:flex mt-[4%] gap-5 leading-10">
-            <img loading="lazy"
-              src={udan5}
-              alt="img"
-              className="justify-center sm:w-[14%] h-[90%]"
-            />
-            <p className="text-justify text-[22.5px] font-thin">
-              “14-year-old Chandni (name changed) used to be a young spirited
-              girl until she was abandoned by her mother and physically and
-              sexually abused by her own father and uncle. She was held captive
-              in her own house. The home was not a safe space for her. The walls
-              of her house which saw her grow into a young girl was now a
-              witness to her pain and suffering.
-            </p>
-          </div>
+         
           {/* ------------------------------------ */}
-          <div className="sm:flex mt-[1%] gap-5 leading-9 mb-[3%]">
-            <p className="text-justify text-[22px] font-thin ">
-              And then came a day when she decided to finally break free from
-              the abusive environment she was in and escape. To her, it was the
-              end of her suffering and a new beginning as she entered a safe
-              abode of a child care institution. Although her external
-              environment changed, the imprint of trauma remained in her mind
-              and body. Living there, Chandni started giving out what she had
-              received and began hitting other children, fighting with the staff
-              members, wanting to run away, not trusting anyone, and was
-              minimally participative and involved in activities.
-              <br /> For adults around her, Chandni’s behaviour was disruptive
-              and required disciplinary action. In her eyes, she was not
-              understood for what she was going through. Everyone failed to
-              understand that she was still trying to fight the danger that was
-              not there anymore.
-              <br /> It was only after she was sent for trauma-informed therapy
-              and intensive work, she started finding safety within her body and
-              experienced safety with other people. Trauma Research and studies
-              indicate that having one trusted available adult can mitigate the
-              impact of Adverse Childhood Experiences. She was able to find out
-              that one trusted available adult in the ecosystem facilitated her
-              journey of healing. She started using dance as a way to express
-              herself. She did run away but got in touch with her trusted
-              anchors to bring her back. These little shifts gradually helped
-              her to take academic support, develop peer relations, participate
-              in activities and stay at the institution. With support and
-              intervention, Chandni started to take charge of her life and
-              became a hero of her own story rather than being on an autopilot
-              mode.”
-            </p>
-          </div>
-          {/* ---------------------------------------- */}
-        </div>
-        </div>
-      </section>
+         <div className="flex flex-col lg:flex-row gap-8 mt-8">
+  {/* Left Section with Map */}
+  <div className="relative w-full lg:w-1/2">
+      {/* Map Image */}
+      <img src={map} alt="Map Illustration" className="w-full h-full" />
 
+      {/* Location Icons */}
+      <motion.div
+        className="absolute top-[15%] left-[24%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 1 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[25%] left-[35%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 1.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[37%] left-[60%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 2 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[45%] left-[26%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 2.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[45%] left-[55%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 3 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[55%] left-[45%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 3.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[60%] left-[18%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 4 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[65%] left-[39%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 4.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[70%] left-[30%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[75%] left-[24%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 5.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[80%] left-[32%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 6 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[85%] left-[30%]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+        transition={{ duration: 6.5 }}
+        variants={iconVariants}
+      >
+        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      </motion.div>
+    </div>
+
+  {/* Right Section with Text and Illustration */}
+  <div className="w-full lg:w-1/2">
+    <p className="text-justify text-lg font-light ">
+      People from different demographics of the country reached out to us, from Tier-2 cities like Rourkela and Suratgarh to Metropolitans like Bengaluru and Mumbai.
+    </p>
+    <p className="text-justify text-lg font-light mt-4">
+      We are breaking cycles of intergenerational trauma and rebuilding trust for so many people through the process and the profession of therapy. Individuals are able to reconnect with different versions of their self, body, and mind, reconceptualize their concerns, and feel a sense of compassion and empowerment.
+    </p>
+    <div className="mt-4 lg:mt-[28%]">
+      <img
+        src={peoples} // Replace with a random illustration image URL
+        alt="Illustration"
+        className="w-full h-auto"
+      />
+                </div>
+                
+              </div>
+              
+            </div>
+           
+          {/* ---------------------------------------- */}
+          </div>
+          
+        </div>
+        
+      </section>
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[20vh] w-[100vw] bg-cover bg-repeat">
+                 
+                 </div>
+      
 
 
                            {/* project arya page */}
       <section id="arya" className="mb-9">
 {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-5 pb-16"
+          className=" px-5 pt-10 pb-16 bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl">Project Arya</h1>

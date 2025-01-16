@@ -15,6 +15,7 @@ export default {
       borderRadius: {
         '50px': '50px', 
       },
+      
     },
   },
   plugins: [],
