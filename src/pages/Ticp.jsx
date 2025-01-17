@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import BlurryImages from '../components/BlurryImages';
+import BlurryImages from "../components/BlurryImages";
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
@@ -11,15 +11,17 @@ const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer1.png`;
 const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer2.png`;
 const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer3.png`;
 const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer4.png`;
-const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer5.png`;
+// const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer5.png`;
+import trainer5 from '../imgs/home-images/trainer5.png'
 const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
 
 // import components
-import Faq from '../components/Faq';
-import Model from '../components/Model';
+import Faq from "../components/Faq";
+import Model from "../components/Model";
 
+import groupImag from '../imgs/home-images/ticp.png'
 const Ticp = () => {
   const [team] = useState([
     {
@@ -56,11 +58,11 @@ const Ticp = () => {
     },
     {
       imgSrc: trainer5,
-      name: "Veena Hari",
+      name: "Ishi agarwal",
       smallImgSrc: "trainer5-small.png",
       designation: "Missing",
       description:
-        "Preeta is a trauma-informed therapist & mental wellbeing consultant., She honours and addresses the triad of the mind, body, & spirit in her work. She holds a Master's Degree in Applied Psychology and is an NLP and shamanic practitioner. Over her 10 years of experience in the field, she has worked closely with children and adolescents, teachers and caregivers, and young adults across corporates, schools, and NGOs. In addition to therapy, Preeta has focused greatly on preventive work as well, and has designed programs, workshops, curricula, & manuals at various organisations to the same end. Deeply passionate about the development sector, Preeta has been a part of the founding/ core team of 2 social entrepreneurships in the mental health space and continues to be associated with multiple non-profit organisations in addition to her private practice. She believes that every individual deserves compassion, connection, and hope and works towards achieving this, one step at a time.",
+        "Ishi is a Trauma-Informed Mental Health Practitioner with a deep curiosity for creative and somatic tools. She practices the principle of     'Slow is Fast' in all aspects of her life. She enjoys exploring different dimensions of art, creativity, and movement to regulate the nervous system and is on a journey to becoming a certified Arts-Based Practitioner. She is also a firm believer in writing as a tool for accessing, processing, and releasing emotions.",
     },
     {
       imgSrc: trainer6,
@@ -72,8 +74,8 @@ const Ticp = () => {
     },
   ]);
 
-  const [selectedTeamMember, setSelectedTeamMember] = useState(null); 
-  const [isOpen, setIsOpen] = useState(false);  
+  const [selectedTeamMember, setSelectedTeamMember] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <Model
@@ -88,19 +90,15 @@ const Ticp = () => {
         }}
       >
         <div className='text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col'>
-        <h2 className="text-black text-4xl font-bold text-center">
-  Certificate course on Trauma-Informed Care Practices
-  <span
-    className="relative text-xl font-bold text-red-600 border border-red-800 rounded-full w-5 h-5 ml-1 inline-flex items-center justify-center"
-    style={{ verticalAlign: 'super' }}
-  >
-    c
-  </span>
-</h2>
-
-
-
-
+          <h2 className='text-black text-4xl font-bold text-center'>
+            Certificate course on Trauma-Informed Care Practices
+            <span
+              className='relative text-xl font-bold text-red-600 border border-red-800 rounded-full w-5 h-5 ml-1 inline-flex items-center justify-center'
+              style={{ verticalAlign: "super" }}
+            >
+              c
+            </span>
+          </h2>
 
           <p className='text-sm'>First-of-its-kind in India</p>
         </div>
@@ -181,7 +179,7 @@ const Ticp = () => {
             Course Activities & Duration
           </h2>
           <p className='p-6 pb-0 pt-0 leading-8 text-justify w-[95%] lg:w-full'>
-            The course will encompass various activities like learning sessions,
+            {/* The course will encompass various activities like learning sessions,
             group discussions, assignments, case conceptualisation, roleplays &
             supervision. There are a total of <b>six modules</b> to be covered
             over a period of <b>two months</b>. Upon completion of each module,
@@ -192,51 +190,84 @@ const Ticp = () => {
             <b>viva</b> and submit
             <b> case studies.</b> The intensive process is designed to ensure
             the learning and application of trauma- informed care practices
+            successfully. */}
+            The coursework will encompass various activities like online
+            learning/theory sessions, practical and viva, assignments, project
+            submission and class discussions. There are a total of five modules
+            in the coursework. Each module will be covered over a period of
+            one/two weeks, and upon completion, the participants will submit a
+            credited assignment related to that module. Week 5 and Week 8 will
+            be integration weeks where the participants will be allowed time to
+            process the knowledge acquired and discuss doubts with the trainers.
+            Once all the modules are complete, all the assignments submitted by
+            the participants will be graded, and a buffer period to complete
+            pending assignments will be allotted. After completing all
+            assignments, the participants will be asked to design a practical
+            program for utilising the knowledge gained throughout the
+            coursework, along with a final submission date. Post this, a viva
+            exam will be scheduled where the participants will discuss their
+            projects and share their learning points. The intensive process is
+            designed to ensure the learning and application of the components
             successfully.
           </p>
 
           <div className='activit-list flex flex-wrap justify-between mt-5 p-4'>
-            <p className='flex flex-col gap-5'>
-              <span>Duration: 6 Months </span>
-              <span> Theory sessions: 15</span>
-              <span>Assignments: 6</span>
-              <span>Case submissions: 5</span>
-              <span>Supervision sessions: 8</span>
-            </p>
-           
+            <div className='table-list  text-md text-center font-bold  flex lg:flex-row flex-col gap-2 lg:gap-0 items-center justify-between  w-full'>
+              <table className='table-list text-md text-center font-bold border-[#029390] border-2 lg:w-[500px] '>
+                <tr>
+                  <td className='p-4 border-4 border-[#029390] '>
+                    2 Months of <br /> Theory Sessions
+                  </td>
+                  <td className='p-4 border-4  border-[#029390]'>
+                    4 Months of <br /> Supervision
+                  </td>
+                </tr>
+                <tr>
+                  <td className='p-4 border-4 border-[#029390] '>
+                    Module-based <br /> Assignments
+                  </td>
+                  <td className=' p-4 border-4 border-[#029390] '>
+                    Five Case <br /> Submissions
+                  </td>
+                </tr>
+                <tr>
+                  <td colSpan='2' className='border-4 p-4 border-[#029390]'>
+                    Knowledge Based Viva Assessment
+                  </td>
+                </tr>
+              </table>
+
+              <div>
+                <img src={groupImag} alt='group-img' />
+              </div>
+            </div>
+
             <LazyLoadImage
-             src='https://www.iamwellbeing.org/imgs/ticp4.png'
-             alt='teammate'
-             className='w-[500px] mt-5 lg:mt-0'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="Home/ticimage1-small.jpg" />
-              }
+              src='https://www.iamwellbeing.org/imgs/ticp4.png'
+              alt='teammate'
+              className='w-[500px] mt-5 lg:mt-0'
+              effect='blur' // Blur effect while loading
+              placeholder={<BlurryImages imgUrl='Home/ticimage1-small.jpg' />}
             />
           </div>
 
-         
           <LazyLoadImage
-             src={ticp2Img} alt='curriculum'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="ticp-images/2-small.png" />
-              }
-            />
-          
+            src={ticp2Img}
+            alt='curriculum'
+            effect='blur' // Blur effect while loading
+            placeholder={<BlurryImages imgUrl='ticp-images/2-small.png' />}
+          />
 
           <LazyLoadImage
-             src={ticp3Img} alt='table-img'
-            
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="ticp-images/2a-small.png" />
-              }
-            />
+            src={ticp3Img}
+            alt='table-img'
+            effect='blur' // Blur effect while loading
+            placeholder={<BlurryImages imgUrl='ticp-images/2a-small.png' />}
+          />
         </div>
         <div className='beyond pl-2  w-[95%]'>
           <h1 className='title text-3xl font-bold mt-3'>BEYOND LEVEL-1</h1>
-          <p className='text-[15px] lg:text-[20px] mt-3 font-semibold text-[#333333] text-justify w-[95%] lg:w-full'>
+          <p className='text-[15px] lg:text-[20px] mt-3  text-black text-justify w-[95%] lg:w-full'>
             Successful completion of level 1 will qualify you to apply for Level
             2 This level is a more specialized coursework, which will focus upon
             topics like:
@@ -353,14 +384,13 @@ const Ticp = () => {
           <h1 className='title text-2xl font-bold mb-3'>
             Criteria for grading assignments
           </h1>
-          
+
           <LazyLoadImage
-             src={ticp4Img} alt='ticp4Img'
-              effect="blur" // Blur effect while loading
-              placeholder={
-                <BlurryImages imgUrl="ticp-images/2aa-small.png" />
-              }
-            />
+            src={ticp4Img}
+            alt='ticp4Img'
+            effect='blur' // Blur effect while loading
+            placeholder={<BlurryImages imgUrl='ticp-images/2aa-small.png' />}
+          />
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <p className='text-xl text-justify'>
             Students from psychology and allied field background (undergraduate
@@ -402,8 +432,8 @@ const Ticp = () => {
             will provide participants with a foundational understanding of
             trauma, effects on the brain, culturally sensitive & evidence based
             approaches and resources to equip mental health professionals in
-            trauma-informed care and therapy. This understanding would further lead
-            to:
+            trauma-informed care and therapy. This understanding would further
+            lead to:
           </p>
           <ul className='list-disc ml-6 text-xl mt-6'>
             <li className='mt-2'>
@@ -464,13 +494,19 @@ const Ticp = () => {
                     src={trainer.imgSrc}
                     alt='trainner-img'
                     effect='blur' // Blur effect while loading
-                    placeholder={<BlurryImages imgUrl={`home-images/${trainer.smallImgSrc}`} />}
+                    placeholder={
+                      <BlurryImages
+                        imgUrl={`home-images/${trainer.smallImgSrc}`}
+                      />
+                    }
                   />
-                  <div className="flex flex-col items-center justify-center w-full gap-3">
-                  <h1 className='text-xl text-center  font-[600] mt-2 uppercase'>
-                    {trainer.name}
-                  </h1>
-                  <button className='text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white'>Know More</button>
+                  <div className='flex flex-col items-center justify-center w-full gap-3'>
+                    <h1 className='text-xl text-center  font-[600] mt-2 uppercase'>
+                      {trainer.name}
+                    </h1>
+                    <button className='text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white'>
+                      Know More
+                    </button>
                   </div>
                 </div>
               );
@@ -501,6 +537,6 @@ const Ticp = () => {
       </div>
     </>
   );
-}
+};
 
-export default Ticp
+export default Ticp;
