@@ -65,7 +65,7 @@ const Carousel = () => {
               effect='blur' // Blur effect while loading
               placeholder={<BlurryImages imgUrl='Home/a1-small.png' />}
             />
-            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10  left-5 text-5xl xl:text-6xl font-bold'>
+            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10  left-5 text-5xl xl:text-6xl font-bold text-center'>
               <p>Creating</p>
               <p>Ecosystems</p>
               <p>of Care</p>
@@ -80,11 +80,11 @@ const Carousel = () => {
               effect='blur' // Blur effect while loading
               placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
             />
-            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl  font-bold'>
+            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-4xl xl:text-6xl  font-bold text-center' >
               <p>Making</p>
               <p>India</p>
-              <p>Trauma-</p>
-              <p>Informed</p>
+              <p>Trauma-Informed</p>
+              {/* <p>Informed</p> */}
             </div>
           </div>
         </Slider>

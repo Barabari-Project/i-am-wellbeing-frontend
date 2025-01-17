@@ -66,7 +66,7 @@ const About = () => {
        name: "Atufa Khan",
        imgSrc: team3,
        smallImgSrc: "team_3-small.png",
-       designation: "Reasearch Coordiinator / Therapist",
+       designation: "Reasearch Coordinator / Therapist",
        specialist: "Counselling Psychologist",
        description:
          "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
@@ -158,7 +158,7 @@ const About = () => {
       },
       {
         name: "Yasha Malhotra",
-        designation: "Training Coordiinator/Therapist",
+        designation: "Operations",
         imgSrc: consultant10,
         smallImgSrc: "consultant_10-small.png",
       },
@@ -279,9 +279,9 @@ const About = () => {
                       // aboutus-images/worker1-small.png
                     }
                   />
-                  <div className='details  w-full lg:absolute lg:left-8  lg:bottom-1 text-center lg:text-left  '>
-                    <h6 className='font-bold uppercase text-lg'>{team.name}</h6>
-                    <p className='text text-gray-600 font-[500] text-md'>
+                  <div className='details  w-full lg:absolute lg:left-8  lg:bottom-1 text-center  '>
+                    <h6 className='font-bold uppercase text-lg '>{team.name}</h6>
+                    <p className='text text-gray-600 font-[500] text-md  '>
                       {team.designation}
                     </p>
                   </div>
