@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
+import img from '../imgs/2a.png';
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
-const ticp3Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2a.png`;
+const ticp3Img = img;
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
 
 const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer1.png`;
@@ -58,7 +59,7 @@ const Ticp = () => {
     },
     {
       imgSrc: trainer5,
-      name: "Ishi agarwal",
+      name: "Ishi Agarwal",
       smallImgSrc: "trainer5-small.png",
       designation: "Missing",
       description:
@@ -266,7 +267,7 @@ const Ticp = () => {
           />
         </div>
         <div className='beyond pl-2  w-[95%]'>
-          <h1 className='title text-3xl font-bold mt-3'>BEYOND LEVEL-1</h1>
+          <h1 className='title text-3xl font-bold mt-3'>Beyond Level-1</h1>
           <p className='text-[15px] lg:text-[20px] mt-3  text-black text-justify w-[95%] lg:w-full'>
             Successful completion of level 1 will qualify you to apply for Level
             2 This level is a more specialized coursework, which will focus upon
@@ -306,7 +307,7 @@ const Ticp = () => {
             </p>
             <p className='text-justify'>
               {" "}
-              **It ismandatory to submit Pan and Aadhar details of the person
+              **It is mandatory to submit Pan and Aadhar details of the person
               who has made the money transfer.
             </p>
           </div>
@@ -369,7 +370,7 @@ const Ticp = () => {
             <p className='mb-2'>70-85% - 4 (Good) </p>
             <p className='mb-2'>51-65% - 3( Above Average)</p>
             <p className='mb-2'>31-50- 2 (Average) </p>
-            <p className='mb-2'>30%- 1 (Below Average) </p>
+            <p className='mb-2'>&lt;30%- 1 (Below Average) </p>
           </div>
 
           <h1 className='title text-3xl font-bold mb-3'>
@@ -392,10 +393,22 @@ const Ticp = () => {
             placeholder={<BlurryImages imgUrl='ticp-images/2aa-small.png' />}
           />
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
-          <p className='text-xl text-justify'>
-            Students from psychology and allied field background (undergraduate
-            and postgraduate) Working mental health practitioners
-          </p>
+          <ul className=' list-disc ml-6 mt-4 text-xl'>
+            <li className='mt-4'>
+              Students from psychology and allied field background (undergraduate
+              and postgraduate)
+            </li>
+            {/* <li className='mt-4'>
+              Develop an understanding of evidence-based holistic tools used for
+              processing of deep-rooted trauma.{" "}
+            </li> */}
+            <li className='mt-4'>
+            Working mental health practitioners
+            </li>
+          </ul>
+          {/* <p className='text-xl text-justify'>
+            Working mental health practitioners
+          </p> */}
 
           <h1 className='title text-3xl font-bold mt-3 '>Scholarship Policy</h1>
           <p className='text-xl mt-2 text-justify'>
@@ -406,7 +419,7 @@ const Ticp = () => {
             communities. If you meet the criteria, 50% of your total course fees
             will be waived off
           </p>
-          <h1 className='title text-3xl font-bold mt-4'>HOW TO APPLY?</h1>
+          <h1 className='title text-3xl font-bold mt-4'>How To Apply?</h1>
           <div className='text-xl'>
             <p className='mt-2 text-justify'>
               Step-1: Fill out the application form. Check if you are eligible
@@ -456,7 +469,7 @@ const Ticp = () => {
           </ul>
 
           <h1 className='title text-4xl font-bold mt-3'>Key Takeaways</h1>
-          <ul className=' list-disc ml-10 mt-4 text-xl'>
+          <ul className=' list-disc ml-6 mt-4 text-xl'>
             <li className='mt-4'>
               Get equipped with trauma-informed counselling skills for practical
               application.{" "}

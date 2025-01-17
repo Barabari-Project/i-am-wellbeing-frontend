@@ -179,7 +179,7 @@ const Header = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             <span className='flex items-center gap-2'>
-              About {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
+              ABOUT US {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
             </span>
             <div
               className={`overflow-hidden transition-all duration-500 ${
@@ -222,7 +222,7 @@ const Header = () => {
                   <li className='text-gray-500'>TICP</li>
                 </Link>
                 <Link to='/short-training' onClick={() => setToggle(false)}>
-                  <li className='text-gray-500'>Short Training</li>
+                  <li className='text-gray-500'>Short Trainings Program</li>
                 </Link>
               </ul>
             </div>

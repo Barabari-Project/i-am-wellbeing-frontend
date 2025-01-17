@@ -323,11 +323,11 @@ const Footer = () => {
         <div className='row align-items-baseline sm:flex sm:justify-between w-full '>
           <div className='col-md-6 text-center'>
             <p className='footer-copyright text-white mt-1 text-xl '>
-              ©2025 I Am. All rights reserved.
+              ©2025 Nairatmya Foundation. All rights reserved.
             </p>
           </div>
           <div className='col-md-6 text-center'>
-            <p className='footer-copyright text-white mt-1 text-xl '>developed by The Barabari collective.</p>
+            <p className='footer-copyright text-white mt-1 text-xl '>Developed by The Barabari Collective.</p>
           </div>
         </div>
       </div>

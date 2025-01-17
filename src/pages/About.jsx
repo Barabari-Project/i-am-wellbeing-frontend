@@ -302,7 +302,7 @@ const About = () => {
               backgroundPosition: "bottom left",
             }}
           >
-            <h1 className='absolute  top-4 lg:top-5 left-2'>Our consultants</h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2'>Our Consultants</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-6 mt-10'>

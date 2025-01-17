@@ -319,7 +319,7 @@ const Home = () => {
         <div className='row mb-4 absolute top-2'>
           <div className='ml-2  '>
             <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
-              <span className='letter-spacing'>Clients & Partners?</span>
+              <span className='letter-spacing'>Clients & Partners</span>
             </h2>
           </div>
         </div>
