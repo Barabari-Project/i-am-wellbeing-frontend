@@ -2,16 +2,16 @@ import React from 'react';
 
 const CurriculumTable = () => {
   return (
-    <div className='bg-[#FFDE59] p-12'>
+    <div className='bg-[#FFDE59] lg:p-12 p-6'>
       <div>
-        <h1 className='text-3xl font-semibold'>Curriculum</h1>
-        <p className='text-xl lg:text-2xl mt-3 text-justify'>
+        <h1 className='lg:text-3xl text-2xl font-semibold'>Curriculum</h1>
+        <p className='text-[16px] lg:text-2xl mt-3 text-justify'>
           Level 1 of the Course includes 6 modules. Below is the structure of
           the requirements of the Certificate Course in Trauma-Informed Care
           Practices
         </p>
       </div>
-      <h2 className='text-center text-3xl mt-5 mb-5 font-bold'>Course Structure</h2>
+      <h2 className='text-center text-2xl lg:text-3xl mt-5 mb-5 font-bold'>Course Structure</h2>
       <table className='w-full table-auto'>
         <thead>
           <tr className=''>
