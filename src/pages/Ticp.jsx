@@ -14,6 +14,9 @@ const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer3.png`;
 const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer4.png`;
 // const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer5.png`;
 import trainer5 from '../imgs/home-images/trainer5.png'
+
+import graidingImg from '../imgs/home-images/graiding.png'
+
 const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
@@ -23,6 +26,8 @@ import Faq from "../components/Faq";
 import Model from "../components/Model";
 
 import groupImag from '../imgs/home-images/ticp.png'
+import CurriculumTable from "../components/CurriculumTable";
+import TrainingSchedule from '../components/TrainingSchedule';
 const Ticp = () => {
   const [team] = useState([
     {
@@ -105,12 +110,12 @@ const Ticp = () => {
         </div>
       </div>
 
-      <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2 border'>
-        <div className='about-us text-xl border border-red-300'>
+      <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2'>
+        <div className='about-us text-xl'>
           <h2 className='title text-4xl font-bold pl-4 mt-10 lg:mt-0'>
             About us
           </h2>
-          <p className='mt-2 leading-8 text-justify lg:text-wrap w-[95%] lg:w-full border'>
+          <p className='mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full'>
             Trauma is the most unaddressed and unseen epidemic in today’s time.
             Seven out of ten children in India experience some form of adversity
             at an early age. If left unaddressed, these painful experiences can
@@ -118,7 +123,7 @@ const Ticp = () => {
             mental, emotional, and physical wellbeing.
           </p>
 
-          <p className='leading-8 text-justify w-[95%] lg:w-full'>
+          <p className='leading-8 text-justify w-[95%] m-auto lg:w-full'>
             I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
             profit organization dedicated to supporting such young lives
             struggling with adverse childhood experiences and building an
@@ -179,7 +184,7 @@ const Ticp = () => {
           <h2 className='title text-4xl font-bold mb-1 p-4'>
             Course Activities & Duration
           </h2>
-          <p className='p-6 pb-0 pt-0 leading-8 text-justify w-[95%] lg:w-full'>
+          <p className='p-6 pb-0 pt-0 leading-8 text-justify w-[98%] lg:w-full'>
             {/* The course will encompass various activities like learning sessions,
             group discussions, assignments, case conceptualisation, roleplays &
             supervision. There are a total of <b>six modules</b> to be covered
@@ -246,20 +251,16 @@ const Ticp = () => {
             <LazyLoadImage
               src='https://www.iamwellbeing.org/imgs/ticp4.png'
               alt='teammate'
-              className='w-[500px] mt-5 lg:mt-0'
+              className='w-[500px]  lg:mt-0'
               effect='blur' // Blur effect while loading
               placeholder={<BlurryImages imgUrl='Home/ticimage1-small.jpg' />}
             />
           </div>
 
+          <CurriculumTable/>
+          {/* <TrainingSchedule/> */}
           <LazyLoadImage
-            src={ticp2Img}
-            alt='curriculum'
-            effect='blur' // Blur effect while loading
-            placeholder={<BlurryImages imgUrl='ticp-images/2-small.png' />}
-          />
-
-          <LazyLoadImage
+            className="w-full border"
             src={ticp3Img}
             alt='table-img'
             effect='blur' // Blur effect while loading
@@ -386,12 +387,15 @@ const Ticp = () => {
             Criteria for grading assignments
           </h1>
 
+         {/* <div className='text-center w-full flex items-center justify-center border-4 border-red-300'> */}
           <LazyLoadImage
+            // className="w-full m-auto text-center border-4 graiding-img"
             src={ticp4Img}
             alt='ticp4Img'
             effect='blur' // Blur effect while loading
             placeholder={<BlurryImages imgUrl='ticp-images/2aa-small.png' />}
           />
+         {/* </div> */}
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <ul className=' list-disc ml-6 mt-4 text-xl'>
             <li className='mt-4'>
@@ -490,18 +494,19 @@ const Ticp = () => {
 
         <div className='know-your-trainner pl-2 mt-5'>
           <h1 className='text-4xl font-bold'>Know Your Trainers</h1>
-          <div className='trainners grid items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10'>
-            {team.map((trainer) => {
+          <div className='trainners grid  items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10'>
+            {team.map((trainer , index) => {
               return (
                 <div
                   key={trainer.name}
-                  className='trainner-card cursor-pointer '
+                  className='trainner-card cursor-pointer flex item-center justify-center flex-col '
                   onClick={() => {
                     setIsOpen(true);
                     setSelectedTeamMember(trainer);
                   }}
                 >
                   <LazyLoadImage
+                    className={`${index == 4 ? 'w-[175px]' : 'w-[200px]' } h-[150px] m-auto object-cover`}
                     src={trainer.imgSrc}
                     alt='trainner-img'
                     effect='blur' // Blur effect while loading
