@@ -258,9 +258,8 @@ const Ticp = () => {
           </div>
 
           <CurriculumTable/>
-          {/* <TrainingSchedule/> */}
           <LazyLoadImage
-            className="w-full border"
+            className="w-full"
             src={ticp3Img}
             alt='table-img'
             effect='blur' // Blur effect while loading
