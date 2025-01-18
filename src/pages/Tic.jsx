@@ -159,9 +159,9 @@ const Tic = () => {
           </div>
         </div>
         {/* informed care */}
-        <div className='understanding trauma lg:grid lg:grid-cols-12  p-2 lg:p-0 lg:w-full m-auto justify-center '>
+        <div className='understanding trauma lg:grid lg:grid-cols-12  p-2 lg:p-0 lg:w-full m-auto justify-center items-center'>
           <div className='right col-span-9'>
-            <h1 className='text-[40px] leading-none font-bold lg:ml-12  p-2 lg:p-0'>
+            <h1 className='text-[40px] leading-none font-bold lg:ml-4  p-2 lg:p-0'>
               Trauma-informed care
             </h1>
             <div className='m-auto'>
@@ -177,8 +177,8 @@ const Tic = () => {
             </div>
           </div>
 
-          <div className='left text-lg text-center font-semibold w-[90%] m-auto  lg:col-span-3 relative top-5 lg:top-0'>
-            <LazyLoadImage
+          <div className='left text-lg text-center font-semibold w-full m-auto  lg:col-span-3 relative top-5 lg:top-0'>
+            <LazyLoadImage 
               src={blueQuoteLeft}
               alt='quote-right'
               className='lg:w-[30px] w-[50px] '
@@ -192,13 +192,13 @@ const Tic = () => {
               re-traumatize.
             </p>
 
-            <LazyLoadImage
+            {/* <LazyLoadImage
               src={blueQuoteRight}
               alt='quote-left'
               className='w-[400px] lg:w-[200px] absolute right-0'
               effect='blur' // Blur effect while loading
               placeholder={<BlurryImages imgUrl='Home/blue-quote1-small.png' />}
-            />
+            /> */}
           </div>
         </div>
 
@@ -328,7 +328,7 @@ const Tic = () => {
               “
             </div>
             <div className='testimonials-slider__text text-center'>
-              <p className='text-2xl leading-[30px] md:mt-20'>
+              <p className='text-md leading-[30px] md:mt-20'>
                 {" "}
                 The most crucial aspect of therapy is the development of a good
                 therapeutic alliance with a therapist who is trauma-informed and

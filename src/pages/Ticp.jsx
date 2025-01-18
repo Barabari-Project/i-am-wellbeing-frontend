@@ -93,24 +93,24 @@ const Ticp = () => {
         <div className='text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col'>
           <h2 className='text-black text-4xl font-bold text-center'>
             Certificate course on Trauma-Informed Care Practices
-            <span
-              className='relative text-xl font-bold text-black border border-black rounded-full w-5 h-5 ml-1 inline-flex items-center justify-center'
-              style={{ verticalAlign: "super" }}
+            <sup
+              className='text-xl font-bold text-black m-2'
+              // style={{ verticalAlign: "super" }}
             >
-              c
-            </span>
+              ©
+            </sup>
           </h2>
 
-          <p className='text-sm'>First-of-its-kind in India</p>
+          <p className='text-[20px] lg:text-md'>First-of-its-kind in India</p>
         </div>
       </div>
 
-      <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2'>
-        <div className='about-us text-xl'>
+      <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2 border'>
+        <div className='about-us text-xl border border-red-300'>
           <h2 className='title text-4xl font-bold pl-4 mt-10 lg:mt-0'>
             About us
           </h2>
-          <p className='mt-2 pl-4 pr-4 leading-8 text-justify lg:text-wrap w-[95%] lg:w-full'>
+          <p className='mt-2 leading-8 text-justify lg:text-wrap w-[95%] lg:w-full border'>
             Trauma is the most unaddressed and unseen epidemic in today’s time.
             Seven out of ten children in India experience some form of adversity
             at an early age. If left unaddressed, these painful experiences can
@@ -118,7 +118,7 @@ const Ticp = () => {
             mental, emotional, and physical wellbeing.
           </p>
 
-          <p className='pl-4 pr-4 leading-8 text-justify w-[95%] lg:w-full'>
+          <p className='leading-8 text-justify w-[95%] lg:w-full'>
             I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
             profit organization dedicated to supporting such young lives
             struggling with adverse childhood experiences and building an
@@ -126,9 +126,9 @@ const Ticp = () => {
             power of compassion, connection, and care to develop a healthy and
             happy nation.
           </p>
-          <div className='bg-[#FFDE59]  p-4'>
+          <div className='bg-[#FFDE59]  p-4 pl-2'>
             <h2 className='title text-4xl font-bold mb-5'>Rationale</h2>
-            <p className='mb-3 leading-8'>
+            <p className='mb-3 leading-8 text-justify'>
               While the last decade has highlighted the significant need for
               mental health interventions, it has also{" "}
               <b>
@@ -146,13 +146,13 @@ const Ticp = () => {
                 </i>
               </b>
             </p>
-            <p className='leading-8'>
+            <p className='leading-8 text-justify'>
               The key to mitigating the impact of the perpetually increasing
               wellbeing concerns in our country is to look beyond the presenting
               symptoms of an individual and work towards the root cause through
               a holistic and trauma- informed outlook.
             </p>
-            <p className='leading-8'>
+            <p className='leading-8 text-justify'>
               We strive to fulfill this unmet need of quality mental health care
               by{" "}
               <b>
@@ -274,12 +274,12 @@ const Ticp = () => {
             topics like:
           </p>
 
-          <ul className='ml-8 mt-6 list-disc text-xl'>
-            <li className='mb-3'>Gender, sexuality, & trauma</li>
-            <li className='mb-3'>Relational trauma</li>
-            <li className='mb-3'>Accidents and trauma</li>
-            <li className='mb-3'>Trauma and addiction</li>
-            <li className='mb-3'>Complex trauma</li>
+          <ul className='ml-8 mt-6 list-disc text-md lg:text-xl grid lg:grid-cols-2'>            
+            <li className='lg:mb-3 mb-1'>Gender, sexuality, & trauma</li>
+            <li className='lg:mb-3 mb-1'>Relational trauma</li>
+            <li className='lg:mb-3 mb-1'>Accidents and trauma</li>
+            <li className='lg:mb-3 mb-1'>Trauma and addiction</li>
+            <li className='lg:mb-3 mb-1'>Complex trauma</li>
             <li>Religious trauma</li>
           </ul>
         </div>
@@ -395,16 +395,14 @@ const Ticp = () => {
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
           <ul className=' list-disc ml-6 mt-4 text-xl'>
             <li className='mt-4'>
-              Students from psychology and allied field background (undergraduate
-              and postgraduate)
+              Students from psychology and allied field background
+              (undergraduate and postgraduate)
             </li>
             {/* <li className='mt-4'>
               Develop an understanding of evidence-based holistic tools used for
               processing of deep-rooted trauma.{" "}
             </li> */}
-            <li className='mt-4'>
-            Working mental health practitioners
-            </li>
+            <li className='mt-4'>Working mental health practitioners</li>
           </ul>
           {/* <p className='text-xl text-justify'>
             Working mental health practitioners

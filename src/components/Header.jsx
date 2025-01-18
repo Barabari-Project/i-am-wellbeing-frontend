@@ -25,26 +25,23 @@ const Header = () => {
     <>
       <header className='w-full shadow-md  border-b '>
         <div className='top-bar bg-[#029390] text-sm md:flex hidden justify-end p-2 pr-8 gap-10'>
-          <img loading="lazy" className='w-[30px]' src={facebook} alt='' />
-          <img loading="lazy" className='w-[30px]' src={instagram} alt='' />
-          <img loading="lazy" className='w-[30px]' src={twitter} alt='' />
-          <img loading="lazy" className='w-[30px]' src={youtube} alt='' />
-          <img loading="lazy" className='w-[30px]' src={linkedin} alt='' />
-
-
+          <img loading='lazy' className='w-[30px]' src={facebook} alt='' />
+          <img loading='lazy' className='w-[30px]' src={instagram} alt='' />
+          <img loading='lazy' className='w-[30px]' src={twitter} alt='' />
+          <img loading='lazy' className='w-[30px]' src={youtube} alt='' />
+          <img loading='lazy' className='w-[30px]' src={linkedin} alt='' />
         </div>
 
         <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  sm:flex hidden'>
           <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
             <Link to='/'>
-              
               <LazyLoadImage
-              src={logo} alt='' className=''
-              effect="blur" 
-              placeholder={
-                <BlurryImages imgUrl="Home/logonew-small.png" />
-              }
-            />
+                src={logo}
+                alt=''
+                className=''
+                effect='blur'
+                placeholder={<BlurryImages imgUrl='Home/logonew-small.png' />}
+              />
             </Link>
           </div>
 
@@ -56,21 +53,21 @@ const Header = () => {
                 </li>
               </Link>
               {/* <Link to='/about-us'> */}
-                <li className='border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer'>
-                  About us
-                  <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390]  z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
-                    <Link to='/about-us'>
-                      <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
-                        Our Team
-                      </li>
-                    </Link>
-                    <Link to='/programs'>
-                      <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
-                        Our Programs
-                      </li>
-                    </Link>
-                  </ul>
-                </li>
+              <li className='border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer'>
+                About us
+                <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390]  z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
+                  <Link to='/about-us'>
+                    <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
+                      Our Team
+                    </li>
+                  </Link>
+                  <Link to='/programs'>
+                    <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
+                      Our Programs
+                    </li>
+                  </Link>
+                </ul>
+              </li>
               {/* </Link> */}
 
               <Link to='/tic'>
@@ -84,9 +81,14 @@ const Header = () => {
                 <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390]  z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
                   <Link to='/ticp'>
                     <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6 flex'>
-                      TICP <span className="relative text-xl font-bold text-white border border-white rounded-full size-5  ml-1 flex items-center justify-center"
-                            style={{ verticalAlign: 'super' }}>c</span>
-                    </li> 
+                      TICP{" "}
+                      <sup
+                        className='relative text-xl font-bold text-white ml-1 flex items-center justify-center'
+                        style={{ verticalAlign: "super" }}
+                      >
+                        ©
+                      </sup>
+                    </li>
                   </Link>
                   <Link to='/short-training'>
                     <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
@@ -124,7 +126,7 @@ const Header = () => {
       {/* sub menu list  */}
 
       <div className='flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full'>
-        <img loading="lazy" src={logo} alt='' className='w-[80px]' />
+        <img loading='lazy' src={logo} alt='' className='w-[80px]' />
         <HiMenuAlt3
           className='text-3xl font-[300] cursor-pointer'
           onClick={() => setToggle(true)}
@@ -199,7 +201,7 @@ const Header = () => {
 
           <Link
             to='/tic'
-            className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
+            className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md uppercase'
             onClick={() => setToggle(false)}
           >
             Trauma-Informed Care
@@ -219,7 +221,9 @@ const Header = () => {
             >
               <ul className='ml-6 mt-5 flex flex-col gap-4'>
                 <Link to='/ticp' onClick={() => setToggle(false)}>
-                  <li className='text-gray-500'>TICP</li>
+                  <li className='text-gray-500'>
+                    TICP <sup className="text-black font-bold">©</sup>
+                  </li>
                 </Link>
                 <Link to='/short-training' onClick={() => setToggle(false)}>
                   <li className='text-gray-500'>Short Trainings Program</li>
