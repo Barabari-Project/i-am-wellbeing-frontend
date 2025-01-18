@@ -4,7 +4,7 @@ const CurriculumTable = () => {
   return (
     <div className='bg-[#FFDE59] p-12'>
       <div>
-        <h1 className='text-3xl font-semibold uppercase'>Curriculum</h1>
+        <h1 className='text-3xl font-semibold'>Curriculum</h1>
         <p className='text-xl lg:text-2xl mt-3 text-justify'>
           Level 1 of the Course includes 6 modules. Below is the structure of
           the requirements of the Certificate Course in Trauma-Informed Care

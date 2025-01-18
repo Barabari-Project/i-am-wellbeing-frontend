@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
-import img from '../imgs/2a.png';
+import img from '../imgs/3a.png';
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = img;
@@ -112,7 +112,7 @@ const Ticp = () => {
 
       <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2'>
         <div className='about-us text-xl'>
-          <h2 className='title text-4xl font-bold pl-4 mt-10 lg:mt-0'>
+          <h2 className='title text-4xl font-bold  mt-10 lg:mt-0'>
             About us
           </h2>
           <p className='mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full'>
