@@ -4,7 +4,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from '../components/BlurryImages';
 
 import { HiMenuAlt3 } from "react-icons/hi";
-import { BiDownArrowAlt , BiUpArrowAlt } from "react-icons/bi";
+import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
 const facebook = `${import.meta.env.VITE_PUBLIC_URL}/icons/f.webp`;
@@ -16,10 +16,10 @@ const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
 
 
 const Header = () => {
-  const [show , setShow] = useState(false); // state for show sub menu 
-  const [toggle , setToggle] = useState(false); // state for side bar array to show and hide
-  const [isOpen , setIsOpen] = useState(false); // state for side bar array to show and hide
-   
+  const [show, setShow] = useState(false); // state for show sub menu 
+  const [toggle, setToggle] = useState(false); // state for side bar array to show and hide
+  const [isOpen, setIsOpen] = useState(false); // state for side bar array to show and hide
+
 
   return (
     <>
@@ -98,14 +98,14 @@ const Header = () => {
                 </ul>
               </li>
 
-              <Link to='/programs'>
+              {/* <Link to='/programs'>
                 <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
                   Programs
                 </li>
-              </Link>
+              </Link> */}
               <Link to='/media'>
                 <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
-                  Media
+                  Resources
                 </li>
               </Link>
               <Link to='/contact-us'>
@@ -140,15 +140,13 @@ const Header = () => {
           e.stopPropagation();
           setToggle(false);
         }}
-        className={`fixed top-0 left-0  z-10 w-full h-screen bg-[rgba(0,0,0,0.6)] ${
-          toggle ? "translate-x-0" : "translate-x-[-1000px]"
-        }`}
+        className={`fixed top-0 left-0  z-10 w-full h-screen bg-[rgba(0,0,0,0.6)] ${toggle ? "translate-x-0" : "translate-x-[-1000px]"
+          }`}
       ></div>
 
       <div
-        className={`fixed border top-0 md:hidden bg-[#F9F7F6] z-20 inset-0 w-full sm:w-[80%]  transition-transform duration-300 ease-in-out transform ${
-          toggle ? "translate-x-0" : "translate-x-[-1000px]"
-        }`}
+        className={`fixed border top-0 md:hidden bg-[#F9F7F6] z-20 inset-0 w-full sm:w-[80%]  transition-transform duration-300 ease-in-out transform ${toggle ? "translate-x-0" : "translate-x-[-1000px]"
+          }`}
       >
         <div
           id='nav-bar'
@@ -184,9 +182,8 @@ const Header = () => {
               ABOUT US {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
             </span>
             <div
-              className={`overflow-hidden transition-all duration-500 ${
-                isOpen ? "max-h-96" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-96" : "max-h-0"
+                }`}
             >
               <ul className='ml-6 mt-5 flex flex-col gap-4'>
                 <Link to='/about-us' onClick={() => setToggle(false)}>
@@ -215,9 +212,8 @@ const Header = () => {
               TRAINING {show ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
             </span>
             <div
-              className={`overflow-hidden transition-all duration-500 ${
-                show ? "max-h-96" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition-all duration-500 ${show ? "max-h-96" : "max-h-0"
+                }`}
             >
               <ul className='ml-6 mt-5 flex flex-col gap-4'>
                 <Link to='/ticp' onClick={() => setToggle(false)}>
@@ -231,21 +227,21 @@ const Header = () => {
               </ul>
             </div>
           </a>
-
+          {/* 
           <Link
             to='programs'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300  rounded-md '
             onClick={() => setToggle(false)}
           >
             PROGRAMS
-          </Link>
+          </Link> */}
 
           <Link
             to='/media'
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
             onClick={() => setToggle(false)}
           >
-            MEDIA
+            RESOURCES
           </Link>
 
           <Link
