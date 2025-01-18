@@ -202,7 +202,7 @@ const Header = () => {
             className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
             onClick={() => setToggle(false)}
           >
-            TIC
+            Trauma-Informed Care
           </Link>
 
           <a

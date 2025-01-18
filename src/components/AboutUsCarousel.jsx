@@ -19,7 +19,6 @@ const work_6_Img=`${import.meta.env.VITE_PUBLIC_URL}/home-images/work_6.png`
 
 const AboutUsCarousel = () => {
 const [screenSize , setScreenSize] = useState(window.innerWidth);
-console.log(screenSize)
  
  const getScreenSize = () => {
     setScreenSize(window.innerWidth);

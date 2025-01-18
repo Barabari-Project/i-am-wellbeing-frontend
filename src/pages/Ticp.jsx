@@ -94,7 +94,7 @@ const Ticp = () => {
           <h2 className='text-black text-4xl font-bold text-center'>
             Certificate course on Trauma-Informed Care Practices
             <span
-              className='relative text-xl font-bold text-red-600 border border-red-800 rounded-full w-5 h-5 ml-1 inline-flex items-center justify-center'
+              className='relative text-xl font-bold text-black border border-black rounded-full w-5 h-5 ml-1 inline-flex items-center justify-center'
               style={{ verticalAlign: "super" }}
             >
               c
@@ -529,7 +529,7 @@ const Ticp = () => {
           <div className='btns max-w-3xl flex flex-wrap items-center gap-5 lg:gap-20 justify-center m-auto mt-10'>
             <button className='btn p-3 transition-all duration-300 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
               <a
-                href='https://drive.google.com/file/d/1KC4EkwWfn7gOndZWCSWj4uknVJKG8S9I/view?usp=sharing'
+                href='https://drive.google.com/file/d/1nlYozsui-13TPcixr76VMVPlbwPmQRst/view?usp=sharing'
                 target='_blank'
               >
                 DOWNLOAD THE BROCHURE
