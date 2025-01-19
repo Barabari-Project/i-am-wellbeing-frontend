@@ -343,7 +343,7 @@ const ShortTraining = () => {
           <i>Stay tuned for information about the next batch
           </i>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8 ">
+        <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8 max-md:justify-center max-md:items-center ">
           <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-[12px]">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform"

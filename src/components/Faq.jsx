@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Chart from "./FlowChart";
 
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -47,7 +46,6 @@ const Faq = () => {
         ))}
       </div>
     </div>
-    <Chart/>
         </>
   );
 };
