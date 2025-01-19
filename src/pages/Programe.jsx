@@ -17,7 +17,6 @@ const anubho6 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho6.png`
 const anubho7 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/anubho7.png`
 
 
-
 const udan1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan1.png`;
 const udan2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan2.png`
 const udan3 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan3.png`

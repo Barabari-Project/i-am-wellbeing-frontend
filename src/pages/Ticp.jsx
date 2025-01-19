@@ -5,7 +5,7 @@ import BlurryImages from "../components/BlurryImages";
 import img from '../imgs/3a.png';
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
-const ticp3Img = img;
+const ticp3Img = "/imgs/home-images/flow-chart.png";
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
 
 const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer1.png`;
@@ -27,7 +27,7 @@ import Model from "../components/Model";
 
 import groupImag from '../imgs/home-images/ticp.png'
 import CurriculumTable from "../components/CurriculumTable";
-import TrainingSchedule from '../components/TrainingSchedule';
+import ScheduleTable from "../components/TableContent";
 const Ticp = () => {
   const [team] = useState([
     {
@@ -112,7 +112,7 @@ const Ticp = () => {
 
       <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2'>
         <div className='about-us text-xl'>
-          <h2 className='title text-4xl font-bold  mt-10 lg:mt-0'>
+          <h2 className='title text-4xl font-bold  mt-10 max-md:ml-3 lg:mt-0'>
             About us
           </h2>
           <p className='mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full'>
@@ -259,13 +259,7 @@ const Ticp = () => {
 
           <CurriculumTable/>
           {/* <TrainingSchedule/> */}
-          <LazyLoadImage
-            className="w-full border"
-            src={ticp3Img}
-            alt='table-img'
-            effect='blur' // Blur effect while loading
-            placeholder={<BlurryImages imgUrl='ticp-images/2a-small.png' />}
-          />
+         <ScheduleTable/>
         </div>
         <div className='beyond pl-2  w-[95%]'>
           <h1 className='title text-3xl font-bold mt-3'>Beyond Level-1</h1>
@@ -390,10 +384,10 @@ const Ticp = () => {
          {/* <div className='text-center w-full flex items-center justify-center border-4 border-red-300'> */}
           <LazyLoadImage
             // className="w-full m-auto text-center border-4 graiding-img"
-            src={ticp4Img}
+            src="/src/imgs/home-images/flow-chart.png"
             alt='ticp4Img'
             effect='blur' // Blur effect while loading
-            placeholder={<BlurryImages imgUrl='ticp-images/2aa-small.png' />}
+            placeholder={<BlurryImages imgUrl='/imgs/home-images/flow-chart.png'/>}
           />
          {/* </div> */}
           <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
