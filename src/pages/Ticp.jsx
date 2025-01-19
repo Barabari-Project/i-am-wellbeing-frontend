@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
-import img from '../imgs/3a.png';
+import img from "../imgs/3a.png";
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = "/imgs/home-images/flow-chart.png";
@@ -13,19 +13,19 @@ const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer2.png`;
 const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer3.png`;
 const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer4.png`;
 // const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer5.png`;
-import trainer5 from '../imgs/home-images/trainer5.png'
+import trainer5 from "../imgs/home-images/trainer5.png";
 
-import graidingImg from '../imgs/home-images/graiding.png'
+import graidingImg from "../imgs/home-images/graiding.png";
 
 const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
+import flowChart from "../imgs/home-images/flow-chart.png";
 
-// import components
 import Faq from "../components/Faq";
 import Model from "../components/Model";
 
-import groupImag from '../imgs/home-images/ticp.png'
+import groupImag from "../imgs/home-images/ticp.png";
 import CurriculumTable from "../components/CurriculumTable";
 import ScheduleTable from "../components/TableContent";
 const Ticp = () => {
@@ -95,27 +95,27 @@ const Ticp = () => {
           backgroundImage: `url(${banner})`,
         }}
       >
-        <div className='text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col'>
-          <h2 className='text-black text-4xl font-bold text-center'>
+        <div className="text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col">
+          <h2 className="text-black text-4xl font-bold text-center">
             Certificate course on Trauma-Informed Care Practices
             <sup
-              className='text-xl font-bold text-black m-2'
+              className="text-xl font-bold text-black m-2"
               // style={{ verticalAlign: "super" }}
             >
               ©
             </sup>
           </h2>
 
-          <p className='text-[20px] lg:text-md'>First-of-its-kind in India</p>
+          <p className="text-[20px] lg:text-md">First-of-its-kind in India</p>
         </div>
       </div>
 
-      <div className='container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2'>
-        <div className='about-us text-xl'>
-          <h2 className='title text-4xl font-bold  mt-10 max-md:ml-3 lg:mt-0'>
+      <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
+        <div className="about-us text-xl">
+          <h2 className="title text-4xl font-bold  mt-10 max-md:ml-3 lg:mt-0">
             About us
           </h2>
-          <p className='mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full'>
+          <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full">
             Trauma is the most unaddressed and unseen epidemic in today’s time.
             Seven out of ten children in India experience some form of adversity
             at an early age. If left unaddressed, these painful experiences can
@@ -123,7 +123,7 @@ const Ticp = () => {
             mental, emotional, and physical wellbeing.
           </p>
 
-          <p className='leading-8 text-justify w-[95%] m-auto lg:w-full'>
+          <p className="leading-8 text-justify w-[95%] m-auto lg:w-full">
             I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
             profit organization dedicated to supporting such young lives
             struggling with adverse childhood experiences and building an
@@ -131,9 +131,9 @@ const Ticp = () => {
             power of compassion, connection, and care to develop a healthy and
             happy nation.
           </p>
-          <div className='bg-[#FFDE59]  p-4 pl-2'>
-            <h2 className='title text-4xl font-bold mb-5'>Rationale</h2>
-            <p className='mb-3 leading-8 text-justify'>
+          <div className="bg-[#FFDE59]  p-4 pl-2">
+            <h2 className="title text-4xl font-bold mb-5">Rationale</h2>
+            <p className="mb-3 leading-8 text-justify">
               While the last decade has highlighted the significant need for
               mental health interventions, it has also{" "}
               <b>
@@ -151,13 +151,13 @@ const Ticp = () => {
                 </i>
               </b>
             </p>
-            <p className='leading-8 text-justify'>
+            <p className="leading-8 text-justify">
               The key to mitigating the impact of the perpetually increasing
               wellbeing concerns in our country is to look beyond the presenting
               symptoms of an individual and work towards the root cause through
               a holistic and trauma- informed outlook.
             </p>
-            <p className='leading-8 text-justify'>
+            <p className="leading-8 text-justify">
               We strive to fulfill this unmet need of quality mental health care
               by{" "}
               <b>
@@ -180,11 +180,11 @@ const Ticp = () => {
             </p>
           </div>
         </div>
-        <div className='Activities text-xl'>
-          <h2 className='title text-4xl font-bold mb-1 p-4'>
+        <div className="Activities text-xl">
+          <h2 className="title text-4xl font-bold mb-1 p-4">
             Course Activities & Duration
           </h2>
-          <p className='p-6 pb-0 pt-0 leading-8 text-justify w-[98%] lg:w-full'>
+          <p className="p-6 pb-0 pt-0 leading-8 text-justify w-[98%] lg:w-full">
             {/* The course will encompass various activities like learning sessions,
             group discussions, assignments, case conceptualisation, roleplays &
             supervision. There are a total of <b>six modules</b> to be covered
@@ -217,136 +217,136 @@ const Ticp = () => {
             successfully.
           </p>
 
-          <div className='activit-list flex flex-wrap justify-between mt-5 p-4'>
-            <div className='table-list  text-md text-center font-bold  flex lg:flex-row flex-col gap-2 lg:gap-0 items-center justify-between  w-full'>
-              <table className='table-list text-md text-center font-bold border-[#029390] border-2 lg:w-[500px] '>
+          <div className="activit-list flex flex-wrap justify-between mt-5 p-4">
+            <div className="table-list  text-md text-center font-bold  flex lg:flex-row flex-col gap-2 lg:gap-0 items-center justify-between  w-full">
+              <table className="table-list text-md text-center font-bold border-[#029390] border-2 lg:w-[500px] ">
                 <tr>
-                  <td className='p-4 border-4 border-[#029390] '>
+                  <td className="p-4 border-4 border-[#029390] ">
                     2 Months of <br /> Theory Sessions
                   </td>
-                  <td className='p-4 border-4  border-[#029390]'>
+                  <td className="p-4 border-4  border-[#029390]">
                     4 Months of <br /> Supervision
                   </td>
                 </tr>
                 <tr>
-                  <td className='p-4 border-4 border-[#029390] '>
+                  <td className="p-4 border-4 border-[#029390] ">
                     Module-based <br /> Assignments
                   </td>
-                  <td className=' p-4 border-4 border-[#029390] '>
+                  <td className=" p-4 border-4 border-[#029390] ">
                     Five Case <br /> Submissions
                   </td>
                 </tr>
                 <tr>
-                  <td colSpan='2' className='border-4 p-4 border-[#029390]'>
+                  <td colSpan="2" className="border-4 p-4 border-[#029390]">
                     Knowledge Based Viva Assessment
                   </td>
                 </tr>
               </table>
 
               <div>
-                <img src={groupImag} alt='group-img' />
+                <img src={groupImag} alt="group-img" />
               </div>
             </div>
 
             <LazyLoadImage
-              src='https://www.iamwellbeing.org/imgs/ticp4.png'
-              alt='teammate'
-              className='w-[500px]  lg:mt-0'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/ticimage1-small.jpg' />}
+              src="https://www.iamwellbeing.org/imgs/ticp4.png"
+              alt="teammate"
+              className="w-[500px]  lg:mt-0"
+              effect="blur" // Blur effect while loading
+              placeholder={<BlurryImages imgUrl="Home/ticimage1-small.jpg" />}
             />
           </div>
 
-          <CurriculumTable/>
+          <CurriculumTable />
           {/* <TrainingSchedule/> */}
-         <ScheduleTable/>
+          <ScheduleTable />
         </div>
-        <div className='beyond pl-2  w-[95%]'>
-          <h1 className='title text-3xl font-bold mt-3'>Beyond Level-1</h1>
-          <p className='text-[15px] lg:text-[20px] mt-3  text-black text-justify w-[95%] lg:w-full'>
+        <div className="beyond pl-2  w-[95%]">
+          <h1 className="title text-3xl font-bold mt-3">Beyond Level-1</h1>
+          <p className="text-[15px] lg:text-[20px] mt-3  text-black text-justify w-[95%] lg:w-full">
             Successful completion of level 1 will qualify you to apply for Level
             2 This level is a more specialized coursework, which will focus upon
             topics like:
           </p>
 
-          <ul className='ml-8 mt-6 list-disc text-md lg:text-xl grid lg:grid-cols-2'>            
-            <li className='lg:mb-3 mb-1'>Gender, sexuality, & trauma</li>
-            <li className='lg:mb-3 mb-1'>Relational trauma</li>
-            <li className='lg:mb-3 mb-1'>Accidents and trauma</li>
-            <li className='lg:mb-3 mb-1'>Trauma and addiction</li>
-            <li className='lg:mb-3 mb-1'>Complex trauma</li>
+          <ul className="ml-8 mt-6 list-disc text-md lg:text-xl grid lg:grid-cols-2">
+            <li className="lg:mb-3 mb-1">Gender, sexuality, & trauma</li>
+            <li className="lg:mb-3 mb-1">Relational trauma</li>
+            <li className="lg:mb-3 mb-1">Accidents and trauma</li>
+            <li className="lg:mb-3 mb-1">Trauma and addiction</li>
+            <li className="lg:mb-3 mb-1">Complex trauma</li>
             <li>Religious trauma</li>
           </ul>
         </div>
 
-        <div className='course policy mt-4 bg-[#FFDE59] p-6'>
-          <h1 className='title text-4xl font-bold mb-1'>Course Policies</h1>
-          <h1 className='title text-2xl font-bold mb-3'>Contribution*</h1>
-          <div className='text-xl flex flex-col gap-5'>
+        <div className="course policy mt-4 bg-[#FFDE59] p-6">
+          <h1 className="title text-4xl font-bold mb-1">Course Policies</h1>
+          <h1 className="title text-2xl font-bold mb-3">Contribution*</h1>
+          <div className="text-xl flex flex-col gap-5">
             <p>
               The contribution amount is payable in advance as per the
               application process protocols.
             </p>
-            <p className='text-justify'>
+            <p className="text-justify">
               {" "}
               The amount can be paid online (NEFT/IMPS)
             </p>
-            <p className='text-justify'>
+            <p className="text-justify">
               Following details will be required to complete the payment
               process:Pan card and Aadhar Card**
             </p>
-            <p className='text-justify'>
+            <p className="text-justify">
               {" "}
               *All contribution will be utilised for Nairatmya Foundation's work
               with under-resourced communities
             </p>
-            <p className='text-justify'>
+            <p className="text-justify">
               {" "}
               **It is mandatory to submit Pan and Aadhar details of the person
               who has made the money transfer.
             </p>
           </div>
-          <h1 className='title text-2xl font-bold mt-2'>Refund Policy</h1>
-          <p className='text-xl text-justify'>
+          <h1 className="title text-2xl font-bold mt-2">Refund Policy</h1>
+          <p className="text-xl text-justify">
             In case the participant wants to withdraw from the course before it
             begins, 50% of the contribution amount shall be returned upon
             connecting with the organisation 15 days before the course
             commencement.
           </p>
-          <h1 className='title text-2xl font-bold mt-3'>Attendance</h1>
-          <ul className='text-xl list-disc ml-6 mt-3'>
-            <li className='mb-2'>
+          <h1 className="title text-2xl font-bold mt-3">Attendance</h1>
+          <ul className="text-xl list-disc ml-6 mt-3">
+            <li className="mb-2">
               It is mandatory to attend all course classes.
             </li>
-            <li className='mb-2'>
+            <li className="mb-2">
               Regularity in attendance shall be taken into account for final
               course credits and certification.
             </li>
             <li>Extra class in lieu of missed class shall not be provided</li>
           </ul>
-          <h1 className='title text-2xl font-bold mb-3 mt-5'>Assignments</h1>
-          <ul className='text-xl list-disc ml-6'>
-            <li className='mb-2'>
+          <h1 className="title text-2xl font-bold mb-3 mt-5">Assignments</h1>
+          <ul className="text-xl list-disc ml-6">
+            <li className="mb-2">
               After each module, a reflective assignment is required to be
               submitted by the participants for evaluation.
             </li>
-            <li className='mb-2'>
+            <li className="mb-2">
               On completion of the course module, all assignments need to be
               submitted as per the assigned due date.
             </li>
-            <li className='mb-2'>
+            <li className="mb-2">
               Assignments play an important role in fulfilling the total credits
               required for the completion of the course.
             </li>
 
-            <li className='mb-2'>
+            <li className="mb-2">
               Assignments play an important role in fulfilling the total credits
               required for the completion of the course.
             </li>
             <li>Late submissions shall not be accepted.</li>
           </ul>
-          <h1 className='title text-2xl font-bold mt-3'>Evaluation</h1>
-          <p className='text-xl text-justify'>
+          <h1 className="title text-2xl font-bold mt-3">Evaluation</h1>
+          <p className="text-xl text-justify">
             To evaluate a student's performance, a written assignment will be
             submitted after the completion of each module. Along with
             assignments, participants will be required to submit 5 case studies.
@@ -355,44 +355,44 @@ const Ticp = () => {
             completing the course, a viva will be conducted to assess
             participants' knowledge and skills.
           </p>
-          <h1 className='title text-3xl font-bold mt-3'>Grading Criteria</h1>
-          <div className='text-xl mt-2'>
-            <p className='mb-2 text-justify'>
+          <h1 className="title text-3xl font-bold mt-3">Grading Criteria</h1>
+          <div className="text-xl mt-2">
+            <p className="mb-2 text-justify">
               Following grading criteria is used for evaluation of both
               assignments and overall course:
             </p>
-            <p className='mb-2'>Above 85%- 5( Excellent) </p>
-            <p className='mb-2'>70-85% - 4 (Good) </p>
-            <p className='mb-2'>51-65% - 3( Above Average)</p>
-            <p className='mb-2'>31-50- 2 (Average) </p>
-            <p className='mb-2'>&lt;30%- 1 (Below Average) </p>
+            <p className="mb-2">Above 85%- 5( Excellent) </p>
+            <p className="mb-2">70-85% - 4 (Good) </p>
+            <p className="mb-2">51-65% - 3( Above Average)</p>
+            <p className="mb-2">31-50- 2 (Average) </p>
+            <p className="mb-2">&lt;30%- 1 (Below Average) </p>
           </div>
 
-          <h1 className='title text-3xl font-bold mb-3'>
+          <h1 className="title text-3xl font-bold mb-3">
             Overall Passing criteria
           </h1>
-          <div className='text-xl'>
-            <li className='mb-2'>All classes must be attended </li>
-            <li className='mb-2'>Timely assignment submission </li>
-            <li className='mb-2'>Complete supervision hours </li>
-            <li className='mb-2'>Case submission and presentation</li>
+          <div className="text-xl">
+            <li className="mb-2">All classes must be attended </li>
+            <li className="mb-2">Timely assignment submission </li>
+            <li className="mb-2">Complete supervision hours </li>
+            <li className="mb-2">Case submission and presentation</li>
           </div>
-          <h1 className='title text-2xl font-bold mb-3'>
+          <h1 className="title text-2xl font-bold mb-3">
             Criteria for grading assignments
           </h1>
 
-         {/* <div className='text-center w-full flex items-center justify-center border-4 border-red-300'> */}
+          {/* <div className='text-center w-full flex items-center justify-center border-4 border-red-300'> */}
           <LazyLoadImage
             // className="w-full m-auto text-center border-4 graiding-img"
-            src="/src/imgs/home-images/flow-chart.png"
-            alt='ticp4Img'
-            effect='blur' // Blur effect while loading
-            placeholder={<BlurryImages imgUrl='/imgs/home-images/flow-chart.png'/>}
+            src={flowChart}
+            alt="ticp4Img"
+            effect="blur" // Blur effect while loading
+            placeholder={<BlurryImages imgUrl={flowChart} />}
           />
-         {/* </div> */}
-          <h1 className='title text-3xl font-bold mb-3'>Eligibility</h1>
-          <ul className=' list-disc ml-6 mt-4 text-xl'>
-            <li className='mt-4'>
+          {/* </div> */}
+          <h1 className="title text-3xl font-bold mb-3">Eligibility</h1>
+          <ul className=" list-disc ml-6 mt-4 text-xl">
+            <li className="mt-4">
               Students from psychology and allied field background
               (undergraduate and postgraduate)
             </li>
@@ -400,14 +400,14 @@ const Ticp = () => {
               Develop an understanding of evidence-based holistic tools used for
               processing of deep-rooted trauma.{" "}
             </li> */}
-            <li className='mt-4'>Working mental health practitioners</li>
+            <li className="mt-4">Working mental health practitioners</li>
           </ul>
           {/* <p className='text-xl text-justify'>
             Working mental health practitioners
           </p> */}
 
-          <h1 className='title text-3xl font-bold mt-3 '>Scholarship Policy</h1>
-          <p className='text-xl mt-2 text-justify'>
+          <h1 className="title text-3xl font-bold mt-3 ">Scholarship Policy</h1>
+          <p className="text-xl mt-2 text-justify">
             We strongly believe that resources play a major role in shaping
             one’s life and no life should struggle to get what they deserve.
             Keeping our mission at the heart of this, we are gladly announcing a
@@ -415,26 +415,26 @@ const Ticp = () => {
             communities. If you meet the criteria, 50% of your total course fees
             will be waived off
           </p>
-          <h1 className='title text-3xl font-bold mt-4'>How To Apply?</h1>
-          <div className='text-xl'>
-            <p className='mt-2 text-justify'>
+          <h1 className="title text-3xl font-bold mt-4">How To Apply?</h1>
+          <div className="text-xl">
+            <p className="mt-2 text-justify">
               Step-1: Fill out the application form. Check if you are eligible
               for scholarship
             </p>
-            <p className='mt-2 text-justify'>
+            <p className="mt-2 text-justify">
               Step 2: Upon receiving an email from our side, write a cover
               letter extensively covering the details mentioned in the email
             </p>
-            <p className='mt-2 text-justify'>
+            <p className="mt-2 text-justify">
               Step 3: If selected, appear for the personal interview
             </p>
-            <p className='mt-2 text-justify'>
+            <p className="mt-2 text-justify">
               Step 4: If you meet the criteria, 50% of your total course fees
               will be waived off
             </p>
           </div>
-          <h1 className='title text-4xl font-bold mt-4'>Impact </h1>
-          <p className='text-xl mt-3 text-justify'>
+          <h1 className="title text-4xl font-bold mt-4">Impact </h1>
+          <p className="text-xl mt-3 text-justify">
             Trauma is a near universal experience of individuals with behavioral
             health problems. The present times have brought to light the hidden
             concerns and traumas of individuals across the globe. The course
@@ -444,77 +444,79 @@ const Ticp = () => {
             trauma-informed care and therapy. This understanding would further
             lead to:
           </p>
-          <ul className='list-disc ml-6 text-xl mt-6'>
-            <li className='mt-2'>
+          <ul className="list-disc ml-6 text-xl mt-6">
+            <li className="mt-2">
               A culture of safety, empowerment, and healing in these tough
               times.
             </li>
-            <li className='mt-2'>
+            <li className="mt-2">
               Access to quality intervention support and care to individuals.
             </li>
-            <li className='mt-2'>Reduction in re-traumatization. </li>
-            <li className='mt-2'>Cost-effective treatment.</li>
-            <li className='mt-2'>
+            <li className="mt-2">Reduction in re-traumatization. </li>
+            <li className="mt-2">Cost-effective treatment.</li>
+            <li className="mt-2">
               Elimination of stereotypes and labelling culture for mental health
               concerns.{" "}
             </li>
-            <li className='mt-2'>
+            <li className="mt-2">
               Shift to holistic interventions that caters to the
             </li>
-            <li className='mt-2'>Connection between mind, body and soul</li>
+            <li className="mt-2">Connection between mind, body and soul</li>
           </ul>
 
-          <h1 className='title text-4xl font-bold mt-3'>Key Takeaways</h1>
-          <ul className=' list-disc ml-6 mt-4 text-xl'>
-            <li className='mt-4'>
+          <h1 className="title text-4xl font-bold mt-3">Key Takeaways</h1>
+          <ul className=" list-disc ml-6 mt-4 text-xl">
+            <li className="mt-4">
               Get equipped with trauma-informed counselling skills for practical
               application.{" "}
             </li>
-            <li className='mt-4'>
+            <li className="mt-4">
               Develop an understanding of evidence-based holistic tools used for
               processing of deep-rooted trauma.{" "}
             </li>
-            <li className='mt-4'>
+            <li className="mt-4">
               Build a trauma-informed care lens for intervention planning.
             </li>
-            <li className='mt-4'>
+            <li className="mt-4">
               Become a trauma-informed Mental health practitioner.{" "}
             </li>
-            <li className='mt-4'>
+            <li className="mt-4">
               Develop an understandingof trauma in the Indian context.
             </li>
           </ul>
         </div>
 
-        <div className='know-your-trainner pl-2 mt-5'>
-          <h1 className='text-4xl font-bold'>Know Your Trainers</h1>
-          <div className='trainners grid  items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10'>
-            {team.map((trainer , index) => {
+        <div className="know-your-trainner pl-2 mt-5">
+          <h1 className="text-4xl font-bold">Know Your Trainers</h1>
+          <div className="trainners grid  items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10">
+            {team.map((trainer, index) => {
               return (
                 <div
                   key={trainer.name}
-                  className='trainner-card cursor-pointer flex item-center justify-center flex-col '
+                  className="trainner-card cursor-pointer flex item-center justify-center flex-col "
                   onClick={() => {
                     setIsOpen(true);
                     setSelectedTeamMember(trainer);
                   }}
                 >
                   <LazyLoadImage
-                    className={`${index == 4 ? 'w-[175px]' : 'w-[200px]' } h-[150px] m-auto object-cover`}
+                    className={`${
+                      index == 4 ? "w-[175px]" : "w-[200px]"
+                    } h-[150px] m-auto object-cover`}
                     src={trainer.imgSrc}
-                    alt='trainner-img'
-                    effect='blur' // Blur effect while loading
+                    alt="trainner-img"
+                    effect="blur" // Blur effect while loading
                     placeholder={
                       <BlurryImages
                         imgUrl={`home-images/${trainer.smallImgSrc}`}
                       />
                     }
                   />
-                  <div className='flex flex-col items-center justify-center w-full gap-3'>
-                    <h1 className='text-xl text-center  font-[600] mt-2 uppercase'>
+                  <div className="flex flex-col items-center justify-center w-full gap-3">
+                    <h1 className="text-xl text-center  font-[600] mt-2 uppercase">
                       {trainer.name}
                     </h1>
-                    <button className='text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white'>
+                    <button className="text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white">
                       Know More
                     </button>
                   </div>
@@ -523,19 +525,19 @@ const Ticp = () => {
             })}
           </div>
 
-          <div className='btns max-w-3xl flex flex-wrap items-center gap-5 lg:gap-20 justify-center m-auto mt-10'>
-            <button className='btn p-3 transition-all duration-300 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
+          <div className="btns max-w-3xl flex flex-wrap items-center gap-5 lg:gap-20 justify-center m-auto mt-10">
+            <button className="btn p-3 transition-all duration-300 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2">
               <a
-                href='https://drive.google.com/file/d/1nlYozsui-13TPcixr76VMVPlbwPmQRst/view?usp=sharing'
-                target='_blank'
+                href="https://drive.google.com/file/d/1nlYozsui-13TPcixr76VMVPlbwPmQRst/view?usp=sharing"
+                target="_blank"
               >
                 DOWNLOAD THE BROCHURE
               </a>
             </button>
-            <button className='p-3 transition-all duration-300 btn bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2'>
+            <button className="p-3 transition-all duration-300 btn bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2">
               <a
-                href='https://docs.google.com/forms/d/1XndjGihgSJNstgCGXm1J1shpAJeRuGz1C9foyq-Lljc/closedform?pli=1'
-                target='_blank'
+                href="https://docs.google.com/forms/d/1XndjGihgSJNstgCGXm1J1shpAJeRuGz1C9foyq-Lljc/closedform?pli=1"
+                target="_blank"
               >
                 APPLY NOW
               </a>
