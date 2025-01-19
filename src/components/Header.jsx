@@ -20,11 +20,11 @@ import { FaXTwitter } from "react-icons/fa6";
 // const linkedin = <FaLinkedin  />;
 
 const SocialMedia = [
-  { icon: <FaFacebookF />, url: "#" },
-  { icon: <FaInstagram />, url: "#" },
-  { icon: <FaXTwitter />, url: "#" },
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/iamwellbeingservices/?_rdr" },
+  { icon: <FaInstagram />, url: "https://www.instagram.com/iamwellbeing_" },
+  { icon: <FaXTwitter />, url: "https://x.com/iamwellbeing_?s=08" },
   { icon: <FaYoutube />, url: "#" },
-  { icon: <FaLinkedin />, url: "#" },
+  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/i-am-3b17b8104" },
 ];
 
 const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
@@ -43,7 +43,7 @@ const Header = () => {
               key={index}
               className="w-8 h-8 bg-black text-white text-base rounded-full flex justify-center scale-100 items-center hover:scale-110 transition-all duration-200 cursor-pointer"
             >
-              <a href={social.url}>{social.icon}</a>
+              <a target="_blank" href={social.url}>{social.icon}</a>
             </div>
           ))}
         </div>
