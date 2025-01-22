@@ -15,9 +15,9 @@ const BodyImagePart = () => {
     <div className="">
   <div
     style={{ backgroundImage: `url(${body})` }}
-    className="h-screen bg-contain bg-no-repeat bg-center flex justify-center items-center "
+    className="h-screen bg-contain bg-no-repeat bg-center flex justify-center items-center  pr-4 sm:pr-8 "
       >
-        <img src={nerves} alt="nerves"   data-aos="fade-in"/>
+        <img src={nerves} alt="nerves"   data-aos="fade-in" className='h-[80%] w-full'/>
     {/* Nerve Image */}
     {/* <div className="w-[60%]">
       <img src={nerves} alt="nerves" className="w-full h-auto" />

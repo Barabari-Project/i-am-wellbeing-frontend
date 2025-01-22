@@ -247,7 +247,7 @@ const Programe = () => {
           <h1 className="text-4xl font-bold px-4 lg:px-11" >Depth of change</h1>
 
           <div className="px-4 lg:px-11 flex flex-col-reverse  md:flex-row ">
-  <div className="mt-[4%] leading-8 flex-[60%]">
+  <div className="mt-[4%] leading-8 flex-[50%]">
     <p className="text-justify text-[20px] font-thin">
       The change we aim to bring through our training initiatives, especially
       the TICP course reaches the depths of the nervous system. Shifts observed
@@ -264,7 +264,7 @@ const Programe = () => {
       approaches.
     </p>
   </div>
-  <div className="flex-[40%]">
+  <div className="flex-[50%]">
     <BodyImagePart className="w-full h-auto object-cover" />
   </div>
 </div>
@@ -390,142 +390,46 @@ Our comprehensive approach acknowledges that mental and emotional health are int
          <div className="flex flex-col lg:flex-row gap-8 mt-8">
   {/* Left Section with Map */}
   <div className="relative w-full lg:w-1/2">
-      {/* Map Image */}
-      <img src={map} alt="Map Illustration" className="w-full h-full" />
+  {/* Map Image */}
+  <img src={map} alt="Map Illustration" className="w-full h-full" />
 
-      {/* Location Icons */}
-      <motion.div
-        className="absolute top-[15%] left-[24%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 1 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
+  {/* Location Icons */}
+  {[
+    { top: "15%", left: "24%", duration: 1 },
+    { top: "25%", left: "35%", duration: 1.5 },
+    { top: "37%", left: "60%", duration: 2 },
+    { top: "45%", left: "26%", duration: 2.5 },
+    { top: "45%", left: "55%", duration: 3 },
+    { top: "55%", left: "45%", duration: 3.5 },
+    { top: "60%", left: "18%", duration: 4 },
+    { top: "65%", left: "39%", duration: 4.5 },
+    { top: "70%", left: "30%", duration: 5 },
+    { top: "75%", left: "24%", duration: 5.5 },
+    { top: "80%", left: "32%", duration: 6 },
+    { top: "85%", left: "30%", duration: 6.5 },
+    // Additional Location Icons
+    { top: "32%", left: "16%", duration: 1.8 },
+    { top: "40%", left: "20%", duration: 2.2 },
+    { top: "34%", left: "78%", duration: 2.7 },
+    { top: "50%", left: "60%", duration: 3.3 },
+    { top: "35%", left: "45%", duration: 3.9 },
+    { top: "7%", left: "30%", duration: 4.5 },
+  ].map(({ top, left, duration }, index) => (
+    <motion.div
+      key={index}
+      className="absolute"
+      style={{ top, left }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3 }}
+      transition={{ duration }}
+      variants={iconVariants}
+    >
+      <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+    </motion.div>
+  ))}
+</div>
 
-      <motion.div
-        className="absolute top-[25%] left-[35%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 1.5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[37%] left-[60%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 2 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[45%] left-[26%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 2.5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[45%] left-[55%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 3 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[55%] left-[45%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 3.5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[60%] left-[18%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 4 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[65%] left-[39%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 4.5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[70%] left-[30%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[75%] left-[24%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 5.5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[80%] left-[32%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 6 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-[85%] left-[30%]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.3 }}
-        transition={{ duration: 6.5 }}
-        variants={iconVariants}
-      >
-        <FaMapMarkerAlt className="text-blue-500 text-3xl" />
-      </motion.div>
-    </div>
 
   {/* Right Section with Text and Illustration */}
   <div className="w-full lg:w-1/2">
