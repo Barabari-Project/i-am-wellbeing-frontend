@@ -66,7 +66,7 @@ const About = () => {
        name: "Atufa Khan",
        imgSrc: team3,
        smallImgSrc: "team_3-small.png",
-       designation: "Reasearch Coordiinator / Therapist",
+       designation: "Reasearch Coordinator / Therapist",
        specialist: "Counselling Psychologist",
        description:
          "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
@@ -158,7 +158,7 @@ const About = () => {
       },
       {
         name: "Yasha Malhotra",
-        designation: "Training Coordiinator/Therapist",
+        designation: "Operations",
         imgSrc: consultant10,
         smallImgSrc: "consultant_10-small.png",
       },
@@ -256,12 +256,12 @@ const About = () => {
             <h1 className='absolute  top-4 lg:top-5 left-2'>Core Team</h1>
           </div>
 
-          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6  md:grid-cols-3 max-w-3xl m-auto  mt-10'>
+          <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6   md:grid-cols-3 max-w-3xl m-auto  mt-10'>
             {teams.map((team) => {
               // console.log(`home-images/${team.smallImgSrc}`);
               return (
                 <div
-                  className='team-card w-[100%]  m-auto cursor-pointer relative'
+                  className='team-card w-[100%] min-h-[300px] flex flex-col items-center   m-auto cursor-pointer relative'
                   key={team.name}
                   onClick={() => {
                     setSelectedTeamMember(team);
@@ -271,7 +271,7 @@ const About = () => {
                   <LazyLoadImage
                     src={team.imgSrc}
                     alt='team'
-                    className='w-full lg:min-h-[300px]   object-cover'
+                    className='w-full h-[200px] relative'
                     placeholder={
                       <BlurryImages
                         imgUrl={`home-images/${team.smallImgSrc}`}
@@ -279,9 +279,9 @@ const About = () => {
                       // aboutus-images/worker1-small.png
                     }
                   />
-                  <div className='details  w-full lg:absolute lg:left-8  lg:bottom-1 text-center lg:text-left  '>
-                    <h6 className='font-bold uppercase text-lg'>{team.name}</h6>
-                    <p className='text text-gray-600 font-[500] text-md'>
+                  <div className='details  w-full text-center absolute lg:bottom-14 sm:bottom-14 bottom-10'>
+                    <h6 className='font-bold uppercase text-lg '>{team.name}</h6>
+                    <p className='text text-gray-600 font-[500] text-md  '>
                       {team.designation}
                     </p>
                   </div>
@@ -302,23 +302,20 @@ const About = () => {
               backgroundPosition: "bottom left",
             }}
           >
-            <h1 className='absolute  top-4 lg:top-5 left-2'>Our consultants</h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2'>Our Consultants</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-6 mt-10'>
             {consultants.map((consultant , index) => {
               return (
-                <div key={index} className='relative'>
-                  {/* <img
-                    src={consultant.imgSrc}
-                    alt='team'
-                    className='w-full min-h-[300px] object-cover'
-                  /> */}
-
+                <div
+                  key={index}
+                  className='min-h-[300px] flex flex-col items-center m-auto cursor-pointer relative'
+                >
                   <LazyLoadImage
                     src={consultant.imgSrc}
                     alt='team'
-                    className='w-full lg:min-h-[300px]   object-cover'
+                    className=' object-cover relative'
                     placeholder={
                       <BlurryImages
                         imgUrl={`home-images/${consultant.smallImgSrc}`}
@@ -327,7 +324,7 @@ const About = () => {
                     }
                   />
 
-                  <div className='details  details  w-full absolute lg:bottom-0 text-center lg:text-left bottom-6'>
+                  <div className='details  details  w-full absolute lg:bottom-14 sm:bottom-14 bottom-10'>
                     <h6 className='font-bold text-black uppercase text-lg text-center'>
                       {consultant.name}
                     </h6>

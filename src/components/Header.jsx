@@ -1,112 +1,131 @@
 import React, { useState } from "react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import BlurryImages from '../components/BlurryImages';
-
+import BlurryImages from "../components/BlurryImages";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { BiDownArrowAlt , BiUpArrowAlt } from "react-icons/bi";
+import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
-const facebook = `${import.meta.env.VITE_PUBLIC_URL}/icons/f.webp`;
-const instagram = `${import.meta.env.VITE_PUBLIC_URL}/icons/i.webp`;
-const twitter = `${import.meta.env.VITE_PUBLIC_URL}/icons/t.webp`;
-const youtube = `${import.meta.env.VITE_PUBLIC_URL}/icons/y.webp`;
-const linkedin = `${import.meta.env.VITE_PUBLIC_URL}/icons/l.webp`;
+// const facebook = <FaFacebookF /> ;
+// const instagram =<FaInstagram  /> ;
+// const twitter = <FaXTwitter  />;
+// const youtube = <FaYoutube  />;
+// const linkedin = <FaLinkedin  />;
+
+const SocialMedia = [
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/iamwellbeingservices/?_rdr" },
+  { icon: <FaInstagram />, url: "https://www.instagram.com/iamwellbeing_" },
+  { icon: <FaXTwitter />, url: "https://x.com/iamwellbeing_?s=08" },
+  { icon: <FaYoutube />, url: "#" },
+  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/i-am-3b17b8104" },
+];
+
 const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
 
-
 const Header = () => {
-  const [show , setShow] = useState(false); // state for show sub menu 
-  const [toggle , setToggle] = useState(false); // state for side bar array to show and hide
-  const [isOpen , setIsOpen] = useState(false); // state for side bar array to show and hide
-   
+  const [show, setShow] = useState(false); // state for show sub menu
+  const [toggle, setToggle] = useState(false); // state for side bar array to show and hide
+  const [isOpen, setIsOpen] = useState(false); // state for side bar array to show and hide
 
   return (
     <>
-      <header className='w-full shadow-md  border-b '>
-        <div className='top-bar bg-[#029390] text-sm md:flex hidden justify-end p-2 pr-8 gap-10'>
-          <img loading="lazy" className='w-[30px]' src={facebook} alt='' />
-          <img loading="lazy" className='w-[30px]' src={instagram} alt='' />
-          <img loading="lazy" className='w-[30px]' src={twitter} alt='' />
-          <img loading="lazy" className='w-[30px]' src={youtube} alt='' />
-          <img loading="lazy" className='w-[30px]' src={linkedin} alt='' />
-
-
+      <header className="w-full shadow-md  border-b ">
+        <div className="top-bar bg-[#029390] text-sm md:flex hidden justify-end p-2 pr-8 gap-10">
+          {SocialMedia.map((social, index) => (
+            <div
+              key={index}
+              className="w-8 h-8 bg-black text-white text-base rounded-full flex justify-center scale-100 items-center hover:scale-110 transition-all duration-200 cursor-pointer"
+            >
+              <a target="_blank" href={social.url}>{social.icon}</a>
+            </div>
+          ))}
         </div>
 
-        <div className='w-[100%] m-auto shadow-lg   items-center justify-between p-8  sm:flex hidden'>
-          <div className='logo z-10 w-[120px] absolute top-5 left-5 hidden md:block'>
-            <Link to='/'>
-              
+        <div className="w-[100%] m-auto shadow-lg   items-center justify-between p-8  sm:flex hidden">
+          <div className="logo z-10 w-[120px] absolute top-5 left-5 hidden md:block">
+            <Link to="/">
               <LazyLoadImage
-              src={logo} alt='' className=''
-              effect="blur" 
-              placeholder={
-                <BlurryImages imgUrl="Home/logonew-small.png" />
-              }
-            />
+                src={logo}
+                alt=""
+                className=""
+                effect="blur"
+                placeholder={<BlurryImages imgUrl="Home/logonew-small.png" />}
+              />
             </Link>
           </div>
 
-          <div className='absolute right-0'>
-            <ul className='flex sm:gap-4 lg:gap-6 gap-10 pr-2 relative flex-end '>
-              <Link to='/'>
-                <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
+          <div className="absolute right-0">
+            <ul className="flex sm:gap-4 lg:gap-6 gap-10 pr-2 relative flex-end ">
+              <Link to="/">
+                <li className="border border-black py-1 px-4 rounded-full text-center cursor-pointer">
                   Home
                 </li>
               </Link>
               {/* <Link to='/about-us'> */}
-                <li className='border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer'>
-                  About us
-                  <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390]  z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
-                    <Link to='/about-us'>
-                      <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
-                        Our Team
-                      </li>
-                    </Link>
-                    <Link to='/programs'>
-                      <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
-                        Our Programs
-                      </li>
-                    </Link>
-                  </ul>
-                </li>
+              <li className="border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer">
+                About us
+                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#029390] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
+                  <Link to="/about-us">
+                    <li className="text-white hover:text-gray-400 text-xl mt-8 ml-6">
+                      Our Team
+                    </li>
+                  </Link>
+                  <Link to="/programs">
+                    <li className="text-white hover:text-gray-400 text-xl mt-3 ml-6">
+                      Our Programs
+                    </li>
+                  </Link>
+                </ul>
+              </li>
               {/* </Link> */}
 
-              <Link to='/tic'>
-                <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
+              <Link to="/tic">
+                <li className="border border-black py-1 px-4 rounded-full text-center cursor-pointer">
                   Trauma-Informed Care
                 </li>
               </Link>
 
-              <li className='border border-black py-1 px-4 group rounded-full text-center cursor-pointer relative'>
+              <li className="border border-black py-1 px-4 group rounded-full text-center cursor-pointer relative">
                 Training
-                <ul className='absolute sub-menu w-[255px] h-0 text-left opacity-0 translate-y-10 transition-all duration-300 text-gray-200 right-[-100px] top-[3rem] bg-[#029390]  z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0'>
-                  <Link to='/ticp'>
-                    <li className='text-white hover:text-gray-400 text-xl mt-8 ml-6'>
-                      TICP
+                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#029390] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
+                  <Link to="/ticp">
+                    <li className="text-white hover:text-gray-400 text-xl mt-8 ml-6 flex">
+                      TICP{" "}
+                      <sup
+                        className="relative text-xl font-bold text-white ml-1 flex hover:text-gray-400 items-center justify-center"
+                        style={{ verticalAlign: "super" }}
+                      >
+                        ©
+                      </sup>
                     </li>
                   </Link>
-                  <Link to='/short-training'>
-                    <li className='text-white hover:text-gray-400 text-xl mt-3 ml-6'>
-                      Short Trainings
+                  <Link to="/short-training">
+                    <li className="text-white hover:text-gray-400 text-xl mt-3 ml-6">
+                      Short Trainings Program
                     </li>
                   </Link>
                 </ul>
               </li>
 
-              <Link to='/programs'>
+              {/* <Link to='/programs'>
                 <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
                   Programs
                 </li>
-              </Link>
-              <Link to='/media'>
-                <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
-                  Media
+              </Link> */}
+              <Link to="/media">
+                <li className="border border-black py-1 px-4 rounded-full text-center cursor-pointer">
+                  Resources
                 </li>
               </Link>
-              <Link to='/contact-us'>
-                <li className='border border-black py-1 px-4 rounded-full text-center'>
+              <Link to="/contact-us">
+                <li className="border border-black py-1 px-4 rounded-full text-center">
                   Contact Us
                 </li>
               </Link>
@@ -122,10 +141,10 @@ const Header = () => {
 
       {/* sub menu list  */}
 
-      <div className='flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full'>
-        <img loading="lazy" src={logo} alt='' className='w-[80px]' />
+      <div className="flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full">
+        <img loading="lazy" src={logo} alt="" className="w-[80px]" />
         <HiMenuAlt3
-          className='text-3xl font-[300] cursor-pointer'
+          className="text-3xl font-[300] cursor-pointer"
           onClick={() => setToggle(true)}
         />
       </div>
@@ -148,18 +167,18 @@ const Header = () => {
         }`}
       >
         <div
-          id='nav-bar'
-          className='flex items-center justify-end w-[80%] m-auto bg-[#F9F7F6]'
+          id="nav-bar"
+          className="flex items-center justify-end w-[80%] m-auto bg-[#F9F7F6]"
         >
-          <button className='md:hidden pt-2' onClick={() => setToggle(false)}>
-            <i className='fa-solid fa-close text-xl'></i>
+          <button className="md:hidden pt-2" onClick={() => setToggle(false)}>
+            <i className="fa-solid fa-close text-xl"></i>
           </button>
         </div>
 
-        <div className='w-full h-full text[14px] flex flex-col items-start pl-14 bg-[#F9F7F6] pt-20 text-sm  gap-2'>
+        <div className="w-full h-full text[14px] flex flex-col items-start pl-14 bg-[#F9F7F6] pt-20 text-sm  gap-2">
           <Link
-            to='/'
-            className='font-[300]  text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
+            to="/"
+            className="font-[300]  text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md "
             onClick={() => setToggle(false)}
           >
             HOME
@@ -174,41 +193,41 @@ const Header = () => {
           </Link> */}
 
           <a
-            className='font-[300] text-[#282A43] p-2  rounded-md '
+            className="font-[300] text-[#282A43] p-2  rounded-md "
             onClick={() => setIsOpen(!isOpen)}
           >
-            <span className='flex items-center gap-2'>
-              About {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
+            <span className="flex items-center gap-2">
+              ABOUT US {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
             </span>
             <div
               className={`overflow-hidden transition-all duration-500 ${
                 isOpen ? "max-h-96" : "max-h-0"
               }`}
             >
-              <ul className='ml-6 mt-5 flex flex-col gap-4'>
-                <Link to='/about-us' onClick={() => setToggle(false)}>
-                  <li className='text-gray-500'>Our Team</li>
+              <ul className="ml-6 mt-5 flex flex-col gap-4">
+                <Link to="/about-us" onClick={() => setToggle(false)}>
+                  <li className="text-gray-500">Our Team</li>
                 </Link>
-                <Link to='/programs' onClick={() => setToggle(false)}>
-                  <li className='text-gray-500'>Our Programs</li>
+                <Link to="/programs" onClick={() => setToggle(false)}>
+                  <li className="text-gray-500">Our Programs</li>
                 </Link>
               </ul>
             </div>
           </a>
 
           <Link
-            to='/tic'
-            className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
+            to="/tic"
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md uppercase"
             onClick={() => setToggle(false)}
           >
-            TIC
+            Trauma-Informed Care
           </Link>
 
           <a
-            className='font-[300] text-[#282A43] p-2  rounded-md '
+            className="font-[300] text-[#282A43] p-2  rounded-md "
             onClick={() => setShow(!show)}
           >
-            <span className='flex items-center gap-2'>
+            <span className="flex items-center gap-2">
               TRAINING {show ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
             </span>
             <div
@@ -216,36 +235,38 @@ const Header = () => {
                 show ? "max-h-96" : "max-h-0"
               }`}
             >
-              <ul className='ml-6 mt-5 flex flex-col gap-4'>
-                <Link to='/ticp' onClick={() => setToggle(false)}>
-                  <li className='text-gray-500'>TICP</li>
+              <ul className="ml-6 mt-5 flex flex-col gap-4">
+                <Link to="/ticp" onClick={() => setToggle(false)}>
+                  <li className="text-gray-500">
+                    TICP <sup className="text-black font-bold">©</sup>
+                  </li>
                 </Link>
-                <Link to='/short-training' onClick={() => setToggle(false)}>
-                  <li className='text-gray-500'>Short Training</li>
+                <Link to="/short-training" onClick={() => setToggle(false)}>
+                  <li className="text-gray-500">Short Trainings Program</li>
                 </Link>
               </ul>
             </div>
           </a>
-
+          {/* 
           <Link
             to='programs'
             className='font-[300] text-[#282A43]  p-2 transition-all duration-300  rounded-md '
             onClick={() => setToggle(false)}
           >
             PROGRAMS
-          </Link>
+          </Link> */}
 
           <Link
-            to='/media'
-            className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
+            to="/media"
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md "
             onClick={() => setToggle(false)}
           >
-            MEDIA
+            RESOURCES
           </Link>
 
           <Link
-            to='/contact-us'
-            className='font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md '
+            to="/contact-us"
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md "
             onClick={() => setToggle(false)}
           >
             CONTACT
@@ -255,12 +276,5 @@ const Header = () => {
     </>
   );
 };
-
-
-
-
-
-
-
 
 export default Header;

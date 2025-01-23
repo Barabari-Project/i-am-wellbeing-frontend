@@ -1,16 +1,10 @@
-import React from 'react';
-
+import React, { useRef, useState } from 'react';
 
 const angerImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/anger.png`;
-
 const backpainImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/backpain.png`;
-
 const beathingImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/beathing.png`;
-
 const helplessnessImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/helplessness.png`;
-
 const safeImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/safe.png`;
-
 const selfImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/self.png`;
 
 const angervideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/anger.mp4`;
@@ -24,38 +18,101 @@ import greenbg from "../imgs/program-images/greenbg.png"
 const calendarBg=`${import.meta.env.VITE_PUBLIC_URL}/phase-2/calender%20bg.svg`
 
 
-import calendar from '../imgs/program-images/calendar.webp'
+import calendar from '../imgs/program-images/calendar.png'
 import support from '../imgs/program-images/support.webp'
 
 
 const Media = () => {
   const data = [
     {
-      video: backpainvideo,
+      video: "https://youtu.be/S-Ji7aayH3A?si=zWIOv1RTWXfw4FkY",
       img: backpainImg,
-      name:"EFT Back Pain"
+      name: "EFT  for Anger (Hindi)",
     },
     {
       video: helplessnessvideo,
       img: helplessnessImg,
-       name:"EFT Helplessness"
+      name: "EFT  for Anger (English)",
     },
     {
       video: beathingvideo,
       img: beathingImg,
-       name:"Breathing Exercises"
+      name: "EFT  for Hopelessness (Hindi)",
     },
     {
       video: safevideo,
       img: safeImg,
-       name:"Safe Space Visualisation"
+      name: "EFT for Hopelessness (English)",
     },
     {
       video: selfvideo,
       img: selfImg,
-       name:"EFT Self Worth"
+      name: "Breathing Exercises (Hindi)",
     },
-  ]
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "EFT  for Back Pain (Hindi)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "Safe Space Visualisation (Hindi)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "Safe Space Visualisation (English)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "EFT for Anxiety (Hindi)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "EFT for Anxiety (English)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "EFT for Grief (English)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "EFT for Grief (Hindi)",
+    },
+    {
+      video: selfvideo,
+      img: selfImg,
+      name: "EFT for Self Worth (Hindi)",
+    },
+
+  ];
+
+  const videoRefs = useRef([]);
+  const [currentPlaying, setCurrentPlaying] = useState(null);
+
+  const handlePlay = (index) => {
+    // Pause the currently playing video, if any
+    if (currentPlaying !== null && videoRefs.current[currentPlaying]) {
+      videoRefs.current[currentPlaying].pause();
+    }
+
+    // Update the currently playing index and play the clicked video
+    setCurrentPlaying(index);
+    const currentVideo = videoRefs.current[index];
+    if (currentVideo) {
+      if (currentVideo.paused) {
+        currentVideo.play();
+      } else {
+        currentVideo.pause(); // Toggle play/pause on repeated clicks
+      }
+    }
+  };
+
   return (
     <>
         <section  className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%]">
@@ -89,7 +146,42 @@ Take breaks and enter this space with curiosity!
             </p>
           </div>
           {/* ------------------------------------ */}
-         
+          <div className="lg:flex py-[3%] px-[3%] pt-[100px] md:pt-[4.5%] lg:gap-3 m-auto w-[99%] 2xl:px-[10%]">
+      {/* Left side */}
+      {/* <div className="lg:flex-1 lg:px-1">
+        <video
+          preload="none"
+          controls
+          poster={angerImg}
+          className="lg:h-[82%] lg:w-full lg:px-[2%]"
+          onClick={() => handlePlay(-1)} // Trigger play on click
+          ref={(el) => (videoRefs.current[-1] = el)} // Assign a unique ref
+        >
+          <source type="video/mp4" src={angervideo} />
+        </video>
+        <h1 className="text-center font-bold text-3xl p-2">EFT for Anger</h1>
+      </div> */}
+
+      {/* Right side */}
+      <div className="sm:flex sm:flex-wrap sm:flex-row  sm:flex-1">
+        {data.map((item, index) => (
+          <div key={index} className="md:w-1/2 sm:pr-10 sm:pl-4 sm:w-[50%]">
+            <video
+              preload="none"
+              controls
+              poster={item.img}
+              className="w-full h-auto "
+              onClick={() => handlePlay(index)} // Trigger play on click
+              ref={(el) => (videoRefs.current[index] = el)} // Assign ref for each video
+            >
+              <source type="video/mp4" src={item.video} />
+            </video>
+            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/S-Ji7aayH3A?si=zWIOv1RTWXfw4FkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
+            <h1 className="text-center font-bold text-3xl p-2">{item.name}</h1>
+          </div>
+        ))}
+      </div>
+      </div>
             
             
           </div>
@@ -109,7 +201,7 @@ Take breaks and enter this space with curiosity!
                 <p className='text-justify text-[20px] font-thin '>Here is a booklet that we have designed to add a drop of support in the ocean of this unknown. This booklet is for anyone supporting a dear one through their journey with grief.</p>
               </div>
               <div className='w-[60%] mt-6  p-3' style={{backgroundImage:`url(${calendarBg})`}} >
-                <img loading="lazy" src={support} alt="support" className='sm:h-[70%] w-[100%] '/>
+                <a href="https://drive.google.com/file/d/1LqXt0rwzBi2iUEH5mLJyL8TraP0mJueZ/view" target='blank'><img loading="lazy" src={support} alt="support" className='sm:h-[70%] w-[100%] '/></a>
               </div>
             </div>
            
@@ -134,7 +226,7 @@ Build in this 30-day Self-Care routine and allow yourself to soak in rest and sl
             </div>
 
             <div style={{backgroundImage:`url(${calendarBg})`}} className='p-10' >
-            <img loading="lazy" src={calendar} alt="selfcare" className='md:w-[80%] h-[80vh] m-auto'/>
+           <a href="https://drive.google.com/file/d/1K9e73YyGNPiFa63an3C_ipngUJGceaJ7/view?usp=drivesdk" target="_blank"> <img loading="lazy" src={calendar} alt="selfcare" className='md:w-[80%] h-[80vh] m-auto'/></a>
           </div>
             <div>
               
@@ -146,54 +238,12 @@ Build in this 30-day Self-Care routine and allow yourself to soak in rest and sl
         </div>
         </div>
       </section>
-    </>
-
-
-
-
-
-
-
-
-
-
-//     <div className="lg:flex py-[3%] px-[3%] pt-[100px] md:pt-[4.5%] lg:gap-3 m-auto w-[99%] 2xl:px-[10%]">
-      
-//   {/* Left side */}
-//   <div className="lg:flex-1 lg:px-1">
-//   <video preload="none" controls poster={angerImg} className="lg:h-[82%] lg:w-full lg:px-[2%] ">
-//     <source
-//       type="video/mp4"
-//       src={angervideo}
-//     />
-//   </video>
-//   <h1 className="text-center font-bold text-3xl p-2">EFT for Anger</h1>
-//       </div>
-      
-
-//   {/* Right side */}
-//   <div className="lg:flex lg:flex-wrap lg:flex-row  lg:flex-1 ">
-//     {data.map((item, index) => (
-//       <div
-//         key={index}
-//         className="lg:w-1/2 lg:pr-10 lg:pl-4"
-//       >
-//         <video
-//           preload="none"
-//           controls
-//           poster={item.img}
-//           className="w-full h-auto "
-//         >
-//           <source type="video/mp4" src={item.video} />
-//         </video>
-//         <h1 className="text-center font-bold text-3xl p-2">{item.name}</h1>
-//       </div>
-//     ))}
-//   </div>
-    // </div>
     
 
-  )
-}
 
-export default Media
+    
+      </>
+  );
+};
+
+export default Media;

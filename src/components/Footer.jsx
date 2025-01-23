@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className='footer bg-black text-white lg:pt-10 pb-5  '>
+    <footer className='footer bg-black text-white lg:pt-5 pb-5  '>
       <div className='max-w-5xl m-auto flex lg:flex-row flex-col lg:gap-10 items-start  p-10 lg:p-0'>
-        <div className='left hidden lg:flex flex-col lg:pr-20 sm:pl-20 md:pl-0'>
-          <div className='footer-contacts '>
+        {/* <div className='left hidden lg:flex flex-col lg:pr-20 sm:pl-20 md:pl-0'> */}
+          {/* <div className='footer-contacts '>
             <div className='footer-logo'>
               <a className='footer-logo__link' href='index.html'>
                 
@@ -59,7 +59,7 @@ const Footer = () => {
                     target='_blank'
                   >
                     {/* <i className='fas fa-linkedin' aria-hidden='true'></i> */}
-                    <i className='fa-brands fa-linkedin-in'></i>
+                    {/* <i className='fa-brands fa-linkedin-in'></i>
                   </a>
                 </li>
                 <li className='footer-socials__item'>
@@ -140,19 +140,19 @@ const Footer = () => {
                 </ul>
               </nav>
             </div>
-          </div>
+          </div> */} 
 
-          <div className='row align-items-baseline'>
+          {/* <div className='row align-items-baseline'>
             <div className='col-md-6'>
               <p className='footer-copyright text-white mt-10 text-xs '>
                 © 2023 I Am. All Rights Reserved.
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* end left bar */}
 
-        <div className='footer-logo lg:hidden mobile-logo'>
+        {/* <div className='footer-logo lg:hidden mobile-logo'>
           <a className='footer-logo__link' href='index.html'>
            
             <LazyLoadImage
@@ -163,9 +163,9 @@ const Footer = () => {
               }
             />
           </a>
-        </div>
+        </div> */}
 
-        <div className='max-w-2xl right flex gap-10  flex-col '>
+        {/* <div className='max-w-2xl right flex gap-10  flex-col '>
           <h4 className='footer__title text-xl lg:text-2xl mt-10 lg:mt-0'>
             A mental health not-for-profit organization dedicated towards
             breaking the cycle of intergenerational trauma by supporting young
@@ -186,7 +186,7 @@ const Footer = () => {
                     target='_blank'
                   >
                     {/* <i className='fas fa-facebook' aria-hidden='true'></i> */}
-                    <i className='fa-brands fa-facebook-f'></i>
+                    {/* <i className='fa-brands fa-facebook-f'></i>
                   </a>
                 </li>
                 <li className='footer-socials__item'>
@@ -205,7 +205,7 @@ const Footer = () => {
                     target='_blank'
                   >
                     {/* <i className='fas fa-linkedin' aria-hidden='true'></i> */}
-                    <i className='fa-brands fa-linkedin-in'></i>
+                    {/* <i className='fa-brands fa-linkedin-in'></i>
                   </a>
                 </li>
                 <li className='footer-socials__item'>
@@ -254,9 +254,9 @@ const Footer = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className='col-sm-6 col-lg-3  mt-10 lg:hidden'>
+        {/* <div className='col-sm-6 col-lg-3  mt-10 lg:hidden'>
           <h4 className='footer__title text-2xl'>--- Important Links</h4>
           <nav className='mt-4'>
             <ul className='unordered-list flex flex-col gap-2'>
@@ -318,13 +318,16 @@ const Footer = () => {
               </li>
             </ul>
           </nav>
-        </div>
+        </div> */}
 
-        <div className='row align-items-baseline lg:hidden'>
+        <div className='row align-items-baseline sm:flex sm:justify-between w-full '>
           <div className='col-md-6 text-center'>
-            <p className='footer-copyright text-white mt-10 text-xs '>
-              © 2023 I Am. All Rights Reserved.
+            <p className='footer-copyright text-white mt-1 text-xl '>
+              ©2025 Nairatmya Foundation. All rights reserved.
             </p>
+          </div>
+          <div className='col-md-6 text-center'>
+            <p className='footer-copyright text-white mt-1 text-xl '>Developed by The Barabari Collective.</p>
           </div>
         </div>
       </div>
