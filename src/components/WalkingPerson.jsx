@@ -13,15 +13,15 @@ const WalkingPerson = () => {
   return (
     <div className='flex  '>
     <img src={animationimage1} alt="Character"  className='w-[14%] h-[50%] mt-[9%]'/>
-    <img src={animationimage6} alt="Character"  className='w-[14%] h-[80%] mt-[9%]' />
-      <img src={animationimage4} alt="Character" className='w-[14%] h-[80%] mt-[9%]' />
+    <img src={animationimage6} alt="Character"  className='w-[14%] h-[80%] mt-[10%]' />
+      <img src={animationimage4} alt="Character" className='w-[14%] h-[80%] mt-[10%]' />
       <img src={animationimage3} alt="Character"  className='w-[14%] mt-[2%]'/>
-      <img src={animationimage5} alt="Character"  className='w-[14%] '/>
+      <img src={animationimage5} alt="Character"  className='w-[14%] mb-[2%] '/>
       
      
-      <img src={animation1} alt="Character"  className='w-[14%] ' />
+      <img src={animation1} alt="Character"  className='w-[14%] mb-[2%]' />
 
-      <img src={animationimage8} alt="Character"  className='w-[14%] ' />
+      <img src={animationimage8} alt="Character"  className='w-[14%] mb-[2%]' />
       {/* <img src={animation1} alt="Character" style={{ width: '150px' }} /> */}
     </div>
     

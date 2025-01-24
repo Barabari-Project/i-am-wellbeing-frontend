@@ -23,7 +23,7 @@ const SocialMedia = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/iamwellbeingservices/?_rdr" },
   { icon: <FaInstagram />, url: "https://www.instagram.com/iamwellbeing_" },
   { icon: <FaXTwitter />, url: "https://x.com/iamwellbeing_?s=08" },
-  { icon: <FaYoutube />, url: "#" },
+  { icon: <FaYoutube />, url: "https://www.youtube.com/@iamwellbeing9989" },
   { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/i-am-3b17b8104" },
 ];
 

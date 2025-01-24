@@ -270,8 +270,8 @@ const Programe = () => {
 
 
 
-          <div className="px-4 lg:px-11">
-          <h1 className="text-4xl font-bold">Corporate and Institutional Trainings</h1>
+          <div className="px-4 lg:px-11 pt-4">
+          <h1 className="text-4xl font-bold pb-2">Corporate and Institutional Trainings</h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8 mb-4">
             
@@ -308,7 +308,7 @@ Our comprehensive approach acknowledges that mental and emotional health are int
        
         </div>
       </section>
-      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[20vh] w-[100vw] bg-cover bg-repeat">
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className=" h-[5vh] sm:h-[10vh] md:h-[20vh] w-[100vw] bg-cover bg-repeat">
                  
                  </div>
 
@@ -424,7 +424,7 @@ Our comprehensive approach acknowledges that mental and emotional health are int
       transition={{ duration }}
       variants={iconVariants}
     >
-      <FaMapMarkerAlt className="text-blue-500 text-3xl" />
+      <FaMapMarkerAlt className="text-blue-500 text-xl sm:text-2xl lg:text-3xl" />
     </motion.div>
   ))}
 </div>
@@ -456,7 +456,7 @@ Our comprehensive approach acknowledges that mental and emotional health are int
         </div>
         
       </section>
-      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[20vh] w-[100vw] bg-cover bg-repeat">
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[5vh] sm:h-[10vh] md:h-[20vh] w-[100vw] bg-cover bg-repeat">
                  
                  </div>
       
@@ -544,6 +544,9 @@ Our comprehensive approach acknowledges that mental and emotional health are int
         </div>
         </div>
       </section>
+      <div style={{backgroundImage:`url(${yelloShadow})`}} className="h-[5vh] sm:h-[10vh] md:h-[20vh] w-[100vw] bg-cover bg-repeat">
+                 
+                 </div>
       
     </>
   );

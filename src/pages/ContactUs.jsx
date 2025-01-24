@@ -118,7 +118,7 @@ const ContactUs = () => {
                   type="text"
                   value={formData.name}
                   onChange={handleInputChange}
-              
+              required
           placeholder="Name"
           className="w-full h-12 px-4 border-2 border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
@@ -135,6 +135,7 @@ const ContactUs = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleInputChange}
+                  required
           className="w-full h-12 px-4 border-2 border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -149,7 +150,8 @@ const ContactUs = () => {
                   type="tel"
                   value={formData.phone}
               onChange={handleInputChange}
-          placeholder="Contact"
+                  placeholder="Contact"
+                  required
           className="w-full h-12 px-4 border-2 border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
@@ -162,6 +164,7 @@ const ContactUs = () => {
         <textarea
                   id="message"
                   value={formData.message}
+                  required
               onChange={handleInputChange}
 
           rows="4"
@@ -173,7 +176,7 @@ const ContactUs = () => {
       {/* Submit Button */}
       <button
         type="submit"
-        className="self-start px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all duration-300"
+        className="self-center px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all duration-300"
       >
         Send
       </button>
@@ -196,19 +199,20 @@ const ContactUs = () => {
       individual gain access to support through our trauma-informed initiatives.
     </p>
     {/* Account Details Box */}
-    <div className="flex flex-col p-10">
+    <div className="flex flex-col p-10 ">
         
               
               <form onSubmit={(e) => handleSubmit(e, sendAccountDetails)}>
           <textarea
             id="AccountDetails"
-            rows="6"
+                  rows="6"
+                  required
             value={formData.AccountDetails}
             onChange={handleInputChange}
                   placeholder="Account Details:"
                   className="w-full px-4 py-2 border-2 border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
-          <button type="submit" className="self-start px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all duration-300">Submit Account Details</button>
+          <button type="submit" className="self-center  px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all duration-300">Submit Account Details</button>
         </form>
       </div>
             
@@ -259,7 +263,8 @@ const ContactUs = () => {
     <label className="text-sm font-medium mb-1" htmlFor="nameneeds">
       Name:
     </label>
-    <input
+                <input
+                   required
       id="nameneeds"
       type="text"
       value={formData.nameneeds}
@@ -274,7 +279,8 @@ const ContactUs = () => {
     <label className="text-sm font-medium mb-1" htmlFor="emailneeds">
       Email:
     </label>
-    <input
+                <input
+                   required
       id="emailneeds"
       type="email"
       value={formData.emailneeds}
@@ -289,7 +295,8 @@ const ContactUs = () => {
     <label className="text-sm font-medium mb-1" htmlFor="need">
       Organisation and its needs:
     </label>
-    <textarea
+                <textarea
+                   required
       id="need"
       rows="4"
       value={formData.need}
@@ -302,7 +309,7 @@ const ContactUs = () => {
   {/* Submit Button */}
   <button
     type="submit"
-    className="self-start px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all duration-300"
+    className="self-center px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-all duration-300"
   >
     Send
   </button>

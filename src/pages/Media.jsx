@@ -115,10 +115,10 @@ const Media = () => {
 
   return (
     <>
-        <section  className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%]">
+        <section  className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%] ">
 {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-center"
+          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-center "
           style={{ backgroundImage: `url(${greenbg})` }}
         >
           <h1 className="text-3xl sm:text-4xl font-bold lg:text-6xl">Resources</h1>
@@ -129,7 +129,7 @@ const Media = () => {
          {/* 3slides of arya */}
         
         {/* content data */}
-        <div className="px-4 lg:px-11">
+        <div className="px-4 lg:px-11  ">
           <h1 className="text-5xl font-bold">Emotional Freedom Technique</h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
@@ -186,7 +186,7 @@ Take breaks and enter this space with curiosity!
             
           </div>
           {/* Grief Support Booklet  */}
-          <div className="px-4 lg:px-11 mt-6">
+          <div className="px-4 lg:px-11 mt-6 ">
           <h1 className="text-5xl font-bold">Grief Support Booklet </h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
@@ -195,12 +195,12 @@ Take breaks and enter this space with curiosity!
             Grief is an ocean that is ever-consuming and ever-flowing. It is not something to get rid of and definitely not easy to live with. There is no right way to work with it. All we can try is to hold space for it, be gentle with it, and allow it to move at its own pace. 
             </p>
             </div>
-            <div className='flex mt-8 gap-8 mb-0  '>
+            <div className='flex flex-col-reverse sm:flex-row mt-8 gap-8 mb-4  '>
 
-              <div className='w-[40%] mt-6  '>
+              <div className='sm:w-[40%] mt-6'>
                 <p className='text-justify text-[20px] font-thin '>Here is a booklet that we have designed to add a drop of support in the ocean of this unknown. This booklet is for anyone supporting a dear one through their journey with grief.</p>
               </div>
-              <div className='w-[60%] mt-6  p-3' style={{backgroundImage:`url(${calendarBg})`}} >
+              <div className='sm:w-[60%] mt-6  p-3' style={{backgroundImage:`url(${calendarBg})`}} >
                 <a href="https://drive.google.com/file/d/1LqXt0rwzBi2iUEH5mLJyL8TraP0mJueZ/view" target='blank'><img loading="lazy" src={support} alt="support" className='sm:h-[70%] w-[100%] '/></a>
               </div>
             </div>
@@ -211,12 +211,12 @@ Take breaks and enter this space with curiosity!
           
           {/* Self-Care Calendar  */}
 
-          <div className="px-4 lg:px-11 sm:-mt-[20%]">
-          <h1 className="text-5xl font-bold">Self-Care Calendar </h1>
+          <div className=" sm:-mt-[20%] ">
+          <h1 className="px-4 lg:px-11 text-5xl font-bold">Self-Care Calendar </h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
             
-            <p className="text-justify text-[20px] font-thin">
+            <p className="text-justify text-[20px] font-thin px-4 lg:px-11 ">
             Self-Care Calendar, as the name suggests, is a thoughtfully designed tool that can be used by anyone to support them in their healing journey. It incorporates the mind-body-spirit triad and focuses on regulation and slow integration.  Whether you are looking for some grounding exercises or just simple ways of connecting with yourself, this self-care calendar takes you on a journey that slowly enhances your ability to support yourself. <br/><br/>
 
 Taking care of ourselves is the truest form of self-acknowledgement and acceptance. It is a step we take not to change anything about ourselves but to allow our body to receive rest, compassion, and nurturance. <br/><br/>
@@ -225,7 +225,7 @@ Build in this 30-day Self-Care routine and allow yourself to soak in rest and sl
             </p>
             </div>
 
-            <div style={{backgroundImage:`url(${calendarBg})`}} className='p-10' >
+            <div style={{backgroundImage:`url(${calendarBg})`}} className='' >
            <a href="https://drive.google.com/file/d/1K9e73YyGNPiFa63an3C_ipngUJGceaJ7/view?usp=drivesdk" target="_blank"> <img loading="lazy" src={calendar} alt="selfcare" className='md:w-[80%] h-[80vh] m-auto'/></a>
           </div>
             <div>
