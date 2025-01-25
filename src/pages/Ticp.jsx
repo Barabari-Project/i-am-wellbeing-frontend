@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
-import img from "../imgs/3a.png";
+// import img from "../imgs/3a.png";
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = "/imgs/home-images/flow-chart.png";
