@@ -28,6 +28,7 @@ import Model from "../components/Model";
 import groupImag from "../imgs/home-images/ticp.png";
 import CurriculumTable from "../components/CurriculumTable";
 import ScheduleTable from "../components/TableContent";
+// import Timeline from "../components/FlowChart";
 const Ticp = () => {
   const [team] = useState([
     {
@@ -112,10 +113,12 @@ const Ticp = () => {
 
       <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
         <div className="about-us text-xl">
-          <h2 className="title text-4xl font-bold  mt-10 max-md:ml-3 lg:mt-0">
+          <h2 className="title text-4xl font-bold  mt-10 max-md:ml-3 lg:mt-0 max-xl:px-6">
             About us
           </h2>
-          <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full">
+          <div className="max-xl:p-6">
+
+          <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full max-md:p-2">
             Trauma is the most unaddressed and unseen epidemic in today’s time.
             Seven out of ten children in India experience some form of adversity
             at an early age. If left unaddressed, these painful experiences can
@@ -131,7 +134,8 @@ const Ticp = () => {
             power of compassion, connection, and care to develop a healthy and
             happy nation.
           </p>
-          <div className="bg-[#FFDE59]  p-4 pl-2">
+          </div>
+          <div className="bg-[#FFDE59]  p-4 pl-2 max-xl:p-6">
             <h2 className="title text-4xl font-bold mb-5">Rationale</h2>
             <p className="mb-3 leading-8 text-justify">
               While the last decade has highlighted the significant need for
@@ -381,7 +385,7 @@ const Ticp = () => {
             Criteria for grading assignments
           </h1>
 
-          {/* <div className='text-center w-full flex items-center justify-center border-4 border-red-300'> */}
+          <div className='text-center w-10/12 flex items-center justify-center mx-auto'>
           <LazyLoadImage
             // className="w-full m-auto text-center border-4 graiding-img"
             src={flowChart}
@@ -389,7 +393,7 @@ const Ticp = () => {
             effect="blur" // Blur effect while loading
             placeholder={<BlurryImages imgUrl={flowChart} />}
           />
-          {/* </div> */}
+          </div>
           <h1 className="title text-3xl font-bold mb-3">Eligibility</h1>
           <ul className=" list-disc ml-6 mt-4 text-xl">
             <li className="mt-4">

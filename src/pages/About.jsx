@@ -66,7 +66,7 @@ const About = () => {
        name: "Atufa Khan",
        imgSrc: team3,
        smallImgSrc: "team_3-small.png",
-       designation: "Reasearch Coordinator / Therapist",
+       designation: "Research Coordinator / Therapist",
        specialist: "Counselling Psychologist",
        description:
          "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
