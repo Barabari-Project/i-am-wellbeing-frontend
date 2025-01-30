@@ -34,7 +34,7 @@ const BodyImagePart = () => {
     <div className="flex-[50%]">
       <div
         ref={parentRef}
-        className="relative h-screen flex justify-center items-center max-md:my-10"
+        className="relative h-screen flex justify-center items-center max-md:mx-10"
       >
         {/* Body Background */}
         <div

@@ -73,7 +73,7 @@ const ContactUs = () => {
           <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 items-center">
             {/* Image */}
             <div
-              className="bg-cover bg-center rounded-lg h-80 sm:h-full max-md:bg-no-repeat max-md:bg-cover max-sm:bg-positionSmall"
+              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full"
               style={{ backgroundImage: `url(${contactUsGirl})` }}
             ></div>
 
@@ -173,21 +173,23 @@ const ContactUs = () => {
 
         {/* Contribution Section */}
         <section className="px-4 py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 items-stretch">
-    {/* Text Content (Left side on medium screens) */}
-    <div className="lg:order-1">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-6 max-md:text-center">
+  <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 items-center">
+    {/* Image (Above text on small screens, right side on larger screens) */}
+    <div
+      className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full order-first md:order-2"
+      style={{ backgroundImage: `url(${contactUsBoy})` }}
+    ></div>
+
+    {/* Text Content (Below image on small screens, left side on larger screens) */}
+    <div className="md:order-1">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center md:text-left">
         Contribute to Break The Cycle
       </h2>
-      <p className="text-gray-600 mb-8 max-md:text-justify text-xl max-md:text-lg">
-        Supporting an individual helps break the cycle of trauma for
-        entire communities. Contribute as little as Rs. 500 to support
-        someone in need.
+      <p className="text-gray-600 mb-8 text-xl sm:text-lg text-justify">
+        Supporting an individual helps break the cycle of trauma for entire 
+        communities. Contribute as little as Rs. 500 to support someone in need.
       </p>
-      <form
-        className="space-y-6"
-        onSubmit={(e) => handleSubmit(e, sendAccountDetails)}
-      >
+      <form className="space-y-6" onSubmit={(e) => handleSubmit(e, sendAccountDetails)}>
         <textarea
           id="AccountDetails"
           value={formData.AccountDetails}
@@ -204,17 +206,10 @@ const ContactUs = () => {
           Submit Details
         </button>
       </form>
-      <p className="text-gray-500 text-lg mt-4 max-md:text-base">
-        Note: Donations are tax-exempt under Section 80G of the Income
-        Tax Act.
+      <p className="text-gray-500 text-lg mt-4 sm:text-base">
+        Note: Donations are tax-exempt under Section 80G of the Income Tax Act.
       </p>
     </div>
-
-    {/* Image (Right side on medium screens) */}
-    <div
-      className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full max-md:bg-no-repeat max-md:bg-positionSmall lg:order-2"
-      style={{ backgroundImage: `url(${contactUsBoy})` }}
-    ></div>
   </div>
 </section>
 
@@ -224,7 +219,7 @@ const ContactUs = () => {
         <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 items-stretch">
   {/* Image */}
   <div
-              className="bg-cover bg-center rounded-lg h-80 sm:h-full max-md:bg-no-repeat max-md:bg-cover max-sm:bg-positionSmall"
+              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full"
               style={{ backgroundImage: `url(${contactUsFamily})` }}
   ></div>
 
