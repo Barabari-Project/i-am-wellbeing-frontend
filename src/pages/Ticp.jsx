@@ -384,8 +384,8 @@ const Ticp = () => {
           <h1 className="title text-2xl font-bold mb-3">
             Criteria for grading assignments
           </h1>
-
-          <div className='text-center w-10/12 flex items-center justify-center mx-auto'>
+{/* *************** that is much clear then before ************** */}
+          <div className='text-center w-10/12 flex items-center justify-center mx-auto max-md:w-full'>
           <LazyLoadImage
             // className="w-full m-auto text-center border-4 graiding-img"
             src={flowChart}
