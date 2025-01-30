@@ -73,7 +73,7 @@ const ContactUs = () => {
           <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 items-center">
             {/* Image */}
             <div
-              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full"
+              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full max-md:h-[30rem]"
               style={{ backgroundImage: `url(${contactUsGirl})` }}
             ></div>
 
@@ -176,7 +176,7 @@ const ContactUs = () => {
   <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 items-center">
     {/* Image (Above text on small screens, right side on larger screens) */}
     <div
-      className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full order-first md:order-2"
+      className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full order-first md:order-2 max-md:h-[30rem]"
       style={{ backgroundImage: `url(${contactUsBoy})` }}
     ></div>
 
@@ -219,7 +219,7 @@ const ContactUs = () => {
         <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 items-stretch">
   {/* Image */}
   <div
-              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full"
+              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full max-md:h-[30rem]"
               style={{ backgroundImage: `url(${contactUsFamily})` }}
   ></div>
 
