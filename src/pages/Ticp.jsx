@@ -97,7 +97,7 @@ const Ticp = () => {
         }}
       >
         <div className="text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col">
-          <h2 className="text-black text-4xl font-bold text-center">
+          <h2 className="text-black text-4xl font-bold text-center max-md:text-3xl">
             Certificate course on Trauma-Informed Care Practices
             <sup
               className="text-xl font-bold text-black m-2"
@@ -113,12 +113,12 @@ const Ticp = () => {
 
       <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
         <div className="about-us text-xl">
-          <h2 className="title text-4xl font-bold  mt-10 max-md:ml-3 lg:mt-0 max-xl:px-6">
+          <h2 className="title text-4xl font-bold  mt-10 lg:mt-0 max-xl:px-6 max-md:px-4 max-md:text-3xl">
             About us
           </h2>
-          <div className="max-xl:p-6">
+          <div className="max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
 
-          <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full max-md:p-2">
+          <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full max-md:m-0 max-md:w-full">
             Trauma is the most unaddressed and unseen epidemic in today’s time.
             Seven out of ten children in India experience some form of adversity
             at an early age. If left unaddressed, these painful experiences can
@@ -126,7 +126,7 @@ const Ticp = () => {
             mental, emotional, and physical wellbeing.
           </p>
 
-          <p className="leading-8 text-justify w-[95%] m-auto lg:w-full">
+          <p className="leading-8 text-justify w-[95%] m-auto lg:w-full  max-md:m-0 max-md:w-full max-md:mt-3">
             I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
             profit organization dedicated to supporting such young lives
             struggling with adverse childhood experiences and building an
@@ -135,8 +135,8 @@ const Ticp = () => {
             happy nation.
           </p>
           </div>
-          <div className="bg-[#FFDE59]  p-4 pl-2 max-xl:p-6">
-            <h2 className="title text-4xl font-bold mb-5">Rationale</h2>
+          <div className="bg-[#FFDE59]  p-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
+            <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">Rationale</h2>
             <p className="mb-3 leading-8 text-justify">
               While the last decade has highlighted the significant need for
               mental health interventions, it has also{" "}
@@ -185,10 +185,10 @@ const Ticp = () => {
           </div>
         </div>
         <div className="Activities text-xl">
-          <h2 className="title text-4xl font-bold mb-1 p-4">
+          <h2 className="title text-4xl font-bold mb-1 p-4 max-md:text-3xl max-md:text-center">
             Course Activities & Duration
           </h2>
-          <p className="p-6 pb-0 pt-0 leading-8 text-justify w-[98%] lg:w-full">
+          <p className="p-6 pb-0 pt-0 leading-8 text-justify w-[98%] lg:w-full max-md:p-5 max-md:w-full max-md:text-lg">
             {/* The course will encompass various activities like learning sessions,
             group discussions, assignments, case conceptualisation, roleplays &
             supervision. There are a total of <b>six modules</b> to be covered
@@ -265,7 +265,7 @@ const Ticp = () => {
           {/* <TrainingSchedule/> */}
           <ScheduleTable />
         </div>
-        <div className="beyond pl-2  w-[95%]">
+        <div className="beyond pl-2  w-[95%] max-md:p-5 max-md:w-full">
           <h1 className="title text-3xl font-bold mt-3">Beyond Level-1</h1>
           <p className="text-[15px] lg:text-[20px] mt-3  text-black text-justify w-[95%] lg:w-full">
             Successful completion of level 1 will qualify you to apply for Level
@@ -283,10 +283,10 @@ const Ticp = () => {
           </ul>
         </div>
 
-        <div className="course policy mt-4 bg-[#FFDE59] p-6">
-          <h1 className="title text-4xl font-bold mb-1">Course Policies</h1>
-          <h1 className="title text-2xl font-bold mb-3">Contribution*</h1>
-          <div className="text-xl flex flex-col gap-5">
+        <div className="course policy mt-4 bg-[#FFDE59] p-6 max-md:p-5">
+          <h1 className="title text-4xl font-bold mb-1 max-md:text-3xl">Course Policies</h1>
+          <h1 className="title text-2xl font-bold mb-3 ">Contribution*</h1>
+          <div className=" flex flex-col gap-5 text-xl max-md:text-lg">
             <p>
               The contribution amount is payable in advance as per the
               application process protocols.
@@ -311,14 +311,14 @@ const Ticp = () => {
             </p>
           </div>
           <h1 className="title text-2xl font-bold mt-2">Refund Policy</h1>
-          <p className="text-xl text-justify">
+          <p className="text-justify text-xl max-md:text-lg">
             In case the participant wants to withdraw from the course before it
             begins, 50% of the contribution amount shall be returned upon
             connecting with the organisation 15 days before the course
             commencement.
           </p>
           <h1 className="title text-2xl font-bold mt-3">Attendance</h1>
-          <ul className="text-xl list-disc ml-6 mt-3">
+          <ul className="list-disc ml-6 mt-3 text-xl max-md:text-lg">
             <li className="mb-2">
               It is mandatory to attend all course classes.
             </li>
@@ -329,7 +329,7 @@ const Ticp = () => {
             <li>Extra class in lieu of missed class shall not be provided</li>
           </ul>
           <h1 className="title text-2xl font-bold mb-3 mt-5">Assignments</h1>
-          <ul className="text-xl list-disc ml-6">
+          <ul className=" list-disc ml-6 text-xl max-md:text-lg">
             <li className="mb-2">
               After each module, a reflective assignment is required to be
               submitted by the participants for evaluation.
@@ -350,7 +350,7 @@ const Ticp = () => {
             <li>Late submissions shall not be accepted.</li>
           </ul>
           <h1 className="title text-2xl font-bold mt-3">Evaluation</h1>
-          <p className="text-xl text-justify">
+          <p className="text-justify text-xl max-md:text-lg">
             To evaluate a student's performance, a written assignment will be
             submitted after the completion of each module. Along with
             assignments, participants will be required to submit 5 case studies.
@@ -359,8 +359,8 @@ const Ticp = () => {
             completing the course, a viva will be conducted to assess
             participants' knowledge and skills.
           </p>
-          <h1 className="title text-3xl font-bold mt-3">Grading Criteria</h1>
-          <div className="text-xl mt-2">
+          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">Grading Criteria</h1>
+          <div className=" mt-2 text-xl max-md:text-lg">
             <p className="mb-2 text-justify">
               Following grading criteria is used for evaluation of both
               assignments and overall course:
@@ -372,10 +372,10 @@ const Ticp = () => {
             <p className="mb-2">&lt;30%- 1 (Below Average) </p>
           </div>
 
-          <h1 className="title text-3xl font-bold mb-3">
+          <h1 className="title text-3xl font-bold mb-3 max-md:text-2xl">
             Overall Passing criteria
           </h1>
-          <div className="text-xl">
+          <div className="text-xl max-md:text-lg">
             <li className="mb-2">All classes must be attended </li>
             <li className="mb-2">Timely assignment submission </li>
             <li className="mb-2">Complete supervision hours </li>
@@ -394,8 +394,8 @@ const Ticp = () => {
             placeholder={<BlurryImages imgUrl={flowChart} />}
           />
           </div>
-          <h1 className="title text-3xl font-bold mb-3">Eligibility</h1>
-          <ul className=" list-disc ml-6 mt-4 text-xl">
+          <h1 className="title text-3xl font-bold mb-3 max-md:text-2xl">Eligibility</h1>
+          <ul className=" list-disc ml-6 mt-4  text-xl max-md:text-lg">
             <li className="mt-4">
               Students from psychology and allied field background
               (undergraduate and postgraduate)
@@ -410,8 +410,8 @@ const Ticp = () => {
             Working mental health practitioners
           </p> */}
 
-          <h1 className="title text-3xl font-bold mt-3 ">Scholarship Policy</h1>
-          <p className="text-xl mt-2 text-justify">
+          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">Scholarship Policy</h1>
+          <p className="mt-2 text-justify text-xl max-md:text-lg">
             We strongly believe that resources play a major role in shaping
             one’s life and no life should struggle to get what they deserve.
             Keeping our mission at the heart of this, we are gladly announcing a
@@ -419,8 +419,8 @@ const Ticp = () => {
             communities. If you meet the criteria, 50% of your total course fees
             will be waived off
           </p>
-          <h1 className="title text-3xl font-bold mt-4">How To Apply?</h1>
-          <div className="text-xl">
+          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">How To Apply?</h1>
+          <div className="text-xl max-md:text-lg">
             <p className="mt-2 text-justify">
               Step-1: Fill out the application form. Check if you are eligible
               for scholarship
@@ -437,8 +437,8 @@ const Ticp = () => {
               will be waived off
             </p>
           </div>
-          <h1 className="title text-4xl font-bold mt-4">Impact </h1>
-          <p className="text-xl mt-3 text-justify">
+          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">Impact </h1>
+          <p className="text-xl max-md:text-lg mt-3 text-justify">
             Trauma is a near universal experience of individuals with behavioral
             health problems. The present times have brought to light the hidden
             concerns and traumas of individuals across the globe. The course
@@ -448,7 +448,7 @@ const Ticp = () => {
             trauma-informed care and therapy. This understanding would further
             lead to:
           </p>
-          <ul className="list-disc ml-6 text-xl mt-6">
+          <ul className="list-disc ml-6 text-xl mt-6 max-md:text-lg">
             <li className="mt-2">
               A culture of safety, empowerment, and healing in these tough
               times.
@@ -468,8 +468,8 @@ const Ticp = () => {
             <li className="mt-2">Connection between mind, body and soul</li>
           </ul>
 
-          <h1 className="title text-4xl font-bold mt-3">Key Takeaways</h1>
-          <ul className=" list-disc ml-6 mt-4 text-xl">
+          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">Key Takeaways</h1>
+          <ul className=" list-disc ml-6 mt-4 text-xl max-md:text-lg">
             <li className="mt-4">
               Get equipped with trauma-informed counselling skills for practical
               application.{" "}
@@ -491,7 +491,7 @@ const Ticp = () => {
         </div>
 
         <div className="know-your-trainner pl-2 mt-5">
-          <h1 className="text-4xl font-bold">Know Your Trainers</h1>
+          <h1 className="text-4xl font-bold max-md:text-3xl max-md:text-center">Know Your Trainers</h1>
           <div className="trainners grid  items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10">
             {team.map((trainer, index) => {
               return (

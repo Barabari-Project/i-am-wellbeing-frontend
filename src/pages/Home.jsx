@@ -94,7 +94,7 @@ const Home = () => {
               />
              
             </div>
-            <div className='w-full lg:w-1/2 xl:w-2/3 p-4'>
+            <div className='w-full lg:w-1/2 xl:w-2/3 p-4 max-md:w-full max-md:p-5'>
               <p className='text-lg text-black text-justify'>
                 <span className='text-6xl'>T</span>rauma is the most unaddressed
                 and invisibilized epidemic in today’s time. 7 out of 10 children
@@ -118,7 +118,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='bottom-background relative w-[90%] lg:max-w-6xl mx-auto'>
+      <section className="bottom-background relative w-[90%] lg:max-w-6xl mx-auto max-md:m-0 max-md:w-full">
         <div className='container mx-auto'>
           <div className='flex flex-col items-center'>
             <div className='bottom-background__img w-full'>
@@ -139,78 +139,78 @@ const Home = () => {
             </div>
           </div>
 
-          <div className=' -mt-10 lg:-mt-20 flex gap-8 flex-wrap lg:flex-nowrap'>
-            {/* Event Item 1 */}
-            <div className='w-full md:w-1/2 lg:w-1/3 text-xl border bg-white p-2'>
-              <div className='event-item text-center'>
-                <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
-                  <h3 className='event-item__title'>
-                    <Link to='/programs' className='text-4xl font-[300]'>
+          <div className=" -mt-10 lg:-mt-20 flex gap-7 flex-wrap lg:flex-nowrap ">
+            {/* Event Item 1 Anubhoo*/}
+            <div className="w-full  lg:w-1/3 text-xl border bg-white p-2 m-auto">
+              <div className="event-item text-center">
+                <div className="event-item__content w-full m-auto border-[#029390] border-4 py-7 ">
+                  <h3 className="event-item__title mb-2">
+                    <a href="#" className="text-4xl font-[300]">
                       Anubhoo
-                    </Link>
+                    </a>
                   </h3>
-                  <h6 className='event-item__title text-md font-[400]'>
-                    <a className='text-gray-700 cursor-default'>
+                  <h6 className="event-item__title text-md font-[400]">
+                    <a href="#" className="">
                       Trauma-Informed care <br />
                       training
                     </a>
                   </h6>
-                  <Link
-                    to='/programs'
-                    className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
+                  <a
+                    className="button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm"
+                    href="#anubho"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Event Item 2 */}
-            <div className='w-full md:w-1/2 lg:w-1/3 text-xl bg-white border p-2'>
-              <div className='event-item text-center'>
-                <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
-                  <h3 className='event-item__title'>
-                    <Link to='/programs' className='text-4xl font-[300]'>
+            {/* Event Item 2 Udaan*/}
+            <div className="w-full  lg:w-1/3 text-xl bg-white border p-2 m-auto">
+              <div className="event-item text-center">
+                <div className="event-item__content w-full m-auto border-[#029390] border-4 py-7">
+                  <h3 className="event-item__title mb-2">
+                    <a href="#" className="text-4xl font-[300]">
                       Udaan
-                    </Link>
+                    </a>
                   </h3>
-                  <h6 className='event-item__title text-md font-[400]'>
-                    <a className='text-gray-700 cursor-default'>
+                  <h6 className="event-item__title text-md font-[400] ">
+                    <a href="#" className="">
                       Individual counselling and
                       <br /> therapy
                     </a>
                   </h6>
-                  <Link
-                    to='/programs'
-                    className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
+                  <a
+                    className="button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm"
+                    href="#udaan"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Event Item 3 */}
-            <div className='w-full md:w-1/2 lg:w-1/3 text-xl border p-2 bg-white'>
-              <div className='event-item text-center'>
-                <div className='event-item__content w-full m-auto border-[#029390] border-4 py-5'>
-                  <h3 className='event-item__title'>
-                    <Link to='/programs' className='text-4xl font-[300]'>
+            {/* Event Item 3 arya */}
+            <div className="w-full lg:w-1/3 text-xl border p-2 bg-white m-auto">
+              <div className="event-item text-center">
+                <div className="event-item__content w-full m-auto border-[#029390] border-4 py-7">
+                  <h3 className="event-item__title mb-2">
+                    <a href="#" className="text-4xl font-[300]">
                       Project Arya
-                    </Link>
+                    </a>
                   </h3>
-                  <h6 className='event-item__title text-md font-[400]'>
-                    <a className='text-gray-700 cursor-default'>
+                  <h6 className="event-item__title text-md font-[400]">
+                    <a href="#" className="">
                       Trauma-informed social- <br />
                       emotional learning
                     </a>
                   </h6>
-                  <Link
-                    to='/programs'
-                    className='button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm'
+                  <a
+                    className="button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm"
+                    href="#arya"
                   >
                     Read More
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -298,7 +298,7 @@ const Home = () => {
       >
         <div className='row absolute top-2'>
           <div className='ml-2 '>
-            <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
+            <h2 className='text-5xl max-md:text-3xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Why we do what we do?</span>
             </h2>
           </div>
@@ -318,7 +318,7 @@ const Home = () => {
       >
         <div className='row mb-4 absolute top-2'>
           <div className='ml-2  '>
-            <h2 className='lg:text-6xl text-2xl lg:mt-0 font-semibold'>
+            <h2 className='text-5xl max-md:text-3xl lg:mt-0 font-semibold'>
               <span className='letter-spacing'>Clients & Partners</span>
             </h2>
           </div>

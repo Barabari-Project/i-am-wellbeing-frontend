@@ -59,7 +59,7 @@ const Tic = () => {
 
   return (
     <div className='container m-auto pt-5 mt-10 md:mt-0'>
-      <div className='content max-w-6xl m-auto mt-5 p-3'>
+      <div className='content max-w-6xl m-auto mt-5 p-4 max-md:p-5'>
         <div className='understanding trauma lg:grid  lg:grid-cols-12 items-center justify-between  '>
           <div className='left text-3xl font-semibold text-center  hidden lg:block lg:col-span-5 '>
             <LazyLoadImage
@@ -116,12 +116,12 @@ const Tic = () => {
             />
           </div>
 
-          <div className='right lg:col-span-7 mt-5 lg:mt-0 p-2 m-auto lg:p-3'>
-            <h1 className='text-[40px] leading-none font-bold text-right p-2 lg:p-0'>
+          <div className='right lg:col-span-7 mt-5 lg:mt-0 p-2 m-auto lg:p-4 max-md:px-0'>
+            <h1 className='text-4xl max-md:text-3xl max-md:text-center leading-none font-bold text-right p-2 lg:p-0 max-md:p-0'>
               Understanding Trauma
             </h1>
-            <div className=''>
-              <p className='text-xl leading-9 text-justify  mt-1 p-2 lg:p-0'>
+            <div className='p-2 lg:p-0 max-md:p-0'>
+              <p className='text-xl leading-9 text-justify  mt-1 max-md:text-lg max-md:mt-3 '>
                 The Substance Abuse and Mental Health Services Administration
                 (SAMHSA) describes trauma as events or circumstances experienced
                 by an individual as physically or emotionally harmful or
@@ -133,7 +133,7 @@ const Tic = () => {
         </div>
 
         {/* impact od trauma */}
-        <div className='understanding trauma  lg:grid lg:grid-cols-12   lg:w-full p-2 lg:p-2 m-auto    '>
+        <div className='understanding trauma  lg:grid lg:grid-cols-12 lg:w-full p-2 lg:p-2 m-auto max-md:p-0 max-md:mt-3 '>
           <div className='left text-3xl text-center  hidden lg:flex justify-center font-semibold max col-span-5'>
             <LazyLoadImage
               src={ticImage}
@@ -144,11 +144,11 @@ const Tic = () => {
             />
           </div>
           <div className='right col-span-7'>
-            <h1 className='text-[38px] leading-none font-bold text-right m-0'>
+            <h1 className='text-4xl max-md:text-3xl max-md:text-center leading-none font-bold text-right m-0'>
               Impact of trauma on health
             </h1>
             <div className=''>
-              <p className='text-xl leading-9 text-justify  p-2'>
+              <p className='text-xl leading-9 text-justify  p-2 max-md:p-0 max-md:text-lg max-md:mt-3'>
                 The Adverse Childhood Experiences (ACE) Study, conducted by the
                 CDC & Kaiser Permanente, revealed that the more an individual is
                 exposed to a variety of stressful and potentially traumatic
@@ -159,13 +159,13 @@ const Tic = () => {
           </div>
         </div>
         {/* informed care */}
-        <div className='understanding trauma lg:grid lg:grid-cols-12  p-2 lg:p-0 lg:w-full m-auto justify-center items-center'>
+        <div className='understanding trauma lg:grid lg:grid-cols-12  p-2 lg:p-0 lg:w-full m-auto justify-center items-center max-md:p-0'>
           <div className='right col-span-9'>
-            <h1 className='text-[40px] leading-none font-bold lg:ml-4  p-2 lg:p-0'>
+            <h1 className='text-4xl max-md:text-3xl max-md:text-center leading-none font-bold lg:ml-4  p-2 lg:p-0'>
               Trauma-informed care
             </h1>
             <div className='m-auto'>
-              <p className='text-xl leading-9 text-justify  w-[95%] m-auto'>
+              <p className='text-xl leading-9 text-justify  w-[95%] m-auto max-md:m-0 max-md:w-full max-md:text-lg'>
                 Trauma-informed care (TIC) is defined as practices that promote
                 a culture of safety, empowerment, and healing. It is a strengths
                 based framework that is grounded in an understanding of and
@@ -203,7 +203,7 @@ const Tic = () => {
         </div>
 
         <div className='lg:mt-10 mt-14  max-w-7xl m-auto '>
-          <h2 className='lg:text-5xl text-3xl ml-2 font-bold lg:ml-12'>
+          <h2 className='text-4xl max-md:text-3xl max-md:text-center max-md:mb-3 ml-2 font-bold lg:ml-12'>
             Principles of TIC
           </h2>
           <div className='max-w-5xl m-auto mb-4'>

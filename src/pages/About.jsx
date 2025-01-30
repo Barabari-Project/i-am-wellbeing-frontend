@@ -190,7 +190,7 @@ const About = () => {
         <div className='flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto mt-10 md:mt-0'>
           <div className='m-auto'>
             <div
-              className={`p-5 max-w-7xl`}
+              className={`p-5 max-w-7xl max-md:mt-[1rem]`}
               style={{
                 borderWidth: "3px" /* Set the border width */,
                 borderStyle: "solid" /* Set the border style */,
@@ -200,7 +200,7 @@ const About = () => {
                 borderImageOutset: 0 /* Optional: Adjust spacing */,
               }}
             >
-              <p className='text-xl leading-8 text-justify'>
+              <p className='text-xl leading-8 text-justify max-md:text-lg'>
                 My very first day at work brought me face to face with 55 young
                 girls living at a childcare home who had survived sexual abuse,
                 physical abuse, and neglect at a very young age. Interacting
@@ -253,7 +253,7 @@ const About = () => {
               backgroundPosition: "bottom left",
             }}
           >
-            <h1 className='absolute  top-4 lg:top-5 left-2'>Core Team</h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2 lg:text-5xl text-3xl lg:mt-0 font-semibold'>Core Team</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 gap-6   md:grid-cols-3 max-w-3xl m-auto  mt-10'>
@@ -302,7 +302,7 @@ const About = () => {
               backgroundPosition: "bottom left",
             }}
           >
-            <h1 className='absolute  top-4 lg:top-5 left-2'>Our Consultants</h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2 lg:text-5xl text-3xl lg:mt-0 font-semibold'>Our Consultants</h1>
           </div>
 
           <div className='team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-6 mt-10'>
@@ -350,7 +350,7 @@ const About = () => {
               backgroundPosition: "bottom left",
             }}
           >
-            <h1 className='absolute  top-4 lg:top-5 left-2'>Annual Reports</h1>
+            <h1 className='absolute  top-4 lg:top-5 left-2 lg:text-5xl text-3xl lg:mt-0 font-semibold'>Annual Reports</h1>
           </div>
 
           <div className='annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-8 mt-10'>

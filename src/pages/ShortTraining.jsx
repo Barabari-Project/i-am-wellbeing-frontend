@@ -1,81 +1,84 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import BlurryImages from '../components/BlurryImages';
-
+import BlurryImages from "../components/BlurryImages";
 
 const stp3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stp3.png`;
 
 const stp0 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stp0.png`;
-const videoposter=`${import.meta.env.VITE_PUBLIC_URL}/stp%20data/stpvideo1.png`
+const videoposter = `${
+  import.meta.env.VITE_PUBLIC_URL
+}/stp%20data/stpvideo1.png`;
 
-const stpnew = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp1.png`
-const stp5 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp5.png`
-const stp7 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp6.png`
-const stpnew3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stpnew.png`
-const stpnew2 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stpnew2.png`
+const stpnew = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp1.png`;
+const stp5 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp5.png`;
+const stp7 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stp6.png`;
+const stpnew3 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stpnew.png`;
+const stpnew2 = `${import.meta.env.VITE_PUBLIC_URL}/stp%20data2/stpnew2.png`;
 
 const ShortTraining = () => {
   return (
     <>
       {/* ---------------opening page------------------------------------ */}
-      <section
-       
-      >
-        <div  className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10  relative  "
-        style={{ backgroundImage: `url(${stp0})` ,backgroundPositionY:"2%"}}>
-        <div className="bg-customPeach opacity-80 w-full text-center">
-          <h1 className="text-[38px] font-black tracking-wider my-2">
-            Short Trainings Program
-          </h1>
-          <p className="text-[#109ca2] mb-[3%]">
-            Bridging the gap from theory to practice
-          </p>
-        </div>
+      <section>
+        <div
+          className="bg-no-repeat bg-cover bg-center h-auto pt-[200px] pb-10  relative  "
+          style={{ backgroundImage: `url(${stp0})`, backgroundPositionY: "2%" }}
+        >
+          <div className="bg-customPeach opacity-80 w-full text-center">
+            <h1 className="text-[38px] font-black tracking-wider my-2 max-md:text-3xl">
+              Short Trainings Program
+            </h1>
+            <p className="text-[#109ca2] mb-4">
+              Bridging the gap from theory to practice
+            </p>
+          </div>
 
-        {/* Buttons Section */}
-     <div className="w-full  flex items-center justify-center ">
-      <div className="w-[100%] sm:w-[78%] flex flex-col  md:flex-row flex-wrap justify-center items-center mt-[100px] 2xl:mt-56">
-        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2  max-w-[200px] xs:max-w-none">
-          <a href="#objectives">Objectives</a>
-        </button>
-        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
-          <a href="#Key-Features">Key Features</a>
-        </button>
-        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
-          <a href="#training">Training Schedule</a>
-        </button>
-        <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mb-1 sm:mb-4 mx-2 max-w-[200px] xs:max-w-none">
-          <a href="#eligibilty">Eligibility</a>
-        </button>
-      </div>
-     </div>
-        {/* Apply Now Button */}
-        <div className="flex justify-center my-7">
-          <button className="bg-customPeach text-white px-[62px] py-[12px] rounded-md font-extrabold text-[14px] md:text-[18px]">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform"
-              target="_blank"
-            >
-              APPLY NOW
-            </a>
-          </button>
-        </div>
+          {/* Buttons Section */}
+          <div className="w-full  flex items-center justify-center ">
+            <div className="w-[100%] sm:w-full flex flex-col  md:flex-row flex-wrap justify-center max-md:content-center max-md:gap-1 mt-[100px] 2xl:mt-56 ">
+              <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mx-2  max-w-[200px] xs:max-w-none9 max-md:px-[41px] max-md:text-[14px] scale-90 transform duration-300 transition-all hover:bg-slate-300 hover:scale-95">
+                <a href="#objectives">Objectives</a>
+              </button>
+              <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px]  mx-2 max-w-[200px] xs:max-w-none max-md:px-[41px] max-md:text-[14px] scale-90 transform duration-300 transition-all hover:bg-slate-300 hover:scale-95">
+                <a href="#Key-Features">Key Features</a>
+              </button>
+              <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mx-2 max-w-[200px] xs:max-w-none max-md:px-[41px] max-md:text-[14px] scale-90 transform duration-300 transition-all hover:bg-slate-300 hover:scale-95">
+                <a href="#training">Training Schedule</a>
+              </button>
+              <button className="bg-[#fbf4e1] px-[60px] py-[10px] rounded-md font-bold text-[18px] mx-2 max-w-[200px] xs:max-w-none max-md:px-[41px] max-md:text-[14px] scale-90 transform duration-300 transition-all hover:bg-slate-300 hover:scale-95">
+                <a href="#eligibilty">Eligibility</a>
+              </button>
+            </div>
+          </div>
+          {/* Apply Now Button */}
+          <div className="flex justify-center my-7">
+            <button className="bg-customPeach text-white px-[62px] py-[12px] rounded-md font-extrabold text-[14px] md:text-[18px]">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdlYsPu5bOkK_Hm-r3LcUbdkYepqopCTgqja4UcC3AVMbPxXw/viewform"
+                target="_blank"
+              >
+                APPLY NOW
+              </a>
+            </button>
+          </div>
 
-        <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[20%] 2xl:mt-20 leading-7">
-          <p>
-            Questions before registering? Please read through this page. If you
-            still have questions, please send us an email at
-            info@iamwellbeing.in
-          </p>
+          <div className="bg-[#000000ab] opacity-90 text-white p-2 mx-[10%] lg:mx-[4%] font-bold text-[25px] 2xl:mx-[20%] 2xl:mt-20 leading-7">
+            <p className="max-md:text-lg">
+              Questions before registering? Please read through this page. If
+              you still have questions, please send us an email at
+              info@iamwellbeing.in
+            </p>
+          </div>
         </div>
-       </div>
       </section>
 
       {/* ---------------------------------intention----------------------------- */}
-      <section className="mx-[10%] lg:mx-[3.5%] py-8  2xl:px-[17%] ">
-        <h1 className="text-[40px] mb-2 font-black">Intention</h1>
-        <p className="text-justify leading-9 text-[22px] 2xl:text-[23px]">
+      <section className="mx-[10%] lg:mx-[3.5%] py-8  2xl:px-[17%] max-md:mx-0 max-md:p-5">
+        <h1 className="text-[40px] mb-2 font-black max-md:text-3xl">
+          Intention
+        </h1>
+        <p className="text-justify leading-9 text-xl max-md:text-lg max-md:mb-7 2xl:text-[23px]">
           With the intention of building the capacity of young mental health
           professionals and students towards trauma-informed practices and
           holistic healing, I Am Wellbeing has designed a series of short
@@ -104,17 +107,17 @@ const ShortTraining = () => {
         id="objectives"
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
-        <h1 className="text-[40px] mb-2 font-black">Objectives</h1>
-        
+        <h1 className="text-[40px] mb-2 font-black max-md:text-3xl">
+          Objectives
+        </h1>
+
         <LazyLoadImage
-              src={stpnew}
-              className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
-              alt="img"
-              effect="blur" 
-              placeholder={
-                <BlurryImages imgUrl="stp%20data2/stp1-small.png" />
-              }
-            />
+          src={stpnew}
+          className=" pr-0 sm:pr-[20%] 2xl:pr-[20%]"
+          alt="img"
+          effect="blur"
+          placeholder={<BlurryImages imgUrl="stp%20data2/stp1-small.png" />}
+        />
       </section>
 
       {/* ----------------------------------------key features------------------------------ */}
@@ -122,8 +125,10 @@ const ShortTraining = () => {
         id="Key-Features"
         className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-8  2xl:px-[20%] "
       >
-        <h1 className="text-[40px] mb-2 font-black">Key Features</h1>
-       
+        <h1 className="text-[40px] mb-2 font-black max-md:text-3xl">
+          Key Features
+        </h1>
+
         <div>
           <div className="bg-[#f6f0df] mt-5 flex text-[10px] xs:text-[14px] sm:text-[16px] m-auto md:text-[18px] xl:w-[80%] w-[97%] lg:text-[20px]  2xl:w-[97%] 2xl:text-[20px] rounded-md">
             <h1 className="w-[26%] py-6 text-center ">Who is it for?</h1>
@@ -190,8 +195,8 @@ const ShortTraining = () => {
         id="eligibilty"
         className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] "
       >
-        <h1 className="text-[40px] mb-2 font-black">Eligibility</h1>
-        <ul className="list-disc pl-[4%]  leading-9 text-[22px]">
+        <h1 className="text-xl mb-2 font-black max-md:text-3xl">Eligibility</h1>
+        <ul className="list-disc pl-4  leading-9 text-xl max-md:text-lg max-md:px-5 max-md:w-full">
           <li>
             Students from psychology and allied fields (postgraduate students
             only).
@@ -200,9 +205,11 @@ const ShortTraining = () => {
         </ul>
       </section>
       {/* -------------------------------contribution--------------------------- */}
-      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%] ">
-        <h1 className="text-[40px] mb-2 font-black">Contribution*</h1>
-        <ul className="list-disc pl-[4%]  leading-9 text-[22px]">
+      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%]">
+        <h1 className="text-4xl mb-2 font-black max-md:text-3xl">
+          Contribution*
+        </h1>
+        <ul className="list-disc pl-[4%]  leading-9 text-xl max-md:text-lg">
           <li>
             Kindly note that the minimum contribution per training is INR 500
             (Five Hundred Rupees Only). However, you can choose to contribute
@@ -219,29 +226,27 @@ const ShortTraining = () => {
           </li>
           <li>The amount can be paid via online transaction (NEFT/IMPS):</li>
         </ul>
-        <p className="text-justify leading-9 text-[22px] pt-6">
+        <p className="text-justify leading-9 text-xl max-md:text-lg pt-6">
           All contributions will be utilised for Nairatmya Foundation's work
           with under- resourced communities...
         </p>
       </section>
       {/* ----------------------------know your trainers--------------------------- */}
-      <section className="px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 bg-customPeach 2xl:px-[20%] ">
-        <h1 className="text-3xl sm:text-[40px] mb-2 font-black">
+      <section className="px-4 max-md:p-5 py-7 bg-customPeach ">
+        <h1 className="text-4xl sm:text-[40px] mb-2 font-black max-md:text-3xl max-md:text-center">
           Know Your Trainers
         </h1>
         {/* <img loading="lazy" src={stp5} alt="img"/> */}
         <div className="lg:px-[2%]">
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={stp5}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
-
-
-
-            <div className="md:ml-6 text-xl">
-              <h2 className="text-lg md:text-2xl font-bold mb-2">
+            <div className="md:ml-6 text-xl max-md:text-lg max-md:mb-4">
+              <h2 className="text-lg md:text-2xl font-bold mb-2 max-md:text-center">
                 Shambhavi Singh (She/Her)
               </h2>
               <p className=" text-justify  leading-relaxed">
@@ -255,20 +260,17 @@ const ShortTraining = () => {
                 in her free time.
               </p>
             </div>
-           
           </div>
 
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={stp7}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
-
-
-
-            <div className="md:ml-6 text-xl">
-              <h2 className="text-lg md:text-2xl font-bold mb-2">
+            <div className="md:ml-6 text-xl max-md:text-lg">
+              <h2 className="text-lg md:text-2xl font-bold mb-2 max-md:text-center">
                 Akanksha Chandele (They/Them)
               </h2>
               <p className=" text-justify  leading-relaxed">
@@ -287,22 +289,20 @@ const ShortTraining = () => {
       </section>
 
       {/* --------------------------------know your trainers2--------------------------- */}
-      <section className=" px-[4%] sm:px-[10%] lg:px-[3.5%] py-7 2xl:px-[20%]  ">
+      <section className=" px-4 py-7 max-md:p-5 ">
         <div className="lg:px-[2%]">
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={stpnew3}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%] 2xl:w-[30%] m-auto"
             />
-
-
-
             <div className="md:ml-6 text-xl">
-              <h2 className="text-lg md:text-2xl font-bold mb-2">
+              <h2 className="text-lg md:text-2xl font-bold mb-2 max-md:text-center">
                 Rakshita Goel (She/Her)
               </h2>
-              <p className="text-justify   leading-relaxed">
+              <p className="text-justify   leading-relaxed text-xl max-md:text-lg">
                 Rakshita Goel is a Creative Arts therapist specialising in
                 Dramatherapy, as well as a certified Emotional Freedom Technique
                 (EFT) practitioner, with over 8 years of experience in mental
@@ -316,19 +316,17 @@ const ShortTraining = () => {
           </div>
 
           <div className="lg:flex mt-[4%] gap-5 leading-10">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               src={stpnew2}
               alt="img"
               className="justify-center h-[90%] w-[30%] lg:w-[15%]  2xl:w-[30%] m-auto"
             />
-
-
-
             <div className="md:ml-6 text-xl">
-              <h2 className="text-lg md:text-2xl font-bold mb-2">
+              <h2 className="text-lg md:text-2xl font-bold mb-2 max-md:text-center">
                 Maitreyi Nigwekar (She/her)
               </h2>
-              <p className=" text-justify  leading-relaxed">
+              <p className=" text-justify  leading-relaxed text-xl max-md:text-lg">
                 Maitreyi is a Trauma-Informed Healer working with survivors of
                 C-PTSD, abuse, & individuals moving through grief. Her approach
                 involves working with different archetypes, belief systems,
@@ -340,8 +338,7 @@ const ShortTraining = () => {
           </div>
         </div>
         <div className="flex  justify-center mt-8 text-[18px] xs:text-xl sm:text-2xl md:text-3xl font-bold">
-          <i>Stay tuned for information about the next batch
-          </i>
+          <i>Stay tuned for information about the next batch</i>
         </div>
         <div className="flex flex-col md:flex-row md:justify-between md:w-1/2 m-auto md:space-x-6 items-start my-8 max-md:justify-center max-md:items-center ">
           <button className="border-2 border-customPeach text-[#333] font-bold py-3 px-6 rounded-50px transition duration-300 ease-in-out hover:bg-customPeach hover:shadow-2xl hover:-translate-y-1 text-[12px]">

@@ -2,7 +2,9 @@
     transform: scale(0.5);
     animation: zoomOut 2s ease-in-out forwards;
   }
-  
+  .bgSize{
+    background-size:205px ;
+  }
   .label {
     transform: scale(0.5);
     animation: zoomOut 2s ease-in-out forwards;
