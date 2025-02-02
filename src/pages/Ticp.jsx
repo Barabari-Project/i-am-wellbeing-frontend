@@ -113,10 +113,10 @@ const Ticp = () => {
 
       <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
         <div className="about-us text-xl">
-          <h2 className="title text-4xl font-bold  mt-10 lg:mt-0 max-xl:px-6 max-md:px-4 max-md:text-3xl">
+          <h2 className="title text-4xl font-bold  max-md:text-3xl pl-2 max-md:px-5">
             About us
           </h2>
-          <div className="max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
+          <div className="px-4 pb-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
 
           <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full max-md:m-0 max-md:w-full">
             Trauma is the most unaddressed and unseen epidemic in today’s time.
@@ -184,11 +184,11 @@ const Ticp = () => {
             </p>
           </div>
         </div>
-        <div className="Activities text-xl">
-          <h2 className="title text-4xl font-bold mb-1 p-4 max-md:text-3xl max-md:text-center">
+        <div className="Activities px-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
+          <h2 className="title text-4xl font-bold mb-1 py-4 max-md:text-3xl max-md:text-left">
             Course Activities & Duration
           </h2>
-          <p className="p-6 pb-0 pt-0 leading-8 text-justify w-[98%] lg:w-full max-md:p-5 max-md:w-full max-md:text-lg">
+          <p className="leading-8 text-justify w-[95%] m-auto lg:w-full  max-md:m-0 max-md:w-full max-md:mt-3">
             {/* The course will encompass various activities like learning sessions,
             group discussions, assignments, case conceptualisation, roleplays &
             supervision. There are a total of <b>six modules</b> to be covered

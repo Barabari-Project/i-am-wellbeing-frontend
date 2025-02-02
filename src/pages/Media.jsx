@@ -141,7 +141,7 @@ const Media = () => {
           {/* 3slides of arya */}
           {/* content data */}
           <div className="px-4 lg:px-11  max-md:p-0">
-            <h1 className="text-4xl font-bold max-md:text-3xl max-md:text-center">
+            <h1 className="text-4xl font-bold max-md:text-3xl ">
               Emotional Freedom Technique
             </h1>
             {/* ------------------------------- */}
@@ -213,56 +213,60 @@ const Media = () => {
 
         {/* Grief Support Booklet  */}
 
-        <div className="mt-6  ">
+        <div className="mt-6">
   <h1 className="text-4xl font-bold max-md:text-3xl lg:pl-11 max-md:px-5">
     Grief Support Booklet
   </h1>
-  {/* ------------------------------- */}
-  <div className="sm:flex mt-[4%] gap-5 leading-8 lg:px-11 max-md:px-5">
-    <p className="text-justify text-[20px] font-thin max-md:text-lg">
-      Grief is an ocean that is ever-consuming and ever-flowing. It is not
-      something to get rid of and definitely not easy to live with. There is no
-      right way to work with it. All we can try is to hold space for it, be
-      gentle with it, and allow it to move at its own pace.
-    </p>
-  </div>
-  <div className="flex flex-col-reverse sm:flex-row mt-8 gap-8 mb-4 max-md:gap-0 ">
-    <div className="sm:w-[40%] mt-6 ">
-      <p className="text-justify text-[20px] max-md:text-lg font-thin lg:px-11 max-md:px-5">
-        Here is a booklet that we have designed to add a drop of support in the
-        ocean of this unknown. This booklet is for anyone supporting a dear one
-        through their journey with grief.
-      </p>
+  
+  {/* Main Content Container */}
+  <div className="flex flex-col sm:flex-row gap-8 mt-8 lg:px-11 max-md:px-5">
+    {/* Text Content - Left Side */}
+    <div className="sm:w-1/2">
+      <div className="mt-[4%]">
+        <p className="text-justify text-[20px] font-thin max-md:text-lg">
+          Grief is an ocean that is ever-consuming and ever-flowing. It is not
+          something to get rid of and definitely not easy to live with. There is no
+          right way to work with it. All we can try is to hold space for it, be
+          gentle with it, and allow it to move at its own pace.
+        </p>
+      </div>
+      <div className="mt-8">
+        <p className="text-justify text-[20px] max-md:text-lg font-thin">
+          Here is a booklet that we have designed to add a drop of support in the
+          ocean of this unknown. This booklet is for anyone supporting a dear one
+          through their journey with grief.
+        </p>
+      </div>
     </div>
-    <div
-      className="bg-bgSize bg-no-repeat bg-left sm:w-[60%] mt-6 p-12 max-md:p-5"
-      style={{ backgroundImage: `url(${calendarBg})` }}
-    >
-      <a
-        href="https://drive.google.com/file/d/123F9-Wx457Vn4zDGqQW00nQo4M-vfOjd/view?usp=drive_link"
-        target="_blank"
-        rel="noopener noreferrer"
-        // className="p-4 rounded shadow hover:bg-gray-100 transition duration-300"
-      >
-        <img
-          loading="lazy"
-          src={support}
-          alt="support"
-          className="sm:h-[70%] w-full h-full"
-        />
-      </a>
+
+    {/* Image Container - Right Side */}
+    <div className="sm:w-1/2 flex items-center justify-center">
+      <div className="w-full h-full p-4">
+        <a
+          href="https://drive.google.com/file/d/123F9-Wx457Vn4zDGqQW00nQo4M-vfOjd/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block h-full"
+        >
+          <img
+            loading="lazy"
+            src={support}
+            alt="support"
+            className="w-full h-auto object-cover rounded-lg shadow-lg"
+          />
+        </a>
+      </div>
     </div>
   </div>
-  {/* ------------------------------------ */}
 </div>
 
 
         {/* Self-Care Calendar  */}
 
-        <div className=" sm:-mt-[20%] max-md:p-5">
-          <h1 className="px-4 lg:px-11 max-md:px-0 text-4xl font-bold max-md:text-3xl">
-            Self-Care Calendar{" "}
-          </h1>
+        <div className="mt-8 max-md:p-5"> {/* Changed from sm:-mt-[20%] */}
+        <h1 className="px-4 lg:px-11 max-md:px-0 text-4xl font-bold max-md:text-3xl">
+    Self-Care Calendar
+  </h1>
           {/* ------------------------------- */}
           <div className="sm:flex mt-[4%] gap-5 leading-8">
             <p className="text-justify text-[20px] font-thin px-4 lg:px-11 max-md:p-0 max-md:text-lg">

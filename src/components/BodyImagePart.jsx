@@ -34,7 +34,7 @@ const BodyImagePart = () => {
     <div className="flex-[50%]">
       <div
         ref={parentRef}
-        className="relative h-screen flex justify-center items-center max-md:mx-10"
+        className="relative h-screen flex justify-center items-center max-md:mx-10 max-sm:mx-0"
       >
         {/* Body Background */}
         <div
@@ -46,7 +46,7 @@ const BodyImagePart = () => {
         <img
           src={nerves}
           alt="nerves"
-          className={`relative z-10 -left-3 max-sm:-left-2 -top-16 sm:w-10/12  lg:w-[95%] md:w-full xl:w-[75%] h-auto object-contain w-full transition-transform duration-1000 ${
+          className={`relative z-5 -left-3 max-md:-left-2 max-sm:left-[-6px] -top-16 sm:w-10/12  lg:w-[95%] md:w-full xl:w-[75%] h-auto object-contain w-full transition-transform duration-1000 ${
             isInView ? 'scale-105' : 'scale-75'
           }`}
         />

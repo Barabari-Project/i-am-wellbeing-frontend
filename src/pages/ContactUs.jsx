@@ -79,12 +79,15 @@ const ContactUs = () => {
 
             {/* Form */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6 max-md:text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                 Be an Agent of Change!
               </h2>
               <p className="text-gray-600 mb-8 max-md:text-justify text-xl max-md:text-lg">
-                Join us as a volunteer, intern, or full-time member to make a
-                difference in someone’s life. Your contribution matters.
+                In a country like ours, there can never be too many mental
+                health professionals, especially those working with people
+                coming from marginalised sections of society. Join us in the
+                capacity of a volunteer/intern/full-time member to be an agent
+                of change in someone's life.
               </p>
               <form
                 className="space-y-6 border-[2px] border-[#029390] rounded-xl p-10"
@@ -173,138 +176,137 @@ const ContactUs = () => {
 
         {/* Contribution Section */}
         <section className="px-4 py-16 bg-gray-100">
-  <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 items-center">
-    {/* Image (Above text on small screens, right side on larger screens) */}
-    <div
-      className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full order-first md:order-2 max-md:h-[30rem]"
-      style={{ backgroundImage: `url(${contactUsBoy})` }}
-    ></div>
+          <div className="max-w-7xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 items-center">
+            {/* Image (Above text on small screens, right side on larger screens) */}
+            <div
+              className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full order-first md:order-2 max-md:h-[30rem]"
+              style={{ backgroundImage: `url(${contactUsBoy})` }}
+            ></div>
 
-    {/* Text Content (Below image on small screens, left side on larger screens) */}
-    <div className="md:order-1">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center md:text-left">
-        Contribute to Break The Cycle
-      </h2>
-      <p className="text-gray-600 mb-8 text-xl sm:text-lg text-justify">
-        Supporting an individual helps break the cycle of trauma for entire 
-        communities. Contribute as little as Rs. 500 to support someone in need.
-      </p>
-      <form className="space-y-6" onSubmit={(e) => handleSubmit(e, sendAccountDetails)}>
-        <textarea
-          id="AccountDetails"
-          value={formData.AccountDetails}
-          onChange={handleInputChange}
-          placeholder="Enter Account Details"
-          className="w-full px-4 py-2 border rounded-lg focus:ring-[#bfe769] focus:outline-none focus:ring-1"
-          rows="4"
-          required
-        ></textarea>
-        <button
-          type="submit"
-          className="w-full py-3 bg-[#bfe769] text-white font-semibold rounded-lg hover:bg-[#aae230] transition duration-300"
-        >
-          Submit Details
-        </button>
-      </form>
-      <p className="text-gray-500 text-lg mt-4 sm:text-base">
-        Note: Donations are tax-exempt under Section 80G of the Income Tax Act.
-      </p>
-    </div>
-  </div>
-</section>
-
+            {/* Text Content (Below image on small screens, left side on larger screens) */}
+            <div className="md:order-1">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center md:text-left max-md:text-left">
+                Contribute to Break The Cycle
+              </h2>
+              <p className="text-gray-600 mb-8 text-xl sm:text-lg text-justify">
+              It’s more about the impact, than the numbers. Connecting with even a single individual helps in breaking the cycle of intergenerational trauma for the entire community. Contribute as little as Rs. 500 to support an individual gain access to support through our trauma-informed initiaves. 
+              </p>
+              <form
+                className="space-y-6"
+                onSubmit={(e) => handleSubmit(e, sendAccountDetails)}
+              >
+                <textarea
+                  id="AccountDetails"
+                  value={formData.AccountDetails}
+                  onChange={handleInputChange}
+                  placeholder="Enter Account Details"
+                  className="w-full px-4 py-2 border rounded-lg focus:ring-[#bfe769] focus:outline-none focus:ring-1"
+                  rows="4"
+                  required
+                ></textarea>
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-[#bfe769] text-white font-semibold rounded-lg hover:bg-[#aae230] transition duration-300"
+                >
+                  Submit Details
+                </button>
+              </form>
+              <p className="text-gray-500 text-lg mt-4 sm:text-base">
+                Note: Donations are tax-exempt under Section 80G of the Income
+                Tax Act.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Join Hands Section */}
         <section className="px-4 py-16 bg-white">
-        <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 items-stretch">
-  {/* Image */}
-  <div
+          <div className="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 items-stretch">
+            {/* Image */}
+            <div
               className="bg-cover bg-center rounded-lg h-80 sm:h-full md:h-[450px] lg:h-full max-md:h-[30rem]"
               style={{ backgroundImage: `url(${contactUsFamily})` }}
-  ></div>
+            ></div>
 
-  {/* Form */}
-  <div className="p-6 lg:p-10 rounded-lg max-md:w-full max-md:p-0">
-    <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
-      Join Hands with Us
-    </h1>
-    <p className="text-xl text-gray-600 mb-6 leading-relaxed max-md:text-justify max-md:text-lg">
-      Change happens in collaboration, not isolation. Whether you are a
-      corporate organization or a not-for-profit foundation, join us
-      to increase impact in your community.
-    </p>
-    <form
-      className="space-y-6 border-[2px] border-[#029390] rounded-xl p-10"
-      onSubmit={(e) => handleSubmit(e, sendNeeds)}
-    >
-      <div>
-        <label
-          htmlFor="nameneeds"
-          className="block text-lg font-medium text-gray-700"
-        >
-          Name
-        </label>
-        <input
-          id="nameneeds"
-          type="text"
-          value={formData.nameneeds}
-          onChange={handleInputChange}
-          placeholder="Name"
-          className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-          required
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="emailneeds"
-          className="block text-lg font-medium text-gray-700"
-        >
-          Email
-        </label>
-        <input
-          id="emailneeds"
-          type="email"
-          value={formData.emailneeds}
-          onChange={handleInputChange}
-          placeholder="Email"
-          className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-          required
-        />
-      </div>
-      <div>
-        <label
-          htmlFor="need"
-          className="block text-lg font-medium text-gray-700"
-        >
-          What are your needs?
-        </label>
-        <textarea
-          id="need"
-          value={formData.need}
-          onChange={handleInputChange}
-          placeholder="Describe your needs"
-          className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-          rows="4"
-          required
-        ></textarea>
-      </div>
-      <button
-        type="submit"
-        className="w-full py-3 bg-[#bfe769] text-white font-semibold rounded-lg hover:bg-[#aae230] transition duration-300"
-      >
-        Submit Needs
-      </button>
-    </form>
-  </div>
-</div>
-
+            {/* Form */}
+            <div className="p-6 lg:p-10 rounded-lg max-md:w-full max-md:p-0">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center max-md:text-left">
+                Join Hands with Us
+              </h1>
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed max-md:text-justify max-md:text-lg">
+              Change happens in collaboration, not isolation. Whether you are a corporate organization or a not-for-profit foundation, a school or an institution, a hospital or a government office, join us so we can add to the level of  impact in your community. We are equipped to offer specialised support to humans from all walks of life, from corporate trainings to SEL modules, from individual to group interventions. 
+              </p>
+              <form
+                className="space-y-6 border-[2px] border-[#029390] rounded-xl p-10"
+                onSubmit={(e) => handleSubmit(e, sendNeeds)}
+              >
+                <div>
+                  <label
+                    htmlFor="nameneeds"
+                    className="block text-lg font-medium text-gray-700"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="nameneeds"
+                    type="text"
+                    value={formData.nameneeds}
+                    onChange={handleInputChange}
+                    placeholder="Name"
+                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="emailneeds"
+                    className="block text-lg font-medium text-gray-700"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="emailneeds"
+                    type="email"
+                    value={formData.emailneeds}
+                    onChange={handleInputChange}
+                    placeholder="Email"
+                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="need"
+                    className="block text-lg font-medium text-gray-700"
+                  >
+                    What are your needs?
+                  </label>
+                  <textarea
+                    id="need"
+                    value={formData.need}
+                    onChange={handleInputChange}
+                    placeholder="Describe your needs"
+                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full py-3 bg-[#bfe769] text-white font-semibold rounded-lg hover:bg-[#aae230] transition duration-300"
+                >
+                  Submit Needs
+                </button>
+              </form>
+            </div>
+          </div>
         </section>
         <div className="text-center mt-8 px-4 md:px-8 mb-12">
-       <h1 className="text-base xs:text-lg sm:text-xl md:text-3xl font-semibold ">
-         For collaboration, write to us at{' '}
-         <span className="font-bold ">info@iamwellbeing.in</span>
-       </h1>
-     </div>
+          <h1 className="text-base xs:text-lg sm:text-xl md:text-3xl font-semibold ">
+            For collaboration, write to us at{" "}
+            <span className="font-bold ">info@iamwellbeing.in</span>
+          </h1>
+        </div>
       </section>
     </>
   );

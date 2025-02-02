@@ -117,7 +117,7 @@ const Tic = () => {
           </div>
 
           <div className='right lg:col-span-7 mt-5 lg:mt-0 p-2 m-auto lg:p-4 max-md:px-0'>
-            <h1 className='text-4xl max-md:text-3xl max-md:text-center leading-none font-bold text-right p-2 lg:p-0 max-md:p-0'>
+            <h1 className='text-4xl max-md:text-3xl leading-none font-bold text-right p-2 lg:p-0 max-md:p-0 max-md:text-left'>
               Understanding Trauma
             </h1>
             <div className='p-2 lg:p-0 max-md:p-0'>
@@ -144,7 +144,7 @@ const Tic = () => {
             />
           </div>
           <div className='right col-span-7'>
-            <h1 className='text-4xl max-md:text-3xl max-md:text-center leading-none font-bold text-right m-0'>
+            <h1 className='text-4xl max-md:text-3xl leading-none font-bold text-right m-0 max-md:text-left'>
               Impact of trauma on health
             </h1>
             <div className=''>
@@ -161,7 +161,7 @@ const Tic = () => {
         {/* informed care */}
         <div className='understanding trauma lg:grid lg:grid-cols-12  p-2 lg:p-0 lg:w-full m-auto justify-center items-center max-md:p-0'>
           <div className='right col-span-9'>
-            <h1 className='text-4xl max-md:text-3xl max-md:text-center leading-none font-bold lg:ml-4  p-2 lg:p-0'>
+            <h1 className='text-4xl max-md:text-3xl leading-none font-bold lg:ml-4  p-2 lg:p-0 max-md:px-0'>
               Trauma-informed care
             </h1>
             <div className='m-auto'>
@@ -203,7 +203,7 @@ const Tic = () => {
         </div>
 
         <div className='lg:mt-10 mt-14  max-w-7xl m-auto '>
-          <h2 className='text-4xl max-md:text-3xl max-md:text-center max-md:mb-3 ml-2 font-bold lg:ml-12'>
+          <h2 className='text-4xl max-md:text-3xl  max-md:text-center max-md:mb-3 ml-2 font-bold lg:ml-12'>
             Principles of TIC
           </h2>
           <div className='max-w-5xl m-auto mb-4'>

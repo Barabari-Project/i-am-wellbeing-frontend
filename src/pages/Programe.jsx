@@ -230,7 +230,7 @@ const Programe = () => {
               <img loading="lazy" src={anubho1} alt="anubho image"></img>
             </div>
             <div className="w-full sm:p-3  ">
-              <h1 className="text-right w-[99%] font-bold text-4xl max-md:text-3xl max-md:text-center pb-4">
+              <h1 className="text-right w-[99%] font-bold text-4xl max-md:text-3xl max-md:text-left pb-4">
                 Creating ecosystems of care
               </h1>
               <p className="leading-9 text-justify text-xl max-md:text-lg ">
@@ -276,7 +276,7 @@ const Programe = () => {
           </div>
 
           <div className="px-4 lg:px-11 pt-4 max-md:pt-6 max-md:px-0">
-          <h1 className="text-left w-[99%] font-bold text-4xl max-md:text-3xl max-md:text-center">
+          <h1 className="text-left w-[99%] font-bold text-4xl max-md:text-3xl ">
           Corporate and Institutional Trainings
             </h1>
             {/* ------------------------------- */}
@@ -341,7 +341,7 @@ const Programe = () => {
           {/* top img of udan */}
           <div className="lg:flex m-auto  p-2 lg:px-4 lg:gap-4 max-md:px-0">
             <div className="w-full sm:p-6  ">
-              <h1 className=" w-[99%] font-bold text-4xl pb-4 max-md:text-3xl max-md:text-center">
+              <h1 className=" w-[99%] font-bold text-4xl pb-4 max-md:text-3xl">
                 Quality therapeutic intervention
               </h1>
               <p className="text-xl leading-9 text-justify tracking-wider max-md:text-lg">
@@ -367,7 +367,7 @@ const Programe = () => {
 
           {/* content data */}
           <div className="px-4 lg:px-14 max-md:px-0">
-            <h1 className="text-4xl font-bold mb-[3%] max-md:text-3xl max-md:text-center">Reach of change</h1>
+            <h1 className="text-4xl font-bold mb-[3%] max-md:text-3xl">Reach of change</h1>
             {/* ------------------------------- */}
 
             {/* ------------------------------------ */}
@@ -470,7 +470,7 @@ const Programe = () => {
               <img loading="lazy" src={arya1} alt="anubho image"></img>
             </div>
             <div className="w-full sm:p-3  ">
-              <h1 className="text-right w-[99%] font-bold text-4xl pb-4 max-md:text-3xl max-md:text-center">
+              <h1 className="text-right w-[99%] font-bold text-4xl pb-4 max-md:text-3xl">
                 Bio-Psycho-Socio Wellbeing
               </h1>
               <p className="text-xl leading-9 text-justify max-md:text-lg">
@@ -493,7 +493,7 @@ const Programe = () => {
 />
           {/* content data */}
           <div className="px-4 lg:px-11 ">
-            <h1 className="text-4xl font-bold max-md:text-3xl max-md:text-center">Community level change</h1>
+            <h1 className="text-4xl font-bold max-md:text-3xl">Community level change</h1>
             {/* ------------------------------- */}
             <div className="sm:flex mt-[4%] gap-5 leading-8 text-xl max-md:text-lg max-md:pb-8">
               <p className="text-justify font-thin">
