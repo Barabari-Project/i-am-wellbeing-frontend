@@ -48,7 +48,7 @@ const peoples = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/4.svg`;
 const yelloShadow = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/bg.svg`;
 
 //animations
-import animation1 from "../imgs/program-images/animation1.gif";
+import animation1 from "../imgs/program-images/gif-6.gif";
 
 import textBorder from "../imgs/program-images/text-border.png";
 
