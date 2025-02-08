@@ -82,7 +82,7 @@ const ContactUs = () => {
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                 Be an Agent of Change!
               </h2>
-              <p className="text-gray-600 mb-8 max-md:text-justify text-xl max-md:text-lg">
+              <p className="text-gray-600 mb-8 max-md:text-justify text-xl max-md:text-lg text-justify">
                 In a country like ours, there can never be too many mental
                 health professionals, especially those working with people
                 coming from marginalised sections of society. Join us in the

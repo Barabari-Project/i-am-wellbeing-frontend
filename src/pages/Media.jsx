@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 
-const angerImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/anger.png`;
+// const angerImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/anger.png`;
 const backpainImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/backpain.png`;
 const beathingImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/beathing.png`;
 const helplessnessImg = `${
@@ -9,32 +9,19 @@ const helplessnessImg = `${
 const safeImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/safe.png`;
 const selfImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/self.png`;
 
-const angervideo = `${import.meta.env.VITE_PUBLIC_URL}/mediavideos/anger.mp4`;
-const backpainvideo = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/mediavideos/backpain_degkwa.mp4`;
-const beathingvideo = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/mediavideos/beathing_fnaq1s.mp4`;
-const helplessnessvideo = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/mediavideos/helplessness_aohsgg.mp4`;
-const safevideo = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/mediavideos/safe_1_kugvfm.mp4`;
-const selfvideo = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/mediavideos/self_fljo0n.mp4`;
 
-import greenbg from "../imgs/program-images/greenbg.png";
+
+import greenbg from "../imgs/program-images/greenbg2.png";
 const calendarBg = `${
   import.meta.env.VITE_PUBLIC_URL
 }/phase-2/calender%20bg.svg`;
 
 import calendar from "../imgs/program-images/calendar.png";
 import support from "../imgs/program-images/support.webp";
+import textAboveImg from "../imgs/program-images/supportImg.png";
 
 const Media = () => {
+
   const data = [
     {
       video: "https://www.youtube.com/watch?v=1mAtRJVRg2w",
@@ -103,36 +90,19 @@ const Media = () => {
     },
   ];
 
-  const videoRefs = useRef([]);
-  const [currentPlaying, setCurrentPlaying] = useState(null);
 
-  const handlePlay = (index) => {
-    // Pause the currently playing video, if any
-    if (currentPlaying !== null && videoRefs.current[currentPlaying]) {
-      videoRefs.current[currentPlaying].pause();
-    }
-
-    // Update the currently playing index and play the clicked video
-    setCurrentPlaying(index);
-    const currentVideo = videoRefs.current[index];
-    if (currentVideo) {
-      if (currentVideo.paused) {
-        currentVideo.play();
-      } else {
-        currentVideo.pause(); // Toggle play/pause on repeated clicks
-      }
-    }
-  };
+ 
+  
 
   return (
     <>
       <section className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%] ">
         {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-center "
+          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom  max-lg:pb-10"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
-          <h1 className="text-3xl sm:text-4xl font-bold lg:text-5xl">
+          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
             Resources
           </h1>
         </div>
@@ -190,74 +160,83 @@ const Media = () => {
       </div> */}
 
               {/* Right side */}
-              <div className="sm:flex sm:flex-wrap sm:flex-row  sm:flex-1">
-              {data.map((item, index) => (
-  <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
-    <iframe
-      width="100%"
-      height="250"
-      src={item.video.replace("watch?v=", "embed/").replace("youtu.be/", "www.youtube.com/embed/")}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-    <h2 className="text-center font-bold text-lg p-2">{item.name}</h2>
-  </div>
-))}
+              <div className="sm:flex sm:flex-wrap sm:flex-row sm:flex-1">
+  {data.map((item, index) => {
+    const videoId = item.video.split("v=")[1]?.split("&")[0] || item.video.split("/").pop();
+    return (
+      <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+        <iframe
+          width="100%"
+          height="250"
+          src={`${item.video
+            .replace("watch?v=", "embed/")
+            .replace("youtu.be/", "www.youtube.com/embed/")}?loop=1&playlist=${videoId}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <h2 className="text-center font-bold text-lg p-2">{item.name}</h2>
+      </div>
+    );
+  })}
+</div>
 
-
-              </div>
             </div>
           </div>{" "}
         </div>
 
         {/* Grief Support Booklet  */}
 
-        <div className="mt-6">
+        <div className="mt-6 ">
   <h1 className="text-4xl font-bold max-md:text-3xl lg:pl-11 max-md:px-5">
     Grief Support Booklet
   </h1>
   
   {/* Main Content Container */}
-  <div className="flex flex-col sm:flex-row gap-8 mt-8 lg:px-11 max-md:px-5">
-    {/* Text Content - Left Side */}
-    <div className="sm:w-1/2">
-      <div className="mt-[4%]">
+  <div className="flex flex-col lg:flex-row gap-8 mt-8 lg:px-11 max-md:px-5 ">
+      {/* Text Content - Left Side */}
+      <div className="w-full lg:w-1/2 flex flex-col ">
+      <div className="mb-10 w-full flex justify-center">
+        <img src={textAboveImg} alt="girl & boy sitting at the edge of the beach" />
+      </div>
         <p className="text-justify text-[20px] font-thin max-md:text-lg">
           Grief is an ocean that is ever-consuming and ever-flowing. It is not
           something to get rid of and definitely not easy to live with. There is no
           right way to work with it. All we can try is to hold space for it, be
           gentle with it, and allow it to move at its own pace.
         </p>
-      </div>
-      <div className="mt-8">
-        <p className="text-justify text-[20px] max-md:text-lg font-thin">
+        <p className="text-justify text-[20px] max-md:text-lg font-thin mt-8">
           Here is a booklet that we have designed to add a drop of support in the
           ocean of this unknown. This booklet is for anyone supporting a dear one
           through their journey with grief.
         </p>
       </div>
-    </div>
 
-    {/* Image Container - Right Side */}
-    <div className="sm:w-1/2 flex items-center justify-center">
-      <div className="w-full h-full p-4">
-        <a
-          href="https://drive.google.com/file/d/123F9-Wx457Vn4zDGqQW00nQo4M-vfOjd/view?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block h-full"
+      {/* Image Container - Right Side */}
+      <div className="w-full lg:w-1/2 flex items-center justify-center">
+        <div className="w-[500px] h-full"
+        style={{
+          backgroundImage: `url(${calendarBg})`,
+          backgroundSize: "cover", // Ensures the background covers the div
+          backgroundPosition: "center", // Centers the background
+        }}
         >
-          <img
-            loading="lazy"
-            src={support}
-            alt="support"
-            className="w-full h-auto object-cover rounded-lg shadow-lg"
-          />
-        </a>
+          <a
+            href="https://drive.google.com/file/d/123F9-Wx457Vn4zDGqQW00nQo4M-vfOjd/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full"
+          >
+            <img
+              loading="lazy"
+              src={support}
+              alt="support"
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+            />
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 </div>
 
 
@@ -294,8 +273,8 @@ const Media = () => {
           <div
             style={{
               backgroundImage: `url(${calendarBg})`,
-              backgroundSize: "cover", // Ensures the background covers the div
-              backgroundPosition: "center", // Centers the background
+              backgroundSize: "contain", // Ensures the background covers the div
+              backgroundPosition: "left", // Centers the background
             }}
             className="flex items-center justify-center h-full" // Flexbox to center the image
           >
@@ -308,7 +287,7 @@ const Media = () => {
                 loading="lazy"
                 src={calendar}
                 alt="selfcare"
-                className="md:w-[80%] max-w-full h-auto m-auto object-contain" // Maintains aspect ratio
+                className="lg:w-[60%] max-md:w-[100%] max-w-full h-auto m-auto object-contain" // Maintains aspect ratio
               />
             </a>
           </div>

@@ -135,7 +135,7 @@ const Ticp = () => {
             happy nation.
           </p>
           </div>
-          <div className="bg-[#FFDE59]  p-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
+          <div className="bg-[#FFDE59]  p-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg xl:p-6">
             <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">Rationale</h2>
             <p className="mb-3 leading-8 text-justify">
               While the last decade has highlighted the significant need for
@@ -189,18 +189,7 @@ const Ticp = () => {
             Course Activities & Duration
           </h2>
           <p className="leading-8 text-justify w-[95%] m-auto lg:w-full  max-md:m-0 max-md:w-full max-md:mt-3">
-            {/* The course will encompass various activities like learning sessions,
-            group discussions, assignments, case conceptualisation, roleplays &
-            supervision. There are a total of <b>six modules</b> to be covered
-            over a period of <b>two months</b>. Upon completion of each module,
-            the participants will submit <b>graded assignments.</b> The end of
-            the theory sessions will embark on the beginning of{" "}
-            <b>four months of trauma-informed supervision </b>with experts from
-            the field. As the supervision commences, participants will attend a{" "}
-            <b>viva</b> and submit
-            <b> case studies.</b> The intensive process is designed to ensure
-            the learning and application of trauma- informed care practices
-            successfully. */}
+          
             The coursework will encompass various activities like online
             learning/theory sessions, practical and viva, assignments, project
             submission and class discussions. There are a total of five modules

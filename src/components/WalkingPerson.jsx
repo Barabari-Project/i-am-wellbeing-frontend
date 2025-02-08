@@ -1,12 +1,12 @@
 import React from "react";
 
 import animationimage1 from "../imgs/program-images/gif-1.gif";
-import animationimage2 from "../imgs/program-images/git-3.gif";
+import animationimage2 from "../imgs/program-images/imm3.gif";
 import animationimage3 from "../imgs/program-images/gif-3.gif";
 import animationimage4 from "../imgs/program-images/gif-4.gif";
-import animationimage5 from "../imgs/program-images/gif-5.gif";
-import animation6 from "../imgs/program-images/gif-6.gif";
-import animationimage7 from "../imgs/program-images/gif-7.gif";
+import animationimage5 from "../imgs/program-images/gif-8.gif";
+import animation6 from "../imgs/program-images/gif-7.gif";
+import animationimage7 from "../imgs/program-images/git9.gif";
 
 const WalkingPerson = () => {
   return (
@@ -31,11 +31,11 @@ const WalkingPerson = () => {
         alt="Character"
         className="w-[14%]  object-cover"
       />
-      <img src={animationimage5} alt="Character" className="w-[14%] mb-[2%] " />
+      <img src={animationimage5} alt="Character" className="w-[14%] mb-[2%] object-cover " />
 
-      <img src={animation6} alt="Character" className="w-[14%] mb-[2%]" />
+      <img src={animation6} alt="Character" className="w-[14%] mb-[2%] " />
 
-      <img src={animationimage7} alt="Character" className="w-[14%] mb-[2%]" />
+      <img src={animationimage7} alt="Character" className="w-[14%] mb-[2%] object-cover " />
       {/* <img src={animation1} alt="Character" style={{ width: '150px' }} /> */}
     </div>
   );

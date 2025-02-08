@@ -9,7 +9,7 @@ import image4 from '../imgs/program-images/image-4.png';
 
 const CollageImage = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 2000 });
   }, []);
 
   return (

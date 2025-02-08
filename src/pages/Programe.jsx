@@ -57,7 +57,7 @@ import map from "../imgs/program-images/map.png";
 import CollageImage from "../components/CollageImage";
 import BodyImagePart from "../components/BodyImagePart";
 import yellowbgnew1 from "../imgs/program-images/yellowBgNew.png";
-import greenbg from "../imgs/program-images/greenbg.png";
+import greenbg from "../imgs/program-images/greenbg2.png";
 
 const Programe = () => {
   const iconVariants = {
@@ -216,11 +216,11 @@ const Programe = () => {
       <section id="anubho" className="mb-9 ">
         {/* header of anubho */}
         <div
-          className="  px-5 pt-10 pb-16  bg-cover bg-no-repeat bg-center "
+          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom "
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
-          <h1 className="max-md:text-[40px] font-bold text-5xl align-text-bottom">
-            Anubhoo
+          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl ">
+          Anubhoo
           </h1>
         </div>
         <div className=" p-4 lg:p-4 px-4 xxxl:px-[14%] max-md:px-5 ">
@@ -271,16 +271,9 @@ const Programe = () => {
                 provided a safe space for individuals to explore how their
                 nervous systems interact with different approaches.
               </p>
-            </div>
-              <BodyImagePart className="w-full h-auto object-cover" />
-          </div>
-
-          <div className="px-4 lg:px-11 pt-4 max-md:pt-6 max-md:px-0">
-          <h1 className="text-left w-[99%] font-bold text-4xl max-md:text-3xl ">
+              <h1 className="text-left w-[99%] font-bold text-4xl max-md:text-3xl py-5">
           Corporate and Institutional Trainings
             </h1>
-            {/* ------------------------------- */}
-            <div className="sm:flex mt-6 gap-5 leading-8 mb-4 text-xl max-md:text-lg">
               <p className="text-justify  font-thin">
                 In addition to training mental health professionals in the
                 field, we are dedicated to creating a holistic system of support
@@ -288,19 +281,31 @@ const Programe = () => {
                 beings. Our efforts extend beyond traditional mental health
                 settings to include the facilitation of diverse corporate and
                 institutional training programs aimed at enhancing individual
-                and collective well-being. <br /> <br />
+                and collective well-being. <br /> 
                 For corporate settings, we provide specialized training such as
-                POSH (Prevention of Sexual Harassment) to ensure safe and
-                inclusive workplaces, training aimed at Team Building and
-                Communication to strengthen interpersonal dynamics, and
-                developing a Healthy Work Environment to boost productivity and
+
+                <div className="w-[90%] absolute mt-5">
+                POSH (Prevention of Sexual Harassment) to ensure safe and inclusive workplaces, training aimed at Team Building and
+                developing a Healthy Work Environment
+                </div>
+                
+                <br /> <br /></p>
+            </div>
+              <BodyImagePart className="w-full h-auto object-cover" />
+          </div>
+
+          <div className="px-4 lg:px-11  max-md:pt-6 max-md:px-0">
+          
+            {/* ------------------------------- */}
+            <div className="sm:flex mt-6 gap-5 leading-8 mb-4 text-xl max-md:text-lg">
+              <p>
+                 productivity and
                 team satisfaction. <br /> <br />
                 In educational and institutional contexts, we prioritize the
                 well-being of all individuals by offering programmes focused on
                 Teachers' Well-being, equipping them with Emotional Regulation
                 Tools to navigate stress, build mindfulness, and foster a
                 healthier and safer environment for both students and teachers.{" "}
-                <br /> <br />
                 Our comprehensive approach acknowledges that mental and
                 emotional health are integral to every aspect of human
                 interaction. By addressing these areas, we aim to cultivate
@@ -329,10 +334,10 @@ const Programe = () => {
       <section id="udaan">
         {/* header of udan */}
         <div
-          className=" px-5 pt-10 pb-16 bg-cover bg-no-repeat bg-center"
+          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom "
           style={{ backgroundImage: `url(${greenbg})` }}
         >
-          <h1 className="max-md:text-[40px] font-bold text-5xl align-text-bottom text-white">
+          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] text-white md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
             Udaan
           </h1>
         </div>
@@ -456,10 +461,10 @@ const Programe = () => {
       <section id="arya" className="mb-9">
         {/* header of arya */}
         <div
-          className=" px-5 pt-10 pb-16 bg-cover bg-no-repeat bg-center"
+          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom "
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
-          <h1 className=" max-md:text-3xl max-md:text-[40px] font-bold text-5xl ">
+          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
             Project Arya
           </h1>
         </div>
