@@ -31,7 +31,7 @@ const WalkingPerson = () => {
         alt="Character"
         className="w-[14%]  object-cover"
       />
-      <img src={animationimage5} alt="Character" className="w-[14%] mb-[2%] object-cover " />
+      <img src={animationimage5} alt="Character" className="w-[14%] object-cover " />
 
       <img src={animation6} alt="Character" className="w-[14%] mb-[2%] " />
 
