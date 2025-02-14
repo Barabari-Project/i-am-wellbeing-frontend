@@ -3,7 +3,7 @@ import React from "react";
 const ScheduleTable = () => {
   return (
     <div className="overflow-x-auto pt-4 max-md:overflow-x-scroll max-xl:p-2 ">
-      <table className="min-w-full lg:p-2  border-collapse border bg-[#FFDE59] border-black text-sm text-left sm:text-xs md:text-sm lg:text-base ">
+      <table className="min-w-full lg:p-2  border-collapse border bg-[#FFDE59] border-black text-sm text-left sm:text-xs md:text-sm lg:text-base overflow-x-scroll ">
         <thead>
           <tr className="bg-[#029390] text-white font-bold">
             <th className="border border-black px-2 py-2 lg:px-4">Week</th>

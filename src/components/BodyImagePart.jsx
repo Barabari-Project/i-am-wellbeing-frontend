@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
-import 'aos/dist/aos.css';
-import body from '../imgs/program-images/body.png';
-import nerves from '../imgs/program-images/nertb.png';
+import React, { useEffect, useState, useRef } from "react";
+import "aos/dist/aos.css";
+import body from "../imgs/program-images/body.png";
+import nerves from "../imgs/program-images/nertb.png";
 
 const BodyImagePart = () => {
   const [isInView, setIsInView] = useState(false);
@@ -39,18 +39,17 @@ const BodyImagePart = () => {
         {/* Body Background */}
         <div
           style={{ backgroundImage: `url(${body})` }}
-          className="absolute inset-0 bg-contain bg-no-repeat bg-center xl:w-full xl:h-full max-xl:bg-BackgroundSize max-sm:bg-positionSmaller"
+          className="absolute inset-0 bg-contain bg-no-repeat bg-center xl:w-full xl:h-full xl:bg-positionSmall max-sm:bg-positionSmaller"
         />
 
         {/* Nerves Image */}
         <img
-  src={nerves}
-  alt="nerves"
-  className={`relative z-5 -left-3 max-md:-left-2 max-sm:left-[-6px] -top-16 sm:w-10/12 lg:w-[95%] md:w-full xl:w-[75%] h-auto object-contain w-full transition-all duration-[2000ms] ease-in-out ${
-    isInView ? 'scale-105' : 'scale-75'
-  }`}
-/>
-
+          src={nerves}
+          alt="nerves"
+          className={`relative z-5 -left-3 max-md:-left-2 max-sm:left-[-6px] -top-16 sm:w-10/12 lg:w-[95%] md:w-full xl:w-[65%] h-auto object-contain w-full transition-all duration-[2000ms] ease-in-out ${
+            isInView ? "scale-105" : "scale-75"
+          }`}
+        />
       </div>
     </div>
   );

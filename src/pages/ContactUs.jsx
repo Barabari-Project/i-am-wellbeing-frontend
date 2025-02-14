@@ -78,97 +78,81 @@ const ContactUs = () => {
             ></div>
 
             {/* Form */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Be an Agent of Change!
-              </h2>
-              <p className="text-gray-600 mb-8 max-md:text-justify text-xl max-md:text-lg text-justify">
-                In a country like ours, there can never be too many mental
-                health professionals, especially those working with people
-                coming from marginalised sections of society. Join us in the
-                capacity of a volunteer/intern/full-time member to be an agent
-                of change in someone's life.
-              </p>
-              <form
-                className="space-y-6 border-[2px] border-[#029390] rounded-xl p-10"
-                onSubmit={(e) => handleSubmit(e, sendMessage)}
-              >
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-lg font-medium text-gray-700"
-                  >
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your Name"
-                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-lg font-medium text-gray-700"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="Your Email"
-                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-lg font-medium text-gray-700"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="Your Phone Number"
-                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-lg font-medium text-gray-700"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Your Message"
-                    className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-1 focus:ring-[#bfe769] focus:outline-none focus:border-[#bfe769]"
-                    rows="4"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-3 bg-[#bfe769] placeholder:text-[#8db538] text-white font-semibold rounded-lg hover:bg-[#aae230] transition duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+            <div className="max-w-3xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+  <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+    Be an Agent of Change!
+  </h2>
+  <p className="text-gray-600 mb-8 text-lg sm:text-xl text-justify">
+    In a country like ours, there can never be too many mental health professionals, especially those working with people coming from marginalized sections of society. Join us in the capacity of a volunteer/intern/full-time member to be an agent of change in someone's life.
+  </p>
+  <form
+    className="space-y-6 border-2 border-[#029390] rounded-xl p-6 sm:p-10 bg-white shadow-lg"
+    onSubmit={(e) => handleSubmit(e, sendMessage)}
+  >
+    <div>
+      <label htmlFor="name" className="block text-lg font-medium text-gray-700">
+        Name
+      </label>
+      <input
+        id="name"
+        type="text"
+        value={formData.name}
+        onChange={handleInputChange}
+        placeholder="Your Name"
+        className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-2 focus:ring-[#bfe769] focus:outline-none"
+        required
+      />
+    </div>
+    <div>
+      <label htmlFor="email" className="block text-lg font-medium text-gray-700">
+        Email
+      </label>
+      <input
+        id="email"
+        type="email"
+        value={formData.email}
+        onChange={handleInputChange}
+        placeholder="Your Email"
+        className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-2 focus:ring-[#bfe769] focus:outline-none"
+        required
+      />
+    </div>
+    <div>
+      <label htmlFor="phone" className="block text-lg font-medium text-gray-700">
+        Phone
+      </label>
+      <input
+        id="phone"
+        type="tel"
+        value={formData.phone}
+        onChange={handleInputChange}
+        placeholder="Your Phone Number"
+        className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-2 focus:ring-[#bfe769] focus:outline-none"
+        required
+      />
+    </div>
+    <div>
+      <label htmlFor="message" className="block text-lg font-medium text-gray-700">
+        Message
+      </label>
+      <textarea
+        id="message"
+        value={formData.message}
+        onChange={handleInputChange}
+        placeholder="Your Message"
+        className="w-full px-4 py-2 border border-[#bfe769] placeholder:text-[#8db538] rounded-lg focus:ring-2 focus:ring-[#bfe769] focus:outline-none"
+        rows="4"
+        required
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      className="w-full py-3 bg-[#bfe769] text-white font-semibold rounded-lg hover:bg-[#aae230] transition duration-300"
+    >
+      Send Message
+    </button>
+  </form>
+</div>
           </div>
         </section>
 
@@ -233,7 +217,7 @@ const ContactUs = () => {
               <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center max-md:text-left">
                 Join Hands with Us
               </h1>
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed max-md:text-justify max-md:text-lg">
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed max-md:text-justify max-md:text-lg text-justify">
               Change happens in collaboration, not isolation. Whether you are a corporate organization or a not-for-profit foundation, a school or an institution, a hospital or a government office, join us so we can add to the level of  impact in your community. We are equipped to offer specialised support to humans from all walks of life, from corporate trainings to SEL modules, from individual to group interventions. 
               </p>
               <form

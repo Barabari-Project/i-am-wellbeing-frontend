@@ -9,8 +9,6 @@ const helplessnessImg = `${
 const safeImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/safe.png`;
 const selfImg = `${import.meta.env.VITE_PUBLIC_URL}/mediaImg/self.png`;
 
-
-
 import greenbg from "../imgs/program-images/greenbg2.png";
 const calendarBg = `${
   import.meta.env.VITE_PUBLIC_URL
@@ -21,7 +19,6 @@ import support from "../imgs/program-images/support.webp";
 import textAboveImg from "../imgs/program-images/supportImg.png";
 
 const Media = () => {
-
   const data = [
     {
       video: "https://www.youtube.com/watch?v=1mAtRJVRg2w",
@@ -90,22 +87,19 @@ const Media = () => {
     },
   ];
 
-
- 
-  
-
   return (
     <>
-      <section className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%] ">
+      <section className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%] mt-5 ">
         {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom  max-lg:pb-10"
+          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
           <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
             Resources
           </h1>
         </div>
+
         <div className="  p-4 lg:p-4 px-[8%] max-md:px-5  xxxl:px-[14%] border-blue-500">
           {/* top img of arya */}
           {/* 3slides of arya */}
@@ -161,139 +155,142 @@ const Media = () => {
 
               {/* Right side */}
               <div className="sm:flex sm:flex-wrap sm:flex-row sm:flex-1">
-  {data.map((item, index) => {
-    const videoId = item.video.split("v=")[1]?.split("&")[0] || item.video.split("/").pop();
-    return (
-      <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
-        <iframe
-          width="100%"
-          height="250"
-          src={`${item.video
-            .replace("watch?v=", "embed/")
-            .replace("youtu.be/", "www.youtube.com/embed/")}?loop=1&playlist=${videoId}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <h2 className="text-center font-bold text-lg p-2">{item.name}</h2>
-      </div>
-    );
-  })}
-</div>
-
+                {data.map((item, index) => {
+                  const videoId =
+                    item.video.split("v=")[1]?.split("&")[0] ||
+                    item.video.split("/").pop();
+                  return (
+                    <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-2">
+                      <iframe
+                        width="100%"
+                        height="250"
+                        src={`${item.video
+                          .replace("watch?v=", "embed/")
+                          .replace(
+                            "youtu.be/",
+                            "www.youtube.com/embed/"
+                          )}?loop=1&playlist=${videoId}`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                      <h2 className="text-center font-bold text-lg p-2">
+                        {item.name}
+                      </h2>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>{" "}
         </div>
 
         {/* Grief Support Booklet  */}
 
-        <div className="mt-6 ">
-  <h1 className="text-4xl font-bold max-md:text-3xl lg:pl-11 max-md:px-5">
-    Grief Support Booklet
-  </h1>
-  
-  {/* Main Content Container */}
-  <div className="flex flex-col lg:flex-row gap-8 mt-8 lg:px-11 max-md:px-5 ">
-      {/* Text Content - Left Side */}
-      <div className="w-full lg:w-1/2 flex flex-col ">
-      <div className="mb-10 w-full flex justify-center">
-        <img src={textAboveImg} alt="girl & boy sitting at the edge of the beach" />
-      </div>
-        <p className="text-justify text-[20px] font-thin max-md:text-lg">
-          Grief is an ocean that is ever-consuming and ever-flowing. It is not
-          something to get rid of and definitely not easy to live with. There is no
-          right way to work with it. All we can try is to hold space for it, be
-          gentle with it, and allow it to move at its own pace.
-        </p>
-        <p className="text-justify text-[20px] max-md:text-lg font-thin mt-8">
-          Here is a booklet that we have designed to add a drop of support in the
-          ocean of this unknown. This booklet is for anyone supporting a dear one
-          through their journey with grief.
-        </p>
-      </div>
+        <div className="container  px-4 md:px-6 lg:px-8 pt-12 w-full h-full">
+          {/* Grief Support Section */}
+          <section className=" gap-20 w-full h-full">
+            <h1 className="px-4 lg:px-11 max-md:px-0 text-5xl font-bold max-md:text-3xl">
+              Grief Support Booklet
+            </h1>
 
-      {/* Image Container - Right Side */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center">
-        <div className="w-[500px] h-full"
-        style={{
-          backgroundImage: `url(${calendarBg})`,
-          backgroundSize: "cover", // Ensures the background covers the div
-          backgroundPosition: "center", // Centers the background
-        }}
-        >
-          <a
-            href="https://drive.google.com/file/d/123F9-Wx457Vn4zDGqQW00nQo4M-vfOjd/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full"
-          >
-            <img
-              loading="lazy"
-              src={support}
-              alt="support"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
-</div>
+            <div className="grid lg:grid-cols-2 gap-12 xl:gap-16 items-center -mt-7">
+              {/* Text Content */}
+              <div className="space-y-8 lg:px-4  mt-[4%] gap-5 leading-8">
+                <p className="text-lg leading-relaxed px-4 lg:px-11 max-md:p-0 text-gray-700 md:text-xl md:leading-loose">
+                  Grief is an ocean that is ever-consuming and ever-flowing. It
+                  is not something to get rid of and definitely not easy to live
+                  with. There is no right way to work with it. All we can try is
+                  to hold space for it, be gentle with it, and allow it to move
+                  at its own pace.
+                </p>
 
+                <p className="text-lg leading-relaxed px-4 lg:px-11 max-md:p-0 text-gray-700 md:text-xl md:leading-loose">
+                  Here is a booklet that we have designed to add a drop of
+                  support in the ocean of this unknown. This booklet is for
+                  anyone supporting a dear one through their journey with grief.
+                </p>
+              </div>
 
-        {/* Self-Care Calendar  */}
+              {/* Image Container */}
+              <div
+                className="w-full h-full bg-center bg-contain bg-no-repeat"
+                style={{ backgroundImage: `url(${calendarBg})` }}
+              >
+                <div className="relative max-w-2xl mx-auto">
+                  <a
+                    href="https://drive.google.com/file/d/123F9-Wx457Vn4zDGqQW00nQo4M-vfOjd/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <img
+                      src={support}
+                      alt="Grief Support Booklet"
+                      className="w-[57%] mx-auto max-lg:w-10/12 "
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
 
-        <div className="mt-8 max-md:p-5"> {/* Changed from sm:-mt-[20%] */}
-        <h1 className="px-4 lg:px-11 max-md:px-0 text-4xl font-bold max-md:text-3xl">
-    Self-Care Calendar
-  </h1>
-          {/* ------------------------------- */}
-          <div className="sm:flex mt-[4%] gap-5 leading-8">
-            <p className="text-justify text-[20px] font-thin px-4 lg:px-11 max-md:p-0 max-md:text-lg">
-              Self-Care Calendar, as the name suggests, is a thoughtfully
-              designed tool that can be used by anyone to support them in their
-              healing journey. It incorporates the mind-body-spirit triad and
-              focuses on regulation and slow integration. Whether you are
-              looking for some grounding exercises or just simple ways of
-              connecting with yourself, this self-care calendar takes you on a
-              journey that slowly enhances your ability to support yourself.{" "}
-              <br />
-              <br />
-              Taking care of ourselves is the truest form of
-              self-acknowledgement and acceptance. It is a step we take not to
-              change anything about ourselves but to allow our body to receive
-              rest, compassion, and nurturance. <br />
-              <br />
-              Build in this 30-day Self-Care routine and allow yourself to soak
-              in rest and slowness. If you find this helpful, write to us at
-              info@iamwellbeing.in with your feedback and suggestions. <br />
-              <br />
-            </p>
-          </div>
+          {/* Self-Care Calendar Section */}
+          <div className=" max-md:p-5">
+            <h1 className="px-4 lg:px-11 max-md:px-0 text-4xl font-bold max-md:text-3xl">
+              Self-Care Calendar
+            </h1>
 
-          <div
-            style={{
-              backgroundImage: `url(${calendarBg})`,
-              backgroundSize: "contain", // Ensures the background covers the div
-              backgroundPosition: "left", // Centers the background
-            }}
-            className="flex items-center justify-center h-full" // Flexbox to center the image
-          >
-            <a
-              href="https://drive.google.com/file/d/1hZKTmrJrd7DCYk2e0tTH6nni1foR4jfR/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
+            <div className="sm:flex mt-[4%] gap-5 leading-8">
+              <p className="text-justify text-[20px] font-thin px-4 lg:px-11 max-md:p-0 max-md:text-lg">
+                Self-Care Calendar, as the name suggests, is a thoughtfully
+                designed tool that can be used by anyone to support them in
+                their healing journey. It incorporates the mind-body-spirit
+                triad and focuses on regulation and slow integration. Whether
+                you are looking for some grounding exercises or just simple ways
+                of connecting with yourself, this self-care calendar takes you
+                on a journey that slowly enhances your ability to support
+                yourself. <br />
+                <br />
+                Taking care of ourselves is the truest form of
+                self-acknowledgement and acceptance. It is a step we take not to
+                change anything about ourselves but to allow our body to receive
+                rest, compassion, and nurturance. <br />
+                <br />
+                Build in this 30-day Self-Care routine and allow yourself to
+                soak in rest and slowness. If you find this helpful, write to us
+                at info@iamwellbeing.in with your feedback and suggestions.{" "}
+                <br />
+                <br />
+              </p>
+            </div>
+
+            {/* Updated Calendar Background Section */}
+            <div
+              style={{
+                backgroundImage: `url(${calendarBg})`,
+                backgroundSize: "88%", // Increases background size
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              className="flex items-center justify-center min-h-[400px] lg:min-h-[850px] max-lg:min-h-[700px] w-full smallBg"
             >
-              <img
-                loading="lazy"
-                src={calendar}
-                alt="selfcare"
-                className="lg:w-[60%] max-md:w-[100%] max-w-full h-auto m-auto object-contain" // Maintains aspect ratio
-              />
-            </a>
+              <a
+                href="https://drive.google.com/file/d/1hZKTmrJrd7DCYk2e0tTH6nni1foR4jfR/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full max-w-[90%] md:max-w-[70%] lg:max-w-[60%] "
+              >
+                <img
+                  loading="lazy"
+                  src={calendar}
+                  alt="selfcare"
+                  className="w-full h-auto object-contain"
+                />
+              </a>
+            </div>
           </div>
-
-          <div></div>
-          {/* ------------------------------------ */}
         </div>
       </section>
     </>

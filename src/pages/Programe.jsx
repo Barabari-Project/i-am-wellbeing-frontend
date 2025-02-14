@@ -6,8 +6,8 @@ import ResponsiveCardSlider from "../components/CardCarousel";
 const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
 // const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/6.svg`;
 // const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/2.svg`;
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const anubho1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/1.svg`;
 const anubho2 = `${
@@ -66,16 +66,16 @@ const Programe = () => {
   };
   const cardSection1 = [
     {
-      text: 'Specialized curriculum for trauma-informed training',
+      text: "Specialized curriculum for trauma-informed training",
     },
     {
-      text: 'Rooted in the socio-cultural context of India',
+      text: "Rooted in the socio-cultural context of India",
     },
     {
-      text: 'Identification, assessment, and working with trauma',
+      text: "Identification, assessment, and working with trauma",
     },
   ];
-  
+
   const cardSection2 = [
     {
       text: "Holistic, long-term and consistent therapeutic support",
@@ -216,11 +216,11 @@ const Programe = () => {
       <section id="anubho" className="mb-9 ">
         {/* header of anubho */}
         <div
-          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom "
+          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
-          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl ">
-          Anubhoo
+          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
+            Anubhoo
           </h1>
         </div>
         <div className=" p-4 lg:p-4 px-4 xxxl:px-[14%] max-md:px-5 ">
@@ -245,16 +245,15 @@ const Programe = () => {
           </div>
 
           {/* 3slides of anubho */}
-          <ResponsiveCardSlider
-  cards={cardSection1}
-/>
+          <ResponsiveCardSlider cards={cardSection1} />
 
-
-          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center">Depth of change</h1>
+          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center max-md:mb-14">
+            Depth of change
+          </h1>
 
           <div className="px-4 lg:pl-11 flex flex-col-reverse  md:flex-row max-md:p-0 ">
-            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg">
-              <p className="text-justify  font-thin">
+            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:-mt-10 ">
+              <p className="text-justify  font-thin leading-10">
                 The change we aim to bring through our training initiatives,
                 especially the TICP course reaches the depths of the nervous
                 system. Shifts observed over the past cohorts have been nothing
@@ -265,61 +264,50 @@ const Programe = () => {
                 just starting out and a whole new lens of understanding for
                 experienced professionals. <br />
                 <br />
+              </p>
+              <p className="text-justify  font-thin leading-10 mt-4">
                 Additionally, our Short Training programme has been a successful
                 capsule for introducing young professionals in the field to
                 different modalities of intervention. These trainings have
                 provided a safe space for individuals to explore how their
                 nervous systems interact with different approaches.
               </p>
-              <h1 className="text-left w-[99%] font-bold text-4xl max-md:text-3xl py-5">
-          Corporate and Institutional Trainings
-            </h1>
-              <p className="text-justify  font-thin">
-                In addition to training mental health professionals in the
-                field, we are dedicated to creating a holistic system of support
-                for anyone engaging in meaningful interactions with other human
-                beings. Our efforts extend beyond traditional mental health
-                settings to include the facilitation of diverse corporate and
-                institutional training programs aimed at enhancing individual
-                and collective well-being. <br /> 
-                For corporate settings, we provide specialized training such as
-
-                <div className="w-[90%] absolute mt-5">
-                POSH (Prevention of Sexual Harassment) to ensure safe and inclusive workplaces, training aimed at Team Building and
-                developing a Healthy Work Environment
-                </div>
-                
-                <br /> <br /></p>
             </div>
-              <BodyImagePart className="w-full h-auto object-cover" />
+            <BodyImagePart className="w-full h-auto object-cover" />
           </div>
-
-          <div className="px-4 lg:px-11  max-md:pt-6 max-md:px-0">
-          
-            {/* ------------------------------- */}
-            <div className="sm:flex mt-6 gap-5 leading-8 mb-4 text-xl max-md:text-lg">
-              <p>
-                 productivity and
-                team satisfaction. <br /> <br />
-                In educational and institutional contexts, we prioritize the
-                well-being of all individuals by offering programmes focused on
-                Teachers' Well-being, equipping them with Emotional Regulation
-                Tools to navigate stress, build mindfulness, and foster a
-                healthier and safer environment for both students and teachers.{" "}
-                Our comprehensive approach acknowledges that mental and
-                emotional health are integral to every aspect of human
-                interaction. By addressing these areas, we aim to cultivate
-                environments where individuals and teams can feel a sense of
-                safety and security and thrive both personally and
-                professionally.
+          <div className="px-4 lg:px-11 max-md:pt-6 max-md:px-0 max-lg:-mt-2 lg:-mt-32">
+            <div className="flex  flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
+              <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5">
+                Corporate and Institutional Trainings
+              </h1>
+              <p className="font-thin leading-10">
+                In addition to training mental health professionals, we are
+                dedicated to creating a holistic system of support for anyone
+                engaging in meaningful interactions. Our efforts extend beyond
+                traditional mental health settings to include corporate and
+                institutional training programs aimed at enhancing well-being.
               </p>
+
+            <p className="mt-5 leading-8">
+              For corporate settings, we provide specialized training such as
+              POSH (Prevention of Sexual Harassment) to ensure safe and
+              inclusive workplaces, as well as programs focused on team building
+              and developing a healthy work environment to improve productivity
+              and team satisfaction.
+            </p>
+
+            <p className="mt-5 leading-8">
+              In educational and institutional contexts, we offer programs
+              focused on teachers' well-being, equipping them with emotional
+              regulation tools to manage stress, build mindfulness, and foster a
+              safer environment for students and teachers. Our comprehensive
+              approach acknowledges that mental and emotional health are
+              integral to human interaction, helping individuals and teams
+              thrive both personally and professionally.
+            </p>
             </div>
-            {/* collage image */}
-            {/* <img src={collage} alt="collage" className="md:w-[80%] md:h-[30%] object-cover m-auto mt-10"/> */}
 
             <CollageImage />
-
-            <div></div>
           </div>
 
           {/* content data */}
@@ -334,10 +322,10 @@ const Programe = () => {
       <section id="udaan">
         {/* header of udan */}
         <div
-          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom "
+          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
-          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] text-white md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
+          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl ">
             Udaan
           </h1>
         </div>
@@ -362,17 +350,22 @@ const Programe = () => {
               </p>
             </div>
             <div className="w-[100%] lg:w-[70%] sm:pr-0  m-auto max-md;:w-full max-md:pr-0 max-md:m-auto">
-              <img loading="lazy" src={udan1} alt="anubho image " className="max-md:m-auto"/>
+              <img
+                loading="lazy"
+                src={udan1}
+                alt="anubho image "
+                className="max-md:m-auto"
+              />
             </div>
           </div>
           {/* 3slides of udan */}
-          <ResponsiveCardSlider
-  cards={cardSection2}
-/>
+          <ResponsiveCardSlider cards={cardSection2} />
 
           {/* content data */}
           <div className="px-4 lg:px-14 max-md:px-0">
-            <h1 className="text-4xl font-bold mb-[3%] max-md:text-3xl">Reach of change</h1>
+            <h1 className="text-4xl font-bold mb-[3%] max-md:text-3xl">
+              Reach of change
+            </h1>
             {/* ------------------------------- */}
 
             {/* ------------------------------------ */}
@@ -461,7 +454,7 @@ const Programe = () => {
       <section id="arya" className="mb-9">
         {/* header of arya */}
         <div
-          className="bg-cover  px-5 pt-10 pb-16  bg-no-repeat bg-bottom "
+          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
           style={{ backgroundImage: `url(${yellowbgnew1})` }}
         >
           <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
@@ -492,13 +485,12 @@ const Programe = () => {
             </div>
           </div>
           {/* 3slides of arya */}
-          <ResponsiveCardSlider
-  cards={cardSection3} 
-
-/>
+          <ResponsiveCardSlider cards={cardSection3} />
           {/* content data */}
           <div className="px-4 lg:px-11 ">
-            <h1 className="text-4xl font-bold max-md:text-3xl">Community level change</h1>
+            <h1 className="text-4xl font-bold max-md:text-3xl">
+              Community level change
+            </h1>
             {/* ------------------------------- */}
             <div className="sm:flex mt-[4%] gap-5 leading-8 text-xl max-md:text-lg max-md:pb-8">
               <p className="text-justify font-thin">

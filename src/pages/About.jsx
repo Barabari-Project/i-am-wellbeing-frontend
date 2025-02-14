@@ -8,7 +8,7 @@ const AkanshaChandrel = `${
 }/aboutus-images/worker1.png`;
 const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
 const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
-
+const greenBackground = "/src/imgs/program-images/greenbg2.png";
 // team images
 const team1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_1.png`;
 const team2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_2.png`;
@@ -279,16 +279,10 @@ const About = () => {
         </div>
         <div className="our-team mt-10">
           <div
-            className="text-4xl md:text-6xl text-white font-bold relative p-1 h-[80px] lg:h-[120px]"
-            style={{
-              backgroundColor: "#029390",
-              backgroundImage: `url(${greenBg})`,
-              backgroundSize: "100% auto",
-              backgroundRepeat: "repeat-x",
-              backgroundPosition: "bottom left",
-            }}
+            className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center  px-5 pt-10 pb-16 max-lg:pb-10"
+            style={{ backgroundImage: `url(${greenBackground})` }}
           >
-            <h1 className="absolute  top-4 lg:top-5 left-2 lg:text-6xl text-3xl lg:mt-0 font-semibold">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
               Core Team
             </h1>
           </div>
@@ -331,17 +325,11 @@ const About = () => {
         </div>
 
         <div className="our-consultant mt-10">
-          <div
-            className="text-4xl md:text-6xl text-white font-bold relative h-[80px] lg:h-[120px]"
-            style={{
-              backgroundColor: "#029390",
-              backgroundImage: `url(${greenBg})`,
-              backgroundSize: "100% auto",
-              backgroundRepeat: "repeat-x",
-              backgroundPosition: "bottom left",
-            }}
+        <div
+            className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center  px-5 pt-10 pb-16 max-lg:pb-10"
+            style={{ backgroundImage: `url(${greenBackground})` }}
           >
-            <h1 className="absolute  top-4 lg:top-5 left-2 lg:text-6xl text-3xl lg:mt-0 font-semibold">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
               Our Consultants
             </h1>
           </div>

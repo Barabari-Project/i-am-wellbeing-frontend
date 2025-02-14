@@ -20,7 +20,7 @@ import graidingImg from "../imgs/home-images/graiding.png";
 const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
-import flowChart from "../imgs/home-images/flow-chart.png";
+import flowChart from "../imgs/home-images/Critical Analysis.png";
 
 import Faq from "../components/Faq";
 import Model from "../components/Model";
@@ -112,78 +112,65 @@ const Ticp = () => {
       </div>
 
       <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
-        <div className="about-us text-xl">
-          <h2 className="title text-4xl font-bold  max-md:text-3xl pl-2 max-md:px-5">
-            About us
-          </h2>
-          <div className="px-4 pb-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
-
-          <p className="mt-2 leading-8 text-justify lg:text-wrap w-[95%] m-auto lg:w-full max-md:m-0 max-md:w-full">
-            Trauma is the most unaddressed and unseen epidemic in today’s time.
-            Seven out of ten children in India experience some form of adversity
-            at an early age. If left unaddressed, these painful experiences can
-            haunt them for the rest of their lives, deeply impacting their
-            mental, emotional, and physical wellbeing.
-          </p>
-
-          <p className="leading-8 text-justify w-[95%] m-auto lg:w-full  max-md:m-0 max-md:w-full max-md:mt-3">
-            I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
-            profit organization dedicated to supporting such young lives
-            struggling with adverse childhood experiences and building an
-            ecosystem of trusted, available, trained adults. We believe in the
-            power of compassion, connection, and care to develop a healthy and
-            happy nation.
-          </p>
-          </div>
-          <div className="bg-[#FFDE59]  p-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg xl:p-6">
-            <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">Rationale</h2>
-            <p className="mb-3 leading-8 text-justify">
-              While the last decade has highlighted the significant need for
-              mental health interventions, it has also{" "}
-              <b>
-                <i>exposed the scarcity of trained professionals</i>
-              </b>{" "}
-              compared to the staggeringly high number of people in need of
-              mental health care and support in India. With each passing day we
-              get to witness a new statistic or data related to
-              <b>
-                <i>
-                  {" "}
-                  increasingly high number of deaths by suicide, depression
-                  rate, severe mental health and physical health concerns like
-                  chronic illnesses, heart problems, and autoimmune diseases.
-                </i>
-              </b>
-            </p>
-            <p className="leading-8 text-justify">
-              The key to mitigating the impact of the perpetually increasing
-              wellbeing concerns in our country is to look beyond the presenting
-              symptoms of an individual and work towards the root cause through
-              a holistic and trauma- informed outlook.
-            </p>
-            <p className="leading-8 text-justify">
-              We strive to fulfill this unmet need of quality mental health care
-              by{" "}
-              <b>
-                <i>building the capacity of professionals</i>
-              </b>{" "}
-              towards adapting a trauma- informed approach that is inclusive,
-              contextualised, and de-stigmatising. To bring this shift in
-              managing mental health concerns, we have designed a{" "}
-              <b>
-                <i>6 months long coursework</i>
-              </b>{" "}
-              on trauma- informed care practices. Experts from the field will
-              support the participants to build a trauma-informed lens for
-              intervention planning.
-            </p>
-
-            <p>
-              The course will create an understanding of evidence-based holistic
-              tools used to process deep-rooted trauma.
-            </p>
-          </div>
-        </div>
+      <div className="about-us text-xl w-full max-w-screen-xl mx-auto ">
+  <h2 className="title text-4xl font-bold max-md:text-3xl pl-2 max-md:px-5 lg:px-5">
+    About us
+  </h2>
+  <div className="px-4 pb-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg lg:px-5">
+    <p className="mt-2 leading-8 text-justify w-full">
+      Trauma is the most unaddressed and unseen epidemic in today’s time.
+      Seven out of ten children in India experience some form of adversity
+      at an early age. If left unaddressed, these painful experiences can
+      haunt them for the rest of their lives, deeply impacting their
+      mental, emotional, and physical wellbeing.
+    </p>
+    <p className="leading-8 text-justify w-full mt-3">
+      I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
+      profit organization dedicated to supporting such young lives
+      struggling with adverse childhood experiences and building an
+      ecosystem of trusted, available, trained adults. We believe in the
+      power of compassion, connection, and care to develop a healthy and
+      happy nation.
+    </p>
+  </div>
+  <div className="bg-[#FFDE59] p-6 text-xl max-md:text-lg w-full">
+    <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">Rationale</h2>
+    <p className="mb-3 leading-8 text-justify">
+      While the last decade has highlighted the significant need for
+      mental health interventions, it has also
+      <b><i> exposed the scarcity of trained professionals</i></b>
+      compared to the staggeringly high number of people in need of
+      mental health care and support in India. With each passing day we
+      get to witness a new statistic or data related to
+      <b><i>
+        increasingly high number of deaths by suicide, depression
+        rate, severe mental health and physical health concerns like
+        chronic illnesses, heart problems, and autoimmune diseases.
+      </i></b>
+    </p>
+    <p className="leading-8 text-justify">
+      The key to mitigating the impact of the perpetually increasing
+      wellbeing concerns in our country is to look beyond the presenting
+      symptoms of an individual and work towards the root cause through
+      a holistic and trauma-informed outlook.
+    </p>
+    <p className="leading-8 text-justify">
+      We strive to fulfill this unmet need of quality mental health care
+      by <b><i>building the capacity of professionals</i></b>
+      towards adapting a trauma-informed approach that is inclusive,
+      contextualized, and de-stigmatizing. To bring this shift in
+      managing mental health concerns, we have designed a
+      <b><i>6 months long coursework</i></b>
+      on trauma-informed care practices. Experts from the field will
+      support the participants to build a trauma-informed lens for
+      intervention planning.
+    </p>
+    <p className="leading-8 text-justify">
+      The course will create an understanding of evidence-based holistic
+      tools used to process deep-rooted trauma.
+    </p>
+  </div>
+</div>
         <div className="Activities px-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
           <h2 className="title text-4xl font-bold mb-1 py-4 max-md:text-3xl max-md:text-left">
             Course Activities & Duration
