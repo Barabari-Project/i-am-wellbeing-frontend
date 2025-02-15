@@ -49,7 +49,7 @@ const Header = () => {
         </div>
 
         <div className="w-[100%] m-auto shadow-lg   items-center justify-between p-8  sm:flex hidden">
-          <div className="logo z-50 w-[120px] absolute top-5 left-5 hidden md:block">
+          <div className="logo z-50 w-[120px] absolute top-4 left-5 hidden md:block">
             <Link to="/">
               <LazyLoadImage
                 src={logo}

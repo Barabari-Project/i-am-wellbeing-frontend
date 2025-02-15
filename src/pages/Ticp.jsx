@@ -112,71 +112,81 @@ const Ticp = () => {
       </div>
 
       <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
-      <div className="about-us text-xl w-full max-w-screen-xl mx-auto ">
-  <h2 className="title text-4xl font-bold max-md:text-3xl pl-2 max-md:px-5 lg:px-5">
-    About us
-  </h2>
-  <div className="px-4 pb-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg lg:px-5">
-    <p className="mt-2 leading-8 text-justify w-full">
-      Trauma is the most unaddressed and unseen epidemic in today’s time.
-      Seven out of ten children in India experience some form of adversity
-      at an early age. If left unaddressed, these painful experiences can
-      haunt them for the rest of their lives, deeply impacting their
-      mental, emotional, and physical wellbeing.
-    </p>
-    <p className="leading-8 text-justify w-full mt-3">
-      I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
-      profit organization dedicated to supporting such young lives
-      struggling with adverse childhood experiences and building an
-      ecosystem of trusted, available, trained adults. We believe in the
-      power of compassion, connection, and care to develop a healthy and
-      happy nation.
-    </p>
-  </div>
-  <div className="bg-[#FFDE59] p-6 text-xl max-md:text-lg w-full">
-    <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">Rationale</h2>
-    <p className="mb-3 leading-8 text-justify">
-      While the last decade has highlighted the significant need for
-      mental health interventions, it has also
-      <b><i> exposed the scarcity of trained professionals</i></b>
-      compared to the staggeringly high number of people in need of
-      mental health care and support in India. With each passing day we
-      get to witness a new statistic or data related to
-      <b><i>
-        increasingly high number of deaths by suicide, depression
-        rate, severe mental health and physical health concerns like
-        chronic illnesses, heart problems, and autoimmune diseases.
-      </i></b>
-    </p>
-    <p className="leading-8 text-justify">
-      The key to mitigating the impact of the perpetually increasing
-      wellbeing concerns in our country is to look beyond the presenting
-      symptoms of an individual and work towards the root cause through
-      a holistic and trauma-informed outlook.
-    </p>
-    <p className="leading-8 text-justify">
-      We strive to fulfill this unmet need of quality mental health care
-      by <b><i>building the capacity of professionals</i></b>
-      towards adapting a trauma-informed approach that is inclusive,
-      contextualized, and de-stigmatizing. To bring this shift in
-      managing mental health concerns, we have designed a
-      <b><i>6 months long coursework</i></b>
-      on trauma-informed care practices. Experts from the field will
-      support the participants to build a trauma-informed lens for
-      intervention planning.
-    </p>
-    <p className="leading-8 text-justify">
-      The course will create an understanding of evidence-based holistic
-      tools used to process deep-rooted trauma.
-    </p>
-  </div>
-</div>
+        <div className="about-us text-xl w-full max-w-screen-xl mx-auto ">
+          <h2 className="title text-4xl font-bold max-md:text-3xl pl-2 max-md:px-5 lg:px-5">
+            About us
+          </h2>
+          <div className="px-4 pb-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg lg:px-5">
+            <p className="mt-2 leading-8 text-justify w-full">
+              Trauma is the most unaddressed and unseen epidemic in today’s
+              time. Seven out of ten children in India experience some form of
+              adversity at an early age. If left unaddressed, these painful
+              experiences can haunt them for the rest of their lives, deeply
+              impacting their mental, emotional, and physical wellbeing.
+            </p>
+            <p className="leading-8 text-justify w-full mt-3">
+              I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
+              profit organization dedicated to supporting such young lives
+              struggling with adverse childhood experiences and building an
+              ecosystem of trusted, available, trained adults. We believe in the
+              power of compassion, connection, and care to develop a healthy and
+              happy nation.
+            </p>
+          </div>
+          <div className="bg-[#FFDE59] p-6 text-xl max-md:text-lg w-full">
+            <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">
+              Rationale
+            </h2>
+            <p className="mb-3 leading-8 text-justify">
+              While the last decade has highlighted the significant need for
+              mental health interventions, it has also
+              <b>
+                <i> exposed the scarcity of trained professionals</i>
+              </b>
+              compared to the staggeringly high number of people in need of
+              mental health care and support in India. With each passing day we
+              get to witness a new statistic or data related to
+              <b>
+                <i>
+                  increasingly high number of deaths by suicide, depression
+                  rate, severe mental health and physical health concerns like
+                  chronic illnesses, heart problems, and autoimmune diseases.
+                </i>
+              </b>
+            </p>
+            <p className="leading-8 text-justify">
+              The key to mitigating the impact of the perpetually increasing
+              wellbeing concerns in our country is to look beyond the presenting
+              symptoms of an individual and work towards the root cause through
+              a holistic and trauma-informed outlook.
+            </p>
+            <p className="leading-8 text-justify">
+              We strive to fulfill this unmet need of quality mental health care
+              by{" "}
+              <b>
+                <i>building the capacity of professionals</i>
+              </b>
+              towards adapting a trauma-informed approach that is inclusive,
+              contextualized, and de-stigmatizing. To bring this shift in
+              managing mental health concerns, we have designed a
+              <b>
+                <i>6 months long coursework</i>
+              </b>
+              on trauma-informed care practices. Experts from the field will
+              support the participants to build a trauma-informed lens for
+              intervention planning.
+            </p>
+            <p className="leading-8 text-justify">
+              The course will create an understanding of evidence-based holistic
+              tools used to process deep-rooted trauma.
+            </p>
+          </div>
+        </div>
         <div className="Activities px-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
           <h2 className="title text-4xl font-bold mb-1 py-4 max-md:text-3xl max-md:text-left">
             Course Activities & Duration
           </h2>
           <p className="leading-8 text-justify w-[95%] m-auto lg:w-full  max-md:m-0 max-md:w-full max-md:mt-3">
-          
             The coursework will encompass various activities like online
             learning/theory sessions, practical and viva, assignments, project
             submission and class discussions. There are a total of five modules
@@ -199,28 +209,30 @@ const Ticp = () => {
 
           <div className="activit-list flex flex-wrap justify-between mt-5 p-4">
             <div className="table-list  text-md text-center font-bold  flex lg:flex-row flex-col gap-2 lg:gap-0 items-center justify-between  w-full">
-              <table className="table-list text-md text-center font-bold border-[#029390] border-2 lg:w-[500px] ">
-                <tr>
-                  <td className="p-4 border-4 border-[#029390] ">
-                    2 Months of <br /> Theory Sessions
-                  </td>
-                  <td className="p-4 border-4  border-[#029390]">
-                    4 Months of <br /> Supervision
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 border-4 border-[#029390] ">
-                    Module-based <br /> Assignments
-                  </td>
-                  <td className=" p-4 border-4 border-[#029390] ">
-                    Five Case <br /> Submissions
-                  </td>
-                </tr>
-                <tr>
-                  <td colSpan="2" className="border-4 p-4 border-[#029390]">
-                    Knowledge Based Viva Assessment
-                  </td>
-                </tr>
+              <table className="table-list text-md text-center font-bold border-[#029390] border-2 lg:w-[500px]">
+                <tbody>
+                  <tr>
+                    <td className="p-4 border-4 border-[#029390]">
+                      2 Months of <br /> Theory Sessions
+                    </td>
+                    <td className="p-4 border-4 border-[#029390]">
+                      4 Months of <br /> Supervision
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 border-4 border-[#029390]">
+                      Module-based <br /> Assignments
+                    </td>
+                    <td className="p-4 border-4 border-[#029390]">
+                      Five Case <br /> Submissions
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colSpan="2" className="border-4 p-4 border-[#029390]">
+                      Knowledge Based Viva Assessment
+                    </td>
+                  </tr>
+                </tbody>
               </table>
 
               <div>
@@ -260,7 +272,9 @@ const Ticp = () => {
         </div>
 
         <div className="course policy mt-4 bg-[#FFDE59] p-6 max-md:p-5">
-          <h1 className="title text-4xl font-bold mb-1 max-md:text-3xl">Course Policies</h1>
+          <h1 className="title text-4xl font-bold mb-1 max-md:text-3xl">
+            Course Policies
+          </h1>
           <h1 className="title text-2xl font-bold mb-3 ">Contribution*</h1>
           <div className=" flex flex-col gap-5 text-xl max-md:text-lg">
             <p>
@@ -335,7 +349,9 @@ const Ticp = () => {
             completing the course, a viva will be conducted to assess
             participants' knowledge and skills.
           </p>
-          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">Grading Criteria</h1>
+          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">
+            Grading Criteria
+          </h1>
           <div className=" mt-2 text-xl max-md:text-lg">
             <p className="mb-2 text-justify">
               Following grading criteria is used for evaluation of both
@@ -360,17 +376,19 @@ const Ticp = () => {
           <h1 className="title text-2xl font-bold mb-3">
             Criteria for grading assignments
           </h1>
-{/* *************** that is much clear then before ************** */}
-          <div className='text-center w-10/12 flex items-center justify-center mx-auto max-md:w-full'>
-          <LazyLoadImage
-            // className="w-full m-auto text-center border-4 graiding-img"
-            src={flowChart}
-            alt="ticp4Img"
-            effect="blur" // Blur effect while loading
-            placeholder={<BlurryImages imgUrl={flowChart} />}
-          />
+          {/* *************** that is much clear then before ************** */}
+          <div className="text-center w-10/12 flex items-center justify-center mx-auto max-md:w-full">
+            <LazyLoadImage
+              // className="w-full m-auto text-center border-4 graiding-img"
+              src={flowChart}
+              alt="ticp4Img"
+              effect="blur" // Blur effect while loading
+              placeholder={<BlurryImages imgUrl={flowChart} />}
+            />
           </div>
-          <h1 className="title text-3xl font-bold mb-3 max-md:text-2xl">Eligibility</h1>
+          <h1 className="title text-3xl font-bold mb-3 max-md:text-2xl">
+            Eligibility
+          </h1>
           <ul className=" list-disc ml-6 mt-4  text-xl max-md:text-lg">
             <li className="mt-4">
               Students from psychology and allied field background
@@ -386,7 +404,9 @@ const Ticp = () => {
             Working mental health practitioners
           </p> */}
 
-          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">Scholarship Policy</h1>
+          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">
+            Scholarship Policy
+          </h1>
           <p className="mt-2 text-justify text-xl max-md:text-lg">
             We strongly believe that resources play a major role in shaping
             one’s life and no life should struggle to get what they deserve.
@@ -395,7 +415,9 @@ const Ticp = () => {
             communities. If you meet the criteria, 50% of your total course fees
             will be waived off
           </p>
-          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">How To Apply?</h1>
+          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">
+            How To Apply?
+          </h1>
           <div className="text-xl max-md:text-lg">
             <p className="mt-2 text-justify">
               Step-1: Fill out the application form. Check if you are eligible
@@ -413,7 +435,9 @@ const Ticp = () => {
               will be waived off
             </p>
           </div>
-          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">Impact </h1>
+          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">
+            Impact{" "}
+          </h1>
           <p className="text-xl max-md:text-lg mt-3 text-justify">
             Trauma is a near universal experience of individuals with behavioral
             health problems. The present times have brought to light the hidden
@@ -444,7 +468,9 @@ const Ticp = () => {
             <li className="mt-2">Connection between mind, body and soul</li>
           </ul>
 
-          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">Key Takeaways</h1>
+          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">
+            Key Takeaways
+          </h1>
           <ul className=" list-disc ml-6 mt-4 text-xl max-md:text-lg">
             <li className="mt-4">
               Get equipped with trauma-informed counselling skills for practical
@@ -467,7 +493,9 @@ const Ticp = () => {
         </div>
 
         <div className="know-your-trainner pl-2 mt-5">
-          <h1 className="text-4xl font-bold max-md:text-3xl max-md:text-center">Know Your Trainers</h1>
+          <h1 className="text-4xl font-bold max-md:text-3xl max-md:text-center">
+            Know Your Trainers
+          </h1>
           <div className="trainners grid  items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10">
             {team.map((trainer, index) => {
               return (

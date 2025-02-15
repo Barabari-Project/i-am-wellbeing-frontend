@@ -10,33 +10,22 @@ import animationimage7 from "../imgs/program-images/git9.gif";
 
 const WalkingPerson = () => {
   return (
-    <div className="flex pt-8 ">
-      <img
-        src={animationimage1}
-        alt="Character"
-        className="w-[14%] h-[50%] mt-[9%] object-cover"
-      />
-      <img
-        src={animationimage2}
-        alt="Character"
-        className="w-[14%]  mt-[6%] object-cover"
-      />
-      <img
-        src={animationimage3}
-        alt="Character"
-        className="w-[14%] mt-[2%] object-cover"
-      />
-      <img
-        src={animationimage4}
-        alt="Character"
-        className="w-[14%]  object-cover"
-      />
-      <img src={animationimage5} alt="Character" className="w-[14%] object-cover " />
-
-      <img src={animation6} alt="Character" className="w-[14%] mb-[2%] " />
-
-      <img src={animationimage7} alt="Character" className="w-[14%] mb-[2%] object-cover " />
-      {/* <img src={animation1} alt="Character" style={{ width: '150px' }} /> */}
+    <div className="relative flex pt-8 justify-center items-center flex-col">
+      {/* Message strip */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-70 text-black text-5xl font-bold text-center py-5 px-32 rounded-lg">
+        12000+ lives impacted
+      </div>
+      
+      {/* Images Container */}
+      <div className="flex">
+        <img src={animationimage1} alt="Character" className="w-[14%] h-[50%] mt-[9%] object-cover" />
+        <img src={animationimage2} alt="Character" className="w-[14%] mt-[6%] object-cover" />
+        <img src={animationimage3} alt="Character" className="w-[14%] mt-[2%] object-cover" />
+        <img src={animationimage4} alt="Character" className="w-[14%] object-cover" />
+        <img src={animationimage5} alt="Character" className="w-[14%] object-cover" />
+        <img src={animation6} alt="Character" className="w-[14%] mb-[2%]" />
+        <img src={animationimage7} alt="Character" className="w-[14%] mb-[2%] object-cover" />
+      </div>
     </div>
   );
 };

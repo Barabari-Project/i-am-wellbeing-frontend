@@ -89,7 +89,7 @@ const Media = () => {
 
   return (
     <>
-      <section className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%] mt-5 ">
+      <section className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%]">
         {/* header of arya */}
         <div
           className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
