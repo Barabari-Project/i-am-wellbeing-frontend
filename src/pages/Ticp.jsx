@@ -111,7 +111,7 @@ const Ticp = () => {
         </div>
       </div>
 
-      <div className="container w-full sm:max-w-7xl  lg:max-w-7xl  m-auto lg:bg-white pt-2">
+      <div className="container w-full sm:max-w-7xl  lg:max-w-7xl   xxxl:max-w-[92%] m-auto lg:bg-white pt-2 ">
         <div className="about-us text-xl w-full max-w-screen-xl mx-auto ">
           <h2 className="title text-4xl font-bold max-md:text-3xl pl-2 max-md:px-5 lg:px-5">
             About us

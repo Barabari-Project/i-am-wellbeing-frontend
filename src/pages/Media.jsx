@@ -100,9 +100,8 @@ const Media = () => {
           </h1>
         </div>
 
-        <div className="  p-4 lg:p-4 px-[8%] max-md:px-5  xxxl:px-[14%] border-blue-500">
-          {/* top img of arya */}
-          {/* 3slides of arya */}
+        <div className="  p-4 lg:p-4 px-[10%] max-md:px-5  border-blue-500">
+         
           {/* content data */}
           <div className="px-4 lg:px-11  max-md:p-0">
             <h1 className="text-4xl font-bold max-md:text-3xl ">
@@ -138,20 +137,7 @@ const Media = () => {
             </div>
             {/* ------------------------------------ */}
             <div className="lg:flex py-[3%] px-[3%] pt-[100px] md:pt-[4.5%] max-md:p-0 lg:gap-3 m-auto w-[99%] 2xl:px-[10%]">
-              {/* Left side */}
-              {/* <div className="lg:flex-1 lg:px-1">
-        <video
-          preload="none"
-          controls
-          poster={angerImg}
-          className="lg:h-[82%] lg:w-full lg:px-[2%]"
-          onClick={() => handlePlay(-1)} // Trigger play on click
-          ref={(el) => (videoRefs.current[-1] = el)} // Assign a unique ref
-        >
-          <source type="video/mp4" src={angervideo} />
-        </video>
-        <h1 className="text-center font-bold text-3xl p-2">EFT for Anger</h1>
-      </div> */}
+           
 
               {/* Right side */}
               <div className="sm:flex sm:flex-wrap sm:flex-row sm:flex-1">
