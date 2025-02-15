@@ -112,7 +112,7 @@ const Programe = () => {
   return (
     <>
       {/* programe first page */}
-      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-6 px-[8%]  xxxl:px-[13%] xxxl:pt-[6%] max-md:px-0">
+      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-6 px-[8%]  xxxl:px-[13%] xxxl:pt-[6%] max-md:px-0 max-md:mt-20 max-sm:mt-3">
         <div className="container mx-auto  md:w-[93%]">
           <div className="flex flex-col items-center">
             <div className="bottom-background__img w-full">

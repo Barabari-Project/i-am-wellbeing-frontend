@@ -48,7 +48,7 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="w-[100%] m-auto shadow-lg   items-center justify-between p-8  sm:flex hidden">
+        <div className="w-[100%] m-auto shadow-lg   items-center justify-between p-8  hidden md:flex">
           <div className="logo z-50 w-[120px] absolute top-4 left-5 hidden md:block">
             <Link to="/">
               <LazyLoadImage
@@ -71,14 +71,14 @@ const Header = () => {
               {/* <Link to='/about-us'> */}
               <li className="border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer">
                 About us
-                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#A7D841] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
+                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#adeada] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
                   <Link to="/about-us">
-                    <li className="text-white hover:text-gray-400 text-xl mt-8 ml-6">
+                    <li className="text-black hover:text-gray-400 text-xl mt-8 ml-6">
                       Our Team
                     </li>
                   </Link>
                   <Link to="/programs">
-                    <li className="text-white hover:text-gray-400 text-xl mt-3 ml-6">
+                    <li className="text-black hover:text-gray-400 text-xl mt-3 ml-6">
                       Our Programs
                     </li>
                   </Link>
@@ -94,12 +94,12 @@ const Header = () => {
 
               <li className="border border-black py-1 px-4 group rounded-full text-center cursor-pointer relative">
                 Training
-                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#A7D841] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
+                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#adeada] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
                   <Link to="/ticp">
-                    <li className="text-white hover:text-gray-400 text-xl mt-8 ml-6 flex">
+                    <li className="text-black hover:text-gray-400 text-xl mt-8 ml-6 flex">
                       TICP{" "}
                       <sup
-                        className="relative text-xl font-bold text-white ml-1 flex hover:text-gray-400 items-center justify-center"
+                        className="relative text-xl font-bold text-black ml-1 flex hover:text-gray-400 items-center justify-center"
                         style={{ verticalAlign: "super" }}
                       >
                         ©
@@ -107,7 +107,7 @@ const Header = () => {
                     </li>
                   </Link>
                   <Link to="/short-training">
-                    <li className="text-white hover:text-gray-400 text-xl mt-3 ml-6">
+                    <li className="text-black hover:text-gray-400 text-xl mt-3 ml-6">
                       Short Trainings Program
                     </li>
                   </Link>

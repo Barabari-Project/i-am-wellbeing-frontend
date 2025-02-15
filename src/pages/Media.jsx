@@ -92,7 +92,7 @@ const Media = () => {
       <section className="mb-9 pt-[24%] xs:pt-[14%] sm:pt-[0%]">
         {/* header of arya */}
         <div
-          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
+          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10 max-md:mt-20 max-sm:mt-3"
           style={{ backgroundImage: `url(${greenbg})` }}
         >
           <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
