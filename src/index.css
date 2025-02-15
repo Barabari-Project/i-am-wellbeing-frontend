@@ -240,3 +240,16 @@ color:#6c757d
         background-repeat: no-repeat;
     }
 }
+
+.top-bar {
+    z-index: 50;
+    position: relative;
+  }
+  @media (max-width: 768px) {
+    header {
+      z-index: 50;
+      position: relative;
+    }
+    
+  }
+  

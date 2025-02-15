@@ -2,7 +2,7 @@ import React from 'react';
 
 const CurriculumTable = () => {
   return (
-    <div className="bg-[#FFDE59] p-6 md:p-12">
+    <div className="bg-[#FFDE59] p-6 md:p-12 max-xl:mx-2">
       <div>
         <h1 className="text-2xl md:text-3xl font-semibold">Curriculum</h1>
         <p className="text-base md:text-lg lg:text-2xl mt-3 text-justify">

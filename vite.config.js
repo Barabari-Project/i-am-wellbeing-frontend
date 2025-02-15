@@ -5,4 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   	base: '/',
 	plugins: [react()],
+	allowedHosts: ['*'] // Allows all hosts (not recommended for production)
+
 })
