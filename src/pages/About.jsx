@@ -281,7 +281,7 @@ const About = () => {
           <div
             className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center  px-5 pt-10 pb-16 max-lg:pb-10"
             style={{ backgroundImage: `url(${greenBackground})` }}
-          >
+            >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
               Core Team
             </h1>
