@@ -11,8 +11,6 @@ const BlurryImages = ({imgUrl}) => {
       backgroundPosition: 'center',
     }}
   />
- 
-   
   )
 }
 
