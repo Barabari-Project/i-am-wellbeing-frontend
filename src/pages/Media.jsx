@@ -176,7 +176,7 @@ const Media = () => {
         <div className="container  px-4 md:px-6 lg:px-8 pt-12 w-full h-full">
           {/* Grief Support Section */}
           <section className=" gap-20 w-full h-full">
-            <h1 className="px-4 lg:px-11 max-md:px-0 text-5xl font-bold max-md:text-3xl">
+            <h1 className="px-4 lg:px-11 max-md:px-0 text-5xl font-bold max-md:text-3xl max-sm:pb-6">
               Grief Support Booklet
             </h1>
 
@@ -223,8 +223,8 @@ const Media = () => {
           </section>
 
           {/* Self-Care Calendar Section */}
-          <div className=" max-md:p-5">
-            <h1 className="px-4 lg:px-11 max-md:px-0 text-4xl font-bold max-md:text-3xl">
+          <div className=" max-md:p-0">
+            <h1 className="px-4 lg:px-11 max-md:px-0 text-4xl font-bold max-md:text-3xl max-sm:pt-8">
               Self-Care Calendar
             </h1>
 
