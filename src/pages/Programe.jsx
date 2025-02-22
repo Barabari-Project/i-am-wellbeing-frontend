@@ -276,7 +276,7 @@ const Programe = () => {
             </div>
             <BodyImagePart className="w-full h-auto object-cover" />
           </div>
-          <div className="px-4 lg:px-11 max-md:pt-6 max-md:px-0  ">
+          <div className="px-4 lg:px-11 max-md:pt-6 max-md:px-0  xl:-mt-32 ">
             <div className="flex  flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
               <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5">
                 Corporate and Institutional Trainings
