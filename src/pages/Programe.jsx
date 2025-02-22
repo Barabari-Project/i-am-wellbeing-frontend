@@ -247,13 +247,14 @@ const Programe = () => {
           {/* 3slides of anubho */}
           <ResponsiveCardSlider cards={cardSection1} />
 
-          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center max-md:mb-0 max-md:relative max-md:bottom-0 max-sm:bottom-[-46px]">
+          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center max-md:mb-0 max-md:relative max-md:bottom-0 max-sm:bottom-[-46px] mb-4">
             Depth of change
           </h1>
 
           <div className="px-4 lg:pl-11 flex flex-col-reverse  md:flex-row max-md:p-0 ">
-            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:-mt-10 ">
-              <p className="text-justify  font-thin leading-10">
+            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:-mt-10 "
+            >
+              <p className="text-justify  font-thin leading-10 ">
                 The change we aim to bring through our training initiatives,
                 especially the TICP course reaches the depths of the nervous
                 system. Shifts observed over the past cohorts have been nothing
@@ -275,7 +276,7 @@ const Programe = () => {
             </div>
             <BodyImagePart className="w-full h-auto object-cover" />
           </div>
-          <div className="px-4 lg:px-11 max-md:pt-6 max-md:px-0 max-lg:-mt-2 lg:-mt-4 xl:-mt-36 xxxl:-mt-4 ">
+          <div className="px-4 lg:px-11 max-md:pt-6 max-md:px-0  ">
             <div className="flex  flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
               <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5">
                 Corporate and Institutional Trainings
