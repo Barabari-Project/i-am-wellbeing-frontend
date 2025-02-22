@@ -247,7 +247,7 @@ const Programe = () => {
           {/* 3slides of anubho */}
           <ResponsiveCardSlider cards={cardSection1} />
 
-          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center max-md:mb-14">
+          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center max-md:mb-0 max-md:relative max-md:bottom-0 max-sm:bottom-[-46px]">
             Depth of change
           </h1>
 

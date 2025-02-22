@@ -260,7 +260,7 @@ const Media = () => {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }}
-              className="flex items-center justify-center min-h-[400px] lg:min-h-[850px] max-lg:min-h-[700px] w-full smallBg"
+              className="flex items-center justify-center min-h-[400px] lg:min-h-[850px] max-lg:min-h-[200px] w-full smallBg "
             >
               <a
                 href="https://drive.google.com/file/d/1hZKTmrJrd7DCYk2e0tTH6nni1foR4jfR/view?usp=drive_link"
