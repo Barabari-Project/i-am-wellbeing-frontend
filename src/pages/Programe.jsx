@@ -266,7 +266,7 @@ const Programe = () => {
                 <br />
                 <br />
               </p>
-              <p className="text-justify font-thin leading-10 mt-4 bg-[#adeada] py-6 pb-24 px-10">
+              <p className="text-justify font-thin leading-10 mt-4">
                 Additionally, our Short Training programme has been a successful
                 capsule for introducing young professionals in the field to
                 different modalities of intervention. These trainings have
