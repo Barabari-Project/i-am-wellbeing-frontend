@@ -247,26 +247,26 @@ const Programe = () => {
           {/* 3slides of anubho */}
           <ResponsiveCardSlider cards={cardSection1} />
 
-          <h1 className="text-4xl font-bold px-4 lg:px-11 max-md:text-3xl max-md:text-center max-md:mb-0 max-md:relative max-md:bottom-0 max-sm:bottom-[-46px] mb-4">
+          <h1 className="text-4xl font-bold px-4 lg:px-11 md:px-6 sm:px-5 xs:px-4 max-md:text-3xl max-md:text-center max-md:mb-0 max-md:relative max-md:bottom-0 max-sm:bottom-[-46px] mb-4">
             Depth of change
           </h1>
 
-          <div className="px-4 lg:pl-11 flex flex-col-reverse  md:flex-row max-md:p-0 ">
-            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:-mt-10 "
-            >
-              <p className="text-justify  font-thin leading-10 ">
+          <div className="px-4 lg:pl-11 md:px-6 sm:px-5 xs:px-4 flex flex-col-reverse md:flex-row max-md:p-0 min-h-screen">
+            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:mt-0">
+              <p className="text-justify font-thin leading-10 mb-10">
                 The change we aim to bring through our training initiatives,
-                especially the TICP course reaches the depths of the nervous
+                especially the TICP course, reaches the depths of the nervous
                 system. Shifts observed over the past cohorts have been nothing
                 short of transformative. From individual shifts to professional
                 growth to relational health, the participants have observed a
                 complete change in their perspective and procedures. This course
                 works at a deeper level, building a strong foundation for those
                 just starting out and a whole new lens of understanding for
-                experienced professionals. <br />
+                experienced professionals.
+                <br />
                 <br />
               </p>
-              <p className="text-justify  font-thin leading-10 mt-4">
+              <p className="text-justify font-thin leading-10 mt-4 bg-[#adeada] py-6 pb-24 px-10">
                 Additionally, our Short Training programme has been a successful
                 capsule for introducing young professionals in the field to
                 different modalities of intervention. These trainings have
@@ -276,8 +276,10 @@ const Programe = () => {
             </div>
             <BodyImagePart className="w-full h-auto object-cover" />
           </div>
-          <div className="px-4 lg:px-11 max-md:pt-6 max-md:px-0  xl:-mt-32 ">
-            <div className="flex  flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
+
+          <div className="px-4 lg:px-11 md:px-6 sm:px-5 xs:px-4 max-md:pt-6 max-md:px-0 xl:mt-0 min-h-screen">
+            <div className="flex flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
+              {" "}
               <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5">
                 Corporate and Institutional Trainings
               </h1>
@@ -288,24 +290,22 @@ const Programe = () => {
                 traditional mental health settings to include corporate and
                 institutional training programs aimed at enhancing well-being.
               </p>
-
-            <p className="mt-5 leading-8">
-              For corporate settings, we provide specialized training such as
-              POSH (Prevention of Sexual Harassment) to ensure safe and
-              inclusive workplaces, as well as programs focused on team building
-              and developing a healthy work environment to improve productivity
-              and team satisfaction.
-            </p>
-
-            <p className="mt-5 leading-8">
-              In educational and institutional contexts, we offer programs
-              focused on teachers' well-being, equipping them with emotional
-              regulation tools to manage stress, build mindfulness, and foster a
-              safer environment for students and teachers. Our comprehensive
-              approach acknowledges that mental and emotional health are
-              integral to human interaction, helping individuals and teams
-              thrive both personally and professionally.
-            </p>
+              <p className="mt-5 leading-8">
+                For corporate settings, we provide specialized training such as
+                POSH (Prevention of Sexual Harassment) to ensure safe and
+                inclusive workplaces, as well as programs focused on team
+                building and developing a healthy work environment to improve
+                productivity and team satisfaction.
+              </p>
+              <p className="mt-5 leading-8">
+                In educational and institutional contexts, we offer programs
+                focused on teachers' well-being, equipping them with emotional
+                regulation tools to manage stress, build mindfulness, and foster
+                a safer environment for students and teachers. Our comprehensive
+                approach acknowledges that mental and emotional health are
+                integral to human interaction, helping individuals and teams
+                thrive both personally and professionally.
+              </p>
             </div>
 
             <CollageImage />
