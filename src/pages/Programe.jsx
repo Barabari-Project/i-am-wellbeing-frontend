@@ -253,7 +253,7 @@ const Programe = () => {
 
           <div className="px-4 lg:pl-11 md:px-6 sm:px-5 xs:px-4 flex flex-col-reverse md:flex-row max-md:p-0 min-h-screen">
             <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:mt-0">
-              <p className="text-justify font-thin leading-10 mb-10">
+              <p className="text-justify font-thin leading-10 ">
                 The change we aim to bring through our training initiatives,
                 especially the TICP course, reaches the depths of the nervous
                 system. Shifts observed over the past cohorts have been nothing
@@ -273,6 +273,17 @@ const Programe = () => {
                 provided a safe space for individuals to explore how their
                 nervous systems interact with different approaches.
               </p>
+              <div className="xl:block max-xl:hidden mt-5">
+
+              <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5 my-4">
+                Corporate and Institutional Trainings
+              </h1>
+              <p className="font-thin leading-10 mt-4">
+                In addition to training mental health professionals, we are
+                dedicated to creating a holistic system of support for anyone
+                engaging in meaningful interactions.
+              </p>
+              </div>
             </div>
             <BodyImagePart className="w-full h-auto object-cover" />
           </div>
@@ -280,22 +291,25 @@ const Programe = () => {
           <div className="px-4 lg:px-11 md:px-6 sm:px-5 xs:px-4 max-md:pt-6 max-md:px-0 xl:mt-0 min-h-screen">
             <div className="flex flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
               {" "}
-              <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5">
+              <div className="xl:hidden">
+
+              <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5 my-4">
                 Corporate and Institutional Trainings
               </h1>
-              <p className="font-thin leading-10">
+              <p className="font-thin leading-10 mt-4">
                 In addition to training mental health professionals, we are
                 dedicated to creating a holistic system of support for anyone
-                engaging in meaningful interactions. Our efforts extend beyond
-                traditional mental health settings to include corporate and
-                institutional training programs aimed at enhancing well-being.
+                engaging in meaningful interactions.
               </p>
-              <p className="mt-5 leading-8">
-                For corporate settings, we provide specialized training such as
-                POSH (Prevention of Sexual Harassment) to ensure safe and
-                inclusive workplaces, as well as programs focused on team
-                building and developing a healthy work environment to improve
-                productivity and team satisfaction.
+              </div>
+              <p className="font-thin leading-10">
+                Our efforts extend beyond traditional mental health settings to
+                include corporate and institutional training programs aimed at
+                enhancing well-being. For corporate settings, we provide
+                specialized training such as POSH (Prevention of Sexual
+                Harassment) to ensure safe and inclusive workplaces, as well as
+                programs focused on team building and developing a healthy work
+                environment to improve productivity and team satisfaction.
               </p>
               <p className="mt-5 leading-8">
                 In educational and institutional contexts, we offer programs
