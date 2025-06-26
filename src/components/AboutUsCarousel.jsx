@@ -50,7 +50,7 @@ const AboutUsCarousel = () => {
     },
     {
       img: circle6,
-      text: "To create a Community of Mental Healthcare workers across the globe",
+      text: "To reduce the gap between survivors and available support by training mental health professionals ",
     },
   ];
 
@@ -76,7 +76,7 @@ const AboutUsCarousel = () => {
                     loading="eager"
                     src={card.img}
                   className="min-w-full min-h-full object-cover"
-
+               
                   
                 />
               </div>

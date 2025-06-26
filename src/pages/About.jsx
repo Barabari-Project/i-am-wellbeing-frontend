@@ -4,6 +4,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import avanti from "../imgs/about/avanti.png"
 
 // team images
 const team1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/Akanshaa.png`;
@@ -38,7 +39,10 @@ const consultant7 = `${
 const consultant8 = `${
   import.meta.env.VITE_PUBLIC_URL
 }/aboutus-images/Sakshi.png`;
-const consultant9 = ``;
+// const consultant9 = `${
+//   import.meta.env.VITE_PUBLIC_URL
+// }/aboutus-images/Avanti.png`;
+const consultant9 = avanti
 const consultant10 = `${
   import.meta.env.VITE_PUBLIC_URL
 }/aboutus-images/Shiraz.png`;
@@ -77,7 +81,7 @@ const breathe = {
 
 const teams = [
   {
-    name: "Akankshaa Chandele",
+    name: "Akanksha Chandele",
     imgSrc: team1,
     smallImgSrc: "team_1-small.png",
     designation: "Director / Senior Supervisor",
@@ -363,14 +367,15 @@ const About = () => {
                 className="flex flex-col items-center text-center"
               >
                 <div className="w-56 h-56">
-                  <LazyLoadImage
+                  <img
                     src={consultant.imgSrc}
                     alt={consultant.name}
-                    className="w-full h-full object-contain"
+                    className={`w-full h-full object-contain ${index === 8 ? 'mt-1' : ''}`}
+
                   />
                 </div>
 
-                <div className="details -mt-6 ">
+                <div className="details -mt-4 ">
                   <h6 className="font-bold text-black uppercase text-lg">
                     {consultant.name}
                   </h6>

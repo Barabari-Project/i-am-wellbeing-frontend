@@ -1,7 +1,10 @@
-import React from "react";
 import Slider from "react-slick";
 
-const testimonialsImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
+const test1 = `${
+  import.meta.env.VITE_PUBLIC_URL
+}/ticp-images/quote-bg-green.png`;
+
+
 
 const Testimonials = () => {
   var settings = {
@@ -18,9 +21,9 @@ const Testimonials = () => {
         className='testimonials-slider-container text-center m-auto md:w-[100%] lg:w-[100%] h-auto min-h-[500px]  lg:h-[600px] flex items-center justify-center'
         style={{
           backgroundPositionX: "center",
-          backgroundImage: `url(${testimonialsImg})`,
+          backgroundImage: `url(${test1})`,
           ObjeectFit: "cover",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
           height: "100%",
         }}
       >
@@ -29,59 +32,60 @@ const Testimonials = () => {
           className=' max-w-[80%]  pb-0 flex  flex-col justify-center items-center '
         >
           <div className='testimonials-slider__item max-w-3xl mx-auto lg:mt-10'>
-            <div className='testimonials-slider__icon text-5xl font-bold text-left'>
-              “
-            </div>
+           
             <div className='testimonials-slider__text text-center'>
-              <p className='text-2xl leading-[40px] '>
-                This was a very thought-provoking experience. Was really
-                inspired by the passion you guys have for this cause. p.s- still
-                processing all the quotes that were mentioned in the session.
+              <p className='text-2xl leading-[40px] italic font-medium '>
+              "COVID Response has empowered me to help people through the consistent supervision, training workshops and support circle provided. I thank them for being so supportive due to which only we have become effective Crisis Counsellors"
               </p>
               <div className='testimonials-slider__author mt-10 text-xl'>
                 <span className='testimonials-slider__name font-bold text-[#029390] text-center'>
-                  Project Arya Fellow
+                - A covid response helpline counselor
                 </span>
               </div>
             </div>
           </div>
 
           <div className='testimonials-slider__item max-w-2xl mx-auto '>
-            <div className='testimonials-slider__icon text-5xl text-left font-bold'>
-              “
-            </div>
             <div className='testimonials-slider__text text-center'>
-              <p className='text-2xl leading-[40px] '>
-                Loved the way the session was conducted and facilitated. The
-                safe space that was created and the way explanations were given
-                for complex concepts without dumbing them down, was commendable.
+              <p className='text-2xl leading-[40px] font-medium italic '>
+              “This session was a wake-up call, allowing me to physically experience the meaning safety and also its absence.
+              I was able to embrace this felt sense with the gentleness the space provided, which reinforced my desire to create a similar space for my clients and myself. 
               </p>
               <div className='testimonials-slider__author mt-10 lg:ml-20 text-xl'>
                 <span className='testimonials-slider__name font-bold text-[#029390] text-center'>
-                  Light Up Caregiver & Mentor
+                - A TICP Participant
                 </span>
               </div>
             </div>
           </div>
 
           <div className='testimonials-slider__item max-w-2xl mx-auto '>
-            <div className='testimonials-slider__icon text-5xl text-left font-bold'>
-              “
-            </div>
+           
             <div className='testimonials-slider__text text-center'>
-              <p className='text-2xl leading-[40px] lg:ml-20'>
-                It was a great experience working with you. I am a facilitator
-                and a single mother, and your sessions help me in both contexts.
-                They help me understand kids' behavior, their needs, and their
-                actions.
+              <p className='text-2xl leading-[40px] lg:ml-20 font-medium italic'>
+              “I felt like the session pushed me to question the way I practice Psychology. It gave me a space to talk about myself, my fears and reservations in a very safe environment.”
+
               </p>
               <div className='testimonials-slider__author mt-10 lg:ml-20 text-xl'>
                 <span className='testimonials-slider__name font-bold text-[#029390] text-center'>
-                  Manzil Mystics Facilitator
-                </span>
+                - A Short Trainings Programme Participant                </span>
               </div>
             </div>
-          </div>
+        </div>
+        
+        <div className='testimonials-slider__item max-w-2xl mx-auto '>
+           
+           <div className='testimonials-slider__text text-center'>
+             <p className='text-2xl leading-[40px] lg:ml-20 font-medium italic'>
+             It was a great experience working with you. I am a facilitator and also a single mother. Your sessions make help me in both contexts. Whether I am in a classroom or at home, it helps me understand kids behaviour, their negative and positive actions, and their needs.
+             </p>
+             <div className='testimonials-slider__author mt-10 lg:ml-20 text-xl'>
+               <span className='testimonials-slider__name font-bold text-[#029390] text-center'>
+                -A SEL facilitator
+              </span>
+             </div>
+           </div>
+         </div>
         </Slider>
       </div>
   );

@@ -21,14 +21,16 @@ const Model = ({isOpen , setIsOpen , selectedTeamMember}) => {
             {selectedTeamMember?.name}
           </h2>
           <h3 className='text-xl font-semibold mb-2'>
-            {selectedTeamMember?.specialist}
+            {selectedTeamMember?.designation}
           </h3>
-          <p className='md:text-lg text-md'>
-            {selectedTeamMember?.description}
-          </p>
+          <div className='md:text-lg text-md'></div>
+            {selectedTeamMember?.description?.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="mb-4">{paragraph}</p>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+ 
   );
 }
 

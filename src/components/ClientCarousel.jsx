@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+
 const clientOneImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/1.png`;
 const clientTwoImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/2.png`;
 const clientThreeImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/3.png`;
@@ -21,78 +22,63 @@ const clientNineteenImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/IMG_5243.PNG`
 const clientTwentyImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/IMG_5244.JPG`;
 const clientTwentyOneImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/IMG_5245.JPG`;
 
-
+const clientImg = [
+  clientOneImg, clientTwoImg, clientThreeImg, clientFourImg, clientFiveImg,
+  clientSixImg, clientSevenImg, clientEightImg, clientNineImg, clientTenImg,
+  clientElevenImg, clientTwelveImg, clientThirteenImg, clientFourteenImg,
+  clientFifteenImg, clientSixteenImg, clientSeventeenImg, clientEighteenImg,
+  clientNineteenImg, clientTwentyImg, clientTwentyOneImg,
+];
 
 const ClientCarousel = () => {
-  const clientImg = [
-    clientOneImg,
-    clientTwoImg,
-    clientThreeImg,
-    clientFourImg,
-    clientFiveImg,
-    clientSixImg,
-    clientSevenImg,
-    clientEightImg,
-    clientNineImg,
-    clientTenImg,
-    clientElevenImg,
-    clientTwelveImg,
-    clientThirteenImg,
-    clientFourteenImg,
-    clientFifteenImg,
-    clientSixteenImg,
-    clientSeventeenImg,
-    clientEighteenImg,
-    clientNineteenImg,
-    clientTwentyImg,
-    clientTwentyOneImg,
-  ]; 
-  var settings = {
-    dots: true,
+  const settings = {
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 7,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
-  var settings2 = {
-    dots: true,
-    
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,  
-  };
   return (
-    <>
-      <Slider {...settings} className=' max-w-6xl m-auto p-10 desktop'>
-        {clientImg.map((img , i) => (
-          <div key={i} className='h-40 flex justify-center items-center p-4'>
-            <img loading="lazy"
-              className='h-28 object-contain'
-              src={img}
-              alt=''
-            />
+    <div className="max-w-7xl m-auto py-10 px-4">
+      <Slider {...settings}className="py-10
+      ">
+        {clientImg.map((img, i) => (
+          <div key={i} className="h-40">
+            <div className="h-full flex justify-center items-center p-4 mx-2 bg-white rounded-lg ">
+              <img
+                loading="lazy"
+                className={`max-h-full object-contain lg:px-4  ${i < 7 ? 'lg:w-full lg:scale-[150%]' : (i === 15 || i === 17) ? 'lg:w-full  lg:scale-[150%]' : 'lg:w-4/3'}`}
+                src={img}
+                alt={`Client logo ${i + 1}`}
+              />
+            </div>
           </div>
         ))}
       </Slider>
-
-      <Slider {...settings2} className='m-auto max-w-xs mobile mt-10 mb-10 pb-16'>
-        {clientImg.map((img , i) => (
-          <div key={i} className='h-32 w-full flex items-center p-4'>
-            <img loading="lazy"
-              className='h-24 object-contain m-auto'
-              src={img}
-              alt=''
-            />
-          </div>
-        ))}
-       
-      </Slider>
-    </>
+    </div>
   );
 };
 

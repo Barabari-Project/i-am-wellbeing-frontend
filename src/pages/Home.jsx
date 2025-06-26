@@ -41,6 +41,8 @@ import AboutUsCarousel from "../components/AboutUsCarousel";
 import ClientCarousel from "../components/ClientCarousel";
 
 
+
+
 const Home = () => {
   const [num1, setNum1] = useState(0); // State for the first counter
   const [num2, setNum2] = useState(0); // State for the second counter
@@ -285,7 +287,7 @@ const Home = () => {
                 smooth
                 key={card?.title}
                 to={`/programs#${card.section}`}
-                className="flex flex-col justify-center items-center  w-[80%] tab:w-[40%] lg:w-[29%] relative group hover:cursor-pointer"
+                className="flex flex-col justify-center items-center  w-[full] tab:w-[40%] lg:w-[29%] relative group hover:cursor-pointer"
               >
                 <div className="relative w-full">
                   <img

@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   	base: '/',
 	plugins: [react()],
+	assetsInclude: ['**/*.JPG', '**/*.PNG', '**/*.GIF', '**/*.WEBP', '**/*.jpeg', '**/*.jpg'],
 	allowedHosts: ['*'] // Allows all hosts (not recommended for production)
 
 })
