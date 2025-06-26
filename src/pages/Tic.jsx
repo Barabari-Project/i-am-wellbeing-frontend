@@ -1,27 +1,23 @@
-import React, { useState } from "react";
 import Slider from "react-slick";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
+import { useState } from "react";
 
-const quoteLeft = `${import.meta.env.VITE_PUBLIC_URL}/Home/quote-left.png`;
-const quoteRight = `${import.meta.env.VITE_PUBLIC_URL}/Home/quote-left1.png`;
-const blueQuoteLeft = `${import.meta.env.VITE_PUBLIC_URL}/Home/blue-quote.png`;
-const blueQuoteRight = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/Home/blue-quote1.png`;
-const ticImage = `${import.meta.env.VITE_PUBLIC_URL}/Home/ticimage1.jpg`;
 const miniMagic = `${
   import.meta.env.VITE_PUBLIC_URL
 }/Home/mini_magick20190427-2009-ff1osr.png`;
 const tic2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/tic2.png`;
-const test1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/testimonialImg.png`;
-
-// upload hona baki h
+const test1 = `${
+  import.meta.env.VITE_PUBLIC_URL
+}/ticp-images/quote-bg-green.png`;
 const resistImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/resist.png`;
 const realiseImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/realise.png`;
 const recogniseImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/recognise.png`;
 const respondImg = `${import.meta.env.VITE_PUBLIC_URL}/Home/respond.png`;
+
+const tic_1 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/tic_1.png`
+const tic_2 = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/tic_2.png`
 
 const Tic = () => {
   const [cards] = useState([
@@ -47,301 +43,171 @@ const Tic = () => {
     },
   ]);
 
-   var settings = {
-    dots: true, 
-     infinite: true,
-     speed: 5000,
-     slidesToShow: 2,
-     slidesToScroll: 1,
-     autoplay: true,
-     autoplaySpeed: 3000,
-   };
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 5000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
 
   return (
-    <div className='container m-auto pt-5 mt-10 md:mt-0'>
-      <div className='content max-w-6xl m-auto mt-5 p-4 max-md:p-5'>
-        <div className='understanding trauma lg:grid  lg:grid-cols-12 items-center justify-between  '>
-          <div className='left text-3xl font-semibold text-center  hidden lg:block lg:col-span-5 '>
-            <LazyLoadImage
-              src={quoteRight} // Image source
-              alt='quoteRight' // Alt text
-              effect='blur' // Blur effect while loading
-              className='w-[50px] ml-20'
-              placeholder={<BlurryImages imgUrl='Home/quote-left1-small.png' />}
-            />
-            It isn't about what's wrong
-            <br /> with a person.
-            <br /> It's about what happened <br />
-            to a person
-            <LazyLoadImage
-              src={quoteLeft}
-              alt='quote-left'
-              effect='blur'
-              className='w-[400px] ml-10'
-              placeholder={<BlurryImages imgUrl='Home/quote-left-small.png' />}
-            />
-          </div>
-          {/* mobile view */}
-          <div className='left text-3xl w-[80%] m-auto font-semibold text-center   block lg:hidden  lg:col-span-5 '>
-            <p className='relative'>
-              <LazyLoadImage
-                src={quoteRight}
-                alt='quote-right'
-                className='w-[40px]'
-                effect='blur' // Blur effect while loading
-                placeholder={
-                  <BlurryImages imgUrl='Home/quote-left1-small.png' />
-                }
-              />
-              It isn't about what's wrong with a person. It's about what
-              happened to a person
-              <LazyLoadImage
-                src={quoteRight}
-                alt='quote-left'
-                className='w-[40px] absolute right-0 rotate-180'
-                effect='blur' // Blur effect while loading
-                placeholder={<BlurryImages imgUrl='Home/about-small.png' />}
-              />
-            </p>
-          </div>
-          {/* end mobile view */}
-          {/* mobile image of teavhing students */}
-          <div className='flex items-center justify-center lg:hidden mt-5  '>
-            <LazyLoadImage
-              src={ticImage}
-              alt='quote-left'
-              className='lg:w-[300px] w-[600px]'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/ticimage1-small.jpg' />}
-            />
-          </div>
-
-          <div className='right lg:col-span-7 mt-5 lg:mt-0 p-2 m-auto lg:p-4 max-md:px-0'>
-            <h1 className='text-4xl max-md:text-3xl leading-none font-bold text-right p-2 lg:p-0 max-md:p-0 max-md:text-left'>
+    <div className="container m-auto pt-5 mt-10 md:mt-0">
+      <div className="content  max-w-6xl m-auto mt-5 p-4 max-md:p-5 space-y-14 tab:space-y-20 ">
+        {/* Undestadning Trauma */}
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-32  w-full">
+          {/* Text Section */}
+          <div className="text-lg tab:text-xl flex-1 flex flex-col gap-6 text-justify max-w-xl">
+            <h2 className="text-3xl tab:text-4xl font-bold drop-shadow-md">
               Understanding Trauma
-            </h1>
-            <div className='p-2 lg:p-0 max-md:p-0'>
-              <p className='text-xl leading-9 text-justify  mt-1 max-md:text-lg max-md:mt-3 '>
-                The Substance Abuse and Mental Health Services Administration
-                (SAMHSA) describes trauma as events or circumstances experienced
-                by an individual as physically or emotionally harmful or
-                life-threatening, which result in adverse effects on the
-                individual’s functioning and well-being.
-              </p>
+            </h2>
+            <p>
+              Trauma is like invisible smoke, unseen but ever-present. Your body
+              feels its weight, constantly working overtime to keep you safe,
+              always on high alert for the next threat. It forces your organs
+              into overdrive, disrupting normal functions while on the surface,
+              everything appears fine.
+            </p>
+            <p>Until one day, it’s not...</p>
+            <p>
+              Your body falters, and instead of recognizing the toll trauma has
+              taken, you end up blaming yourself. This is how deeply ingrained
+              it gets in our system, eventually making our own selves
+              accountable for what was never our fault, unknowingly perpetuating
+              the cycle of intergenerational trauma.
+            </p>
+          </div>
+          {/* Image + Quote */}
+          <div className="flex flex-col items-center justify-center h-full lg:items-center ">
+            <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-[#545656] shadow-lg mb-4">
+              <img
+                className="w-full h-full object-cover"
+                src={tic_1}
+                alt="A Girl Painting"
+              />
             </div>
+            <p className="font-medium italic text-center lg:text-right text-xl mt-2">
+              “It isn&apos;t about what&apos;s wrong with a person.
+              <br />
+              It&apos;s about what happened to a person…”
+            </p>
           </div>
         </div>
 
-        {/* impact od trauma */}
-        <div className='understanding trauma  lg:grid lg:grid-cols-12 lg:w-full p-2 lg:p-2 m-auto max-md:p-0 max-md:mt-3 '>
-          <div className='left text-3xl text-center  hidden lg:flex justify-center font-semibold max col-span-5'>
-            <LazyLoadImage
-              src={ticImage}
-              alt='quote-left'
-              className='w-[350px]'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/ticimage1-small.jpg' />}
-            />
-          </div>
-          <div className='right col-span-7'>
-            <h1 className='text-4xl max-md:text-3xl leading-none font-bold text-right m-0 max-md:text-left'>
-              Impact of trauma on health
-            </h1>
-            <div className=''>
-              <p className='text-xl leading-9 text-justify  p-2 max-md:p-0 max-md:text-lg max-md:mt-3'>
-                The Adverse Childhood Experiences (ACE) Study, conducted by the
-                CDC & Kaiser Permanente, revealed that the more an individual is
-                exposed to a variety of stressful and potentially traumatic
-                experiences, the greater the risk for chronic health conditions
-                and health-risk behaviors later in life.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* informed care */}
-        <div className='understanding trauma lg:grid lg:grid-cols-12  p-2 lg:p-0 lg:w-full m-auto justify-center items-center max-md:p-0'>
-          <div className='right col-span-9'>
-            <h1 className='text-4xl max-md:text-3xl leading-none font-bold lg:ml-4  p-2 lg:p-0 max-md:px-0'>
+        {/* Trauma-Informed Care */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-32  w-full">
+          {/* Text Section */}
+          <div className="text-lg tab:text-xl flex-1 flex flex-col gap-6 text-justify max-w-xl">
+            <h2 className="text-3xl tab:text-4xl font-bold drop-shadow-md text-right">
               Trauma-informed care
-            </h1>
-            <div className='m-auto'>
-              <p className='text-xl leading-9 text-justify  w-[95%] m-auto max-md:m-0 max-md:w-full max-md:text-lg'>
-                Trauma-informed care (TIC) is defined as practices that promote
-                a culture of safety, empowerment, and healing. It is a strengths
-                based framework that is grounded in an understanding of and
-                responsiveness to the impact of trauma, that emphasizes
-                physical, psychological, and emotional safety for both providers
-                and survivors, and that creates opportunities for survivors to
-                rebuild a sense of control and empowerment.
-              </p>
-            </div>
-          </div>
-
-          <div className='left text-lg text-center font-semibold w-full m-auto  lg:col-span-3 relative top-5 lg:top-0'>
-            <LazyLoadImage 
-              src={blueQuoteLeft}
-              alt='quote-right'
-              className='lg:w-[30px] w-[50px] '
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/blue-quote-small.png' />}
-            />
-            <p className='text-2xl lg:text-2xl relative '>
-              Trauma-Informed Care understands and considers the pervasive
-              nature of trauma and promotes environments of healing and recovery
-              rather than practices and services that may inadvertently
-              re-traumatize.
+            </h2>
+            <p>
+              Trauma-Informed Care (TIC) is about recognizing this invisible
+              burden and reshaping the way we offer support. It is a
+              human-centered approach that prioritizes safety, empowerment, and
+              healing. Grounded in an understanding of trauma’s profound impact,
+              TIC fosters physical, psychological, and emotional safety. not
+              just for survivors, but for caregivers, professionals, and
+              communities as well.
             </p>
 
-            {/* <LazyLoadImage
-              src={blueQuoteRight}
-              alt='quote-left'
-              className='w-[400px] lg:w-[200px] absolute right-0'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/blue-quote1-small.png' />}
-            /> */}
+            <p>
+              It seeks to restore control, rebuild trust, and create spaces
+              where survivors can reclaim their power breaking cycles of trauma,
+              rather than unknowingly reinforcing them.
+            </p>
+          </div>
+          {/* Image + Quote */}
+          <div className="flex flex-col items-center justify-center h-full lg:items-center ">
+            <div className="w-72 h-72 rounded-full overflow-hidden border-4 border-[#545656] shadow-lg mb-4">
+              <img
+                className="w-full h-full object-cover"
+                src={tic_2}
+                alt="A Girl Painting"
+              />
+            </div>
+            {/* <p className="font-medium italic text-center lg:text-right text-lg mt-2">
+              “It isn't about what's wrong with a person.
+              <br />
+              It's about what happened to a person…”
+            </p> */}
           </div>
         </div>
 
-        <div className='lg:mt-10 mt-14  max-w-7xl m-auto '>
-          <h2 className='text-4xl max-md:text-3xl  max-md:text-center max-md:mb-3 ml-2 font-bold lg:ml-12'>
+        <div>
+          <p className="font-medium text-xl italic text-center max-w-4xl mx-auto">
+            “Trauma-Informed Care understands and considers the pervasive nature
+            of trauma and promotes environments of healing and recovery rather
+            than practices and services that may inadvertently re-traumatize.”
+          </p>
+        </div>
+
+        <div className="lg:mt-10 mt-14  max-w-7xl m-auto ">
+          <h2 className="text-4xl max-md:text-3xl  max-md:text-center max-md:mb-3 ml-2 font-bold lg:ml-12">
             Principles of TIC
           </h2>
-          <div className='max-w-5xl m-auto mb-4'>
+          <div className="w-full mb-4 ">
             <LazyLoadImage
               src={miniMagic}
-              alt=''
-              effect='blur' // Blur effect while loading
+              alt=""
+              effect="blur" // Blur effect while loading
               placeholder={
-                <BlurryImages imgUrl='Home/mini_magick20190427-2009-ff1osr-small.png' />
+                <BlurryImages imgUrl="Home/mini_magick20190427-2009-ff1osr-small.png" />
               }
             />
 
             <LazyLoadImage
               src={tic2}
-              alt=''
-              className='text-center m-auto hidden md:block'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/tic2-small.png' />}
+              alt=""
+              className="text-center m-auto hidden md:block  pb-10"
+              effect="blur" // Blur effect while loading
+              placeholder={<BlurryImages imgUrl="Home/tic2-small.png" />}
             />
           </div>
         </div>
       </div>
 
-      <div className='tic-cards flex md:hidden w-full outline-none'>
-        <Slider
-          {...settings}
-          className='m-auto w-[80%] overflow-hidden'
-        >
+      <div className="tic-cards flex md:hidden w-full outline-none">
+        <Slider {...settings} className="m-auto w-[80%] overflow-hidden">
           {cards.map((card, i) => (
-            <div key={i} className=' w-full items-center relative pb-4 outline-none'>
+            <div
+              key={i}
+              className=" w-full items-center relative py-6  outline-none"
+            >
               <img
-                loading='lazy'
-                className='w-full h-[200px]'
+                loading="lazy"
+                className="w-full h-[200px]"
                 src={card.src}
-                alt=''
+                alt=""
               />
             </div>
           ))}
         </Slider>
       </div>
       {/* section */}
-      <section
-        className='section testimonials--style-2 hidden lg:block'
-        style={{ padding: "100px 0", backgroundImage: `url(${test1})` }}
-      >
-        <div className='container'>
-          <div className='row'>
-            <div className='col-xl-10'>
-              <div className='  slick-initialized slick-slider'>
-                <div className='slick-list' style={{ height: "360px" }}>
-                  <div
-                    className='slick-track'
-                    style={{
-                      opacity: 1,
-                      width: "970px",
-                      transform: "translate3d(0px, 0px, 0px)",
-                    }}
-                  >
-                    <div
-                      className='slick-slide slick-current slick-active'
-                      data-slick-index='0'
-                      aria-hidden='false'
-                      style={{ width: "970px" }}
-                    >
-                      <div>
-                        <div
-                          className='testimonials-slider__item max-w-3xl ml-40 '
-                          style={{ width: "90%", display: "inline-block" }}
-                        >
-                          <div className='testimonials-slider__icon text-7xl relative top-10 right-10'>
-                            “
-                          </div>
-                          <div className='testimonials-slider__text'>
-                            <p
-                              style={{
-                                textAlign: "center",
-                                fontSize: "25px",
-                                lineHeight: "50px",
-                              }}
-                            >
-                              The most crucial aspect of therapy is the
-                              development of a good therapeutic alliance with a
-                              therapist who is trauma-informed and has a
-                              Spiritually open mindset. With this we create a
-                              place of safety where we offer information, make
-                              sure our clients are grounded, feel empowered,
-                              have a way to regulate emotions and feel cared for
-                              and respected.
-                            </p>
-                            <div className='testimonials-slider__author text-center mt-2 text-xl'>
-                              <span className='testimonials-slider__name text-center text-[#029390] font-bold'>
-                                Teresa Naseba Marsh
-                              </span>
-                              <span className='testimonials-slider__position'></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* mobile view */}
-
-      <div
-        className='testimonials-slider w-full  block lg:hidden justify-center mt-10  h-auto min-h-[400px] lg:h-[400px]'
-        style={{
-          backgroundImage: `url(${test1})`,
-          backgroundPositionX: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "repeat",
-        }}
-      >
-        <div className='text-center max-w-[90%] m-auto lg:max-w-4xl   pb-0'>
-          <div className='testimonials-slider__item max-w-3xl mx-auto'>
-            <div className='testimonials-slider__icon text-5xl font-bold text-left mt-4'>
-              “
-            </div>
-            <div className='testimonials-slider__text text-center'>
-              <p className='text-md leading-[30px] md:mt-20'>
-                {" "}
-                The most crucial aspect of therapy is the development of a good
-                therapeutic alliance with a therapist who is trauma-informed and
-                has a Spiritually open mindset. With this we create a place of
-                safety where we offer information, make sure our clients are
-                grounded, feel empowered, have a way to regulate emotions and
-                feel cared for and respected.
-              </p>
-              <div className='testimonials-slider__author mt-10 text-xl'>
-                <span className='testimonials-slider__name font-bold text-[#029390]'>
-                  Teresa Naseba Marsh
-                </span>
-              </div>
+      <div className="w-ful">
+        <div
+          className="relative max-w-4xl mx-auto p-8 sm:p-12 md:p-16 bg-no-repeat bg-center bg-contain"
+          style={{
+            backgroundImage: `url(${test1})`,
+          }}
+        >
+          <div className="text-center">
+            <p className="text-lg md:text-xl lg:text-3xl italic lg:max-w-3xl  mx-auto text-gray-800 mb-4">
+              “The most crucial aspect of therapy is the development of a good
+              therapeutic alliance with a therapist who is trauma-informed and
+              has a Spiritually open mindset.With this we create a place of
+              safety where we offer information, make sure our clients are
+              grounded, feel empowered, have a way to regulate emotions and feel
+              cared for and respected.”
+            </p>
+            <div className="mt-8 text-xl">
+              <span className="font-bold text-[#029390]">
+                Teresa Naseba Marsh
+              </span>
             </div>
           </div>
         </div>

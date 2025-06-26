@@ -1,58 +1,53 @@
-import React, { useState } from "react";
+import Model from "../components/Model";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import BlurryImages from "../components/BlurryImages";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
-const borderImg = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/aboutus-images/about-us-bg.png`;
-const AkanshaChandrel = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/aboutus-images/worker1.png`;
-const s7 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/s7.jpg`;
-const greenBg = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/greenbg.png`;
-import greenbg from "../imgs/program-images/greenbg2.png";
 // team images
-const team1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_1.png`;
-const team2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_2.png`;
-const team3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_3.png`;
-const team4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_4.png`;
-const team5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/team_5.png`;
+const team1 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/Akanshaa.png`;
+const team2 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/Pallavii.png`;
+const team3 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/Atufa.png`;
+const team4 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/Ishi.png`;
+const team5 = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/Shubhi.png`;
 
+// consultant images
 // consultant images
 const consultant1 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_1.png`;
+}/aboutus-images/Preeta.png`;
 const consultant2 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_2.png`;
+}/aboutus-images/Maitreyi.png`;
 const consultant3 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_3.png`;
+}/aboutus-images/Veena.png`;
 const consultant4 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_4.png`;
+}/aboutus-images/Rakshita.png`;
 const consultant5 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_5.png`;
+}/aboutus-images/Shambhavi.png`;
 const consultant6 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_6.png`;
+}/aboutus-images/Yasha.png`;
 const consultant7 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_7.png`;
+}/aboutus-images/Nishita.png`;
 const consultant8 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_8.png`;
-const consultant9 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_9.png`;
+}/aboutus-images/Sakshi.png`;
+const consultant9 = ``;
 const consultant10 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_10.png`;
+}/aboutus-images/Shiraz.png`;
 const consultant11 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_11.png`;
+}/aboutus-images/Anurag.png`;
 const consultant12 = `${
   import.meta.env.VITE_PUBLIC_URL
-}/home-images/consultant_12.png`;
+}/aboutus-images/Anupam.png`;
 
 // annual reports images
 const annualReport1 = `${
@@ -68,388 +63,397 @@ const annualReport4 = `${
   import.meta.env.VITE_PUBLIC_URL
 }/aboutus-images/annualreport4.jpeg`;
 
-import Model from "../components/Model";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import BlurryImages from "../components/BlurryImages";
+const breathe = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
+const teams = [
+  {
+    name: "Akankshaa Chandele",
+    imgSrc: team1,
+    smallImgSrc: "team_1-small.png",
+    designation: "Director / Senior Supervisor",
+    specialist: "Program Manager / Therapist",
+    description:
+      "Akanksha is a Holistic Trauma Therapist committed to supporting survivors of abuse and trauma. Their work is deeply rooted in compassion, interconnectedness, and the belief that true healing happens when the mind, body, and spirit are in harmony.\n\nWith an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and training in Arts-Based Therapy, Akanksha has cultivated a diverse and integrative approach to healing. They are a certified Somatic Experiencing Practitioner, EMDR Therapist, Integral Eye Movement Therapist, and Reiki Master Practitioner, in addition to being trained in Psychological First-Aid, Bach Remedies, and Access Consciousness.\n\nDriven by a deep commitment to the holistic well-being of marginalized and vulnerable communities, Akanksha founded I Am Wellbeing (Nairatmya Foundation)—an organization dedicated to making India trauma-informed. Through their work, I Am Wellbeing provides direct support to survivors and equips mental health professionals, caregivers, and educators with the tools to offer trauma-informed care.",
+  },
+  {
+    name: "Pallavi Singh",
+    imgSrc: team2,
+    smallImgSrc: "team_2-small.png",
+    designation: "Program Manager / Therapist",
+    specialist: "Program Manager / Therapist",
+    description:
+      "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. \n\nEquipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
+  },
+  {
+    name: "Atufa Khan",
+    imgSrc: team3,
+    smallImgSrc: "team_3-small.png",
+    designation: "Research Coordinator / Therapist",
+    specialist: "Counselling Psychologist",
+    description:
+      "Atufa holds a Master’s degree in Psychology from Delhi University and is deeply committed to destigmatizing mental health while building inclusive, compassionate, and safe spaces for individuals. With a specialization in health and culture, she values a holistic approach to understanding people, recognizing the complex interplay between psychological well-being, societal influences, and lived experiences.\n\nAtufa is also a dedicated researcher and heads the research department at I Am Wellbeing. She is passionate about bridging the gap in available information on Adverse Childhood Experiences (ACEs) in India and is actively working on creating a comprehensive database to inform further research and optimize resource allocation. Through her work, she strives to ensure that data-driven insights translate into meaningful, trauma-informed interventions.\n\nHer expertise extends to active and compassionate listening, group therapy and session facilitation, working with adverse childhood experiences, and grief in psychotherapy. Atufa’s mission is to empower individuals while strengthening the research foundation necessary to drive systemic change across the globe.",
+  },
+  {
+    name: "Ishi Agarwal",
+    imgSrc: team4,
+    smallImgSrc: "team_4-small.png",
+    designation: "Content Manager/ Therapist",
+    specialist: "Content Manager, Therapist",
+    description:
+      "Ishi holds a Master’s degree in Psychology and has received various trainings in counselling, Trauma-informed care, working with grief, Internal Family Systems, relationship dynamics, and working with addiction. She believes that self-awareness and reconnecting with the body are the first steps toward healing, guiding individuals to build healthier relationships with themselves and others. \n\nShe contributes to awareness initiatives as a Content Creator and helps present the impact of trauma-informed work, making mental health conversations more accessible and engaging. She is also a certified Arts-Based Therapist and encourages writing, visual art, music, play, and other artistic avenues as powerful outlets for processing emotions. She integrates these into her personal and professional life as a pathway to self-discovery and holistic well-being.",
+  },
+  {
+    name: "Shubhi Bankawat",
+    imgSrc: team5,
+    smallImgSrc: "team_5-small.png",
+    designation: "Therapist",
+    specialist: "Therapist",
+    description:
+      "Shubhi is a psychologist with a master’s degree in Clinical Psychology, deeply passionate about supporting individuals in understanding their mind and emotions. Her journey in the field has taken her through diverse roles in clinical and counseling spaces. She feels strongly about advocating for mental health, breaking the stigma around emotional well-being, and is committed to reflect that in both her therapeutic work and public engagement. \n\nWith a deep belief in the power of safe and non-judgmental spaces, she is dedicated to creating a therapeutic environment where people can exist how they want to. She envisions therapy not just as a space for healing, but as a collaborative journey of self-exploration, where individuals feel seen. When she’s not engaging in conversations about mental well-being, you’re likely to find her immersed in the pages of a good book.",
+  },
+];
+
+const consultants = [
+  {
+    name: "Preeta Ganguli",
+    designation: "Training",
+    imgSrc: consultant1,
+    smallImgSrc: "consultant_1-small.png",
+  },
+  {
+    name: "Maitreyi Nigwekar",
+    designation: "Training",
+    imgSrc: consultant2,
+    smallImgSrc: "consultant_2-small.png",
+  },
+  {
+    name: "Veena Hari",
+    designation: "Training",
+    imgSrc: consultant3,
+    smallImgSrc: "consultant_3-small.png",
+  },
+  {
+    name: "Rakshita Goel",
+    designation: "Training",
+    imgSrc: consultant4,
+    smallImgSrc: "consultant_4-small.png",
+  },
+  {
+    name: "Shambhavi Singh",
+    designation: "Training",
+    imgSrc: consultant5,
+    smallImgSrc: "consultant_5-small.png",
+  },
+  {
+    name: "Yasha Malhotra",
+    designation: "Operations",
+    imgSrc: consultant6,
+    smallImgSrc: "consultant_6-small.png",
+  },
+  {
+    name: "Dr. Nishtha Lamba",
+    designation: "Research",
+    imgSrc: consultant7,
+    smallImgSrc: "consultant_7-small.png",
+  },
+  {
+    name: "Sakshi Gaba",
+    designation: "Facilitation",
+    imgSrc: consultant8,
+    smallImgSrc: "consultant_8-small.png",
+  },
+  {
+    name: "Avanti Tewari",
+    designation: "Legal",
+    imgSrc: consultant9,
+    smallImgSrc: "consultant_9-small.png",
+  },
+  {
+    name: "Dr. Shiraz",
+    designation: "Psychiatrist",
+    imgSrc: consultant10,
+    smallImgSrc: "consultant_10-small.png",
+  },
+  {
+    name: "Anurag Chaubey",
+    designation: "Content",
+    imgSrc: consultant11,
+    smallImgSrc: "consultant_11-small.png",
+  },
+  {
+    name: "Anupam Parashar",
+    designation: "Finance",
+    imgSrc: consultant12,
+    smallImgSrc: "consultant_12-small.png",
+  },
+];
+
+const founder = `${import.meta.env.VITE_PUBLIC_URL}/aboutus-images/founder.png`;
 
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTeamMember, setSelectedTeamMember] = useState(null);
 
-  const [teams] = useState([
-    {
-      name: "Akanksha Chandele",
-      imgSrc: team1,
-      smallImgSrc: "team_1-small.png",
-      designation: "Director/Senior Supervisor",
-      specialist: "Program Manager / Therapist",
-      description:
-        "Akanksha is a Holistic Trauma Therapist actively engaged in working with survivors of abuse and trauma. Their practice is rooted in building interconnectedness and compassion for all beings and they believe in the power of mind-body-spirit healing in order to thrive and grow. Akanksha has an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and a diploma in Arts-Based Therapy.They are trained in EMDR, IEMT, Somatic Practices, and psychological first-aid. They also use Bach remedies, Access consciousness, and are a Reiki Master Practitioner.With a deep inclination to support the mental wellbeing of marginalised and vulnerable communities, they started I Am Wellbeing (Nairatmya Foundation), an organisation dedicated to trauma healing and prevention. I Am Wellbeing works with survivors of adverse life experiences and equips mental health professionals, caregivers, and educators in providing trauma-informed care to those in need.",
-    },
-
-    {
-      name: "Pallavi Singh",
-      imgSrc: team2,
-      smallImgSrc: "team_2-small.png",
-      designation: "Program Manager / Therapist",
-      specialist: "Program Manager / Therapist",
-      description:
-        "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
-    },
-    {
-      name: "Atufa Khan",
-      imgSrc: team3,
-      smallImgSrc: "team_3-small.png",
-      designation: "Research Coordinator / Therapist",
-      specialist: "Counselling Psychologist",
-      description:
-        "Atufa holds a Master’s degree in psychology from Delhi University. She is passionate about destigmatizing mental health. She aims towards creating an inclusive, compassionate and safe space for individuals. Specializing in health and culture, she values a holistic approach to understanding people. She has undergone a considerable amount of training in various areas like listening skills, group therapy sessions, adverse childhood experiences, trauma awareness and grief in psychotherapy.",
-    },
-
-    {
-      name: "Neeti Kaushal",
-      imgSrc: team5,
-      smallImgSrc: "team_5-small.png",
-      designation: "Training Coordinator / Therapist",
-      specialist: "Counselling Psychologist",
-      description:
-        "Neeti Kaushal is a Psychologist, with a Masters degree in Psychology from Delhi University. She has been working in the field of Psychology since the last two years. She is instrumental in Counselling and Psychological Testing. She also has experience in facilitating listening circles. She wished she had a listening ear in childhood to help her through personal struggles. She chose the field of Psychology as her career path to be that source of help and healing for children, adolescents, and young adults. She believes in the power of early intervention in childhood and breaking the cycle of intergenerational trauma.  As an individual, she is an empathetic person and a good listener. She is a creative soul who enjoys painting, music, and dance. She is equally passionate about fitness and sports. Some of the values she lives by are kindness, compassion, and honesty. ",
-    },
-    {
-      name: "Ishi Agarwal",
-      imgSrc: team4,
-      smallImgSrc: "team_4-small.png",
-      designation: "Content Manager/Therapist",
-      specialist: "Content Manager, Therapist",
-      description:
-        "She has completed her Master's in Psychology and received training in different sectors of mental health such as counseling, relationship concerns, and addiction and recovery. She believes that building a deeper understanding of 'self' is the first and the most important step toward healing. She aims to help individuals build a healthier relationship with themselves and those around them. She is also a big supporter of writing and other creative activities as an outlet for pent-up emotions and tries to integrate these practices into her personal and professional life.",
-    },
-    //  {
-    //    name: "Laasya Mangalampalli",
-    //    imgSrc: team1,
-    //    designation: "Therapist",
-    //    specialist: "Counselor",
-    //    description:
-    //      "Laasya Mangalampalli is a mental health counselor who holds a Master’s Degree in counseling psychology from SNDT University, Mumbai. She is passionate about creating safe and nurturing spaces for everyone. She has an ardent passion for working with people who have undergone adverse life experiences. In her work, her focus is on building a sense of connection, safety, and compassion. With a strong inclination towards working for the overall well-being of children and young adults from under-resourced communities, she is presently trying to train in multiple approaches to counseling and equip herself with in-depth knowledge about working with children in institutional care and the legal frameworks involved.",
-    //  },
-  ]);
-
-  const [consultants] = useState([
-    {
-      name: "Preeta Ganguli",
-      designation: "Training",
-      imgSrc: consultant1,
-      smallImgSrc: "consultant_1-small.png",
-    },
-    {
-      name: "Maitreyi Nigwekar",
-      designation: "Training",
-      imgSrc: consultant2,
-      smallImgSrc: "consultant_2-small.png",
-    },
-    {
-      name: "Veena Hari",
-      designation: "Training",
-      imgSrc: consultant3,
-      smallImgSrc: "consultant_3-small.png",
-    },
-    {
-      name: "Rakshita Goel",
-      designation: "Training",
-      imgSrc: consultant4,
-      smallImgSrc: "consultant_4-small.png",
-    },
-    {
-      name: "Dr Shiraz",
-      designation: "Psychiatrist",
-      imgSrc: consultant5,
-      smallImgSrc: "consultant_5-small.png",
-    },
-    {
-      name: "Sukun Chandele",
-      designation: "Legal",
-      imgSrc: consultant6,
-      smallImgSrc: "consultant_6-small.png",
-    },
-    {
-      name: "Faseeh Amin",
-      designation: "Research",
-      imgSrc: consultant7,
-      smallImgSrc: "consultant_7-small.png",
-    },
-    {
-      name: "Anupam Parashar",
-      designation: "Finace",
-      imgSrc: consultant8,
-      smallImgSrc: "consultant_8-small.png",
-    },
-    {
-      name: "Shambhavi Singh",
-      designation: "Training",
-      imgSrc: consultant9,
-      smallImgSrc: "consultant_9-small.png",
-    },
-    {
-      name: "Yasha Malhotra",
-      designation: "Operations",
-      imgSrc: consultant10,
-      smallImgSrc: "consultant_10-small.png",
-    },
-    {
-      name: "Dr Nishtha Lamba",
-      designation: "Research",
-      imgSrc: consultant11,
-      smallImgSrc: "consultant_11-small.png",
-    },
-    {
-      name: "Alisha Sethi",
-      designation: "Outreach",
-      imgSrc: consultant12,
-      smallImgSrc: "consultant_12-small.png",
-    },
-  ]);
-
   return (
-    <>
-      <section className="section about py-16 ">
-        <Model
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          selectedTeamMember={selectedTeamMember}
-        />
-        {/* code model */}
+    <section className="section about py-16 ">
+      <Model
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        selectedTeamMember={selectedTeamMember}
+      />
+      {/* code model */}
 
-        <div className="flex w-[90%] md:max-w-6xl flex-wrap md:flex-nowrap  m-auto mt-10 md:mt-0">
-          <div className="m-auto">
-            <div
-              className={`p-5 max-w-7xl max-md:mt-[1rem]`}
-              style={{
-                borderWidth: "3px" /* Set the border width */,
-                borderStyle: "solid" /* Set the border style */,
-                borderImageSource: `url(${borderImg})` /* Path to your image */,
-                borderImageSlice: 100 /* Adjust this value as needed */,
-                borderImageWidth: 10 /* Adjust this value as needed */,
-                borderImageOutset: 0 /* Optional: Adjust spacing */,
-              }}
-            >
-              <p className="text-xl leading-8 text-justify max-md:text-lg">
-                My very first day at work brought me face to face with 55 young
-                girls living at a childcare home who had survived sexual abuse,
-                physical abuse, and neglect at a very young age. Interacting
-                with them I realised that all my education hadn’t equipped me to
-                deal with any of it &amp; this required a whole other skill set.
-                This realisation hit me hard. Being a survivor myself I was
-                highly aware of the impact of risk factors and protective
-                factors that existed within the system. This pushed me to
-                further enhance my training by enrolling in courses, taking
-                intensive supervision, and adding to my trauma therapy skill
-                set. I went on to work with many different organizations and
-                understood that while so many people could identify the
-                prevalence and impact of trauma, there was no concrete
-                intervention that could help mitigate this impact. There were so
-                many gaps in the level of understanding and care. There were
-                adults struggling with trauma themselves, trying to raise
-                children who were struggling too. They say that it takes a
-                village, and from my standpoint, that village was completely
-                disconnected. This yearning for creating a network of
-                compassion, connection, care, equipped with knowledge and
-                expertise sowed the seed for the birth of I Am Wellbeing.
-              </p>
-            </div>
-          </div>
+      {/* mobile-tab */}
+      <div className="flex flex-col gap-4 lg:hidden overflow-hidden items-center italic tab:-mt-14">
+        <motion.div
+          variants={breathe}
+          viewport={{ once: true }}
+          initial="hidden"
+          whileInView="visible"
+          className="w-[130dvw] px-10 "
+        >
+          <img className="" src={founder} alt="Akansha" />
+        </motion.div>
 
-          <div className="">
-            <LazyLoadImage
-              src={AkanshaChandrel}
-              alt="img"
-              effect="blur"
-              className="max-w-sm h-auto "
-              placeholder={
-                <BlurryImages imgUrl="aboutus-images/worker1-small.png" />
-              }
-            />
-            <h6
-              className="text-center bg-cover bg-repeat-round font-bold"
-              style={{ backgroundImage: `url(${s7})` }}
-            >
-              Akanksha Chandele, Director
-            </h6>
-          </div>
+        <div className="flex flex-col gap-4 text-justify font-medium text-base tab:text-xl p-4 tab:px-14 -mt-20 tab:-mt-32">
+          <p>
+            “From the very first day I entered this field, the dark realities
+            have been unfolding one after another. As a new counsellor at a
+            childcare home, standing in front of 55 young girls, each a survivor
+            of sexual abuse, violence, and neglect, I realized that none of my
+            degrees had prepared me for this. Being a survivor of sexual abuse,
+            I understood the deep impact of trauma and the failure of systems
+            meant to protect us. It was a moment of reckoning that shifted the
+            course of my life. It pushed me to seek deeper training, take
+            intensive supervision, and become the kind of therapist I once
+            needed. Working with trauma meant unlearning what I knew and
+            building a whole new skill set, one that is rooted in presence,
+            compassion, and connection.
+          </p>
+          <p>
+            They say it takes a village, but our village was broken. I found
+            only a few professionals who truly embodied trauma-informed care.
+            But for a country like India, that wasn't enough.{" "}
+          </p>
+          <p>
+            This sense of scarcity and urgency gave birth to I Am Wellbeing,
+            where healing is not just an individual journey, but a collective
+            endeavour.
+          </p>
+          <p>
+            Because with time, trauma doesn’t end, it passes on. And we believe
+            it’s time to break that cycle.”
+          </p>
+          <p className="py-2">-From the Founder&apos;s Desk</p>
         </div>
-        <div className="our-team mt-10">
-          <div
-            className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center  px-5 pt-10 pb-16 max-lg:pb-10"
-            style={{ backgroundImage: `url(${greenbg})` }}
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
-              Core Team
-            </h1>
+      </div>
+
+      {/* desktop */}
+      <div className="hidden lg:flex flex-col max-w-4xl mx-auto text-xl text-justify italic font-medium">
+        <p className="">
+          “From the very first day I entered this field, the dark realities have
+          been unfolding one after another. As a new counsellor at a childcare
+          home, standing in front of 55 young girls, each a survivor of sexual
+          abuse, violence, and neglect, I realized that none of my degrees had
+          prepared me for this. Being a survivor of sexual abuse, I understood
+          the deep impact of trauma and the failure of systems meant to protect
+          us. It was a moment of reckoning that shifted the course of my life.
+          It pushed me to seek deeper training, take intensive supervision, and
+          become the kind of therapist I once needed. Working with trauma meant
+          unlearning what I knew and building a whole new skill set, one that is
+          rooted in presence, compassion, and connection.
+        </p>
+        <div className="flex justify-between items-center">
+          <div className="flex flex-col gap-4  w-3/4    ">
+            <p>
+              They say it takes a village, but our village was broken. I found
+              only a few professionals who truly embodied trauma-informed care.
+              But for a country like India, that wasn't enough.{" "}
+            </p>
+            <p>
+              This sense of scarcity and urgency gave birth to I Am Wellbeing,
+              where healing is not just an individual journey, but a collective
+              endeavour.
+            </p>
+            <p>
+              Because with time, trauma doesn’t end, it passes on. And we
+              believe it’s time to break that cycle.”
+            </p>
+            <p className="pt-4">-From the Founder&apos;s Desk</p>
           </div>
 
-          <div className="team-container flex flex-wrap justify-center items-center max-w-[70rem] m-auto mt-10 -mb-6 min-h-screen">
-            {teams.map((team) => {
-              return (
-                <div
-                  className="team-card flex-[0_0 49%] xs:flex-[0_0 48%] sm:flex-[0_0 31%] min-h-[300px] flex flex-col items-center justify-center cursor-pointer relative mr-4 mb-6"
-                  key={team.name}
-                  onClick={() => {
-                    setSelectedTeamMember(team);
-                    setIsOpen(true);
-                  }}
-                >
-                  <div className="relative w-[300px] h-[300px]">
-                    <LazyLoadImage
-                      src={team.imgSrc}
-                      alt="team"
-                      className="w-full h-full object-cover rounded-full" // Image with full container size
-                      placeholder={
-                        <BlurryImages
-                          imgUrl={`home-images/${team.smallImgSrc}`}
-                        />
-                      }
-                    />
-                    <div className="details absolute bottom-0 w-full text-center py-2">
-                      <h6 className="font-bold uppercase text-lg text-black">
-                        {team.name}
-                      </h6>
-                      <p className="text text-gray-700 font-[500] text-md">
-                        {team.designation}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <motion.div
+            variants={breathe}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className=""
+          >
+            <img className="w-full" src={founder} alt="Akansha" />
+          </motion.div>
+        </div>
+      </div>
+
+      <section className="mt-10">
+        <div className=" bg-customGreen w-[90%] tab:pl-32 p-6 rounded-br-full bg-no-repeat bg-bottom  flex items-center  ">
+          <h1 className="text-3xl tab:text-5xl lg:text-6xl font-bold  text-white drop-shadow-lg ">
+            Core Team
+          </h1>
         </div>
 
-        <div className="our-consultant mt-10">
-        <div
-            className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center  px-5 pt-10 pb-16 max-lg:pb-10"
-            style={{ backgroundImage: `url(${greenbg})` }}
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-5">
-              Our Consultants
-            </h1>
-          </div>
-
-          <div className="team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-6 mt-10">
-            {consultants.map((consultant, index) => {
-              return (
-                <div
-                  key={index}
-                  className="min-h-[300px] flex flex-col items-center m-auto cursor-pointer relative"
-                >
+        <div className="team-container flex flex-wrap justify-center items-center max-w-[70rem] m-auto min-h-screen">
+          {teams.map((team) => {
+            return (
+              <div
+                className="team-card flex-[0_0 49%] xs:flex-[0_0 48%] sm:flex-[0_0 31%] min-h-[300px] flex flex-col items-center justify-center cursor-pointer relative mr-4 mb-6"
+                key={team.name}
+                onClick={() => {
+                  setSelectedTeamMember(team);
+                  setIsOpen(true);
+                }}
+              >
+                <div className="relative w-[300px] h-[300px]">
                   <LazyLoadImage
-                    src={consultant.imgSrc}
+                    src={team.imgSrc}
                     alt="team"
-                    className=" object-cover relative"
+                    className="w-full h-full object-cover "
                     placeholder={
                       <BlurryImages
-                        imgUrl={`home-images/${consultant.smallImgSrc}`}
+                        imgUrl={`home-images/${team.smallImgSrc}`}
                       />
-                      // aboutus-images/worker1-small.png
                     }
                   />
-
-                  <div className="details  details  w-full absolute lg:bottom-14 sm:bottom-14 bottom-10">
-                    <h6 className="font-bold text-black uppercase text-lg text-center">
-                      {consultant.name}
-                    </h6>
-                    <p className="text text-gray-800 font-[500] text-lg text-center">
-                      {consultant.designation}
-                    </p>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="annual-reports mt-14">
-          <div
-            className="text-4xl md:text-6xl text-white font-bold relative h-[80px] lg:h-[120px]"
-            style={{
-              backgroundColor: "#029390",
-              backgroundImage: `url(${greenBg})`,
-              backgroundSize: "100% auto",
-              backgroundRepeat: "repeat-x",
-              backgroundPosition: "bottom left",
-            }}
-          >
-            <h1 className="absolute  top-4 lg:top-5 left-2 lg:text-5xl text-3xl lg:mt-0 font-semibold">
-              Annual Reports
-            </h1>
-          </div>
-
-          <div className="annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-8 mt-10">
-            <a
-              href="https://drive.google.com/file/d/1O2lsC6jPYwwu_HR-qmm7_vgxRpKYNBDu/view?usp=sharing&embedded=true"
-              target="_blank"
-              className="cursor-pointer"
-            >
-              <LazyLoadImage
-                src={annualReport1}
-                alt="annualreport1"
-                effect="blur"
-                className="sm:w-[300px]"
-                placeholder={
-                  <BlurryImages imgUrl="aboutus-images/annualreport1-small.png" />
-                }
-              />
-            </a>
-            <a
-              href="https://drive.google.com/file/d/14ayDznPPVbfQtQ2G802D8d-PEy6xQWzy/view?usp=sharing&embedded=true"
-              target="_blank"
-              className="cursor-pointer"
-            >
-              <LazyLoadImage
-                src={annualReport2}
-                alt="annualreport2"
-                effect="blur"
-                className="sm:w-[300px]"
-                placeholder={
-                  <BlurryImages imgUrl="aboutus-images/annualreport2-small.png" />
-                }
-              />
-            </a>
-
-            <a
-              href="https://drive.google.com/file/d/11q4HwENy1-IsLeVGLVxrQn1hzyK_pnW3/view?usp=sharing&embedded=true"
-              target="_blank"
-              className="cursor-pointer"
-            >
-              <LazyLoadImage
-                src={annualReport3}
-                alt="annualreport3"
-                effect="blur"
-                className="sm:w-[300px]"
-                placeholder={
-                  <BlurryImages imgUrl="aboutus-images/annualreport3-small.png" />
-                }
-              />
-            </a>
-
-            <a
-              href="https://drive.google.com/file/d/1sHhcyxUHjhX5kjdfWZ4ufhymyDqSBjap/view?usp=sharing&embedded=true"
-              target="_blank"
-              className="cursor-pointer"
-            >
-              <LazyLoadImage
-                src={annualReport4}
-                alt="annualreport4"
-                effect="blur"
-                className="sm:w-[300px]"
-                placeholder={
-                  <BlurryImages imgUrl="aboutus-images/annualreport4-small.jpeg" />
-                }
-              />
-            </a>
-          </div>
+                <div className="details text-center py-2 -mt-10 relative z-10">
+                  <h6 className="font-bold uppercase text-lg text-black">
+                    {team.name}
+                  </h6>
+                  <p className="text text-gray-700 font-[500] text-md">
+                    {team.designation}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
-    </>
+
+      <section className="our-consultant mt-10">
+        <div className=" bg-customGreen w-[90%] tab:pl-32 p-6 rounded-br-full bg-no-repeat bg-bottom  flex items-center  ">
+          <h1 className="text-3xl tab:text-5xl lg:text-6xl font-bold  text-white drop-shadow-lg ">
+            Our Consultants
+          </h1>
+        </div>
+
+        <div className="team-container grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-5xl m-auto gap-14 mt-10">
+          {consultants.map((consultant, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center"
+              >
+                <div className="w-56 h-56">
+                  <LazyLoadImage
+                    src={consultant.imgSrc}
+                    alt={consultant.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                <div className="details -mt-6 ">
+                  <h6 className="font-bold text-black uppercase text-lg">
+                    {consultant.name}
+                  </h6>
+                  <p className="text text-gray-800 font-[500] text-lg">
+                    {consultant.designation}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="annual-reports mt-14">
+        <div className=" bg-customGreen w-[90%] tab:pl-32 p-6 rounded-br-full bg-no-repeat bg-bottom  flex items-center  ">
+          <h1 className="text-3xl tab:text-5xl lg:text-6xl font-bold  text-white drop-shadow-lg ">
+            Annual Reports
+          </h1>
+        </div>
+
+        <div className="annual-container  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:max-w-5xl w-[90%] m-auto gap-8 mt-10">
+          <a
+            href="https://drive.google.com/file/d/1O2lsC6jPYwwu_HR-qmm7_vgxRpKYNBDu/view?usp=sharing&embedded=true"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <LazyLoadImage
+              src={annualReport1}
+              alt="annualreport1"
+              effect="blur"
+              className="sm:w-[300px]"
+            />
+          </a>
+          <a
+            href="https://drive.google.com/file/d/14ayDznPPVbfQtQ2G802D8d-PEy6xQWzy/view?usp=sharing&embedded=true"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <LazyLoadImage
+              src={annualReport2}
+              alt="annualreport2"
+              effect="blur"
+              className="sm:w-[300px]"
+              placeholder={
+                <BlurryImages imgUrl="aboutus-images/annualreport2-small.png" />
+              }
+            />
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/11q4HwENy1-IsLeVGLVxrQn1hzyK_pnW3/view?usp=sharing&embedded=true"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <LazyLoadImage
+              src={annualReport3}
+              alt="annualreport3"
+              effect="blur"
+              className="sm:w-[300px]"
+              placeholder={
+                <BlurryImages imgUrl="aboutus-images/annualreport3-small.png" />
+              }
+            />
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1sHhcyxUHjhX5kjdfWZ4ufhymyDqSBjap/view?usp=sharing&embedded=true"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <LazyLoadImage
+              src={annualReport4}
+              alt="annualreport4"
+              effect="blur"
+              className="sm:w-[300px]"
+              placeholder={
+                <BlurryImages imgUrl="aboutus-images/annualreport4-small.jpeg" />
+              }
+            />
+          </a>
+        </div>
+      </section>
+    </section>
   );
 };
 

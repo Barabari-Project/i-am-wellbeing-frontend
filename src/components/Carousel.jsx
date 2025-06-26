@@ -36,8 +36,8 @@ const Carousel = () => {
      };
   return (
     <>
-      <div className='hidden lg:block border  relative cursor-pointer'>
-        <Slider {...settings} className=''>
+      <div className='hidden lg:block border  relative cursor-pointer '>
+        <Slider {...settings} className='lg:min-h-[500px]'>
           <div className=' w-full  items-center relative flex text-center'>
             <LazyLoadImage
               src={a2}
