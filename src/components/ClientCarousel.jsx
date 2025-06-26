@@ -70,7 +70,7 @@ const ClientCarousel = () => {
             <div className="h-full flex justify-center items-center p-4 mx-2 bg-white rounded-lg ">
               <img
                 loading="lazy"
-                className={`max-h-full object-contain lg:px-4  ${i < 7 ? 'lg:w-full lg:scale-[150%]' : (i === 15 || i === 17) ? 'lg:w-full  lg:scale-[150%]' : 'lg:w-4/3'}`}
+                className={`max-h-full object-contain lg:px-4  ${i < 7 ? 'lg:w-full lg:scale-[130%]' : (i === 15 || i === 17) ? 'lg:w-full  lg:scale-[150%]' : 'lg:w-[150%]'}`}
                 src={img}
                 alt={`Client logo ${i + 1}`}
               />
