@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full shadow-md  border-b ">
+      <header className="  w-full shadow-md  border-b ">
         <div className="top-bar bg-[#A7D841] text-sm md:flex hidden justify-end p-2 pr-8 gap-10">
           {SocialMedia.map((social, index) => (
             <div
@@ -141,7 +141,7 @@ const Header = () => {
 
       {/* sub menu list  */}
 
-      <div className="flex md:hidden  items-center justify-between px-4 mobile-header z-10 bg-white fixed top-0 w-full">
+      <div className="flex md:hidden   items-center justify-between px-4 mobile-header z-50 bg-white fixed top-0 w-full">
         <img loading="lazy" src={logo} alt="" className="w-[80px]" />
         <HiMenuAlt3
           className="text-3xl font-[300] cursor-pointer"

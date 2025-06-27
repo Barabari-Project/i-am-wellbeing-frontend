@@ -229,7 +229,7 @@ const About = () => {
           <img className="" src={founder} alt="Akansha" />
         </motion.div>
 
-        <div className="flex flex-col gap-4 text-justify font-medium text-base tab:text-xl p-4 tab:px-14 -mt-20 tab:-mt-32">
+        <div className="relative z-10 flex flex-col gap-4 text-justify font-medium text-base tab:text-xl p-4 tab:px-14 -mt-20 tab:-mt-32">
           <p>
             “From the very first day I entered this field, the dark realities
             have been unfolding one after another. As a new counsellor at a
