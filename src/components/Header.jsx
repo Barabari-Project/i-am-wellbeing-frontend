@@ -141,7 +141,7 @@ const Header = () => {
 
       {/* sub menu list  */}
 
-      <div className="flex md:hidden   items-center justify-between px-4 mobile-header z-50 bg-white fixed top-0 w-full">
+      <div className="flex md:hidden   items-center justify-between px-4 mobile-header z-20 bg-white fixed top-0 w-full">
         <img loading="lazy" src={logo} alt="" className="w-[80px]" />
         <HiMenuAlt3
           className="text-3xl font-[300] cursor-pointer"
@@ -156,7 +156,7 @@ const Header = () => {
           e.stopPropagation();
           setToggle(false);
         }}
-        className={`fixed top-0 left-0  z-10 w-full h-screen bg-[rgba(0,0,0,0.6)] ${
+        className={`fixed top-0 left-0  z-50 w-full h-screen bg-[rgba(0,0,0,0.6)] ${
           toggle ? "translate-x-0" : "translate-x-[-1000px]"
         }`}
       ></div>
