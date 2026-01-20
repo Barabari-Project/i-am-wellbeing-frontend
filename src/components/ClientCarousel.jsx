@@ -34,16 +34,19 @@ const ClientCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0, // continuous scrolling
+    speed: 10000, // slower and smoother
+    cssEase: "linear", // smooth continuous motion
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
         },
       },
       {
@@ -55,22 +58,27 @@ const ClientCarousel = () => {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
   };
 
   return (
-    <div className="max-w-7xl m-auto py-10 px-4">
-      <Slider {...settings}className="py-10
-      ">
+    <div className="container mx-auto py-5 px-4">
+      <Slider {...settings} className="py-6">
         {clientImg.map((img, i) => (
-          <div key={i} className="h-40">
-            <div className="h-full flex justify-center items-center p-4 mx-2 bg-white rounded-lg ">
+          <div key={i} className="h-32 sm:h-36 md:h-40 px-1"> {/* Less spacing */}
+            <div className="h-full flex justify-center items-center bg-white rounded-lg overflow-hidden">
               <img
                 loading="lazy"
-                className={`max-h-full object-contain lg:px-4  ${i < 7 ? 'lg:w-full lg:scale-[130%]' : (i === 15 || i === 17) ? 'lg:w-full  lg:scale-[150%]' : 'lg:w-[150%]'}`}
+                className={`object-contain max-h-full ${
+                  i < 7
+                    ? "scale-110"
+                    : i === 15 || i === 17
+                    ? "scale-125"
+                    : "scale-100"
+                }`}
                 src={img}
                 alt={`Client logo ${i + 1}`}
               />

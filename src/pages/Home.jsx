@@ -5,6 +5,7 @@ import BlurryImages from "../components/BlurryImages";
 import textBorder from "../imgs/program-images/text-border.png";
 import { HashLink } from "react-router-hash-link";
 import { motion } from "framer-motion";
+// import video from "../imgs/Home/vd.mov"
 
 const boxVariants = {
   hidden: { opacity: 0 },
@@ -12,7 +13,7 @@ const boxVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      
+
     },
   },
 };
@@ -31,7 +32,8 @@ const lastBox = {
 
 const people = `${import.meta.env.VITE_PUBLIC_URL}/Home/peopleNewGreen.png`
 const design = `${import.meta.env.VITE_PUBLIC_URL}/Home/design.png`;
-const video = `${import.meta.env.VITE_PUBLIC_URL}/Home/vd.mp4`;
+// const video = `${import.meta.env.VITE_PUBLIC_URL}/Home/vd.mp4`;
+
 const intro = `${import.meta.env.VITE_PUBLIC_URL}/Home/intro.png`;
 
 
@@ -40,23 +42,75 @@ import Carousel from "../components/Carousel";
 import AboutUsCarousel from "../components/AboutUsCarousel";
 import ClientCarousel from "../components/ClientCarousel";
 
+import home1 from "../imgs/Home/home1.png";
+import home2 from "../imgs/Home/home2.jpg";
+import home3 from "../imgs/Home/home3.jpg";
+import home4 from "../imgs/Home/home4.jpg";
+import home5 from "../imgs/Home/home5.jpg";
+import home6 from "../imgs/Home/home6.jpg";
+import home7 from "../imgs/Home/home7.jpg";
+import home8 from "../imgs/Home/home8.png";
+import home9 from "../imgs/Home/home9.jpg";
+import home10 from "../imgs/Home/home10.png";
+import home11 from "../imgs/Home/home11.png";
+import home12 from "../imgs/Home/home12.png";
+import home13 from "../imgs/Home/home13.png";
+import home14 from "../imgs/Home/home14.png";
+import home15 from "../imgs/Home/home15.png";
+import home16 from "../imgs/Home/home16.png";
+import home17 from "../imgs/Home/home17.png";
+
+import { ImageAutoFit } from "../components/ImageAutoFit";
+import { Heading } from "../components/heading";
 
 
 
 const Home = () => {
-  const [num1, setNum1] = useState(0); // State for the first counter
-  const [num2, setNum2] = useState(0); // State for the second counter
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
   const counterOne = useRef(null);
   const counterTwo = useRef(null);
   const hasScrolledToSectionOne = useRef(false);
   const hasScrolledToSectionTwo = useRef(false);
+
+  const scrollRefs = useRef([]);
+
+  useEffect(() => {
+    scrollRefs.current.forEach((ref) => {
+      if (ref) {
+        let scrollAmount = 0;
+        const scrollSpeed = 0.3;
+
+        const step = () => {
+          scrollAmount += scrollSpeed;
+          if (scrollAmount >= ref.scrollWidth / 2) {
+            scrollAmount = 0;
+          }
+          ref.scrollLeft = scrollAmount;
+          requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+      }
+    });
+  }, []);
+
 
   const animateCounter = (target, setNum, ref, hasScrolled) => {
     if (ref.current && !hasScrolled.current) {
       const rect = ref.current.getBoundingClientRect();
 
       if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        hasScrolled.current = true; // Mark as scrolled to section
+        hasScrolled.current = true;
 
         const startTime = performance.now();
         const duration = 2000; // Duration of the animation in milliseconds
@@ -95,10 +149,8 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -122,289 +174,219 @@ const Home = () => {
     },
   ];
 
+
+
+  const imagesRows = [
+    [
+      home1,
+      home2,
+      home3,
+      home4,
+      home5,
+      home6,
+      home7,
+      home8,
+      home9,
+      home10,
+      home11,
+      home12, home13, home14, home15, home15, home16, home17
+    ],
+
+
+  ];
+
+  const sizesMapRow0 = {
+    4: { width: "25rem", height: "10rem" }, // home5
+    8: { width: "25rem", height: "10rem" }, // home9
+  };
+
   return (
-    <div className="main w-full">
-      {/* Hero Carousel */}
+    <section className="w-full pt-[80px] md:pt-0">
+
       <Carousel />
 
-      {/* Trauma Explaination and Boxes */}
       <section className="section about-us py-8">
         <div className="max-w-6xl 2xl:max-w-7xl  mx-auto">
           <div className="w-full">
-            <div className="flex jus p-4 tab:px-16     ">
-              {/* Text */}
+            <div className="flex jus p-4 tab:px-16 ">
               <div className=" flex flex-col gap-9 lg:gap-12 w-[140%] ">
-                {/* Text */}
                 <div className=" flex flex-col gap-9">
-                  <p className="text-justify text-lg tab:text-2xl ">
-                    Trauma is a silent epidemic disrupting lives across
-                    socio-economic strata, particularly of those on the margins.
-                    The six-letter word is weighing down millions of Indians as
-                    a majority remains unaware of its prevalence and
-                    consequences.
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+                    Trauma is a silent epidemic disrupting lives across socio-economic strata,
+                    particularly of those on the margins. The six-letter word is weighing down
+                    millions of Indians as a majority remains unaware of its prevalence and consequences.
+
+
                   </p>
-                  <p className="text-justify text-lg tab:text-2xl">
-                    At I Am Wellbeing | Nairatmya Foundation, we are lifting
-                    that weight off individuals one intervention at a time by
-                    empowering an army of changemakers on the ground. We are a
-                    mental health not-for-profit organisation dedicated to
-                    breaking cycles of intergenerational trauma and building an
-                    ecosystem of trusted, available, and trained adults.{" "}
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+                    At <strong>I Am Wellbeing | Nairatmya Foundation,</strong> we are lifting that weight off individuals one
+                    intervention at a time by empowering an army of changemakers on the ground. We are a
+                    mental health not-for-profit organisation dedicated to breaking cycles of intergenerational
+                    trauma and building an ecosystem of trusted, available, and trained adults.
                   </p>
-                  <p className="text-justify text-lg tab:text-2xl">
-                    We work with underserved, high-risk communities and have
-                    supported over one lakh survivors of violence,
-                    discrimination, abuse, and systemic oppression. With a
-                    multidisciplinary team of experts, our holistic approach to
-                    mental health care includes individual therapy, group
-                    interventions, and skill-building.
+
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+                    We work with underserved, high-risk communities and have <strong>supported over one lakh survivors</strong> of violence,
+                    discrimination, abuse, and systemic oppression. With a multidisciplinary team of experts, our holistic
+                    approach to mental health care includes individual therapy, group interventions, and skill-building.
                   </p>
-                  <p className="text-justify text-lg tab:text-2xl">
-                    We are democratising access to mental health by making
-                    high-quality, low-cost support accessible to all as we
-                    believe healing is not a privilege, it is a right!
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+                    We are <strong>democratising access to mental health</strong> by making high-quality, low-cost support accessible
+                    to all as we believe healing is not a privilege, it is a right!
                   </p>
                 </div>
-                {/* Last Box */}
-                <div className="hidden lg:flex items-end justify-end h-full  -mr-24 gap-8 ">
-                  <motion.div
-                    variants={lastBox}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: "all" }}
-                    className="h-[200px] w-[200px] rounded-3xl border-2 border-[#81b219] flex items-center justify-center "
-                  >
-                    <p className="text-center text-base py-2 px-4 text-[#4f2b0e] font-semibold">
-                      Improved quality of life, stronger sense of self,
-                      community, and safety. Reduced prevalence of health
-                      concerns, crime & violence and death by suicide{" "}
-                    </p>
-                  </motion.div>
-                  <motion.div
-                    variants={lastBox}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: "all" }}
-                    className="py-16"
-                  >
-                    <LeftDownSvgIcon />
-                  </motion.div>
-                </div>
+
               </div>
-              {/* Arrow Boxes */}
-              <div className=" flex-col gap-2 items-center w-full hidden  lg:flex">
-                {/* 1 */}
-                <motion.div
-                  variants={boxVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: "all" }}
-                >
-                  <HowSvgIcon />
-                </motion.div>
-                {/* 2 */}
-                <motion.div
-                  variants={boxVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: "all" }}
-                  className="h-[200px] w-[200px] rounded-3xl border-2 border-[#81b219] flex items-center justify-center "
-                >
-                  <p className="text-center text-base py-2 px-4 text-[#4f2b0e] font-semibold">
-                    Connecting with high stress sectors and under-resourced
-                    communities{" "}
-                  </p>
-                </motion.div>
-                {/* 3 */}
-                <motion.div
-                  variants={boxVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: "all" }}
-                >
-                  <DownLeftSvgIcon />
-                </motion.div>
-                {/* 4 */}
-                <motion.div
-                  variants={boxVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: "all" }}
-                  className="h-[200px] w-[200px] rounded-3xl border-2 border-[#81b219] flex items-center justify-center "
-                >
-                  <p className="text-center text-base py-2 px-4 text-[#4f2b0e] font-semibold">
-                    Seed of safety, resources for management and supportive
-                    tools for individuals, organisations, and society.{" "}
-                  </p>
-                </motion.div>
-                {/* 5 */}
-                <motion.div
-                  variants={boxVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: "all" }}
-                >
-                  <DownRightSvgIcon />
-                </motion.div>
-                {/* 6 */}
-                <motion.div
-                  variants={boxVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: "all" }}
-                  className="h-[200px] w-[200px] rounded-3xl border-2 border-[#81b219] flex items-center justify-center "
-                >
-                  <p className="text-center text-base py-2 px-4  text-[#4f2b0e] font-semibold">
-                    Shift in personal, relational, and societal health,
-                    availability of support, and integration of self-care
-                    practices
-                  </p>
-                </motion.div>
-              </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-dvw py-6 lg:py-10 ">
-        {/* Image with BG Design */}
 
-        <img
-          loading="lazy"
-          src={people}
-          alt="People"
-          className="w-full h-full object-cover scale-[1.5] lg:scale-110"
-        />
-      </section>
+      <div className="w-full bg-white">
+        {imagesRows.map((row, rowIndex) => (
+          <div key={rowIndex} className="my-6">
+            <div className="my-6 flex flex-col gap-[6px]">
+              <div className="border-t-4 border-[#a8d940] w-full"></div>
+              <div className="border-t-4 border-[#a8d940] w-full"></div>
+            </div>
+
+            <div
+              ref={(el) => (scrollRefs.current[rowIndex] = el)}
+              className="flex overflow-hidden relative space-x-4 px-4"
+            >
+              {row.map((img, i) => (
+                <ImageAutoFit key={i} src={img} index={i} sizesMap={sizesMapRow0} />
+              ))}
+            </div>
+
+            <div className="my-6 flex flex-col gap-[6px]">
+              <div className="border-t-4 border-[#a8d940] w-full"></div>
+              <div className="border-t-4 border-[#a8d940] w-full"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+
+
 
       {/* Programs */}
-      <section className="lg:max-w-6xl mx-auto max-md:m-0 max-md:w-full px-4 tab:px-8">
-        {/* Programs */}
-        <div className=" -mt-10 lg:-mt-20 flex gap-7 flex-wrap lg:flex-nowrap ">
-          <div className="flex flex-wrap justify-center gap-16 m-auto mt-28 ">
+      <section className=" mx-auto max-md:m-0  ">
+
+
+        <Heading Text={'Our Programs'} />
+        <div className="-mt-10  flex gap-7 flex-wrap lg:flex-nowrap py-10">
+          <div className="flex flex-wrap justify-center gap-16 m-auto mt-20">
             {programs?.map((card, index) => (
               <HashLink
                 smooth
                 key={card?.title}
                 to={`/programs#${card.section}`}
-                className="flex flex-col justify-center items-center  w-[full] tab:w-[40%] lg:w-[29%] relative group hover:cursor-pointer"
+                className="flex flex-col justify-center items-center  group hover:cursor-pointer "
               >
-                <div className="relative w-full">
-                  <img
-                    loading="lazy"
-                    src={textBorder}
-                    alt={`Card ${index + 1}`}
-                    className="w-full"
-                  />
-                  <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
-                    <h2 className="text-4xl  font-bold mb-2 ">{card?.title}</h2>
-                    <p className="text-black font-medium text-lg sm:text-sm md:text-base lg:text-lg px-2">
+                <div className="relative   border-2  border-[#a8d940] rounded-3xl p-3 ">
+                  <div className="absolute inset-0 m-2 border-2  border-[#a8d940] rounded-3xl pointer-events-none -top-6 -left-6 "></div>
+
+                  <div className="flex flex-col justify-center items-center text-center py-10 ">
+                    <h2 className="lg:text-5xl text-2xl font-bold mb-2 sm:text-2xl font-alegreya">{card?.title}</h2>
+                    <p className="text-black font-medium text-lg sm:text-sm md:text-base lg:text-2xl px-2 font-alegreya">
                       {card?.description}
                     </p>
                   </div>
                 </div>
-                <div className="py-2 text-lg  mt-8 border border-black border-1 px-8 rounded-full group-hover:bg-neutral-700/15 transition-colors">
+                <div className="py-2 lg:text-2xl sm:text-xl text-md mt-6 border border-black px-8 rounded-full group-hover:bg-neutral-700/15 transition-colors font-alegreya">
                   Read More
                 </div>
               </HashLink>
             ))}
           </div>
         </div>
+
       </section>
 
-      <section className="section about-us py-16 ">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap md:flex-nowrap  items-start md:justify-between justify-center gap-5 md:gap-0">
-            <div className="hidden lg:block lg:w-1/12"></div>
-            <div className="flex items-center justify-center w-auto shadow-md rounded-md overflow-hidden">
-              <video
-                preload="none"
-                controls
-                className="max-w-xs lg:max-w-xl h-[400px]  "
-                poster={intro}
-              >
-                <source type="video/mp4" src={video} />
-              </video>
+      <section className="section about-us  ">
+        <div className=" mx-auto">
+
+
+          <Heading Text={' Our essence, at a glance...'} />
+
+          <div className="flex flex-col xl:flex-row items-center justify-around gap-10 md:gap-16 px-4 md:px-12 lg:px-20 py-5 bg-white">
+            <div className="relative flex justify-center items-center">
+              <div className="absolute inset-0 rounded-3xl border-[3px] border-[#a8d940] translate-x-2 translate-y-2"></div>
+              <div className="absolute inset-0 rounded-3xl border-[2px]  border-[#a8d940]"></div>
+
+              <div className="relative rounded-3xl overflow-hidden shadow-lg items-center justify-between border-[3px] border-[#a8d940]">
+                <iframe
+                  className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-[250px] sm:h-[330px] md:h-[390px] lg:h-[450px] rounded-2xl"
+                  src="https://www.youtube.com/embed/t5jTHNB4rBc?autoplay=1&mute=1&loop=1&playlist=t5jTHNB4rBc&controls=0&modestbranding=1"
+                  title="YouTube video"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                ></iframe>
+                {/* <video
+                  ref={videoRef}
+                  preload="auto"
+                  autoPlay
+                  loop
+                  muted={isMuted}
+                  playsInline
+                  className="w-[450px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-auto rounded-2xl"
+                  poster={intro}
+                >
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+
+                <button
+                  onClick={toggleMute}
+                  className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full text-xs sm:text-sm transition-all duration-300"
+                >
+                  {isMuted ? "🔇 Sound Off" : "🔊 Sound On"}
+                </button> */}
+              </div>
             </div>
 
-            <div className="lg:w-4/12 xl:w-6/12  flex items-center justify-center flex-col h-full ">
-              <div className=" flex">
-                <LazyLoadImage
-                  src={design}
-                  alt="Design"
-                  effect="blur"
-                  className="w-[300px] m-auto"
-                  placeholder={<BlurryImages imgUrl="Home/design-small.png" />}
-                />
+            <div className="flex flex-col items-center justify-center text-center gap-12">
+              <div>
+                <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold text-black font-alegreya">
+                  7000+
+                </h2>
+                <p className="text-lg sm:text-xl lg:text-3xl mt-2 font-medium text-black font-alegreya">
+                  Professionals Trained
+                </p>
               </div>
 
-              <div className="lg:mb-6 mb-6">
-                <div className="counter-item flex flex-col gap-2 text-center">
-                  <div className="counter-item__lower">
-                    <span
-                      ref={counterOne}
-                      className="js-counter text-6xl font-bold"
-                      data-target="3346"
-                    >
-                      {num1}
-                    </span>
-                  </div>
-                  <div className="counter-item__top ml-10">
-                    <h6 className="counter-item__title text-lg text-center">
-                      Professionals Trained
-                    </h6>
-                  </div>
-                </div>
+              <div>
+                <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold text-black font-alegreya">
+                  1,15,000+
+                </h2>
+                <p className="text-lg sm:text-xl lg:text-3xl mt-2 font-medium text-black font-alegreya">
+                  Lives Impacted
+                </p>
               </div>
 
-              <div className="text-center flex flex-col mt-6">
-                <div className="counter-item counter-item--style-1">
-                  <div className="counter-item__lower ml-10">
-                    <span
-                      ref={counterTwo}
-                      className="js-counter text-6xl font-bold"
-                      data-target="100844"
-                    >
-                      {num2}
-                    </span>
-                  </div>
-                  <div className="counter-item__top">
-                    <h6 className="counter-item__title text-lg">
-                      Lives Impacted
-                    </h6>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section elements bg-[#c1e477] relative h-[60px] sm:h-[80px] lg:h-[120px] ">
-        <div className="row  flex h-full items-center">
-          <div className="ml-4  lg:ml-16 ">
-            <h2 className="text-5xl max-md:text-2xl lg:mt-0 font-semibold">
-              <span className="letter-spacing">Why we do what we do?</span>
-            </h2>
-          </div>
-        </div>
+      <section className="section about-us py-5 ">
+
+
+        <Heading Text={' Why we do what we do...'} />
       </section>
 
       <AboutUsCarousel className="max-w-xl border" />
 
-      <section className="section elements bg-[#c1e477] h-[60px] sm:h-[80px] lg:h-[120px] relative">
-        <div className="flex h-full items-center">
-          <div className="ml-4  lg:ml-16">
-            <h2 className="text-5xl max-md:text-2xl lg:mt-0 font-medium">
-              <span className="letter-spacing">Clients & Partners</span>
-            </h2>
-          </div>
-        </div>
+      <section className="section about-us py-5 ">
+
+        <Heading Text={' Clients and Partners'} />
       </section>
 
       <ClientCarousel />
-      <Testimonials />
-    </div>
+      {/* <Testimonials /> */}
+    </section>
   );
 };
 

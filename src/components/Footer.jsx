@@ -23,25 +23,8 @@ const Footer = () => {
             </p>
           </div>
           <div className="w-full lg:w-1/2 mt-4 lg:mt-0 text-center lg:text-center">
-            <p className="text-sm text-gray-400 pr-6">
-              Grateful to{" "}
-              <a
-                href="https://www.questionpro.com/"
-                className="text-gray-400 underline hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                QuestionPro
-              </a>{" "}
-              for their generous provision of{" "}
-              <a
-                href="https://www.questionpro.com/survey-templates/"
-                className="text-gray-400 underline hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                free survey templates
-              </a>, empowering our nonprofit initiatives.
+            <p className="text-xl text-white pr-6">
+             Website developed by The Barabari Collective
             </p>
           </div>
         </div>

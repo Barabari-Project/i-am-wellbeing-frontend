@@ -9,30 +9,65 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
-  FaLinkedinIn ,
+  FaLinkedinIn,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
-// const facebook = <FaFacebookF /> ;
-// const instagram =<FaInstagram  /> ;
-// const twitter = <FaXTwitter  />;
-// const youtube = <FaYoutube  />;
-// const linkedin = <FaLinkedin  />;
 
 const SocialMedia = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/iamwellbeingservices/?_rdr" },
   { icon: <FaInstagram />, url: "https://www.instagram.com/iamwellbeing_" },
   { icon: <FaXTwitter />, url: "https://x.com/iamwellbeing_?s=08" },
   { icon: <FaYoutube />, url: "https://youtube.com/@iamwellbeing9989?si=4wzV7aaxSCAXRhbv" },
-  { icon: <FaLinkedinIn  />, url: "https://www.linkedin.com/in/i-am-3b17b8104" },
+  { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/i-am-3b17b8104" },
 ];
 
 const logo = `${import.meta.env.VITE_PUBLIC_URL}/Home/logonew.png`;
 
 const Header = () => {
-  const [show, setShow] = useState(false); // state for show sub menu
-  const [toggle, setToggle] = useState(false); // state for side bar array to show and hide
-  const [isOpen, setIsOpen] = useState(false); // state for side bar array to show and hide
+  const [show, setShow] = useState(false);
+  const [toggle, setToggle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isProgramsOpen, setIsProgramsOpen] = useState(false);
+
+  const [isAnubhooOpen, setIsAnubhooOpen] = useState(false);
+
+  let aboutTimeout;
+  let programTimeout;
+  let anubhooTimeout;
+
+  const handleAboutEnter = () => {
+    clearTimeout(aboutTimeout);
+    setIsAboutOpen(true);
+  };
+
+  const handleAboutLeave = () => {
+    aboutTimeout = setTimeout(() => {
+      setIsAboutOpen(false);
+    }, 200);
+  };
+
+  const handleProgramsEnter = () => {
+    clearTimeout(programTimeout);
+    setIsProgramsOpen(true);
+  };
+
+  const handleProgramsLeave = () => {
+    programTimeout = setTimeout(() => {
+      setIsProgramsOpen(false);
+    }, 200);
+  };
+
+  const handleAnubhooEnter = () => {
+    clearTimeout(anubhooTimeout);
+    setIsAnubhooOpen(true);
+  };
+
+  const handleAnubhooLeave = () => {
+    anubhooTimeout = setTimeout(() => {
+      setIsAnubhooOpen(false);
+    }, 200);
+  };
 
   return (
     <>
@@ -68,23 +103,87 @@ const Header = () => {
                   Home
                 </li>
               </Link>
-              {/* <Link to='/about-us'> */}
-              <li className="border border-black py-1 px-4 group relative rounded-full text-center cursor-pointer">
+
+              <li
+                className="border border-black py-1 px-4 relative rounded-full text-center cursor-pointer"
+                onMouseEnter={handleAboutEnter}
+                onMouseLeave={handleAboutLeave}
+              >
                 About us
-                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#adeada] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
+                <ul
+                  className={`absolute w-[160px] text-center transition-all duration-300 right-[-60px] top-[3rem] bg-[#adeada] rounded-lg z-50
+  ${isAboutOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                >
                   <Link to="/about-us">
-                    <li className="text-black hover:text-gray-400 text-xl mt-8 ml-6">
+                    <li className="text-black hover:text-gray-400 text-xl mt-3">
                       Our Team
                     </li>
                   </Link>
-                  <Link to="/programs">
-                    <li className="text-black hover:text-gray-400 text-xl mt-3 ml-6">
+
+                  <li
+                    className="relative"
+                    onMouseEnter={handleProgramsEnter}
+                    onMouseLeave={handleProgramsLeave}
+                  >
+                    <div className="text-black hover:text-black hover:font-bold text-xl mt-2 cursor-pointer flex justify-center items-center">
                       Our Programs
-                    </li>
-                  </Link>
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+
+                    <div
+                      className={`absolute left-full top-0 z-50 transition-all duration-300 ${isProgramsOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                    >
+                      <ul className="w-[140px] text-center text-[#bff0cf] bg-[#adeada] rounded-lg">
+                        <li
+                          className="relative"
+                          onMouseEnter={handleAnubhooEnter}
+                          onMouseLeave={handleAnubhooLeave}
+                        >
+                          <Link to="/anuboo">
+                            <div className="text-black hover:text-gray-400 text-xl mt-3 flex justify-center items-center">
+                              Anubhoo
+                              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </div>
+                          </Link>
+
+                          <div
+                            className={`absolute left-full top-0 z-50 transition-all duration-300 ${isAnubhooOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+                          >
+                            <ul className="w-[160px] text-center text-[#bff0cf] bg-[#adeada] rounded-lg">
+                              <Link to="/ticp">
+                                <li className="text-black hover:text-gray-400 text-xl pt-2">
+                                  TICP
+                                </li>
+                              </Link>
+                              <Link to="/short-training">
+                                <li className="text-black hover:text-gray-400 text-xl pt-2 ">
+                                  Other Trainings
+                                </li>
+                              </Link>
+                            </ul>
+                          </div>
+                        </li>
+
+                        <Link to="/udaan">
+                          <li className="text-black hover:text-gray-400 text-xl mt-2">
+                            Udaan
+                          </li>
+                        </Link>
+                        <Link to="/aryan">
+                          <li className="text-black hover:text-gray-400 text-xl mt-2 mb-2">
+                            Project Arya
+                          </li>
+                        </Link>
+                      </ul>
+
+                    </div>
+                  </li>
                 </ul>
               </li>
-              {/* </Link> */}
 
               <Link to="/tic">
                 <li className="border border-black py-1 px-4 rounded-full text-center cursor-pointer">
@@ -92,33 +191,6 @@ const Header = () => {
                 </li>
               </Link>
 
-              <li className="border border-black py-1 px-4 group rounded-full text-center cursor-pointer relative">
-                Training
-                <ul className="absolute sub-menu w-[255px] h-0 overflow-hidden text-left opacity-0 translate-y-10 transition-all ease-in-out duration-500 text-gray-200 right-[-100px] top-[3rem] bg-[#adeada] z-[1] group-hover:h-[150px] group-hover:opacity-100 group-hover:translate-y-0">
-                  <Link to="/ticp">
-                    <li className="text-black hover:text-gray-400 text-xl mt-8 ml-6 flex">
-                      TICP{" "}
-                      <sup
-                        className="relative text-xl font-bold text-black ml-1 flex hover:text-gray-400 items-center justify-center"
-                        style={{ verticalAlign: "super" }}
-                      >
-                        ©
-                      </sup>
-                    </li>
-                  </Link>
-                  <Link to="/short-training">
-                    <li className="text-black hover:text-gray-400 text-xl mt-3 ml-6">
-                      Short Trainings Program
-                    </li>
-                  </Link>
-                </ul>
-              </li>
-
-              {/* <Link to='/programs'>
-                <li className='border border-black py-1 px-4 rounded-full text-center cursor-pointer'>
-                  Programs
-                </li>
-              </Link> */}
               <Link to="/media">
                 <li className="border border-black py-1 px-4 rounded-full text-center cursor-pointer">
                   Resources
@@ -129,17 +201,19 @@ const Header = () => {
                   Contact Us
                 </li>
               </Link>
+              <Link to="https://pages.razorpay.com/iamwellbeing#">
+                <li className="border border-black py-1 px-4 rounded-full text-center">
+                  Donate
+                </li>
+              </Link>
             </ul>
           </div>
         </div>
 
-        {/* hamburgur menu */}
         <div
           className={`sub-menu group h-[150px] bg-[#029390] w-[250px] absolute right-[22%] z-10 transition-opacity duration-300 ease-in-out group-hover:block hidden`}
         ></div>
       </header>
-
-      {/* sub menu list  */}
 
       <div className="flex md:hidden   items-center justify-between px-4 mobile-header z-20 bg-white fixed top-0 w-full">
         <img loading="lazy" src={logo} alt="" className="w-[80px]" />
@@ -148,72 +222,99 @@ const Header = () => {
           onClick={() => setToggle(true)}
         />
       </div>
-      {/* end hamburgur menu */}
 
-      {/* side bar  */}
       <div
         onClick={(e) => {
           e.stopPropagation();
           setToggle(false);
         }}
-        className={`fixed top-0 left-0  z-50 w-full h-screen bg-[rgba(0,0,0,0.6)] ${
-          toggle ? "translate-x-0" : "translate-x-[-1000px]"
-        }`}
+        className={`fixed top-0 left-0 z-50 w-full h-screen bg-[rgba(0,0,0,0.6)] transition-all duration-300 ${toggle ? "translate-x-0" : "translate-x-[-1000px]"
+          }`}
       ></div>
 
       <div
-        className={`fixed border top-0 md:hidden bg-[#F9F7F6] z-20 inset-0 w-full sm:w-[80%]  transition-transform duration-300 ease-in-out transform ${
-          toggle ? "translate-x-0" : "translate-x-[-1000px]"
-        }`}
+        className={`fixed top-0 md:hidden bg-[#F9F7F6] z-50 inset-0 w-full sm:w-[80%] transition-transform duration-300 ease-in-out transform ${toggle ? "translate-x-0" : "translate-x-[-1000px]"
+          }`}
       >
-        <div
-          id="nav-bar"
-          className="flex items-center justify-end w-[80%] m-auto bg-[#F9F7F6]"
-        >
+        <div className="flex items-center justify-end w-[80%] m-auto bg-[#F9F7F6]">
           <button className="md:hidden pt-2" onClick={() => setToggle(false)}>
             <i className="fa-solid fa-close text-xl"></i>
           </button>
         </div>
 
-        <div className="w-full h-full text[14px] flex flex-col items-start pl-14 bg-[#F9F7F6] pt-20 text-sm  gap-2">
+        <div className="w-full h-full flex flex-col items-start pl-14 bg-[#F9F7F6] pt-20 text-sm gap-3">
           <Link
             to="/"
-            className="font-[300]  text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md "
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md"
             onClick={() => setToggle(false)}
           >
             HOME
           </Link>
 
-          {/* <Link
-            to='/about-us'
-            className='font-[300] text-[#282A43]  p-2 transition-all duration-300 hover:bg-gray-100 rounded-md '
-            onClick={() => setToggle(false)}
-          >
-            ABOUT US
-          </Link> */}
-
-          <a
-            className="font-[300] text-[#282A43] p-2  rounded-md "
+          <button
+            className="font-[300] text-[#282A43] p-2 rounded-md w-full text-left flex items-center justify-between pr-10"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <span className="flex items-center gap-2">
-              ABOUT US {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
-            </span>
-            <div
-              className={`overflow-hidden transition-all duration-500 ${
-                isOpen ? "max-h-96" : "max-h-0"
-              }`}
-            >
-              <ul className="ml-6 mt-5 flex flex-col gap-4">
-                <Link to="/about-us" onClick={() => setToggle(false)}>
-                  <li className="text-gray-500">Our Team</li>
-                </Link>
-                <Link to="/programs" onClick={() => setToggle(false)}>
-                  <li className="text-gray-500">Our Programs</li>
-                </Link>
-              </ul>
-            </div>
-          </a>
+            <span>ABOUT US</span>
+            {isOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
+          </button>
+
+          <div
+            className={`overflow-hidden transition-all duration-500 ${isOpen ? "max-h-96" : "max-h-0"}`}
+          >
+            <ul className="ml-6 mt-4 flex flex-col gap-4">
+              <Link to="/about-us" onClick={() => setToggle(false)}>
+                <li className="text-gray-500">Our Team</li>
+              </Link>
+
+              <button
+                className="text-gray-500 flex items-center justify-between pr-5 w-full text-left"
+                onClick={() => setIsProgramsOpen(!isProgramsOpen)}
+              >
+                <span>Our Programs</span>
+                {isProgramsOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-500 ml-4 ${isProgramsOpen ? "max-h-96" : "max-h-0"
+                  }`}
+              >
+                <ul className="flex flex-col gap-4 mt-3">
+                  <Link to="/anuboo" onClick={() => setToggle(false)}>
+                    <li className="text-gray-500">Anubhoo</li>
+                  </Link>
+                  <Link to="/udaan" onClick={() => setToggle(false)}>
+                    <li className="text-gray-500">Udaan</li>
+                  </Link>
+                  <Link to="/aryan" onClick={() => setToggle(false)}>
+                    <li className="text-gray-500">Project Arya</li>
+                  </Link>
+                  <button
+                    className="text-gray-500 flex items-center justify-between pr-5 w-full text-left"
+                    onClick={() => setIsAnubhooOpen(!isAnubhooOpen)}
+                  >
+                    <span>About Anuboo</span>
+                    {isAnubhooOpen ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
+                  </button>
+                </ul>
+
+                <div
+                  className={`overflow-hidden transition-all duration-500 gap-4 ${isAnubhooOpen ? "max-h-96" : "max-h-0"
+                    }`}
+                >
+                  <ul className="flex flex-col gap-4 mt-3">
+
+                    <Link to="/ticp" onClick={() => setToggle(false)}>
+                      <li className="text-gray-500 ">TICP</li>
+                    </Link>
+                    <Link to="/short-training" onClick={() => setToggle(false)}>
+                      <li className="text-gray-500">Other Training</li>
+                    </Link>
+                  </ul>
+                </div>
+              </div>
+            </ul>
+          </div>
 
           <Link
             to="/tic"
@@ -223,42 +324,9 @@ const Header = () => {
             Trauma-Informed Care
           </Link>
 
-          <a
-            className="font-[300] text-[#282A43] p-2  rounded-md "
-            onClick={() => setShow(!show)}
-          >
-            <span className="flex items-center gap-2">
-              TRAINING {show ? <BiUpArrowAlt /> : <BiDownArrowAlt />}
-            </span>
-            <div
-              className={`overflow-hidden transition-all duration-500 ${
-                show ? "max-h-96" : "max-h-0"
-              }`}
-            >
-              <ul className="ml-6 mt-5 flex flex-col gap-4">
-                <Link to="/ticp" onClick={() => setToggle(false)}>
-                  <li className="text-gray-500">
-                    TICP <sup className="text-black font-bold">©</sup>
-                  </li>
-                </Link>
-                <Link to="/short-training" onClick={() => setToggle(false)}>
-                  <li className="text-gray-500">Short Trainings Program</li>
-                </Link>
-              </ul>
-            </div>
-          </a>
-          {/* 
-          <Link
-            to='programs'
-            className='font-[300] text-[#282A43]  p-2 transition-all duration-300  rounded-md '
-            onClick={() => setToggle(false)}
-          >
-            PROGRAMS
-          </Link> */}
-
           <Link
             to="/media"
-            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md "
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md"
             onClick={() => setToggle(false)}
           >
             RESOURCES
@@ -266,11 +334,20 @@ const Header = () => {
 
           <Link
             to="/contact-us"
-            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover rounded-md "
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md"
             onClick={() => setToggle(false)}
           >
             CONTACT
           </Link>
+          <Link
+            to="https://pages.razorpay.com/iamwellbeing#"
+            className="font-[300] text-[#282A43] p-2 transition-all duration-300 hover:bg-gray-100 rounded-md"
+            onClick={() => setToggle(false)}
+          >
+            DONATE
+          </Link>
+
+         
         </div>
       </div>
     </>

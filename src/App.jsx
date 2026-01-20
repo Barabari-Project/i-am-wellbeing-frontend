@@ -1,11 +1,13 @@
 import './App.css'
 
-import { lazy , Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { BrowserRouter , Routes , Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Udaan from './pages/Udaan';
+import Aryan from './pages/Aryan';
 
 
 const About = lazy(() => import('./pages/About'));
@@ -21,20 +23,23 @@ function App() {
   return (
     <BrowserRouter>
       <div className='w-full'>
-        <Header/>
-          <Suspense fallback={<div>Loading...</div>}> 
-        <Routes> 
-          <Route path='/' element={<Home/>}/>
-            <Route path='/about-us' element={<About/>}/>
-            <Route path='/tic' element={<Tic/>}/>
-            <Route path='/ticp' element={<Ticp/>}/>
-            <Route path='/short-training' element={<ShortTraining/>}/>
-            <Route path='/media' element={<Media/>}/>
-            <Route path='/contact-us' element={<ContactUs/>}/>
-            <Route path='/programs' element={<Programe/>}/> 
-         </Routes> 
-          </Suspense> 
-        <Footer/>
+        <Header />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about-us' element={<About />} />
+            <Route path='/tic' element={<Tic />} />
+            <Route path='/ticp' element={<Ticp />} />
+            <Route path='/short-training' element={<ShortTraining />} />
+            <Route path='/media' element={<Media />} />
+            <Route path='/contact-us' element={<ContactUs />} />
+            <Route path='/anuboo' element={<Programe />} />
+            <Route path='/udaan' element={<Udaan />} />
+            <Route path='/aryan' element={<Aryan />} />
+
+          </Routes>
+        </Suspense>
+        <Footer />
       </div>
     </BrowserRouter>
   );

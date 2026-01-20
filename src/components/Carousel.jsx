@@ -1,138 +1,55 @@
+"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import Slider from "react-slick";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import "react-lazy-load-image-component/src/effects/blur.css";
-import BlurryImages from '../components/BlurryImages';
+import home1 from "../imgs/home-images/Carosual1.png";
+import home2 from "../imgs/home-images/Carosual2.png";
+import home3 from "../imgs/home-images/Carosual3.png";
+import home4 from "../imgs/home-images/Carosual4.png";
+import home5 from "../imgs/home-images/Carosual5.png";
 
-const a1 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a1.png`;
-const a2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a2.png`;
-const a3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/a3.png`;  
-const mobileBanner2 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-2.png`;
-const mobileBanner3 = `${import.meta.env.VITE_PUBLIC_URL}/Home/mobile-banner-3.png`;
+export default function Carousel() {
+  const images = [home1, home2, home3, home4, home5];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Auto change image every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
-const banner3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/banner3.png`;
-const bannerText3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/banner3Text.png`;
-
-const Carousel = () => {
-     var settings = {
-       dots: true,
-       infinite: true,
-       speed: 500,
-       slidesToShow: 1,
-       slidesToScroll: 1,
-       autoplay: true,
-       autoplaySpeed: 3000,
-     };  
-
-     var settings2 = {
-      //  dots: true,
-       infinite: true,
-       speed: 500,
-       slidesToShow: 1,
-       slidesToScroll: 1,
-       autoplay: true,
-       autoplaySpeed: 3000,
-     };
   return (
-    <>
-      <div className='hidden lg:block border  relative cursor-pointer '>
-        <Slider {...settings} className='lg:min-h-[500px]'>
-          <div className=' w-full  items-center relative flex text-center'>
-            <LazyLoadImage
-              src={a2}
-              alt=''
-              className='w-full'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/a2-small.png' />}
-            />
+    <section className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      <img
+        src={images[currentIndex]}
+        alt={`slide-${currentIndex}`}
+        className="w-full h-[500px] sm:h-[500px] md:h-[600px] lg:h-[600px] xl:h-[800px] object-cover object-center bg-white transition-all duration-700 ease-in-out"
+      />
 
-            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-5xl xl:text-6xl font-bold'>
-              <p>Mitigating</p>
-              <p>the impact of</p>
-
-              <p>Adverse</p>
-              <p>Childhood</p>
-              <p>Experiences</p>
-            </div>
-          </div>
-
-          <div className='w-full items-center relative flex'>
-            <LazyLoadImage
-              src={a1}
-              alt=''
-              className='w-full'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/a1-small.png' />}
-            />
-            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10  left-5 text-5xl xl:text-6xl font-bold text-center'>
-              <p>Creating</p>
-              <p>Ecosystems</p>
-              <p>of Care</p>
-            </div>
-          </div>
-
-          <div className='w-full items-center relative flex '>
-            <LazyLoadImage
-              src={a3}
-              alt=''
-              className='w-full'
-              effect='blur' // Blur effect while loading
-              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
-            />
-            <div className='absolute top-5 md:top-20 2xl:top-20  lg:left-10 left-5 text-4xl xl:text-6xl  font-bold text-center' >
-              <p>Making</p>
-              <p>India</p>
-              <p>Trauma-Informed</p>
-              {/* <p>Informed</p> */}
-            </div>
-          </div>
-        </Slider>
+      {/* Animated Text */}
+      <div className="absolute inset-0 flex flex-col items-start justify-center text-start md:ml-16 lg:ml-32 px-6">
+        <h1
+     
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold font-alegreya text-white bg-[#545656]/50 lg:p-4 p-2"
+        >
+          Making India<br/> Trauma-Informed
+        </h1>
       </div>
 
-      <div className='border-b lg:hidden block  mt-20'>
-        <Slider {...settings2} className=''>
-          <div className=' w-full'>
-            <LazyLoadImage
-              src={mobileBanner2}
-              effect='blur'
-              alt=''
-              className='w-full h-[350px] object-contain'
-              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
-            />
-          </div>
-
-          <div className=' w-full'>
-            <LazyLoadImage
-              src={mobileBanner3}
-              effect='blur'
-              alt=''
-              className='w-full h-[350px] object-contain'
-              placeholder={<BlurryImages imgUrl='Home/a3-small.png' />}
-            />
-          </div>
-
-          <div className='w-full text-center items-center justify-center pt-10 outline-none'>
-            <LazyLoadImage
-              src={bannerText3}
-              effect='blur'
-              alt=''
-              className='w-full h-[350px] object-contain'
-              placeholder={<BlurryImages imgUrl='home-images/banner3Text-small.png' />}
-            />
-            <LazyLoadImage
-              src={banner3}
-              effect='blur'
-              alt=''
-              className='w-full h-[350px] object-contain'
-              placeholder={<BlurryImages imgUrl='home-images/banner3-small.png' />}
-            />
-          </div>
-        </Slider>
+      {/* Image navigation indicators */}
+      <div className="absolute bottom-8 flex gap-3">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`lg:w-3 lg:h-3 h-2 w-2 rounded-full ${
+              currentIndex === index ? "bg-white" : "bg-white/40"
+            } transition-all`}
+          ></button>
+        ))}
       </div>
-    </>
+    </section>
   );
-};
-
-
-export default Carousel;
+}
