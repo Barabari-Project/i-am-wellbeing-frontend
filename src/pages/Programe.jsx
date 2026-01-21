@@ -1,33 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa"; // Location icon
 import { motion } from "framer-motion"; // Framer Motion for animation
 import WalkingPerson from "../components/WalkingPerson";
 import ResponsiveCardSlider from "../components/CardCarousel";
-const peoplenew = `${import.meta.env.VITE_PUBLIC_URL}/Home/peoplenew.png`;
-// const yellowbgnew1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/6.svg`;
-// const greenbg = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/2.svg`;
-import Slider from "react-slick";
+import heroimage from "../imgs/home-images/HeroPrograme1.png"
+import AryaHero from "../imgs/program-images/Aryahero.png";
+
+import bharat from "../imgs/tic/Bharat.png"
+
+import Aid1 from "../imgs/program-training/aid1.jpg"
+import Aid2 from "../imgs/program-training/aid2.jpg"
+import Aid3 from "../imgs/program-training/aid3.jpg"
+import Aid4 from "../imgs/program-training/aid4.jpg"
+
+
+
+import capacity1 from "../imgs/program-training/capacity1.jpeg"
+import capacity2 from "../imgs/program-training/capacity2.jpeg"
+import capacity3 from "../imgs/program-training/capacity3.jpeg"
+
+
+
+
+import TicVideo1 from "../imgs/tic/ticpimg1.jpeg"
+import TicVideo2 from "../imgs/tic/ticpimg2.png"
+import TicVideo3 from "../imgs/tic/ticpimg3.png"
+import TicVideo4 from "../imgs/tic/ticpimg4.png"
+
+import Couns1 from "../imgs/program-images/counselling1.jpg"
+import Couns2 from "../imgs/program-images/counselling2.jpg"
+import Couns3 from "../imgs/program-images/counselling3.jpg"
+import Couns4 from "../imgs/program-images/counselling4.jpg"
+
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const anubho1 = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/1.svg`;
-const anubho2 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/programPageData/anubho2.png`;
-const anubho3 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/programPageData/anubho3.png`;
-const anubho4 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/programPageData/anubho4.png`;
-const anubho5 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/programPageData/anubho5.png`;
-const anubho6 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/programPageData/anubho6.png`;
-const anubho7 = `${
-  import.meta.env.VITE_PUBLIC_URL
-}/programPageData/anubho7.png`;
+const anubho2 = `${import.meta.env.VITE_PUBLIC_URL
+  }/programPageData/anubho2.png`;
+const anubho3 = `${import.meta.env.VITE_PUBLIC_URL
+  }/programPageData/anubho3.png`;
+const anubho4 = `${import.meta.env.VITE_PUBLIC_URL
+  }/programPageData/anubho4.png`;
+const anubho5 = `${import.meta.env.VITE_PUBLIC_URL
+  }/programPageData/anubho5.png`;
+const anubho6 = `${import.meta.env.VITE_PUBLIC_URL
+  }/programPageData/anubho6.png`;
+const anubho7 = `${import.meta.env.VITE_PUBLIC_URL
+  }/programPageData/anubho7.png`;
 
 const udan1 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan1.png`;
 const udan2 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/udan2.png`;
@@ -43,503 +63,794 @@ const arya5 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya5.png`;
 const arya6 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya6.png`;
 const arya7 = `${import.meta.env.VITE_PUBLIC_URL}/programPageData/arya7.png`;
 
-const peoples = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/4.svg`;
+import Slider1 from "../imgs/tic/slide1.jpeg"
+import Slider2 from "../imgs/tic/slide2.jpg"
+import Slider3 from "../imgs/tic/slide3.jpg"
+import Slider4 from "../imgs/tic/slide4.jpg"
+import Slider5 from "../imgs/tic/slide5.jpg"
+import Slider6 from "../imgs/tic/slide6.jpg"
+import Slider7 from "../imgs/tic/slide7.jpg"
+import Slider8 from "../imgs/tic/slide8.jpeg"
+import Slider9 from "../imgs/tic/slide9.jpeg"
+import Slider10 from "../imgs/tic/slide10.jpg"
+import Slider11 from "../imgs/tic/slide11.jpeg"
+import Slider12 from "../imgs/tic/slide12.jpeg"
+import slide1 from "../imgs/tic/slide1.png"
+import slide2 from "../imgs/tic/slide2.png"
+import slide3 from "../imgs/tic/slide3.png"
+import slide4 from "../imgs/tic/slide4.png"
+import slide5 from "../imgs/tic/slide5.png"
 
+import show1 from "../imgs/program-training/show1.jpg"
+import show2 from "../imgs/program-training/show2.jpg"
+import show3 from "../imgs/program-training/show5.png"
+import show4 from "../imgs/program-training/show4.jpg"
 const yelloShadow = `${import.meta.env.VITE_PUBLIC_URL}/phase-2/bg.svg`;
+import { FaRegCheckCircle } from "react-icons/fa";
 
 //animations
 import animation1 from "../imgs/program-images/gif-6.gif";
 
 import textBorder from "../imgs/program-images/text-border.png";
 
-import map from "../imgs/program-images/map.png";
+import BackImage from "../imgs/tic/treeback1.png"
 
 import CollageImage from "../components/CollageImage";
 import BodyImagePart from "../components/BodyImagePart";
 import yellowbgnew1 from "../imgs/program-images/yellowBgNew.png";
 import greenbg from "../imgs/program-images/greenbg2.png";
+import { ImageAutoFit } from "../components/ImageAutoFit";
+import { Heading } from "../components/heading";
 
 const Programe = () => {
-  const iconVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 },
-  };
-  const cardSection1 = [
+
+  // const imagesRows = [
+  //   [
+  //     Slider1,
+  //     Slider2,
+  //     Slider3,
+  //     Slider4,
+  //     Slider5,
+  //     Slider6,
+  //     Slider7,
+  //     Slider8,
+  //     Slider9,
+  //     Slider10,
+  //     Slider11,
+  //     Slider12,
+  //   ],
+
+
+  // ];
+  const imagesRows = [
+    [
+      slide1,
+      slide2,
+      slide3,
+      slide4,
+      slide5,
+      slide1,
+      slide2,
+      slide3,
+      slide4,
+      slide5,
+
+    ],
+
+
+  ];
+  const imagesRowsfor = [
+    [
+      Slider1,
+      Slider2,
+      Slider3,
+      Slider4,
+      Slider5,
+      Slider6,
+      Slider7,
+      Slider8,
+      Slider9,
+      Slider10,
+      Slider11,
+      Slider12,
+    ],
+
+
+  ];
+
+
+
+
+  const programs = [
     {
-      text: "Specialized curriculum for trauma-informed training",
+      description: "Specialized curriculum for trauma-informed training",
     },
     {
-      text: "Rooted in the socio-cultural context of India",
+      description: "Rooted in the socio-cultural context of India",
     },
     {
-      text: "Identification, assessment, and working with trauma",
+      description: "Identification, assessment, and working with trauma",
     },
   ];
 
-  const cardSection2 = [
+
+  const milestone = [
     {
-      text: "Holistic, long-term and consistent therapeutic support",
+      tite: "COVID RESPONSE HELPLINE",
+      description: "Trained over 800 volunteers and supported 80,000+ lives in collaboration with the Delhi Government",
     },
     {
-      text: "Safe, supportive, and compassionate space for the clients",
+      tite: "AANAGANWADI WORKERS",
+      description: "Trained 200  Anganwadi workers from tribal communities of Jharkhand in partnership with TITLI ",
     },
     {
-      text: "Exploring and processing deep-rooted underlying trauma",
+      tite: "DALIT COMMUNITY LEADERS",
+      description: "Trained lay mental health counselors in collaboration with SASLN and Banyan Academy of Leadership across 10 states",
+    },
+    {
+      tite: "CAREGIVER WELLBEING",
+      description: "Supported and trained caregivers at various child care institutions like Udayan Care, Salaam Baalak Trust, Rainbow homes and more",
+    }, {
+      tite: "ACEs AWARENESS",
+      description: "Introduced ACEs in several universities like OP Jindal, Amity University, Jamia Millia Islamia, and others",
     },
   ];
-  const cardSection3 = [
-    {
-      text: "Trauma-informed group work for holistic wellbeing",
-    },
-    {
-      text: "Creating a system for support and a community safety net",
-    },
-    {
-      text: "Designed specifically for people from different marginalised communities",
-    },
+  const textItems = [
+    "Non-judgemental and curious approach to life",
+    "Stronger connection and trust with others",
+    "Emotional safety and regulation ",
+    "Deeper Self-Awareness and Compassion",
+    "Integration of TIC Principles in daily life",
+    "Stronger understanding of trauma and the body"
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
+
+
+
+
+  const VideoCallImg = [
+    [
+      { img: TicVideo1, name: "Cohort: 1 (2022-2023)" },
+      { img: TicVideo2, name: "Cohort: 2 (2023-2024)" },
+      { img: TicVideo3, name: "Cohort: 3 (2024-2025)" },
+      { img: TicVideo4, name: "Cohort: 4 (2025-2026)" },
+    ],
+  ];
+
+  const AidImg = [
+    [
+      Aid1,
+      Aid2,
+      Aid3,
+      Aid4,
+
+    ],
+
+
+  ];
+  const CounselingImg = [
+    [
+      Couns1,
+      Couns2,
+      Couns3,
+      Couns4,
+
+    ],
+
+
+  ];
+  const scrollRefs = useRef([]);
+
+
+  const scrollRefsfor = useRef([]);
+  useEffect(() => {
+    scrollRefs.current.forEach((ref) => {
+      if (ref) {
+        let scrollAmount = 0;
+        const scrollSpeed = 0.3;
+
+        const step = () => {
+          scrollAmount += scrollSpeed;
+          if (scrollAmount >= ref.scrollWidth / 2) {
+            scrollAmount = 0;
+          }
+          ref.scrollLeft = scrollAmount;
+          requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+      }
+    });
+  }, []);
+  useEffect(() => {
+    scrollRefsfor.current.forEach((ref) => {
+      if (ref) {
+        let scrollAmount = 0;
+        const scrollSpeed = 0.3;
+
+        const step = () => {
+          scrollAmount += scrollSpeed;
+          if (scrollAmount >= ref.scrollWidth / 2) {
+            scrollAmount = 0;
+          }
+          ref.scrollLeft = scrollAmount;
+          requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+      }
+    });
+  }, []);
+  const sizesMapRow0 = {
+    0: { width: "25rem", height: "10rem" }, // home5
+    2: { width: "25rem", height: "10rem" }, // home5
+    8: { width: "20rem", height: "10rem" }, // home5
+
   };
+
   return (
-    <>
-      {/* programe first page */}
-      <section className="bottom-background relative w-[100%] lg:max-w-[100%] lg:my-14 mx-auto mb-9 pt-[22%] sm:pt-6 px-[8%]  xxxl:px-[13%] xxxl:pt-[6%] max-md:px-0 max-md:mt-20 max-sm:mt-3">
-        <div className="container mx-auto  md:w-[93%]">
-          <div className="flex flex-col items-center">
-            <div className="bottom-background__img w-full">
-              <img
-                loading="lazy"
-                src={peoplenew}
-                alt="People"
-                className="w-full lg:-[100px] h-full object-cover "
-              />
-            </div>
-            <div className="bottom-background__img w-full">
-              <img
-                loading="lazy"
-                src={yellowbgnew1}
-                alt="Yellow Background"
-                className="w-full h-[50px] lg:h-[130px] object-cover "
-              />
-            </div>
-          </div>
+    <section className="w-full pt-[80px] md:pt-0">
 
-          <div className=" -mt-10 lg:-mt-20 flex gap-7 flex-wrap lg:flex-nowrap ">
-            {/* Event Item 1 Anubhoo*/}
-            <div className="w-full  lg:w-1/3 text-xl border bg-white p-2 m-auto">
-              <div className="event-item text-center">
-                <div className="event-item__content w-full m-auto border-[#029390] border-4 py-7 ">
-                  <h3 className="event-item__title mb-2">
-                    <a href="#" className="text-4xl font-[300]">
-                      Anubhoo
-                    </a>
-                  </h3>
-                  <h6 className="event-item__title text-md font-[400]">
-                    <a href="#" className="">
-                      Trauma-Informed care <br />
-                      training
-                    </a>
-                  </h6>
-                  <a
-                    className="button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm"
-                    href="#anubho"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
+      <section
+        className="relative h-[40vh] sm:h-[45vh] md:h-[70vh] lg:h-[85vh] xl:h-[90vh] 
+             flex items-center justify-center overflow-hidden bg-center bg-cover"
+        style={{
+          backgroundImage: `url(${heroimage})`,
+        }}
+      >
 
-            {/* Event Item 2 Udaan*/}
-            <div className="w-full  lg:w-1/3 text-xl bg-white border p-2 m-auto">
-              <div className="event-item text-center">
-                <div className="event-item__content w-full m-auto border-[#029390] border-4 py-7">
-                  <h3 className="event-item__title mb-2">
-                    <a href="#" className="text-4xl font-[300]">
-                      Udaan
-                    </a>
-                  </h3>
-                  <h6 className="event-item__title text-md font-[400] ">
-                    <a href="#" className="">
-                      Individual counselling and
-                      <br /> therapy
-                    </a>
-                  </h6>
-                  <a
-                    className="button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm"
-                    href="#udaan"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Event Item 3 arya */}
-            <div className="w-full lg:w-1/3 text-xl border p-2 bg-white m-auto">
-              <div className="event-item text-center">
-                <div className="event-item__content w-full m-auto border-[#029390] border-4 py-7">
-                  <h3 className="event-item__title mb-2">
-                    <a href="#" className="text-4xl font-[300]">
-                      Project Arya
-                    </a>
-                  </h3>
-                  <h6 className="event-item__title text-md font-[400]">
-                    <a href="#" className="">
-                      Trauma-informed social- <br />
-                      emotional learning
-                    </a>
-                  </h6>
-                  <a
-                    className="button gallery__button button--primary mt-8 inline-block border-2 rounded-full border-orange-300 py-2 px-6 text-sm"
-                    href="#arya"
-                  >
-                    Read More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Anubhoooo page */}
-      <section id="anubho" className="mb-9 ">
-        {/* header of anubho */}
-        <div
-          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
-          style={{ backgroundImage: `url(${yellowbgnew1})` }}
-        >
-          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
-            Anubhoo
-          </h1>
-        </div>
-        <div className=" p-4 lg:p-4 px-4 xxxl:px-[14%] max-md:px-5 ">
-          {/* top img of anubho */}
-          <div className="lg:flex m-auto  px-4 lg:px-11 lg:gap-4 max-md:p-0">
-            <div className="m-auto">
-              <img loading="lazy" src={anubho1} alt="anubho image"></img>
-            </div>
-            <div className="w-full sm:p-3  ">
-              <h1 className="text-right w-[99%] font-bold text-4xl max-md:text-3xl max-md:text-left pb-4">
-                Creating ecosystems of care
-              </h1>
-              <p className="leading-9 text-justify text-xl max-md:text-lg ">
-                With the dream of Making India Trauma-Informed, Anubhoo is a
-                training and skill building initiative which focuses on
-                equipping and training all the stakeholders, like psychologists,
-                social workers, teachers, parents, and caregivers, who are
-                directly involved in working with young survivors of abuse and
-                neglect in trauma informed care practices (TICP)
-              </p>
-            </div>
-          </div>
-
-          {/* 3slides of anubho */}
-          <ResponsiveCardSlider cards={cardSection1} />
-
-          <h1 className="text-4xl font-bold px-4 lg:px-11 md:px-6 sm:px-5 xs:px-4 max-md:text-3xl max-md:text-center max-md:mb-0 max-md:relative max-md:bottom-0 max-sm:bottom-[-46px] mb-4">
-            Depth of change
-          </h1>
-
-          <div className="px-4 lg:pl-11 md:px-6 sm:px-5 xs:px-4 flex flex-col-reverse md:flex-row max-md:p-0 min-h-screen">
-            <div className="mt-6 leading-8 max-md:p-0 flex-[50%] text-xl max-md:text-lg max-sm:mt-0">
-              <p className="text-justify font-thin leading-10 ">
-                The change we aim to bring through our training initiatives,
-                especially the TICP course, reaches the depths of the nervous
-                system. Shifts observed over the past cohorts have been nothing
-                short of transformative. From individual shifts to professional
-                growth to relational health, the participants have observed a
-                complete change in their perspective and procedures. This course
-                works at a deeper level, building a strong foundation for those
-                just starting out and a whole new lens of understanding for
-                experienced professionals.
-                <br />
-              </p>
-              <p className="text-justify font-thin leading-10 mt-4 xl:mt-1">
-                Additionally, our Short Training programme has been a successful
-                capsule for introducing young professionals in the field to
-                different modalities of intervention. These trainings have
-                provided a safe space for individuals to explore how their
-                nervous systems interact with different approaches.
-              </p>
-              <div className="xl:block max-xl:hidden mt-5">
-                <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5 my-4">
-                  Corporate and Institutional Trainings
-                </h1>
-                <p className="font-thin leading-10 mt-4">
-                  In addition to training mental health professionals, we are
-                  dedicated to creating a holistic system of support for anyone
-                  engaging in meaningful interactions.Our efforts extend beyond
-                  traditional mental health settings to include corporate and
-                  institutional
-                </p>
-              </div>
-            </div>
-            <BodyImagePart className="w-full h-auto object-cover" />
-          </div>
-
-          <div className="px-4 lg:px-11 md:px-6 sm:px-5 xs:px-4 max-md:pt-6 max-md:px-0 xl:mt-0 min-h-screen">
-            <div className="flex flex-col gap-5 leading-8 mb-4 text-xl max-md:text-lg">
-              {" "}
-              <div className="xl:hidden">
-                <h1 className="text-left w-full font-bold text-4xl max-md:text-3xl py-5 my-4">
-                  Corporate and Institutional Trainings
-                </h1>
-                <p className="font-thin leading-10 mt-4">
-                  In addition to training mental health professionals, we are
-                  dedicated to creating a holistic system of support for anyone
-                  engaging in meaningful interactions.Our efforts extend beyond
-                  traditional mental health settings to include corporate and
-                  institutional
-                </p>
-              </div>
-              <p className="font-thin leading-10">
-                training programs aimed at enhancing well-being. For corporate
-                settings, we provide specialized training such as POSH
-                (Prevention of Sexual Harassment) to ensure safe and inclusive
-                workplaces, as well as programs focused on team building and
-                developing a healthy work environment to improve productivity
-                and team satisfaction.
-              </p>
-              <p className="mt-5 leading-8">
-                In educational and institutional contexts, we offer programs
-                focused on teachers' well-being, equipping them with emotional
-                regulation tools to manage stress, build mindfulness, and foster
-                a safer environment for students and teachers. Our comprehensive
-                approach acknowledges that mental and emotional health are
-                integral to human interaction, helping individuals and teams
-                thrive both personally and professionally.
-              </p>
-            </div>
-
-            <CollageImage />
-          </div>
-
-          {/* content data */}
-        </div>
-      </section>
-      <div
-        style={{ backgroundImage: `url(${yelloShadow})` }}
-        className=" h-[5vh] sm:h-[10vh] md:h-[20vh] w-[100vw] bg-cover bg-repeat"
-      ></div>
-
-      {/* udaan page */}
-      <section id="udaan">
-        {/* header of udan */}
-        <div
-          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
-          style={{ backgroundImage: `url(${greenbg})` }}
-        >
-          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl ">
-            Udaan
-          </h1>
-        </div>
-
-        <div className=" p-4 lg:p-4 px-4 xxxl:px-[14%] max-md:px-5 ">
-          {/* top img of udan */}
-          <div className="lg:flex m-auto  p-2 lg:px-4 lg:gap-4 max-md:px-0">
-            <div className="w-full sm:p-6  ">
-              <h1 className=" w-[99%] font-bold text-4xl pb-4 max-md:text-3xl">
-                Quality therapeutic intervention
-              </h1>
-              <p className="text-xl leading-9 text-justify tracking-wider max-md:text-lg">
-                Through Udaan, we build a safe therapeutic space for individuals
-                from marginalized communities. Trauma-focussed therapy aims at
-                establishing safety & then progresses towards processing
-                deep-rooted trauma stemming from experiences of marginalisation
-                and adversities from a young age. Our low-cost therapy
-                initiative aims to reach a diverse audience, providing a safe
-                and supportive environment for many individuals. Our team of
-                trauma-informed therapists offer regular sessions tailored to
-                young and middle-aged adults facing mental health challenges.
-              </p>
-            </div>
-            <div className="w-[100%] lg:w-[70%] sm:pr-0  m-auto max-md;:w-full max-md:pr-0 max-md:m-auto">
-              <img
-                loading="lazy"
-                src={udan1}
-                alt="anubho image "
-                className="max-md:m-auto"
-              />
-            </div>
-          </div>
-          {/* 3slides of udan */}
-          <ResponsiveCardSlider cards={cardSection2} />
-
-          {/* content data */}
-          <div className="px-4 lg:px-14 max-md:px-0">
-            <h1 className="text-4xl font-bold mb-[3%] max-md:text-3xl">
-              Reach of change
+        <div className="relative z-10 flex flex-col items-center text-center px-4">
+          <div
+            className="border border-[#a8d940] px-4 sm:px-10 md:px-16 lg:px-20 
+                 py-1 sm:py-2 md:py-3 bg-[#545656]/70 rounded-xl"
+          >
+            <h1 className="text-white text-xl sm:text-4xl md:text-5xl lg:text-7xl font-bold font-alegreya">
+              Anubhoo
             </h1>
-            {/* ------------------------------- */}
+          </div>
+        </div>
 
-            {/* ------------------------------------ */}
-            <div className="flex flex-col lg:flex-row gap-8 mt-8">
-              {/* Left Section with Map */}
-              <div className="relative w-full lg:w-1/2 max-md:w-2/3 max-md:m-auto max-xs:w-full">
-                {/* Map Image */}
-                <img
-                  src={map}
-                  alt="Map Illustration"
-                  className="w-full h-full "
-                />
 
-                {/* Location Icons */}
-                {[
-                  { top: "15%", left: "24%", duration: 1 },
-                  { top: "25%", left: "35%", duration: 1.5 },
-                  { top: "37%", left: "60%", duration: 2 },
-                  { top: "45%", left: "26%", duration: 2.5 },
-                  { top: "45%", left: "55%", duration: 3 },
-                  { top: "55%", left: "45%", duration: 3.5 },
-                  { top: "60%", left: "18%", duration: 4 },
-                  { top: "65%", left: "39%", duration: 4.5 },
-                  { top: "70%", left: "30%", duration: 5 },
-                  { top: "75%", left: "24%", duration: 5.5 },
-                  { top: "80%", left: "32%", duration: 6 },
-                  { top: "85%", left: "30%", duration: 6.5 },
-                  // Additional Location Icons
-                  { top: "32%", left: "16%", duration: 1.8 },
-                  { top: "40%", left: "20%", duration: 2.2 },
-                  { top: "34%", left: "78%", duration: 2.7 },
-                  { top: "50%", left: "60%", duration: 3.3 },
-                  { top: "35%", left: "45%", duration: 3.9 },
-                  { top: "7%", left: "30%", duration: 4.5 },
-                ].map(({ top, left, duration }, index) => (
-                  <motion.div
+        <div
+          className="absolute bottom-0 left-0 w-full bg-[#545656]/50 
+               py-1 sm:py-2 border-t border-[#a8d940] flex justify-center items-center"
+        >
+          <h2 className="text-white font-semibold text-sm sm:text-lg md:text-2xl text-center px-2 font-alegreya">
+            #MakingIndiaTraumaInformed
+          </h2>
+        </div>
+
+      </section>
+
+
+
+      <section className="py-5  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5  ">
+
+        <div
+          className="container  relative bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${BackImage})` }}
+
+        >
+          <div className="-mt-10 lg:-mt-20 flex gap-7 flex-wrap lg:flex-nowrap justify-center items-center">
+            <div className="flex flex-wrap justify-center gap-16 m-auto mt-28">
+              {programs?.map((card, index) => (
+                <div key={index} className="flex flex-col justify-center items-center   group hover:cursor-pointer "
+                >
+                  <div className="relative border-2 border-[#a8d940] rounded-3xl lg:w-[250px] lg:h-[180px] md:w-[200px] md:h-[150px] sm:w-[190px] sm:h-[140px]  ">
+                    <div className="absolute inset-0 m-2 border-2 border-[#a8d940] rounded-3xl pointer-events-none -top-5 -left-5"></div>
+
+                    <div className=" justify-center items-center text-center p-10">
+                      <p className="text-black font-medium text-xl sm:text-sm md:text-base lg:text-xl font-alegreya ">
+                        {card?.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+              ))}
+            </div>
+          </div>
+          <div className="relative z-10 flex flex-col gap-12 text-justify font-medium text-base tab:text-xl py-8">
+
+            <div className="space-y-3 mt-10 relative flex flex-col gap-5 leading-10">
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                By empowering those at the frontlines of care, i.e. mental health professionals, caregivers, teachers, social workers, and community leaders, with trauma-informed tools, knowledge,
+                and skills, we are creating an <strong>army of changemakers</strong> equipped to offer holistic support. In today’s time, there isn’t even one psychologist per 1,00,000 individuals in India, a staggering gap
+                that leaves <strong>millions without access to timely support.</strong> Unless more people are trained and equipped, this gap will only widen, leaving communities more vulnerable and isolated.
+
+              </p>
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                At the heart of our work is the <strong>Trauma-Informed Care Practices  (TICP) course </strong>, our flagship program, <strong>a first-of-its-kind in India.</strong> This training goes beyond surface-level learning,
+                reaching into the nervous system and reshaping the way participants understand themselves and those they serve. Complementing this, we also deliver short trainings,
+                which act as a gateway to accessibility for young professionals. These capsules introduce participants to diverse modalities of intervention, while offering a safe,
+                supportive space to notice how their own nervous systems respond to different approaches. For many, this becomes the first step toward expanding their skill set and capacity for presence.
+
+              </p>
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+                Through all of these trainings, our intent remains the same: to bridge the gap between need and care, and to make India Trauma-Informed.
+              </p>
+            </div>
+          </div>
+          <div className=" mx-auto">
+            <div className="overflow-hidden relative border-t-2 border-b-2 border-[#a8d940] py-2">
+              <div className="flex whitespace-nowrap  " style={{
+                animation: "marquee 20s linear infinite",
+              }}>
+                {[...textItems, ...textItems].map((item, index) => (
+                  <span
                     key={index}
-                    className="absolute"
-                    style={{ top, left }}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ amount: 0.3 }}
-                    transition={{ duration }}
-                    variants={iconVariants}
+                    className="text-lg font-medium text-black mx-8 font-alegreya"
                   >
-                    <FaMapMarkerAlt className="text-blue-500 text-xl sm:text-2xl lg:text-3xl" />
-                  </motion.div>
+                    {item}
+                  </span>
                 ))}
               </div>
+            </div>
 
-              {/* Right Section with Text and Illustration */}
-              <div className="w-full lg:w-1/2">
-                <p className="text-justify text-xl font-light max-md:text-lg">
-                  People from different demographics of the country reached out
-                  to us, from Tier-2 cities like Rourkela and Suratgarh to
-                  Metropolitans like Bengaluru and Mumbai.
-                </p>
-                <p className="text-justify text-xl font-light mt-4 max-md:text-lg">
-                  We are breaking cycles of intergenerational trauma and
-                  rebuilding trust for so many people through the process and
-                  the profession of therapy. Individuals are able to reconnect
-                  with different versions of their self, body, and mind,
-                  reconceptualize their concerns, and feel a sense of compassion
-                  and empowerment.
-                </p>
-                <div className="mt-4 lg:mt-[28%]">
-                  <img
-                    src={peoples} // Replace with a random illustration image URL
-                    alt="Illustration"
-                    className="w-full h-auto"
-                  />
+            <div className="w-full overflow-hidden">
+              {imagesRowsfor.map((row, rowIndex) => (
+                <div key={rowIndex} className="my-6">
+
+                  <div
+                    ref={(el) => (scrollRefsfor.current[rowIndex] = el)}
+                    className="flex overflow-hidden relative space-x-4 px-4"
+                  >
+                    {row.map((img, i) => (
+                      <ImageAutoFit key={i} src={img} index={i} sizesMap={sizesMapRow0} />
+                    ))}
+                  </div>
+
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <Heading Text="Projects and Initiatives" />
+
+      <section className="  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5  ">
+
+        <div className="flex flex-col justify-center items-center ">
+          <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-2xl  py-4 font-alegreya">
+            Certificate Course on Trauma-Informed Care Practices
+          </h1>
+          <h3 className="text-center w-[55%] font-medium text-xl md:text-xl lg:text-2xl font-alegreya">First-of-its-kind in India</h3>
+
+        </div>
+        <div className="relative z-10 flex flex-col gap-8 text-justify font-medium text-base tab:text-xl lg:py-2 py-1">
+
+          <div className="space-y-3 mt-5 relative flex flex-col gap-5 leading-10">
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+              As the post-pandemic world transitioned into a digital mode of living and learning, we designed an <strong>online training program for mental health practitioners across the country.</strong>
+              Beginning with eight participants in the first cohort, we laid the foundation for our dream of making India trauma-informed. In 2023, we <strong>introduced Supervision</strong> and revised the course structure to align with participant needs.
+              The Supervision model added <strong>ongoing support and facilitated real-time integration</strong> of TIC principles and counselling skills.
+
+
+            </p>
+
+            <div className="w-full py-4">
+              <div className="flex flex-col gap-6">
+                {VideoCallImg.map((row, rowIndex) => (
+                  <div
+                    key={rowIndex}
+                    className="flex flex-wrap justify-center gap-8 px-4"
+                  >
+                    {row.map((item, i) => (
+                      <div
+                        key={i}
+                        className="relative w-[310px] bg-black border-2 border-black sm:w-[280px] md:w-[250px] lg:w-[240px] h-[150px] sm:h-[180px] md:h-[190px] lg:h-[160px] rounded-xl overflow-hidden shadow-md"
+                      >
+                        <img
+                          src={item.img}
+                          alt={`image-${i}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center text-sm sm:text-base py-1">
+                          {item.name}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+              With each passing year, we are moving closer to a <strong>structured, standardised, and sustainable training model,</strong> while remaining deeply responsive to the evolving needs. Designed for practitioners, by practitioners, and facilitated by professionals with
+              years of field experience, this is not just an educational programme but an <strong>initiative grounded in practice and lived experiences.</strong> We are equipping young and seasoned professionals with the knowledge, skills, and sensitivity needed to work with a
+              trauma-informed lens, guiding them to integrate embodied practices, reflective tools, and real-world strategies that support their personal and professional journeys.
+              <a href="/ticp" className="text-blue-500 underline hover:text-blue-700">Read more...</a>
+            </p>
+
+
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="py-5  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5   ">
+
+        <div className="flex flex-col justify-center items-center ">
+          <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-2xl  py-4 font-alegreya">
+            Psychological First-Aid for Youth Community Leaders
+          </h1>
+          <h3 className="text-center w-[55%] font-medium text-xl md:text-xl lg:text-2xl font-alegreya">In collaboration with Restless Development, India</h3>
+
+        </div>
+        <div className="relative z-10 flex flex-col gap-12 text-justify font-medium text-base tab:text-xl py-5">
+
+          <div className="space-y-3 mt-5 relative flex flex-col gap-5 leading-10">
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+              This initiative was born from the need <strong>to support  lived realities and create safe spaces for</strong> people from marginalised
+              sections of society, especially <strong>the LGBTQIA+  community.</strong> Queer individuals often navigate multiple layers of invisibility,
+              violence, discrimination, loneliness, and rejection.
+
+            </p>
+
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+              This training equipped youth leaders from the queer community in <strong>Psychological First Aid,</strong> enabling them to facilitate wellbeing
+              circles and break the silence around mental health. By creating safe, healing-centred spaces, we aimed to replace ignorance with dialogue,
+              invisibility with recognition, and isolation with community. Through <strong>trauma-informed and queer-affirmative approaches,</strong> the program provided LGBTQIA+
+              youth leaders with tools to understand their emotions, navigate difficult experiences, strengthen relationships, and cultivate compassion for themselves and others.
+
+
+            </p>
+
+          </div>
+        </div>
+        <div className="w-full py-4">
+          <div className="flex flex-col gap-6">
+            {AidImg.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="flex flex-wrap justify-center gap-8 px-4 "
+              >
+                {row.map((img, i) => (
+                  <div
+                    key={i}
+                    className="w-[340px] sm:w-[290px] md:w-[200px] lg:w-[240px] h-[200px] sm:h-[180px] md:h-[150px] lg:h-[160px] rounded-3xl overflow-hidden shadow-md border-4 border-[#545656]"
+                  >
+                    <img
+                      src={img}
+                      alt={`image-${i}`}
+                      className="w-full h-full object-contain object-center hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-center items-center ">
+          <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-2xl  py-4 font-alegreya">
+            Foundation of Trauma-Informed Counselling in Schools
+          </h1>
+          <h3 className="text-center w-[55%] font-medium text-xl md:text-xl lg:text-2xl font-alegreya">In collaboration with  State Council of Educational Research and Training (SCERT), Delhi</h3>
+
+        </div>
+        <div className="relative z-10 flex flex-col gap-8 text-justify font-medium text-base tab:text-xl py-5">
+
+          <div className="space-y-3 mt-5 relative flex flex-col gap-5 leading-10">
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+              Recognising that Government school teachers are often the first line of support for children navigating complex emotions and trauma,
+              this initiative was designed to equip them with basic counselling skills through a trauma-informed lens. The intention was to move
+              beyond theory and provide teachers with practical tools that could be used in real-life classroom situations.
+            </p>
+
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+              The training focused on <strong>building safe connections with children,</strong> deepening understanding of trauma and its manifestations,
+              and strengthening essential counselling skills such as active listening, empathy, reflection, and validation. Teachers were
+              also introduced to principles of trauma-informed care: safety, trust, choice, collaboration, and empowerment, and explored
+              strategies to remain grounded when managing high-risk disclosures.
+            </p>
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+              This training planted the seeds for a more compassionate school ecosystem where teachers feel better equipped to hold space for children with care, curiosity, and dignity.</p>
+
+          </div>
+        </div>
+        <div className="w-full py-4">
+          <div className="flex flex-col gap-6">
+            {CounselingImg.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="flex flex-wrap justify-center gap-8 px-4"
+              >
+                {row.map((img, i) => (
+                  <div
+                    key={i}
+                    className="w-[340px] sm:w-[300px] md:w-[290px] lg:w-[240px] h-[210px] sm:h-[200px] md:h-[190px] lg:h-[160px] rounded-3xl overflow-hidden shadow-md border-2 border-[#545656]"
+                  >
+                    <img
+                      src={img}
+                      alt={`image-${i}`}
+                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </section>
+
+      <div
+        className="w-full relative bg-no-repeat bg-right overflow-hidden"
+        style={{
+          backgroundImage: `url(${BackImage})`,
+          backgroundSize: "cover",     // full-size image
+          backgroundPosition: "left", // only show right side
+          backgroundClip: "content-box",
+        }}
+      >
+
+
+        <section className="py-5  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5  ">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
+            <div className="flex flex-col justify-center lg:w-[80%]  w-full">
+              <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-2xl  py-4 font-alegreya">
+                Short Trainings
+              </h1>
+              <h3 className="text-black font-medium text-xl sm:text-xl lg:text-2xl text-center  mt-2 font-alegreya">
+                Bridging the gap from Theory to Practice
+              </h3>
+              <div className="relative z-10 flex flex-col gap-8 text-justify font-medium text-base tab:text-xl py-5">
+
+                <div className="space-y-3 mt-5 relative flex flex-col gap-5 leading-10">
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                    Systemic and financial barriers often make access to quality training difficult. To address this gap, we introduced high-quality,
+                    low-cost training programmes across multiple modalities of care. From emotional release tools like{" "}
+                    <strong>Emotional Freedom Tapping</strong>, to creative and expressive approaches like{" "}
+                    <strong>Arts-Based Therapy</strong>, to reflective practices such as{" "}
+                    <strong>Internal Family Systems</strong>, each session is led by experienced professionals in the field.
+                    We are able to bring trauma-informed learning to communities often left out of such spaces, including professionals in remote areas of Kashmir.
+                  </p>
+
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                    This initiative has been supported by the Azim Premji Philanthropy Initiatives. With the support of more funding partners,
+                    we aspire to expand such trainings further, creating accessible, inclusive spaces for mental health professionals across the country.
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* ---------------------------------------- */}
-          </div>
-        </div>
-      </section>
-      <div
-        style={{ backgroundImage: `url(${yelloShadow})` }}
-        className="h-[5vh] sm:h-[10vh] md:h-[20vh] w-[100vw] bg-cover bg-repeat"
-      ></div>
-
-      {/* project arya page */}
-      <section id="arya" className="mb-9">
-        {/* header of arya */}
-        <div
-          className="bg-cover bg-no-repeat bg-bottom h-32 flex items-center px-5 pt-10 pb-16 max-lg:pb-10"
-          style={{ backgroundImage: `url(${yellowbgnew1})` }}
-        >
-          <h1 className="text-3xl sm:text-4xl max-lg:mb-2 max-lg:pl-[4.7rem] md:text-5xl max-md:px-0 max-md:text-4xl lg:mb-6 lg:px-11 font-bold lg:text-6xl">
-            Project Arya
-          </h1>
-        </div>
-        <div className="  p-4 lg:p-4 px-4 xxxl:px-[14%] border-blue-500 max-md:px-1">
-          {/* top img of arya */}
-          <div className="lg:flex m-auto  px-4 lg:px-11 lg:gap-3">
-            <div className="w-[100%] lg:w-[70%] ">
-              <img loading="lazy" src={arya1} alt="anubho image"></img>
+            <div className="flex flex-col items-center lg:items-end gap-5 w-[340px] sm:w-[620px] md:w-[720px] lg:w-[450px] h-[600px] sm:h-[600px] md:h-[890px] lg:h-[450px] ">
+              <img
+                src={show1}
+                alt="Training group 1"
+                className="rounded-3xl w-full max-w-md h-35 sm:h-25 lg:h-[16rem] object-cover   border-2 border-[#545656]"
+              />
+              <img
+                src={show2}
+                alt="Training group 2"
+                className="rounded-3xl w-full max-w-md h-35 sm:h-25 lg:h-[16rem] object-cover border-2 border-[#545656]"
+              />
+              <img
+                src={show3}
+                alt="Training group 3"
+                className="rounded-3xl w-full max-w-md h-35 sm:h-25 lg:h-[16rem] object-cover border-2 border-[#545656]"
+              />
+              {/* <img
+              src={show4}
+              alt="Training group 4"
+              className="rounded-3xl w-full max-w-md h-35 sm:h-25 lg:h-[16rem] object-cover border-2 border-[#545656]"
+            /> */}
             </div>
-            <div className="w-full sm:p-3  ">
-              <h1 className="text-right w-[99%] font-bold text-4xl pb-4 max-md:text-3xl">
-                Bio-Psycho-Socio Wellbeing
+          </div>
+        </section>
+
+        <section className="py-5  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5  ">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start justify-center items-center gap-3">
+            <div className="flex justify-center lg:w-1/2 ">
+              <img
+                src={bharat}
+                alt="Training Bharat"
+                className=" w-full object-contain object-center"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center lg:w-1/2 w-full">
+              <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-2xl  py-4 font-alegreya">
+                Trauma-Informed Team Training
               </h1>
-              <p className="text-xl leading-9 text-justify max-md:text-lg">
-                Individuals facing adversities require specific support to
-                enhance their overall development. Project Arya is a unique
-                Social-Emotional Learning program based on the CASEL framework
-                with a trauma-informed lens that caters to the particular needs
-                of marginalized young lives. We support our participants in
-                navigating unprecedented challenges through art, play, drama,
-                music, and movement to facilitate holistic development, foster
-                safe connections, and build social skills, creativity and
-                self-expression.
-              </p>
+              <h3 className="text-center  font-medium text-xl sm:text-xl lg:text-2xl font-alegreya">
+                In Collaboration with Vartamaan Care Network, Tinsukia, Assam
+              </h3>
+
+              <div className="relative z-10 flex flex-col gap-5 text-justify font-medium text-base tab:text-xl ">
+
+                <div className="space-y-3 mt-10 relative flex flex-col gap-5 leading-10">
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                    In 2024, I Am Wellbeing partnered with Vartamaan Care Network, a Section 8 Mental Health Organisation in Tinsukia,
+                    Assam, to provide <strong>Trauma-Informed Mental Health Training</strong> to their team of counsellors. While rooted in the core
+                    principles of our Trauma-Informed Care Practices, this programme was built from scratch, carefully adapted to
+                    meet participants where they were in their learning journey and professional practice.
+                  </p>
+
+                  <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                    This collaboration marked an important step for I Am Wellbeing: entering into a new community in the Northeast, and <strong>contributing to a network
+                      of care for survivors from culturally and ethnically marginalised backgrounds.</strong> By equipping professionals with trauma-informed tools, we not
+                    only strengthened the capacity of the Vartamaan team but also expanded the circle of support available to the wider community.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          {/* 3slides of arya */}
-          <ResponsiveCardSlider cards={cardSection3} />
-          {/* content data */}
-          <div className="px-4 lg:px-11 ">
-            <h1 className="text-4xl font-bold max-md:text-3xl">
-              Community level change
-            </h1>
-            {/* ------------------------------- */}
-            <div className="sm:flex mt-[4%] gap-5 leading-8 text-xl max-md:text-lg max-md:pb-8">
-              <p className="text-justify font-thin">
-                We are creating ripples of change at diverse developmental
-                stages in life. Each program is designed specifically to address
-                the needs of different populations, be it students from middle
-                school or individuals engaged in daily labour. The idea is to
-                impact the community and build a safety net at each level. From
-                being unable to speak up at all, to expressing in front of the
-                entire group, there has been an immense shift in
-                self-confidence, emotional understanding and regulation in our
-                participants. We plant a seed of openness and curiosity by
-                making them feel safe and encouraging them to explore the
-                intricacies of their selves. Starting from building awareness
-                about their bodies we delve deeper into the concept and
-                different parts of the self, slowly building a connection to
-                others, how relationships impact our mental health, and how we
-                can support ourselves. Taking young individuals and turning them
-                into leaders of the society thereby fulfilling our mission of
-                #makingindiatraumainformed.
-              </p>
-            </div>
-            {/* ------------------------------------ */}
+        </section>
+      </div>
 
-            {/* <img src={ animation1 } alt="animation"/> */}
-            <WalkingPerson />
+      <section className="py-5  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5  ">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
+          <div className="flex flex-col justify-center lg:w-[80%]  w-full">
+            <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-2xl  py-4 font-alegreya">
+              Capacity Building and Supervision
+            </h1>
+            <h3 className="text-black font-medium text-xl sm:text-xl lg:text-2xl text-center mt-4 font-alegreya">
+              In Collaboration with Badlav,
+              Lucknow, Uttar Pradesh
+            </h3>
+
+            <div className="relative z-10 flex flex-col gap-5 text-justify font-medium text-base tab:text-xl py-2">
+
+              <div className="space-y-3 mt-10 relative flex flex-col gap-10 leading-10">
+                <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                  I Am Wellbeing partnered with Badlav in 2022, an organisation dedicated to empowering, rehabilitating, and linking <strong>survivors of
+                    homelessness and addiction</strong> to employment opportunities and mainstream society. Recognising the complex challenges faced by this
+                  historically deprived community, our collaboration <strong>aimed to strengthen the capacity of Badlav’s care providers and mental health
+                    counsellors while also creating a trauma-informed module for group sessions</strong> with individuals navigating addiction and adverse life circumstances.
+
+                </p>
+
+                <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+                  This initiative has been supported by the Azim Premji Philanthropy Initiatives. With the support of more funding partners,
+                  we aspire to expand such trainings further, creating accessible, inclusive spaces for mental health professionals across the country.
+                  This module introduced the team to the brain biology of trauma and addiction, as well as techniques like EFT, somatic work, and arts-based tools.
+                  Through this collaboration, we were able to bring a new lens and awareness into a space where survivors have long faced systemic neglect, stigma, and social exclusion.
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT IMAGES */}
+          <div className="flex flex-col items-center lg:items-end gap-5 w-[340px] sm:w-[620px] md:w-[720px] lg:w-[450px] h-[300px] sm:h-[600px] md:h-[890px] lg:h-[450px] ">
+            <img
+              src={capacity1}
+              alt="Training group 1"
+              className="rounded-2xl w-full h-full object-cover object-center border-2 border-[#545656]"
+            />
+            <img
+              src={capacity2}
+              alt="Training group 2"
+              className="rounded-2xl w-full h-full object-cover object-center border-2 border-[#545656]"
+            />
+            {/* <img
+              src={capacity3}
+              alt="Training group 3"
+              className="rounded-2xl w-full max-w-md h-35 sm:h-25  lg:h-[16rem]  object-cover object-center  border-2 border-[#545656] "
+            /> */}
+
           </div>
         </div>
       </section>
-      <div
-        style={{ backgroundImage: `url(${yelloShadow})` }}
-        className="h-[5vh] sm:h-[10vh] md:h-[20vh] w-[100vw] bg-cover bg-repeat"
-      ></div>
-    </>
+
+      <section className="py-5  lg:px-10 sm:px-2 md:px-5   p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5   ">
+
+        <div className="flex flex-col justify-center items-center ">
+          <h1 className="text-center w-[99%] font-medium lg:text-3xl md:text-2xl sm:text-2xl text-3xl  py-4 font-alegreya">
+            Corporate Trainings
+          </h1>
+          <h3 className="text-center lg:w-[55%] w-[80%] font-medium text-xl md:text-xl lg:text-2xl font-alegreya">In Collaboration with multiple organisations like Azure Power and JIST Media</h3>
+
+        </div>
+        <div className="relative z-10 flex flex-col gap-5 text-justify font-medium text-base tab:text-xl ">
+
+          <div className="space-y-3  lg:mt-10 mt-5 relative flex flex-col gap-5 leading-10">
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+
+              In addition to training mental health professionals in the field, we are dedicated to creating a holistic system of support for anyone engaging in meaningful
+              interactions with other human beings. Our efforts extend beyond traditional mental health settings to include the facilitation of <strong>diverse corporate and
+                institutional training programs</strong> aimed at enhancing individual and collective well-being. We provide various specialised trainings such as <strong>POSH (Prevention of Sexual Harassment)</strong>
+              to ensure safe and inclusive workplaces, <strong>Team Building and Communication</strong> to strengthen interpersonal dynamics, and Developing a Healthy Work Environment to boost productivity and team satisfaction.
+
+
+
+            </p>
+            <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+              Our comprehensive approach acknowledges that mental and emotional health are integral to every aspect of human interaction. By addressing these areas, we aim to cultivate environments where individuals
+              and teams can feel a sense of safety and security and thrive both personally and professionally.
+            </p>
+
+            <div className="w-full ">
+              <div className="my-6 flex flex-col gap-[6px]">
+                <div className="border-t-4 border-[#a8d940] w-full"></div>
+                <div className="border-t-4 border-[#a8d940] w-full"></div>
+              </div>
+
+              {imagesRows.map((row, rowIndex) => (
+                <div key={rowIndex} className="my-6">
+
+                  <div
+                    ref={(el) => (scrollRefs.current[rowIndex] = el)}
+                    className="flex overflow-hidden relative space-x-4 px-4"
+                  >
+                    {row.map((img, i) => (
+                      <ImageAutoFit key={i} src={img} index={i} sizesMap={sizesMapRow0} />
+                    ))}
+                  </div>
+
+
+                </div>
+              ))}
+              <div className="my-6 flex flex-col gap-[6px]">
+                <div className="border-t-4 border-[#a8d940] w-full"></div>
+                <div className="border-t-4 border-[#a8d940] w-full"></div>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center  px-4 lg:px-11 md:px-6 sm:px-5 xs:px-4">
+          <h1 className="text-center w-[99%] font-bold text-xl max-md:text-3xl max-md:text-center lg:text-4xl py-4 font-alegreya">
+            Other Milestones over the years...
+          </h1>
+
+        </div>
+        <div className=" lg:py-16 py-8 px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-wrap justify-center gap-3">
+            {milestone?.map((card, index) => (
+              <div
+                key={index}
+                className="flex flex-col justify-center items-center group hover:cursor-pointer  "
+              >
+                <div className="relative border-2 border-[#a8d940] rounded-3xl w-[280px] sm:w-[250px] md:w-[260px] lg:w-[270px] xl:w-[300px] h-[190px] sm:h-[180px] md:h-[190px] lg:h-[200px] xl:h-[210px]  shadow-md hover:shadow-lg transition-all duration-300 mx-10 my-5">
+                  <div className="absolute inset-0 m-2 border-2 border-[#a8d940] rounded-3xl pointer-events-none -top-6 -left-6"></div>
+
+                  <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 text-center">
+                    <p className="text-black font-bold text-base sm:text-base md:text-lg mb-2 break-words font-alegreya">
+                      {card?.tite}
+                    </p>
+                    <p className="text-black font-medium text-sm sm:text-sm md:text-base leading-snug break-words font-alegreya">
+                      {card?.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+      </section>
+
+      <div className="bg-[#545656] py-4 flex justify-center items-center my-5">
+        <h1 className="text-white font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-alegreya">
+          7000+ professionals trained and counting...
+        </h1>
+      </div>
+
+    </section>
   );
 };
 

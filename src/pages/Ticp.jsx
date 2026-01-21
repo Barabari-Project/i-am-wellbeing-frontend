@@ -2,22 +2,33 @@ import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import BlurryImages from "../components/BlurryImages";
+import HeroImage from "../imgs/tic/heroticp.png"
+import BackImage from "../imgs/tic/treeback1.png"
+
+
+import trainer1 from "../imgs/tic/1.png"
+import trainer2 from "../imgs/tic/2.png"
+import trainer3 from "../imgs/tic/3.png"
+import trainer4 from "../imgs/tic/4.png"
+import trainer5 from "../imgs/tic/5.png"
+import trainer6 from "../imgs/tic/6.png"
+
 // import img from "../imgs/3a.png";
 
 const ticp2Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2.png`;
 const ticp3Img = "/imgs/home-images/flow-chart.png";
 const ticp4Img = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/2aa.png`;
 
-const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer1.png`;
-const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer2.png`;
-const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer3.png`;
-const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer4.png`;
+// const trainer1 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer1.png`;
+// const trainer2 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer2.png`;
+// const trainer3 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer3.png`;
+// const trainer4 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer4.png`;
 // const trainer5 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer5.png`;
-import trainer5 from "../imgs/home-images/trainer5.png";
+// import trainer5 from "../imgs/home-images/trainer5.png";
 
 import graidingImg from "../imgs/home-images/graiding.png";
 
-const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
+// const trainer6 = `${import.meta.env.VITE_PUBLIC_URL}/home-images/trainer6.png`;
 
 const banner = `${import.meta.env.VITE_PUBLIC_URL}/ticp-images/ticp5.png`;
 import flowChart from "../imgs/home-images/Critical Analysis.png";
@@ -28,533 +39,304 @@ import Model from "../components/Model";
 import groupImag from "../imgs/home-images/ticp.png";
 import CurriculumTable from "../components/CurriculumTable";
 import ScheduleTable from "../components/TableContent";
+import TableContent from "../components/TableContent";
+import CourseInfoLayout from "../components/CourseInfoLayout";
+import PolicyCards from "../components/PolicyCards";
+import TestimonialCards from "../components/TestimonialCards";
+import { Heading } from "../components/heading";
 // import Timeline from "../components/FlowChart";
 const Ticp = () => {
   const [team] = useState([
     {
       imgSrc: trainer1,
-      name: "Akanksha Chandele",
+      name: "Akanksha Chandele  (They/Them)",
       smallImgSrc: "trainer1-small.png",
-      designation: "Director / Senior supervisor",
+      designation: "(Holistic Trauma Therapist)",
       description:
-        "Akanksha is a Holistic Trauma Therapist actively engaged in working with survivors of abuse and trauma. Their practice is rooted in building interconnectedness and compassion for all beings and they believe in the power of mind-body-spirit healing in order to thrive and grow. Akanksha has an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and a diploma in Arts-Based Therapy.They are trained in EMDR, IEMT, Somatic Practices, and psychological first-aid. They also use Bach remedies, Access consciousness, and are a Reiki Master Practitioner.With a deep inclination to support the mental wellbeing of marginalised and vulnerable communities, they started I Am Wellbeing (Nairatmya Foundation), an organisation dedicated to trauma healing and prevention. I Am Wellbeing works with survivors of adverse life experiences and equips mental health professionals, caregivers, and educators in providing trauma-informed care to those in need",
+        `Akanksha is a Holistic Trauma Therapist committed to supporting survivors of abuse and trauma. Their work is deeply rooted in compassion, interconnectedness, and the belief that true healing happens when the mind, body, and spirit are in harmony.
+With an MA in Counselling Psychology, a diploma in Rehabilitation Psychology, and training in Arts-Based Therapy, Akanksha has cultivated a diverse and integrative approach to healing. They are a certified Somatic Experiencing Practitioner, EMDR Therapist, Integral Eye Movement Therapist, and Reiki Master Practitioner, in addition to being trained in Psychological First-Aid, Bach Remedies, and Access Consciousness.
+Driven by a deep commitment to the holistic well-being of marginalised and vulnerable communities, Akanksha founded I Am Wellbeing (Nairatmya Foundation)—an organisation dedicated to making India trauma-informed. I Am Wellbeing provides direct support to survivors and equips mental health professionals, caregivers, and educators with the tools to offer trauma-informed care.`
     },
     {
       imgSrc: trainer2,
-      name: "Pallavi Singh",
+      name: "Pallavi Singh (She/Her)",
       smallImgSrc: "trainer2-small.png",
-      designation: "Program Manager / Therapist",
+      designation: "(Trauma and Grief Therapist)",
       description:
-        "Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings. With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care, she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.",
+        `Pallavi is a Trauma and Grief-Informed therapist driven to support people in overcoming personal obstacles. She is passionate about bringing healing to people who have been through traumatic life experiences. Her work focuses on building a client's self-worth & how they view their value as human beings.
+         With the belief that connection is the key to trauma healing, she uses multiple trauma-informed approaches in her work with children at risk & young adults living in under-resourced communities. Equipped in working with children in institutional care,
+         she has in-depth knowledge of the ecosystem of childcare homes, stakeholders, and legal frameworks. She is trained in providing psychological first- aid in the event of emergencies. She offers guidance on psychosocial care provided while supporting people & holds a Master's degree in applied psychology with a specialisation in clinical psychology from Jamia Millia Islamia University.`,
     },
     {
       imgSrc: trainer3,
-      name: "Maitreyi Nigwekar",
+      name: "Maitreyi Nigwekar (She/Her)",
       smallImgSrc: "trainer3-small.png",
-      designation: "Consultant, Curriculum Development",
-      description:
-        "Maitreyi has an MSc in Psychological Approaches to Health from the University of Leeds (UK, 2009), and an MA in Counseling Psychology from SNDT University (India, 2012). She also holds a Diploma in Arts-Based Therapy and is an NLP Practitioner, a Reiki Master-Teacher, and a Clinical Hypnotherapist. Most of her work experience has been in the developmental sector, working with patients and caregivers of chronic conditions, children, and women. She has also worked with Aangan Trust, an NGO that works toward child protection. Currently, she works with teens, young adults, caregivers, and individuals from dysfunctional families surviving struggling from trauma and abuse in her private practice.",
+      designation: "(Trauma-Informed Healer)",
+      description: `Maitreyi has an MSc in Psychological Approaches to Health from the University of Leeds (UK, 2009), and an MA in Counseling Psychology from SNDT University (India, 2012). She also holds a Diploma in Arts-Based Therapy and is an NLP Practitioner, a Reiki Master-Teacher, and a Clinical Hypnotherapist. Most of her work experience has been in the developmental sector, working with patients and caregivers of chronic conditions, children, and women. She has also worked with Aangan Trust, an NGO that works toward child protection. Currently, she works with teens, young adults, caregivers, and individuals from dysfunctional families surviving struggling from trauma and abuse in her private practice.
+`
     },
     {
       imgSrc: trainer4,
-      name: "Shambhavi Singh",
+      name: "Preeta Ganguli (She/Her)",
       smallImgSrc: "trainer4-small.png",
-      designation: "Trainer",
-      description:
-        "Shambhavi has studied Child and Adolescent Psychologist at Queen's University, Belfast. She is a Trauma Informed Arts Based Therapist; Solution Focussed Brief Therapist Who expertises in Social-Emotional Concerns and Parenting. She has been working since 13 years and uses Arts based mediums to work with trauma and learn regulation. In her personal life, she lives by Buddhist philosophy, enjoys coloring, cleaning and reality TV in her free time.",
+      designation: "(Trauma-Informed Therapist)",
+      description: `Preeta has worked closely with children, adolescents,  teachers, caregivers, and young adults across corporates, schools, and NGOs in the past decade. She also focuses on preventive work, and has designed programs, workshops, curricula, & manuals at various organizations. She is associated with multiple NGOs in addition to her practice. She is also an NLP and Shamanic Practitioner and addresses the triad of the mind, body, & spirit in her work.`
     },
     {
       imgSrc: trainer5,
-      name: "Ishi Agarwal",
+      name: "Veena Hari (She/Her)",
       smallImgSrc: "trainer5-small.png",
-      designation: "Missing",
-      description:
-        "Ishi is a Trauma-Informed Mental Health Practitioner with a deep curiosity for creative and somatic tools. She practices the principle of     'Slow is Fast' in all aspects of her life. She enjoys exploring different dimensions of art, creativity, and movement to regulate the nervous system and is on a journey to becoming a certified Arts-Based Practitioner. She is also a firm believer in writing as a tool for accessing, processing, and releasing emotions.",
+      designation: "(Queer Affirmative Therapist)",
+      description: `Veena Hari is a Mental Health Practitioner with a Master's in Clinical Psychology and around 10 years of experience across the mental health and development sector. She is also the founder of Bhavati Foundation, a not-for-profit organisation working on reproductive mental health in India. She has also completed an advanced perinatal psychotherapy course. Veena, mother to a three-year-old, is also the host of the podcast Mothering and describes herself as a passionate and imperfect feminist.`
     },
     {
       imgSrc: trainer6,
-      name: "Preeta Ganguli",
+      name: "Shambhavi Singh (She/Her)",
       smallImgSrc: "trainer6-small.png",
-      designation: "Consultant, Research",
-      description:
-        "Veena Hari is a Mental Health Practitioner with a Master's in Clinical Psychology and around 10 years of experience across the mental health and development sector. She is also the founder of Bhavati Foundation, a not-for-profit organisation working on reproductive mental health in India. She has also completed an advanced perinatal psychotherapy course. Veena, mother to a three-year-old, is also the host of the podcast Mothering and describes herself as a passionate and imperfect feminist.",
+      designation: "(Trauma-Informed Therapist)",
+      description: `Shambhavi has studied Child and Adolescent Psychologist at Queen's University, Belfast. She is a Trauma Informed Arts Based Therapist; Solution Focussed Brief Therapist Who expertises in Social-Emotional Concerns and Parenting. She has been working since 13 years and uses Arts based mediums to work with trauma and learn regulation. In her personal life, she lives by Buddhist philosophy, enjoys coloring, cleaning and reality TV in her free time.`
     },
   ]);
-
-  const [selectedTeamMember, setSelectedTeamMember] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedTeamMember, setSelectedTeamMember] = useState(null);
+
   return (
     <>
-      <Model
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        selectedTeamMember={selectedTeamMember}
-      />
-      <div
-        className={`ticp-banner flex items-center mt-10 justify-center w-full  md:mt-0 `}
-        style={{
-          backgroundImage: `url(${banner})`,
-        }}
-      >
-        <div className="text-content bg-[rgba(255,222,89)] opacity-80 w-full p-8 mt-10 flex items-center gap-2 justify-center flex-col">
-          <h2 className="text-black text-4xl font-bold text-center max-md:text-3xl">
-            Certificate course on Trauma-Informed Care Practices
-            <sup
-              className="text-xl font-bold text-black m-2"
-              // style={{ verticalAlign: "super" }}
-            >
-              ©
-            </sup>
-          </h2>
+      <section className="w-full pt-[80px] md:pt-0">
 
-          <p className="text-[20px] lg:text-md">First-of-its-kind in India</p>
-        </div>
-      </div>
+        <section
+          className="relative h-[40vh] sm:h-[45vh] md:h-[70vh] lg:h-[85vh] xl:h-[90vh] 
+             flex items-center justify-center overflow-hidden bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${HeroImage})`,
+          }}
+        >
 
-      <div className="container w-full sm:max-w-7xl  lg:max-w-7xl   xxxl:max-w-[92%] m-auto lg:bg-white pt-2 ">
-        <div className="about-us text-xl w-full max-w-screen-xl mx-auto ">
-          <h2 className="title text-4xl font-bold max-md:text-3xl pl-2 max-md:px-5 lg:px-5">
-            About us
-          </h2>
-          <div className="px-4 pb-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg lg:px-5">
-            <p className="mt-2 leading-8 text-justify w-full">
-              Trauma is the most unaddressed and unseen epidemic in today’s
-              time. Seven out of ten children in India experience some form of
-              adversity at an early age. If left unaddressed, these painful
-              experiences can haunt them for the rest of their lives, deeply
-              impacting their mental, emotional, and physical wellbeing.
-            </p>
-            <p className="leading-8 text-justify w-full mt-3">
-              I Am Wellbeing (Nairatmya Foundation) is a mental health not-for-
-              profit organization dedicated to supporting such young lives
-              struggling with adverse childhood experiences and building an
-              ecosystem of trusted, available, trained adults. We believe in the
-              power of compassion, connection, and care to develop a healthy and
-              happy nation.
-            </p>
+
+
+          <div className="absolute bottom-0 left-0 w-full  flex flex-col justify-center items-center">
+
+            <div className=" px-10 py-0 sm:py-2 md:py-5 lg:py-8 bg-[#ffde59]/80 w-full justify-center items-center">
+
+              <h1 className="text-black text-sm sm:text-2xl md:text-2xl lg:text-3xl font-semibold text-center  font-alegreya">
+                Certificate Course on Trauma-Informed Care Practices©
+              </h1>
+              <h2 className="text-black text-sm sm:text-xl md:text-xl lg:text-2xl text-center font-alegreya">First-of-its-kind in India</h2>
+            </div>
+            <div className=" bg-black/70 w-full justify-center items-center py-1 md:py-2 lg:py-4">
+              <h2 className="text-white font-semibold text-sm sm:text-lg md:text-md lg:text-xl text-center  font-alegreya">
+                Questions before registering? Please read through this page. If you still have questions, please send us an email at info@iamwellbeing.in
+              </h2>
+            </div>
           </div>
-          <div className="bg-[#FFDE59] p-6 text-xl max-md:text-lg w-full">
-            <h2 className="title text-4xl font-bold mb-5 max-md:text-3xl">
-              Rationale
-            </h2>
-            <p className="mb-3 leading-8 text-justify">
-              While the last decade has highlighted the significant need for
-              mental health interventions, it has also
-              <b>
-                <i> exposed the scarcity of trained professionals</i>
-              </b>
-              compared to the staggeringly high number of people in need of
-              mental health care and support in India. With each passing day we
-              get to witness a new statistic or data related to
-              <b>
-                <i>
-                  increasingly high number of deaths by suicide, depression
-                  rate, severe mental health and physical health concerns like
-                  chronic illnesses, heart problems, and autoimmune diseases.
-                </i>
-              </b>
-            </p>
-            <p className="leading-8 text-justify">
-              The key to mitigating the impact of the perpetually increasing
-              wellbeing concerns in our country is to look beyond the presenting
-              symptoms of an individual and work towards the root cause through
-              a holistic and trauma-informed outlook.
-            </p>
-            <p className="leading-8 text-justify">
-              We strive to fulfill this unmet need of quality mental health care
-              by{" "}
-              <b>
-                <i>building the capacity of professionals</i>
-              </b>
-              towards adapting a trauma-informed approach that is inclusive,
-              contextualized, and de-stigmatizing. To bring this shift in
-              managing mental health concerns, we have designed a
-              <b>
-                <i>6 months long coursework</i>
-              </b>
-              on trauma-informed care practices. Experts from the field will
-              support the participants to build a trauma-informed lens for
-              intervention planning.
-            </p>
-            <p className="leading-8 text-justify">
-              The course will create an understanding of evidence-based holistic
-              tools used to process deep-rooted trauma.
-            </p>
+        </section>
+
+
+        <div className="container w-full  m-auto  pt-2 ">
+
+
+          <Heading Text="Rationale" />
+          <div className="py-10  lg:px-10 sm:px-2 md:px-5 p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5 ">
+            <div className="space-y-3  relative flex flex-col gap-10 leading-10">
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya ">
+                In India’s current climate, the number of people in need of mental health care far exceeds the number of professionals equipped to provide it,
+                and this gap has only widened over the past decade. While recent years have brought greater awareness to the need for mental health interventions,
+                they have also laid bare an uncomfortable truth: we simply do not have enough trained professionals to meet the staggering demand. Every day,
+                new data emerges, whether it is an <strong>increasingly high number of deaths by suicide or severe mental and physical health concerns like chronic illnesses,
+                  heart problems, and autoimmune diseases.</strong>
+
+              </p>
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya my-10">
+                If we are to address this crisis, we must go beyond treating surface-level ‘symptoms’ and work towards the <strong>root causes.</strong> This requires a <strong>holistic,
+                  trauma-informed approach,</strong> one that is inclusive, culturally contextualised, and deeply de-stigmatising.
+
+              </p>
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya">
+                I Am Wellbeing is committed to bridging this gap by equipping mental health professionals with the skills, knowledge, and tools to meet this urgent
+                need. Our <strong>six-month course on trauma-informed care practices</strong> is designed to build capacity and shift how mental health concerns are understood and managed.
+
+              </p>
+              <p className="text-justify text-lg tab:text-2xl leading-10 font-alegreya my-10 ">
+                This program empowers professionals to integrate evidence-based, holistic methods into their work, enabling them to support individuals to heal from deep-rooted
+                trauma while coping with the challenges of everyday life.
+
+              </p>
+            </div>
+
           </div>
-        </div>
-        <div className="Activities px-4 pl-2 max-xl:p-6 max-md:p-5 text-xl max-md:text-lg">
-          <h2 className="title text-4xl font-bold mb-1 py-4 max-md:text-3xl max-md:text-left">
-            Course Activities & Duration
-          </h2>
-          <p className="leading-8 text-justify w-[95%] m-auto lg:w-full  max-md:m-0 max-md:w-full max-md:mt-3">
-            The coursework will encompass various activities like online
-            learning/theory sessions, practical and viva, assignments, project
-            submission and class discussions. There are a total of five modules
-            in the coursework. Each module will be covered over a period of
-            one/two weeks, and upon completion, the participants will submit a
-            credited assignment related to that module. Week 5 and Week 8 will
-            be integration weeks where the participants will be allowed time to
-            process the knowledge acquired and discuss doubts with the trainers.
-            Once all the modules are complete, all the assignments submitted by
-            the participants will be graded, and a buffer period to complete
-            pending assignments will be allotted. After completing all
-            assignments, the participants will be asked to design a practical
-            program for utilising the knowledge gained throughout the
-            coursework, along with a final submission date. Post this, a viva
-            exam will be scheduled where the participants will discuss their
-            projects and share their learning points. The intensive process is
-            designed to ensure the learning and application of the components
-            successfully.
-          </p>
 
-          <div className="activit-list flex flex-wrap justify-between mt-5 p-4">
-            <div className="table-list  text-md text-center font-bold  flex lg:flex-row flex-col gap-2 lg:gap-0 items-center justify-between  w-full">
-              <table className="table-list text-md text-center font-bold border-[#029390] border-2 lg:w-[500px]">
-                <tbody>
-                  <tr>
-                    <td className="p-4 border-4 border-[#029390]">
-                      2 Months of <br /> Theory Sessions
-                    </td>
-                    <td className="p-4 border-4 border-[#029390]">
-                      4 Months of <br /> Supervision
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 border-4 border-[#029390]">
-                      Module-based <br /> Assignments
-                    </td>
-                    <td className="p-4 border-4 border-[#029390]">
-                      Five Case <br /> Submissions
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colSpan="2" className="border-4 p-4 border-[#029390]">
-                      Knowledge Based Viva Assessment
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+          <Heading Text="Course Structure" />
+          <div className="py-5  lg:px-10 sm:px-2 md:px-5 p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5 ">
+            <TableContent />
+            <div className="w-full bg-white py-5 px-4 sm:px-6 lg:px-8 justify-center items-center">
+              <div className="text-center mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-4  font-alegreya">
+                  Beyond Level-1
+                </h2>
+                <p className="text-lg sm:text-xl mb-6  font-alegreya">
+                  Successful completion of Level 1 will qualify the participant to apply for Level 2. This level will be a more specialised coursework, which will focus upon topics like:
+                </p>
+              </div>
 
-              <div>
-                <img src={groupImag} alt="group-img" />
+              {/* Box Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-center items-center  ">
+                {["Gender, sexuality, & trauma", "Complex Trauma", "Relational Trauma", "Trauma and Addiction", "Religious Trauma"].map((topic, index) => (
+                  <div
+                    key={index}
+                    className="relative lg:w-[220px] sm:w-[280px] w-[300px] h-[180px] flex items-center justify-center p-4
+                   border-2 border-[#03989e]"
+                  >
+                    <div className="absolute  lg:w-[220px] sm:w-[280px] w-[300px] h-[180px]  inset-2 border-2 border-dotted border-[#03989e] pointer-events-none -top-3 -left-3"></div>
+
+                    <p className="text-center text-xl sm:text-xl md:text-lg lg:text-xl font-semibold text-black z-10  font-alegreya">
+                      {topic}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <LazyLoadImage
-              src="https://www.iamwellbeing.org/imgs/ticp4.png"
-              alt="teammate"
-              className="w-[500px]  lg:mt-0"
-              effect="blur" // Blur effect while loading
-              placeholder={<BlurryImages imgUrl="Home/ticimage1-small.jpg" />}
-            />
+
+
           </div>
-
-          <CurriculumTable />
-          {/* <TrainingSchedule/> */}
-          <ScheduleTable />
-        </div>
-        <div className="beyond pl-2  w-[95%] max-md:p-5 max-md:w-full">
-          <h1 className="title text-3xl font-bold mt-3">Beyond Level-1</h1>
-          <p className="text-[15px] lg:text-[20px] mt-3  text-black text-justify w-[95%] lg:w-full">
-            Successful completion of level 1 will qualify you to apply for Level
-            2 This level is a more specialized coursework, which will focus upon
-            topics like:
-          </p>
-
-          <ul className="ml-8 mt-6 list-disc text-md lg:text-xl grid lg:grid-cols-2">
-            <li className="lg:mb-3 mb-1">Gender, sexuality, & trauma</li>
-            <li className="lg:mb-3 mb-1">Relational trauma</li>
-            <li className="lg:mb-3 mb-1">Accidents and trauma</li>
-            <li className="lg:mb-3 mb-1">Trauma and addiction</li>
-            <li className="lg:mb-3 mb-1">Complex trauma</li>
-            <li>Religious trauma</li>
-          </ul>
         </div>
 
-        <div className="course policy mt-4 bg-[#FFDE59] p-6 max-md:p-5">
-          <h1 className="title text-4xl font-bold mb-1 max-md:text-3xl">
-            Course Policies
-          </h1>
-          <h1 className="title text-2xl font-bold mb-3 ">Contribution*</h1>
-          <div className=" flex flex-col gap-5 text-xl max-md:text-lg">
-            <p>
-              The contribution amount is payable in advance as per the
-              application process protocols.
-            </p>
-            <p className="text-justify">
-              {" "}
-              The amount can be paid online (NEFT/IMPS)
-            </p>
-            <p className="text-justify">
-              Following details will be required to complete the payment
-              process:Pan card and Aadhar Card**
-            </p>
-            <p className="text-justify">
-              {" "}
-              *All contribution will be utilised for Nairatmya Foundation's work
-              with under-resourced communities
-            </p>
-            <p className="text-justify">
-              {" "}
-              **It is mandatory to submit Pan and Aadhar details of the person
-              who has made the money transfer.
-            </p>
+        <div className="container w-full  m-auto lg:bg-white pt-2 ">
+          <Heading Text="Course Policies" />
+          <div className="py-10  lg:px-10 sm:px-2 md:px-5 p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5 ">
+            <PolicyCards />
           </div>
-          <h1 className="title text-2xl font-bold mt-2">Refund Policy</h1>
-          <p className="text-justify text-xl max-md:text-lg">
-            In case the participant wants to withdraw from the course before it
-            begins, 50% of the contribution amount shall be returned upon
-            connecting with the organisation 15 days before the course
-            commencement.
-          </p>
-          <h1 className="title text-2xl font-bold mt-3">Attendance</h1>
-          <ul className="list-disc ml-6 mt-3 text-xl max-md:text-lg">
-            <li className="mb-2">
-              It is mandatory to attend all course classes.
-            </li>
-            <li className="mb-2">
-              Regularity in attendance shall be taken into account for final
-              course credits and certification.
-            </li>
-            <li>Extra class in lieu of missed class shall not be provided</li>
-          </ul>
-          <h1 className="title text-2xl font-bold mb-3 mt-5">Assignments</h1>
-          <ul className=" list-disc ml-6 text-xl max-md:text-lg">
-            <li className="mb-2">
-              After each module, a reflective assignment is required to be
-              submitted by the participants for evaluation.
-            </li>
-            <li className="mb-2">
-              On completion of the course module, all assignments need to be
-              submitted as per the assigned due date.
-            </li>
-            <li className="mb-2">
-              Assignments play an important role in fulfilling the total credits
-              required for the completion of the course.
-            </li>
-
-            <li className="mb-2">
-              Assignments play an important role in fulfilling the total credits
-              required for the completion of the course.
-            </li>
-            <li>Late submissions shall not be accepted.</li>
-          </ul>
-          <h1 className="title text-2xl font-bold mt-3">Evaluation</h1>
-          <p className="text-justify text-xl max-md:text-lg">
-            To evaluate a student's performance, a written assignment will be
-            submitted after the completion of each module. Along with
-            assignments, participants will be required to submit 5 case studies.
-            The trainer will assess the student's performance based on the
-            assignment, classroom interaction, and case submissions. After
-            completing the course, a viva will be conducted to assess
-            participants' knowledge and skills.
-          </p>
-          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">
-            Grading Criteria
-          </h1>
-          <div className=" mt-2 text-xl max-md:text-lg">
-            <p className="mb-2 text-justify">
-              Following grading criteria is used for evaluation of both
-              assignments and overall course:
-            </p>
-            <p className="mb-2">Above 85%- 5( Excellent) </p>
-            <p className="mb-2">70-85% - 4 (Good) </p>
-            <p className="mb-2">51-65% - 3( Above Average)</p>
-            <p className="mb-2">31-50- 2 (Average) </p>
-            <p className="mb-2">&lt;30%- 1 (Below Average) </p>
-          </div>
-
-          <h1 className="title text-3xl font-bold mb-3 max-md:text-2xl">
-            Overall Passing criteria
-          </h1>
-          <div className="text-xl max-md:text-lg">
-            <li className="mb-2">All classes must be attended </li>
-            <li className="mb-2">Timely assignment submission </li>
-            <li className="mb-2">Complete supervision hours </li>
-            <li className="mb-2">Case submission and presentation</li>
-          </div>
-          <h1 className="title text-2xl font-bold mb-3">
-            Criteria for grading assignments
-          </h1>
-          {/* *************** that is much clear then before ************** */}
-          <div className="text-center w-10/12 flex items-center justify-center mx-auto max-md:w-full">
-            <LazyLoadImage
-              // className="w-full m-auto text-center border-4 graiding-img"
-              src={flowChart}
-              alt="ticp4Img"
-              effect="blur" // Blur effect while loading
-              placeholder={<BlurryImages imgUrl={flowChart} />}
-            />
-          </div>
-          <h1 className="title text-3xl font-bold mb-3 max-md:text-2xl">
-            Eligibility
-          </h1>
-          <ul className=" list-disc ml-6 mt-4  text-xl max-md:text-lg">
-            <li className="mt-4">
-              Students from psychology and allied field background
-              (undergraduate and postgraduate)
-            </li>
-            {/* <li className='mt-4'>
-              Develop an understanding of evidence-based holistic tools used for
-              processing of deep-rooted trauma.{" "}
-            </li> */}
-            <li className="mt-4">Working mental health practitioners</li>
-          </ul>
-          {/* <p className='text-xl text-justify'>
-            Working mental health practitioners
-          </p> */}
-
-          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">
-            Scholarship Policy
-          </h1>
-          <p className="mt-2 text-justify text-xl max-md:text-lg">
-            We strongly believe that resources play a major role in shaping
-            one’s life and no life should struggle to get what they deserve.
-            Keeping our mission at the heart of this, we are gladly announcing a
-            few scholarship slots to students/professionals from under-resourced
-            communities. If you meet the criteria, 50% of your total course fees
-            will be waived off
-          </p>
-          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">
-            How To Apply?
-          </h1>
-          <div className="text-xl max-md:text-lg">
-            <p className="mt-2 text-justify">
-              Step-1: Fill out the application form. Check if you are eligible
-              for scholarship
-            </p>
-            <p className="mt-2 text-justify">
-              Step 2: Upon receiving an email from our side, write a cover
-              letter extensively covering the details mentioned in the email
-            </p>
-            <p className="mt-2 text-justify">
-              Step 3: If selected, appear for the personal interview
-            </p>
-            <p className="mt-2 text-justify">
-              Step 4: If you meet the criteria, 50% of your total course fees
-              will be waived off
-            </p>
-          </div>
-          <h1 className="title text-3xl font-bold mt-4 max-md:text-2xl">
-            Impact{" "}
-          </h1>
-          <p className="text-xl max-md:text-lg mt-3 text-justify">
-            Trauma is a near universal experience of individuals with behavioral
-            health problems. The present times have brought to light the hidden
-            concerns and traumas of individuals across the globe. The course
-            will provide participants with a foundational understanding of
-            trauma, effects on the brain, culturally sensitive & evidence based
-            approaches and resources to equip mental health professionals in
-            trauma-informed care and therapy. This understanding would further
-            lead to:
-          </p>
-          <ul className="list-disc ml-6 text-xl mt-6 max-md:text-lg">
-            <li className="mt-2">
-              A culture of safety, empowerment, and healing in these tough
-              times.
-            </li>
-            <li className="mt-2">
-              Access to quality intervention support and care to individuals.
-            </li>
-            <li className="mt-2">Reduction in re-traumatization. </li>
-            <li className="mt-2">Cost-effective treatment.</li>
-            <li className="mt-2">
-              Elimination of stereotypes and labelling culture for mental health
-              concerns.{" "}
-            </li>
-            <li className="mt-2">
-              Shift to holistic interventions that caters to the
-            </li>
-            <li className="mt-2">Connection between mind, body and soul</li>
-          </ul>
-
-          <h1 className="title text-3xl font-bold mt-3 max-md:text-2xl">
-            Key Takeaways
-          </h1>
-          <ul className=" list-disc ml-6 mt-4 text-xl max-md:text-lg">
-            <li className="mt-4">
-              Get equipped with trauma-informed counselling skills for practical
-              application.{" "}
-            </li>
-            <li className="mt-4">
-              Develop an understanding of evidence-based holistic tools used for
-              processing of deep-rooted trauma.{" "}
-            </li>
-            <li className="mt-4">
-              Build a trauma-informed care lens for intervention planning.
-            </li>
-            <li className="mt-4">
-              Become a trauma-informed Mental health practitioner.{" "}
-            </li>
-            <li className="mt-4">
-              Develop an understandingof trauma in the Indian context.
-            </li>
-          </ul>
         </div>
 
-        <div className="know-your-trainner pl-2 mt-5">
-          <h1 className="text-4xl font-bold max-md:text-3xl max-md:text-center">
-            Know Your Trainers
-          </h1>
-          <div className="trainners grid  items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5 bg-white max-w-3xl m-auto mt-10">
-            {team.map((trainer, index) => {
-              return (
-                <div
-                  key={trainer.name}
-                  className="trainner-card cursor-pointer flex item-center justify-center flex-col "
-                  onClick={() => {
-                    setIsOpen(true);
-                    setSelectedTeamMember(trainer);
-                  }}
-                >
-                  <LazyLoadImage
-                    className={`${
-                      index == 4 ? "w-[175px]" : "w-[200px]"
-                    } h-[150px] m-auto object-cover`}
-                    src={trainer.imgSrc}
-                    alt="trainner-img"
-                    effect="blur" // Blur effect while loading
-                    placeholder={
-                      <BlurryImages
-                        imgUrl={`home-images/${trainer.smallImgSrc}`}
+
+        <div className="container w-full  m-auto lg:bg-white pt-2 ">
+
+          <Heading Text="Course Evaluation" />
+          <div className="py-10  lg:px-10 sm:px-2 md:px-5 p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5 ">
+            <CourseInfoLayout />
+          </div>
+        </div>
+
+        <div className="w-full m-auto lg:bg-white pt-2">
+          <div className="know-your-trainner mt-5">
+            {/* Header */}
+
+
+            <Heading Text="Key Takeaways from the Course:" />
+
+            {/* Content */}
+            <div className="py-10  lg:px-10 sm:px-2 md:px-5 p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5 ">
+              <ul className="list-disc list-inside space-y-3 text-black text-lg lg:text-xl  font-alegreya">
+                <li >An understanding of the theory, brain–body connection, and cultural context of trauma, with a focus on the Indian setting.</li>
+                <li>Practical skills in trauma-informed care, counselling, and intervention planning using evidence-based, holistic tools for deep-rooted trauma.</li>
+                <li>The ability to create a culture of safety, empowerment, and healing while reducing the risk of re-traumatization.</li>
+                <li>The capacity to provide accessible, cost-effective, and high-quality mental health support that addresses root causes, not just symptoms.</li>
+                <li>A trauma-informed lens to challenge stereotypes and labels, promoting inclusion and de-stigmatisation in mental health.</li>
+                <li>A holistic approach that integrates mind, body, and soul in intervention and care.</li>
+                <li>Enhanced professional expertise, reflective practice, and the ability to continue your personal and professional growth beyond the course.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className=" flex justify-center items-center">
+          <Model
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            selectedTeamMember={selectedTeamMember}
+          />
+        </div>
+
+        <div
+          className="w-full relative bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${BackImage})` }}
+
+        >
+          <div className="relative z-10 w-full m-auto  pt-2">
+            <div className="know-your-trainner  mt-5">
+
+              <Heading Text="Know Your Trainers" />
+
+
+              <div className="trainners grid items-center justify-center sm:grid-cols-2 lg:grid-cols-3 gap-5  max-w-5xl m-auto mt-10">
+                {team.map((trainer, index) => (
+                  <div
+                    key={trainer.name}
+                    className="trainner-card cursor-pointer flex flex-col items-center justify-center"
+                    onClick={() => {
+                      setIsOpen(true);
+                      setSelectedTeamMember(trainer);
+                    }}
+                  >
+                    <div className="relative border-2 border-[#03989e] p-2 rounded-lg">
+                      <div className="absolute inset-2 border-2  border-[#03989e] pointer-events-none -top-4 -left-4 rounded-lg"></div>
+                      <LazyLoadImage
+                        className="w-[200px] h-[200px] object-cover m-auto "
+                        src={trainer.imgSrc}
+                        alt={trainer.name}
+                        effect="blur"
+                        placeholder={
+                          <BlurryImages imgUrl={`home-images/${trainer.smallImgSrc}`} />
+                        }
                       />
-                    }
-                  />
-                  <div className="flex flex-col items-center justify-center w-full gap-3">
-                    <h1 className="text-xl text-center  font-[600] mt-2 uppercase">
+                    </div>
+
+                    <h1 className="text-xl text-center font-semibold mt-3 uppercase  font-alegreya">
                       {trainer.name}
                     </h1>
-                    <button className="text-center bg-[#029390] p-1 px-2 text-xs rounded-md text-white">
-                      Know More
+                  </div>
+                ))}
+              </div>
+              {/* {isOpen && selectedTeamMember && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                  <div className="bg-white rounded-lg shadow-lg max-w-3xl w-[90%] p-6 relative">
+                    <button
+                      className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      &times;
                     </button>
+
+                    <h2 className="text-2xl font-bold mb-4">{selectedTeamMember.name}</h2>
+                    <h3 className="text-lg text-gray-600 mb-4">{selectedTeamMember.designation}</h3>
+                    <p className="text-gray-800 whitespace-pre-line">
+                      {selectedTeamMember.description}
+                    </p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              )} */}
 
-          <div className="btns max-w-3xl flex flex-wrap items-center gap-5 lg:gap-20 justify-center m-auto mt-10">
-            <button className="btn p-3 transition-all duration-300 bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2">
-              <a
-                href="https://drive.google.com/file/d/1nlYozsui-13TPcixr76VMVPlbwPmQRst/view?usp=sharing"
-                target="_blank"
-              >
-                DOWNLOAD THE BROCHURE
-              </a>
-            </button>
-            <button className="p-3 transition-all duration-300 btn bg-white font-[700] text-gray-600 px-8 text-xs rounded-full border-yellow-400 border-2">
-              <a
-                href="https://docs.google.com/forms/d/1XndjGihgSJNstgCGXm1J1shpAJeRuGz1C9foyq-Lljc/closedform?pli=1"
-                target="_blank"
-              >
-                APPLY NOW
-              </a>
-            </button>
+
+              <div className="btns max-w-3xl flex flex-wrap items-center gap-5 lg:gap-20 justify-center m-auto mt-10">
+                <button className="relative   border-2 border-[#03989e] p-4 shadow-lg rounded-md">
+                  <div className="absolute  inset-2 border-2  border-[#03989e] pointer-events-none -bottom-2 -right-2 rounded-md"></div>
+                  <a
+                    href="https://drive.google.com/file/d/1nlYozsui-13TPcixr76VMVPlbwPmQRst/view?usp=sharing"
+                    target="_blank"
+                    className="relative text-lg font-bold top-1"
+                  >
+                    DOWNLOAD THE BROCHURE
+                  </a>
+                </button>
+                <button className="relative   border-2 border-[#03989e] p-4 shadow-lg rounded-md">
+                  <div className="absolute  inset-2 border-2  border-[#03989e] pointer-events-none -bottom-2 -right-2 rounded-md"></div>
+                  <a
+                    href="https://docs.google.com/forms/d/1XndjGihgSJNstgCGXm1J1shpAJeRuGz1C9foyq-Lljc/closedform?pli=1"
+                    target="_blank"
+                    className="relative text-lg font-bold top-1"
+                  >
+                    APPLY NOW
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div className="py-10  lg:px-10 sm:px-2 md:px-5 p-4 lg:p-4 px-4 xl:px-[14%] max-md:px-5 ">
+
+              <TestimonialCards />
+            </div>
+            <Faq />
           </div>
         </div>
-
-        <Faq />
-      </div>
+      </section>
     </>
   );
 };

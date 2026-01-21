@@ -63,7 +63,7 @@ const Faq = () => {
                     }}
                   >
                     <div className="flex items-center justify-between">
-                      <h1 className="w-full text-lg font-bold">
+                      <h1 className="w-full text-lg font-bold  font-alegreya">
                         {question.ques}
                       </h1>
                       <div
@@ -80,7 +80,7 @@ const Faq = () => {
                           : "max-h-0"
                       }`}
                     >
-                      <p className="text-[#444]">{question.answer}</p>
+                      <p className="text-[#444]  font-alegreya">{question.answer}</p>
                     </div>
                   </div>
                 );
