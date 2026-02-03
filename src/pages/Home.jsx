@@ -68,7 +68,6 @@ import { Heading } from "../components/heading";
 const Home = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
-
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;

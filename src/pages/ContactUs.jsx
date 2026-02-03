@@ -30,7 +30,7 @@ const ContactUs = () => {
   const handleSubmit = async (e, apiFunction) => {
     e.preventDefault();
     try {
-      // console.log(formData)
+      console.log(formData)
       const response = await apiFunction(formData);
       console.log(response);
       setFormData({
