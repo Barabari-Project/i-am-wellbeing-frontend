@@ -331,26 +331,33 @@ const Programe = () => {
           style={{ backgroundImage: `url(${BackImage})` }}
 
         >
-          <div className="-mt-10 lg:-mt-20 flex gap-7 flex-wrap lg:flex-nowrap justify-center items-center">
+          <div className="-mt-[5.5rem] lg:-mt-20 flex gap-7 flex-wrap lg:flex-nowrap justify-center items-center">
             <div className="flex flex-wrap justify-center gap-16 m-auto mt-28">
               {programs?.map((card, index) => (
-                <div key={index} className="flex flex-col justify-center items-center   group hover:cursor-pointer "
+                <div
+                  key={index}
+                  className="flex flex-col justify-center items-center group hover:cursor-pointer"
                 >
-                  <div className="relative border-2 border-[#a8d940] rounded-3xl lg:w-[250px] lg:h-[180px] md:w-[200px] md:h-[150px] sm:w-[190px] sm:h-[140px]  ">
+                  <div className="relative border-2 border-[#a8d940] rounded-3xl 
+          lg:w-[250px] lg:h-[180px] 
+          md:w-[200px] md:h-[150px] 
+          sm:w-[190px] sm:h-[140px] 
+          flex items-center justify-center text-center">
+
                     <div className="absolute inset-0 m-2 border-2 border-[#a8d940] rounded-3xl pointer-events-none -top-5 -left-5"></div>
 
-                    <div className=" justify-center items-center text-center p-10">
-                      <p className="text-black font-medium text-xl sm:text-sm md:text-base lg:text-xl font-alegreya ">
+                    <div className="p-4">
+                      <p className="text-black font-medium sm:text-sm md:text-base lg:text-xl font-alegreya">
                         {card?.description}
                       </p>
                     </div>
+
                   </div>
                 </div>
-
-
               ))}
             </div>
           </div>
+
           <div className="relative z-10 flex flex-col gap-12 text-justify font-medium text-base tab:text-xl py-8">
 
             <div className="space-y-3 mt-10 relative flex flex-col gap-5 leading-10">

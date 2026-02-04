@@ -66,14 +66,44 @@ import { Heading } from "../components/heading";
 
 
 const Home = () => {
-  const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(true);
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
+  const playerRef = useRef(null);
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    if (!window.YT) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
     }
+
+    window.onYouTubeIframeAPIReady = () => {
+      playerRef.current = new window.YT.Player(iframeRef.current, {
+        events: {
+          onReady: (e) => {
+            e.target.mute();
+            e.target.playVideo();
+          },
+        },
+      });
+    };
+  }, []);
+
+  const toggleSound = () => {
+    if (!playerRef.current) return;
+
+    if (isMuted) {
+      playerRef.current.unMute();
+    } else {
+      playerRef.current.mute();
+    }
+    setIsMuted(!isMuted);
   };
+
+  const redirectToYoutube = () => {
+    window.open("https://www.youtube.com/watch?v=t5jTHNB4rBc", "_blank");
+  };
+  const [isMuted, setIsMuted] = useState(true);
+
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
   const counterOne = useRef(null);
@@ -160,16 +190,19 @@ const Home = () => {
       title: "Anubhoo",
       description: "Trauma-Informed Care Training ",
       section: "anubho",
+      url: '/anuboo'
     },
     {
       title: "Udaan",
       description: "Individual counselling and therapy  ",
       section: "udaan",
+      url: '/udaan'
     },
     {
       title: "Project Arya",
       description: "Trauma-Informed Care Training ",
       section: "arya",
+      url: '/aryan'
     },
   ];
 
@@ -282,7 +315,7 @@ const Home = () => {
               <HashLink
                 smooth
                 key={card?.title}
-                to={`/programs#${card.section}`}
+                to={card?.url}
                 className="flex flex-col justify-center items-center  group hover:cursor-pointer "
               >
                 <div className="relative   border-2  border-[#a8d940] rounded-3xl p-3 ">
@@ -295,7 +328,7 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                <div className="py-2 lg:text-2xl sm:text-xl text-md mt-6 border border-black px-8 rounded-full group-hover:bg-neutral-700/15 transition-colors font-alegreya">
+                <div href={card?.url} className="py-2 lg:text-2xl sm:text-xl text-md mt-6 border border-black px-8 rounded-full group-hover:bg-neutral-700/15 transition-colors font-alegreya">
                   Read More
                 </div>
               </HashLink>
@@ -304,71 +337,69 @@ const Home = () => {
         </div>
 
       </section>
-
-      <section className="section about-us  ">
-        <div className=" mx-auto">
-
-
-          <Heading Text={' Our essence, at a glance...'} />
+      <section className="section about-us">
+        <div className="mx-auto">
+          <Heading Text={" Our essence, at a glance..."} />
 
           <div className="flex flex-col xl:flex-row items-center justify-around gap-10 md:gap-16 px-4 md:px-12 lg:px-20 py-5 bg-white">
             <div className="relative flex justify-center items-center">
               <div className="absolute inset-0 rounded-3xl border-[3px] border-[#a8d940] translate-x-2 translate-y-2"></div>
-              <div className="absolute inset-0 rounded-3xl border-[2px]  border-[#a8d940]"></div>
+              <div className="absolute inset-0 rounded-3xl border-[2px] border-[#a8d940]"></div>
 
-              <div className="relative rounded-3xl overflow-hidden shadow-lg items-center justify-between border-[3px] border-[#a8d940]">
+              <div className="relative rounded-3xl overflow-hidden shadow-lg border-[3px] border-[#a8d940]">
+
+                {/* YouTube iframe */}
                 <iframe
-                  className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-[250px] sm:h-[330px] md:h-[390px] lg:h-[450px] rounded-2xl"
-                  src="https://www.youtube.com/embed/t5jTHNB4rBc?autoplay=1&mute=1&loop=1&playlist=t5jTHNB4rBc&controls=0&modestbranding=1"
+                  ref={iframeRef}
+                  className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-[250px] sm:h-[330px] md:h-[390px] lg:h-[450px]"
+                  src="https://www.youtube.com/embed/t5jTHNB4rBc?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=t5jTHNB4rBc&controls=0&modestbranding=1"
                   title="YouTube video"
                   allow="autoplay; encrypted-media; picture-in-picture"
-                ></iframe>
-                {/* <video
-                  ref={videoRef}
-                  preload="auto"
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  playsInline
-                  className="w-[450px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-auto rounded-2xl"
-                  poster={intro}
-                >
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
 
+                {/* Click overlay → Redirect */}
+                <div
+                  onClick={redirectToYoutube}
+                  className="absolute inset-0 cursor-pointer"
+                />
+
+                {/* Sound toggle button */}
                 <button
-                  onClick={toggleMute}
-                  className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white px-3 py-2 rounded-full text-xs sm:text-sm transition-all duration-300"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleSound();
+                  }}
+                  className="absolute bottom-4 right-4 bg-black/70 text-white p-3 rounded-full hover:bg-black transition"
                 >
-                  {isMuted ? "🔇 Sound Off" : "🔊 Sound On"}
-                </button> */}
+                  {isMuted ? "🔇" : "🔊"}
+                </button>
               </div>
             </div>
 
+            {/* Stats */}
             <div className="flex flex-col items-center justify-center text-center gap-12">
               <div>
-                <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold text-black font-alegreya">
+                <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold font-alegreya">
                   7000+
                 </h2>
-                <p className="text-lg sm:text-xl lg:text-3xl mt-2 font-medium text-black font-alegreya">
+                <p className="text-lg sm:text-xl lg:text-3xl mt-2 font-alegreya">
                   Professionals Trained
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold text-black font-alegreya">
+                <h2 className="text-3xl sm:text-4xl lg:text-7xl font-semibold font-alegreya">
                   1,15,000+
                 </h2>
-                <p className="text-lg sm:text-xl lg:text-3xl mt-2 font-medium text-black font-alegreya">
+                <p className="text-lg sm:text-xl lg:text-3xl mt-2 font-alegreya">
                   Lives Impacted
                 </p>
               </div>
-
             </div>
           </div>
         </div>
       </section>
+
 
       <section className="section about-us py-5 ">
 

@@ -17,7 +17,7 @@ const SocialMedia = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/iamwellbeingservices/?_rdr" },
   { icon: <FaInstagram />, url: "https://www.instagram.com/iamwellbeing_" },
   { icon: <FaXTwitter />, url: "https://x.com/iamwellbeing_?s=08" },
-  { icon: <FaYoutube />, url: "https://youtube.com/@iamwellbeing9989?si=4wzV7aaxSCAXRhbv" },
+  { icon: <FaYoutube />, url: "https://youtube.com/@iamwellbeing.2015?si=46bI4JQ7_icR1gT9" },
   { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/in/i-am-3b17b8104" },
 ];
 
