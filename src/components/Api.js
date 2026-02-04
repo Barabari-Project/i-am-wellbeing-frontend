@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import emailjs from "emailjs-com";
 // const BASE_URL = "https://i-am-wellbeing-backend.onrender.com/wellBeing/api/";
 
 // export const sendMessage = async (formData) => {
@@ -18,27 +18,53 @@ import axios from "axios";
 //     throw error;
 //   }
 // };
+// export const sendMessage = async (formData) => {
+//   try {
+//     const response = await fetch("http://localhost/i-am-wellbeing-frontend/sendMessage.php", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(formData),
+//     });
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error("API Error:", error);
+//     throw error;
+//   }
+// };
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+
+// ✅ CONTACT FORM (EmailJS – NO BACKEND)
 export const sendMessage = async (formData) => {
   try {
-    const response = await fetch(
-      `${window.location.origin}/sendMessage.php`,
+    const result = await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
       {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      },
+      PUBLIC_KEY
     );
 
-    const data = await response.json();
-    return data;
+    return {
+      status: "success",
+      message: "Message sent successfully",
+    };
   } catch (error) {
-    console.error("API Error:", error);
-    throw error;
+    console.error("EmailJS Error:", error);
+    return {
+      status: "error",
+      message: "Failed to send message",
+    };
   }
 };
-
 
 
 export const sendAccountDetails = async (data) => {
