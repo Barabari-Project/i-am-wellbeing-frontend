@@ -22,17 +22,14 @@ const ContactUs = () => {
     emailneeds: "",
   });
 
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
-  };
+const handleSubmit = async (e, apiFunction) => {
+  e.preventDefault();
 
-  const handleSubmit = async (e, apiFunction) => {
-    e.preventDefault();
-    try {
-      console.log(formData)
-      const response = await apiFunction(formData);
-      console.log(response);
+  try {
+    const response = await apiFunction(formData);
+
+    if (response.status === "success") {
+      alert(response.message); 
       setFormData({
         name: "",
         email: "",
@@ -43,11 +40,14 @@ const ContactUs = () => {
         nameneeds: "",
         emailneeds: "",
       });
-    } catch (error) {
-      alert("Error submitting the form. Please try again.");
-      console.error(error);
+    } else {
+      alert(response.message); 
     }
-  };
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+    console.error(error);
+  }
+};
 
   return (
     <>
