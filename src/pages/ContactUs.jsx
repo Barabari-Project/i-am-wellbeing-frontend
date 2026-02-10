@@ -21,7 +21,10 @@ const ContactUs = () => {
     nameneeds: "",
     emailneeds: "",
   });
-
+const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
 const handleSubmit = async (e, apiFunction) => {
   e.preventDefault();
 
